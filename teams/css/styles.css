@@ -1,0 +1,50 @@
+header{
+	margin-bottom:5px;
+}
+.breadcrumb>li+li:before{
+	content:"\003e";
+
+}
+.faculty-title{
+	margin:0;
+	line-height:55px;
+	font-size:22px;
+}
+.breadcrumb{
+	background:initial;
+	border-radius: 0;
+	margin-bottom:0;
+}
+.breadcrumb a{
+	color:#000;
+}
+.side-nav-container{
+	padding-left:0;
+}
+.side-nav{
+	padding-left:15px;
+	margin-bottom:5px;
+	/*background:#c6dce3;*/ /*#effaf0;*/
+	background:#c6d6d0;
+}
+.side-nav a{
+	color:#000;
+}
+.side-nav li{
+	border-right:1px solid #ddd;
+}
+.nav .sub-nav li{
+}
+.nav .sub-nav li a{
+	padding-left: 45px;
+
+}
+.content h1{
+	margin-top:5px;
+}
+.content{
+	margin-left: 0;
+}
+h1{
+	color:#002145;
+}
