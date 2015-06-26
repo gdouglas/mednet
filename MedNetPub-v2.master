@@ -1,0 +1,397 @@
+﻿<%@ Master Language="C#" %>
+<%@Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
+<%@Register TagPrefix="wssuc" TagName="Welcome" Src="~/_controltemplates/15/Welcome.ascx"%>
+<%@Register TagPrefix="SearchWC" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
+<%@Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx"%>
+
+<!DOCTYPE HTML>
+<SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
+    <head runat="server">
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta charset="utf-8" />
+        <meta name="GENERATOR" content="Microsoft SharePoint" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Expires" content="0" />
+
+        <!-- ===== STARTER: Robots  ======================================================================================================= -->
+        <SharePoint:RobotsMetaTag runat="server" />
+
+        <!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== -->	
+		<SharePoint:SPShortcutIcon runat="server" IconUrl="/_catalogs/masterpage/StarterBranding/favicon.ico" />
+		<SharePoint:SPPinnedSiteTile runat="server" TileUrl="/_catalogs/masterpage/StarterBranding/metrotile.png" TileColor="#0072C6" />				
+		
+		<!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
+		<SharePoint:PageTitle runat="server">
+            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" Visible="false" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder>
+		</SharePoint:PageTitle>
+
+        <!-- ===== STARTER: SP Scripts and CSS  =========================================================================================== -->
+		<SharePoint:StartScript runat="server" />
+		<SharePoint:CssLink runat="server" Version="15" />
+		<SharePoint:CacheManifestLink runat="server" />
+		<SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
+		<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
+		<SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+		<SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+		<SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+		<SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+		<SharePoint:CustomJSUrl runat="server" />
+		<SharePoint:SoapDiscoveryLink runat="server" />
+
+        <!-- Bootstrap -->
+        <link href="../masterpage/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="../masterpage/css/homepage-styles.css" rel="stylesheet"/>
+        <link href="../masterpage/css/bx-slider.css" rel="stylesheet"/>
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- ===== STARTER: Additional header placeholder - overridden by asp:content on pages or page layouts  =========================== -->
+		<asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+		<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
+
+        <!-- ===== STARTER: Core SharePoint CSS =========================================================================================== -->
+		<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+
+
+    </head>
+
+      <body>
+
+		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
+		<SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+		<SharePoint:ImageLink runat="server" />
+		<SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
+		
+		<!-- ===== STARTER: SharePoint Reqs this for adding columns ===================================================== -->
+		<script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
+
+		<!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
+		<WebPartPages:SPWebPartManager runat="server" />		
+		
+		<!-- ===== STARTER: ScriptManager ===================================================== -->
+		<asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+
+        <!-- ===== STARTER: Ribbon Code Starts Here ===================================================== -->
+		<PublishingRibbon:PublishingRibbon runat="server" />
+		<!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
+
+        			<!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
+			<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
+				<wssuc:Welcome runat="server" EnableViewState="false" />
+			</SharePoint:SPSecurityTrimmedControl>
+			
+			<!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
+			<div id="s4-workspace">
+				<div id="s4-bodyContainer">
+				
+				<!-- ===== STARTER: This decides where the web part menu lives ===================================================== -->
+				<div id="DeltaPlaceHolderMain" runat="server">
+				
+				<!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
+				<div class="customWidth">
+				
+				<!-- ===== STARTER: SharePoint looks for this div ID s4-titlerow for the "Focus on Content" Button ======================== -->
+				<div id="s4-titlerow" style="display:none!important;">
+					
+			        <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
+				    <div class="ms-dialogHidden" style="display:none;">
+						<SharePoint:SPLinkButton runat="server" NavigateUrl="~sitecollection/">
+							<SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/logo.png %&gt;" AlternateText="Back to Home" runat="server" />
+						</SharePoint:SPLinkButton>
+					</div>
+						
+					<!-- ===== STARTER: Global navigation ================================================================================= -->
+					<div class="ms-dialogHidden">
+						<div class="ms-displayInline ms-core-navigation ms-dialogHidden">
+							<PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" />
+							<SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />												
+						</div>
+					</div>
+						
+					<!-- ===== STARTER: Search Control ==================================================================================== -->
+					<div class="ms-dialogHidden">
+						<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+							<!--<SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" /> -->
+						</asp:ContentPlaceHolder>
+					</div>
+						
+						<!-- ===== STARTER: Breadcrumbs ======================================================================================= -->
+					<div class="ms-dialogHidden">
+						<h1 id="pageTitle" class="ms-core-pageTitle">	
+							<!-- ===== STARTER: SP Reqs DeltaPlaceHolderPageTitleInTitleArea and PlaceHolderPageTitleInTitleArea for adding Apps in Site Content =================== -->
+							<SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">							
+								<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" Visible="False" runat="server">
+									<SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+										<PATHSEPARATORTEMPLATE>
+											<SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
+										</PATHSEPARATORTEMPLATE>
+									</SharePoint:SPTitleBreadcrumb>
+								</asp:ContentPlaceHolder>
+							</SharePoint:AjaxDelta>									
+
+							<div class="ms-displayInlineBlock ms-normalWrap">
+								<a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;">
+									<span id="ms-pageDescriptionImage">&#160;</span>
+								</a>
+								<span class="ms-accessible" id="ms-pageDescription">
+									<asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
+								</span>
+								<SharePoint:ScriptBlock runat="server">
+									_spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
+								</SharePoint:ScriptBlock>
+							</div>
+						</h1>
+					</div>
+				</div>
+
+                <header>
+                  <div class="container-fluid">
+                    <div class="row top-nav">
+                      <div class="col-xs-12">
+                        <ul class="nav nav-pills pull-left utility-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Contact List</a></li>
+                            <li><a href="#">UBC Directory</a></li>
+                            <li><a href="#">med.ubc.ca</a></li>
+                        </ul>
+                        <form class="search col-lg-4 pull-right">
+                          <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search Mednet for...">
+                            <span class="input-group-btn">
+                              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>                
+                          </div>           
+                        </form>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <a href="https://mednet.med.ubc.ca/" title="MedNet" class="pull-left logo"><img src="http://assets.brand.ubc.ca/signatures/2015/ubc_brand_assets_white/4_logo/rgb/s4rc2015.png" alt="UBC"/></a>
+                      <h2 class="faculty-title">Faculty of Medicine</h2>
+                      <h1 class="intranet-title">
+                        <span class="MedNet">MedNet</span>
+                      </h1>
+                    </div>
+                    <div class="row site-nav">
+                      <nav>
+                        <ul class="nav navbar-nav">
+                          <li><a href="#">About Us</a></li> 
+                          <li><a href="#">Services &amp; Resources</a></li> 
+                          <li><a href="#">HR</a></li> 
+                          <li><a href="#">Teaching</a></li> 
+                          <li><a href="#">Research</a></li> 
+                          <li><a href="#">Team Sites</a></li>             
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>         
+                </header>
+
+<!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
+					
+				<!-- ===== STARTER: Current navigation =========================================================================================== -->
+				<div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+					<div class="ms-core-navigation">
+						<!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->						
+						<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+							<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server">
+								<!-- ===== STARTER: hide the quick launch for any page the doesn't override the PlaceHolderLeftNavBar ============ -->
+								<!-- ===== STARTER: if you want the navigation back you can add it from the collab master ============ -->
+								<style type="text/css">
+									#contentBox { margin-left: 0; }
+									#sideNavBox { display: none; }
+								</style>
+							</asp:ContentPlaceHolder>
+							<asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+							<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+							<asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+							<asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+							<asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchBottom" runat="server" />
+						</asp:ContentPlaceHolder>
+					</div>
+				</div>	
+					
+				<!-- ===== STARTER: Main Content ========================================================================================== -->
+				<div id="contentBox">
+
+                <!-- body content -->    
+                <div class="container-fluid homepage-content">
+                  <div class="row">
+                    <!--BEGIN SLIDER-->
+                    <div class="col-md-4 fp-column slider">
+                      <div class="border-top">
+                        <img src="../_catalogs/masterpage/images/pic1.jpg" class="slider-img" /><p>Congratulations to 14 Faculty of Medicine staff members who joined the 25+ Year Club this year. The Club honours those staff that have been with UBC for 25 years of service.</p>
+                      </div>
+                    </div>        
+                    <!--END SLIDER-->
+                    <div class="col-md-4 fp-column announcements">
+                      <div class="border-top">
+                        <h2>ANNOUNCEMENTS</h2>
+                        <ul class="list-unstyled">
+                          <li><span class="date">05/15/2015</span>
+                           Call for Applications: Faculty of Medicine Internal CFI JELF Competition</li>
+                          <li><span class="date">05/14/2015</span>
+                            Advanced WordPress Features &amp; Functionality Workshop - June 10</li>
+                          <li><span class="date">05/12/2015</span>
+                            Watch the 2015 Full Faculty Meeting</li>
+                          <li><span class="date">05/08/2015</span>
+                            FoM Internal Canada Foundation for Innovation John R. Evans Leaders Fund Retention Competition launching soon</li>
+                          <li><span class="date">05/07/2015</span>
+                            New travel planning resource for UBC faculty and staff</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-4 fp-column staff-spotlight-container">
+                        <div class="border-top">
+                          <h2>STAFF SPOTLIGHT</h2>
+                          <img class="staff-spotlight img-circle" src="../_catalogs/masterpage/images/mike-andrews.jpg" width = "150" height = "150">
+                          <h3 class="staff-spotlight-name">Captain Beefheart</h3>
+                          <p class="staff-spotlight-text">This is a person who works in the faculty of medicine. It's really neat to see a picture of them with a name. It clarifies what you need to call the random people you run into every day and have some obligation to interact with.</p>
+                      </div>
+                    </div>        
+                  </div>
+                  <div class="row">
+                      <div class="col-md-4 fp-column news-honours">
+                        <div class="border-top">  
+                          <h2>NEWS &amp; HONOURS</h2>
+                            <ul class="list-unstyled">
+                              <li><span class="date">05/21/2015</span>
+                                Alex Scott honoured with UBC Overall Excellence &#8211; Early Career award</li>
+                              <li><span class="date">05/20/2015</span>
+                                Tuum Est! Graduation 2015</li>
+                              <li><span class="date">05/19/2015</span>
+                                UBC Midwifery Program celebrates 10 year anniversary of first graduating class</li>
+                              <li><span class="date">05/19/2015</span>
+                                Two local chefs host a cooking class for prostate cancer survivors</li>
+                              <li><span class="date">05/15/2015</span>
+                                Christie Newton appointed Director, Interprofessional Education</li>
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-4 dates-deadlines fp-column">
+                        <div class="border-top">
+                          <h2>DATES &amp; DEADLINES</h2>
+                            <ul class="list-unstyled">
+                              <li><span class="date">05/25/2015</span>
+                              Canadian Institutes of Health Research - Innovative Ebola Research Grants</li>
+                              <li><span class="date">05/27/2015</span>
+                              Michael J. Fox Foundation - Parkinson's Biomarkers and Outcomes Measures Research</li>
+                              <li><span class="date">05/31/2015</span>
+                              Call For Abstracts: 32nd International Seating Symposium</li>
+                              <li><span class="date">06/01/2015</span>
+                              Cystic Fibrosis Foundation – Clinical Research Awards</li>
+                              <li><span class="date">06/02/2015</span>
+                              Department of Defense – Lung Cancer Research Program</li>
+                            </ul>
+                          </div>
+                      </div>
+                      <div class="col-md-4 events fp-column">
+                        <div class="border-top">
+                          <h2>EVENTS</h2>
+                          <ul class="list-unstyled">          
+                            <li><span class="date">05/21/2015</span>
+                            Garrod 2015 Symposium</li>
+                            <li><span class="date">05/21/2015</span>
+                            CBR Job Search Workshop</li>
+                            <li><span class="date">05/21/2015</span>
+                            Southern Medical Program Master Teacher </li>
+                            <li><span class="date">05/22/2015</span>
+                            Pediatric Grand Rounds</li>
+                            <li><span class="date">05/22/2015</span>
+                            Advances in Pediatrics</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>                        
+                </div>
+
+
+                <!-- footer -->
+                <footer>
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="logo-footer pull-left">
+                          <a href="https://mednet.med.ubc.ca/"><img src="../_catalogs/masterpage/images/footer-logo.png"/></a>
+                          <a href="#" class="toplink">Back To Top</a>
+                        </div>
+                        <address class="pull-right">
+                          <strong>Faculty of Medicine</strong><br>
+                          317 - 2194 Health Sciences Mall<br>
+                          Vancouver, BC Canada V6T 1Z3<br>
+                          Tel: <a href="tel:604-822-2421">604.822.2421</a> | Fax: <a href="fax:604-822-6061">604.822.6061</a><br>
+                        </address>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <ul class="list-inline center-block">
+                          <li>About Us</li>
+                          <li>Services &amp; Resources</li>
+                          <li>HR</li>
+                          <li>Teaching</li>
+                          <li>Research</li>
+                          <li>Team Sites</li>
+                          <li>Site Map</li>
+                          <li>Terms of Use</li>
+                          <li>MedNet Support</li>
+                          <li>Contact Us</li>
+                          <li>Copyright 2013 - UBC Faculty of Medicine</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+
+			</div>
+				</div>
+			    </div>
+			</div>
+			<!-- ===== STARTER: Main Scrolling Body Ends Here ================================================================================= -->
+			
+			<!-- ===== STARTER: Needed for form stuff ========================================================================================= -->
+			<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+				<SharePoint:formdigest runat="server" />
+			</asp:ContentPlaceHolder>
+		
+			<!-- ===== STARTER: Hidden Placeholders =========================================================================================== -->	
+			<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
+            <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+			<asp:ContentPlaceHolder ID="PlaceHolderMain" Visible="False" runat="server" />
+				
+		</SharePoint:SharePointForm>
+	
+		<!-- ===== STARTER: Adds extra stuff like another form for Survey management ====================================================== -->	
+		<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="../_catalogs/masterpage/js/bootstrap.min.js"></script>
+        <script src="../_catalogs/masterpage/js/bxslider.js"></script>
+        <script src="../_catalogs/masterpage/js/homepage.js"></script>
+      </body>
+</SharePoint:SPHtmlTag>
