@@ -1,3 +1,11 @@
+*{
+	font-family:"Segoe UI",Tahoma;
+}
+.col-xs-12{
+	max-width: 1500px;
+	margin:0 auto;
+	float:initial;
+}
 .top-nav{
 	background:#FFF;
 }
@@ -5,8 +13,9 @@
 	margin-top:3px;
 }
 header{
-	background:#002859;
+	background:#002145;
 	color:#FFF;
+	margin-bottom:22px
 }
 header nav{
 	display:block;
@@ -16,19 +25,47 @@ header nav{
 	margin:0;
 	
 }
+.homepage-content{
+	max-width: 1500px
+}
+.mednet-title{
+	float:right;
+	margin:65px 20px 0 0;
+}
+body { 
+  background: url(http://localhost/mednet/teams/images/bg-sun.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .logo{
 	padding:25px;
 	margin-right:20px;
-	border-right:3px solid white;
-	background:#002859;
+	background:#002145;
 }
 .logo img{
-	width:50px;
+	width:350px;
 }
 .site-nav{
-	background:#FFF;
+	background:#effaf0;
+	border-top: 5px solid #fff;
 }
-
+.navbar-nav li{
+	padding:10px 0;
+}
+.navbar-nav a{
+	color:#0c5e79;
+	font-size:18px;
+	font-family:"Segoe UI",Tahoma;
+	text-transform: uppercase;
+	border-right:1px solid #C2E0BC;
+	letter-spacing: 1px;
+	padding:5px 10px !important;
+}
+.navbar-nav li:last-of-type a{
+	border:0;
+}
 header h2{
 	margin:19px 0 0 0;
 	line-height:30px;
@@ -40,79 +77,143 @@ h2{
 }
 .toplink{
 	display:block;
+	line-height:40px;
+	color:#effaf0;	
 }
 
-.slider{
-	background: #8cc0c1;
-	border:2px solid #FFF;
-}
-.slider .bx-wrapper {
-	margin-bottom:31px;
-	margin-top:31px;
-}
-.slider .bx-wrapper .bx-viewport{
-	margin-top:30px;
-	background: #8cc0c1;
-	border:0;
-}
-
+.staff-spotlight-container,
 .announcements{
-	background: #8cc0c1;
-	color:#000;
-	font-size: 16px;
-	padding:15px;
-	border:2px solid #FFF;
+	height:400px;
 }
-.announcements h2{
-	position:relative;
-	top:-15px;
-	left:-15px;
-	padding:20px;
-	display:inline-block;
-	background:#003a40 ;
-	color:#FFF;
+.staff-spotlight-container img{
+	float:right;
+	margin:10px 0 0 20px;
 }
+.border-top{
+	/*pale green
+	border-top: 5px solid #cbe1d5;*/
+	border-top: 5px solid #62A53A;
+	padding-top: 10px;
+}
+/*middle column borders*/
+.row .fp-column:nth-child(even):after{
+	content:""; 
+	background: #62A53A; 
+	position: absolute; 
+	bottom: 30px; 
+	left: 0; 
+	height: 85%; 
+	width: 1px;
+}
+.row .fp-column:nth-child(even):before{
+	content:""; 
+	background: #62A53A; 
+	position: absolute; 
+	bottom: 30px; 
+	right: 0; 
+	height: 85%; 
+	width: 1px;	
+}
+/*END middle column borders*/
 .date{
 	font-style: italic;
 	display:block;
 	margin-left: -5px;
+	display: table-cell;
+	padding-right:20px;
+	color:#888;
+}
+.details{
+	display: table-cell;
+
 }
 .announcements li{
 	padding-bottom: 5px;
 	margin-left:5px;
 }
-
-
-.table-container {
-  display: table; 
-  width: 100%; 
-  height: 100%; 
-}
-.table-row {
-  display: table-row;
-}
-
-
 .fp-column{
-	border-width:1px 1px 0 1px;
-	border-color:#FFF;
-	border-style:solid;
-	display:table-cell;
-	background:#CCC;
 	padding:20px;
 	width:33%;
+	height:400px;
+	overflow: hidden;
+}
+.btn{
+	
+	border-radius: 0;
+}
+.btn:hover{
+	background: #64b63a;
+	color:#fff;
+	border:1px solid #FFF;
+	transition:background-color .2s, color .2s, border .2s;
+
+}
+.read-more{
+	color:#64b63a;
+	border:1px solid #64b63a;
+	text-transform: uppercase;
+	position:absolute;
+	bottom:20px;
+}
+.fp-column li{
+	margin:10px 0;
 }
 .fp-column h2{
 	margin-bottom:10px;
-	border-bottom:1px solid teal;
+	background-image: linear-gradient(to right, #62A53A 30%, rgba(98, 165, 58, 0) 20%);
+	background-position: bottom;
+	background-size: 8px 2px;
+	background-repeat: repeat-x;
+	line-height: 40px;
+	padding-bottom:5px;
 }
 footer .row{
  padding:20px 0;
- background:#FFF;
- border-top:1px solid #002145;
- border-bottom:1px solid #002145;;
+ background:#002145;
+ color:#fff;
 }
-
+footer a{
+	color:#effaf0;
+}
+footer a:hover{
+	text-decoration: underline;
+	color:#effaf0;
+}
+.footer-nav{
+	border-top:1px solid #2f5d7c;
+}
+.logo-footer img{
+	width:220px;
+}
 .center-block{
 	text-align: center;
 }
+.footer-links:first-of-type{
+	margin-top:20px;
+}
+.footer-links li{
+	border-right:1px solid #CCC;
+	padding:0 5px 0 0;
+}
+.footer-links li:last-of-type{
+	border:none;
+	padding:0;
+}
+#unit-social-icons{
+	font-size:35px;
+	float:right;
+}
+
+/*SLIDER BEGIN*/
+.slider{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+.slider p{
+	background:#ccc;
+}
+.slider-img{
+	width:100%;
+}
+/*SLIDER END*/
