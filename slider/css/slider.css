@@ -1,4 +1,7 @@
-.caption p{
-	color:red;
-	font-size:72px;
+.caption{
+	position:absolute;
+	bottom:0;
+	margin:0;
+	width:100%;
+	height:90px;
 }
