@@ -1,23 +1,74 @@
-$(document).ready(function(){
+jQuery(document).ready(function ($) {
 
-var counter = 0,
-$items = $('.diy-slideshow figure'),
-numItems = $items.length;
+    var _SlideshowTransitions = [
+        //Fade
+        { $Duration: 1200, $Opacity: 2 }
+    ];
 
-var showCurrent = function(){
-var itemToShow = Math.abs(counter%numItems);
-$items.removeClass('show');
-$items.eq(itemToShow).addClass('show');
-};
+    var options = { 
+            $AutoPlay: true,
+            $FillMode:4,
+            $AutoPlayInterval:3000,
+            $SlideDuration:1200,
 
-$('.next').on('click', function(){
-counter++;
-showCurrent();
-});
+            $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
+                $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
+                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $AutoCenter: 2,                                 //[Optional] Auto center arrows in parent container, 0 No, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                $Scale: false                                   //Scales bullets navigator or not while slider scale
+            },
 
-$('.prev').on('click', function(){
-counter--;
-showCurrent();
-});
+            $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+                $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                $AutoCenter: 1,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                $SpacingX: 12,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                $SpacingY: 4,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                $Orientation: 1,                                //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                $Scale: false                                   //Scales bullets navigator or not while slider scale
+            }                        
+        };
 
+
+    var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+
+        //responsive code begin
+        //you can remove responsive code if you don't want the slider scales
+        //while window resizes
+        /*
+
+        function ScaleSlider() {
+            var parentWidth = $('#slider1_container').parent().width();
+            if (parentWidth) {
+                jssor_slider1.$ScaleWidth(parentWidth);
+            }
+            else
+                window.setTimeout(ScaleSlider, 30);
+        }
+        //Scale slider after document ready
+        ScaleSlider();
+                                        
+        //Scale slider while window load/resize/orientationchange.
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        
+        */
+        //responsive code end
+
+
+
+
+	/*add controls*/
+    $('#slider-controls .pause').click(function(){
+    	jssor_slider1.$Pause();
+    	$('#slider-controls span').toggleClass("active");
+    });
+    $('#slider-controls .play').click(function(){
+    	jssor_slider1.$Play();
+    	$('#slider-controls span').toggleClass("active");
+    });
 });

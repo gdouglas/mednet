@@ -1,67 +1,108 @@
-.diy-slideshow{
-position: relative;
-display: block;
-overflow: hidden;
+#slider1_container{
+	width:100%;
+}
+.slides-container{
+	background:green;
+	width:100%;
+}
+.slides-container div,
+.slides-container figure{
+	width:100%;
+}
+.slides-container figure img{
+	width:100%;
+	height:auto;
+}
+#slider-controls{
+	position:absolute;
+	bottom:0;
+	right:0;
+	padding:3px 10px;
+	background:#ccc;
+	cursor: pointer;
+}
+#slider-controls span:hover{
+	color:#fff;
+}
+.active{
+	color:red;
 }
 figure{
-position: absolute;
-opacity: 0;
-transition: 1s opacity;
+	height:300px;
+	text-align: center;
+}
+figure img{
+	max-height:80%;
+	width:auto !important;
 }
 figcaption{
-position: absolute;
-font-family: sans-serif;
-font-size: .8em;
-bottom: .75em;
-right: .35em;
-padding: .25em;
-color: #fff;
-background: rgba(0,0,0, .25);
-border-radius: 2px;
+	text-align: justify;
+	margin:0 auto;
+	background:blue;
+	color:#fff;
+	min-height:20%;
+	padding:3px 55px 0 5px;
 }
-figcaption a{
-color: #fff;
+
+/* jssor slider bullet navigator*/
+.jssorb05 {
+    position: absolute;
 }
-figure.show{
-opacity: 1;
-position: static;
-transition: 1s opacity;
+.jssorb05 div,
+.jssorb05 div:hover,
+.jssorb05 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 16px;
+    height: 16px;
+    background: url(../images/b05.png) no-repeat;
+    overflow: hidden;
+    cursor: pointer;
 }
-.next, .prev{
-color: #fff;
-position: absolute;
-background: rgba(0,0,0, .6);
-top: 50%;
-z-index: 1;
-font-size: 2em;
-margin-top: -.75em;
-opacity: .3;
-user-select: none;
+.jssorb05 div {
+    background-position: -7px -7px;
+    top:-50px !important;
 }
-.next:hover, .prev:hover{
-cursor: pointer;
-opacity: 1;
+.jssorb05 div:hover,
+.jssorb05 .av:hover {
+    background-position: -37px -7px;
 }
-.next{
-right: 0;
-padding: 10px 5px 15px 10px;
-border-top-left-radius: 3px;
-border-bottom-left-radius: 3px;
+.jssorb05 .av {
+    background-position: -67px -7px;
 }
-.prev{
-left: 0;
-padding: 10px 10px 15px 5px;
-border-top-right-radius: 3px;
-border-bottom-right-radius: 3px;
+.jssorb05 .dn,
+.jssorb05 .dn:hover {
+    background-position: -97px -7px;
 }
- 
-figure{
-position: absolute;
-opacity: 0;
-transition: 1s opacity;
+
+/*slider arrows*/
+
+.jssora11l,
+.jssora11r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    background: url(../images/a11.png) no-repeat;
+    overflow: hidden;
 }
-figure.show{
-opacity: 1;
-position: static;
-transition: 1s opacity;
+.jssora11l {
+    background-position: -11px -41px;
+}
+.jssora11r {
+    background-position: -71px -41px;
+}
+.jssora11l:hover {
+    background-position: -131px -41px;
+}
+.jssora11r:hover {
+    background-position: -191px -41px;
+}
+.jssora11l.jssora11ldn {
+    background-position: -251px -41px;
+}
+.jssora11r.jssora11rdn {
+    background-position: -311px -41px;
 }
