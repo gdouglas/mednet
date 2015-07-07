@@ -10,6 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/homepage-styles.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/slider.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -66,12 +67,60 @@
       <div class="row">
         <!--BEGIN SLIDER-->
         <div class="col-md-4 fp-column">
-          <div class="border-top">
-            <ul class="slider">
-              <li><img src="images/pic1.jpg" class="slider-img" /><p>Congratulations to 14 Faculty of Medicine staff members who joined the 25+ Year Club this year. The Club honours those staff that have been with UBC for 25 years of service.</p></li>
-              <li><img src="images/pic2.jpg" class="slider-img" /><p>Congratulations to 14 Faculty of Medicine staff members who joined the 25+ Year Club this year. The Club honours those staff that have been with UBC for 25 years of service.</p></li>
-            </ul>
+            <div id="slider1_container" style="position: relative; top: 0px; left: 0px; max-width: 600px; height: 360px;">
+              <!-- Slides Container -->
+              <!-- Loading Screen -->
+              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                  <p>Loading slides</p>
+              </div>        
+              <div class="slides-container" u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; max-width: 600px; height: 360px;">
+                  <div>
+                      <figure>
+                          <img u="image" src="images/pic1.jpg" />
+                          <figcaption class="caption">
+                              Ut leo. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aliquam eu nunc. Proin magna. Etiam ut purus mattis mauris sodales aliquam.
+
+                              Sed aliquam ultrices mauris. In consectetuer turpis ut velit. Fusce commodo aliquam arcu. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac auctor orci leo non est. Sed a libero.
+
+                              Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Quisque id mi. Curabitur suscipit suscipit tellus. Suspendisse enim turpis, dictum sed, iaculis a, condimentum nec, nisi. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci.
+
+                              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Maecenas egestas arcu quis ligula mattis placerat. Vivamus aliquet elit ac nisl. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Pellentesque ut neque.
+
+                              Aenean imperdiet. Phasellus magna. Nunc nulla. Ut leo. Praesent metus tellus, elementum eu, semper a, adipiscing nec, purus.
+                          </figcaption>
+                      </figure>
+                  </div>
+                  <div>
+                      <figure>
+                          <img u="image" src="images/pic2.jpg" />
+                          <figcaption class="caption">
+                              Aenean imperdiet.
+                          </figcaption>
+                      </figure>
+                  </div>
+              </div>
+
+              <!--#region Bullet Navigator Skin Begin -->
+              <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
+              <!-- bullet navigator container -->
+              <div u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;">
+                  <!-- bullet navigator item prototype -->
+                  <div u="prototype"></div>
+              </div>
+              <!-- controls -->
+              <div id="slider-controls">
+                  <span class="play active"><i class="fa fa-play-circle"></i></span>
+                  <span class="pause"><i class="fa fa-pause"></i></span>
+              </div>
+              <!-- Arrow Left -->
+              <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;">
+              </span>
+              <!-- Arrow Right -->
+              <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
+              </span>
+              <!--#endregion Arrow Navigator Skin End -->
           </div>
+
         </div>        
         <!--END SLIDER-->
         <div class="col-md-4 fp-column announcements">
@@ -221,11 +270,10 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/homepage.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>    
+    <script type="text/javascript" src="js/slider.js"></script>
 
 
-    $( document ).ready(function() {
-    console.log( "ready!" );
-});
   </body>
 </html>
 <script>
