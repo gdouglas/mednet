@@ -22,16 +22,17 @@ header{
 	padding-left:0;
 }
 .side-nav{
-	padding-left:15px;
+/*	margin-left:15px;*/
 	margin-bottom:5px;
 	/*background:#c6dce3;*/ /*#effaf0;*/
 	background:#c6d6d0;
+	background-color: #fff;
 }
 .side-nav a{
 	color:#000;
 }
 .side-nav li{
-	border-right:1px solid #ddd;
+	border-right:1px solid #002145;
 }
 .nav .sub-nav li{
 }
@@ -44,6 +45,10 @@ header{
 }
 .content{
 	margin-left: 0;
+}
+.current{
+	background:#fff;
+		background:#c6d6d0;
 }
 h1{
 	color:#002145;
