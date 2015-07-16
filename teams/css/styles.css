@@ -53,3 +53,53 @@ header{
 h1{
 	color:#002145;
 }
+.whats-new{
+	background:#2e7453;
+	color:#fff;
+	padding:15px;
+	font-weight: lighter;
+	font-size: 16px;
+}
+.whats-new h2{
+	margin-bottom:10px;
+		font-weight: lighter;
+}
+.whats-new img{
+	float:left;
+	margin: 0 10px 0 0;
+	-webkit-box-shadow: 1px 1px 3px 1px rgba(38,97,68,1);
+	-moz-box-shadow: 1px 1px 3px 1px rgba(38,97,68,1);
+	box-shadow: 1px 1px 3px 1px rgba(38,97,68,1);
+
+}
+.whats-new dl{
+	padding:0 0 0 10px;
+}
+.whats-new .fn{
+	font-size:22px;
+		font-weight: lighter;
+}
+.whats-new a{
+	color:#fff;
+	text-decoration:underline;
+	white-space: true;
+	word-wrap:break-all;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;	
+}
+.whats-new a:hover{
+	color:#ccc;
+}
+/*hack styles, do not put these in prod*/
+.ms-rte-layoutszone-outer h2{
+	font-size:1.46em;
+  font-family: "Segoe UI Semilight","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+  color: #0072C6;
+  font-weight: 400;
+  margin: 0 0 5px 0;
+}
+.ms-rte-layoutszone-outer td{
+	padding:0 5px 50px 5px !important;
+	vertical-align: top;
+}
