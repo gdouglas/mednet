@@ -1,5 +1,34 @@
+.col-xs-12{
+	max-width: 1600px;
+	margin:0 auto;
+	float:initial;
+}
+.utility-links a{
+	color:#002145;
+}
+.top-nav{
+	background:#FFF;
+}
+.top-nav form{
+	margin-top:3px;
+}
+header{
+	background:#002145;
+	color:#FFF;
+	margin-bottom:22px
+}
+header nav{
+	display:block;
+}
 header{
 	margin-bottom:5px;
+}
+.mednet-title{
+	float:left;
+	margin:65px 20px 0 0;
+}
+header .logo{
+	float:right;
 }
 .breadcrumb>li+li:before{
 	content:"\003e";
@@ -7,24 +36,26 @@ header{
 }
 /*top nav*/
 .site-nav{
-	background:#effaf0;
+	/*background:#effaf0;*/
+	background: #3868A6;
 	margin-bottom: 0;
 	border:0;
-	border-top: 5px solid #fff;
+	border-top: 2px solid #fff;
 }
 .site-nav .navbar-nav>li>a{
-	color:#0c5e79;
+	/*color:#0c5e79;*/
+	color:#fff;
 }
 .site-nav .navbar-nav>li>a:focus,
 .site-nav .navbar-nav>li>a:hover{
 	background: #eee;
+	color:#002145;
 }
 .navbar-nav li{
 	/*padding:10px 0;*/
 	border:0;
 }
 .navbar-nav a{
-	color:#0c5e79;
 	font-size:18px;
 	font-family:"Segoe UI",Tahoma;
 	text-transform: uppercase;

@@ -1,11 +1,7 @@
 *{
 	font-family:"Segoe UI",Tahoma;
 }
-.col-xs-12{
-	max-width: 1600px;
-	margin:0 auto;
-	float:initial;
-}
+
 .top-nav{
 	background:#FFF;
 }
@@ -46,24 +42,7 @@ header nav{
 	background:#3868A6;/*#D7E0D8;*/
 	border-top: 5px solid #fff;
 }
-.navbar-nav li{
-	padding:10px 0;
-}
-.navbar-nav a{
-	color:#fff; /*#0c5e79;*/
-	font-size:18px;
-	font-family:"Segoe UI",Tahoma;
-	text-transform: uppercase;
-	border-right:1px solid #C2E0BC;
-	letter-spacing: 1px;
-	padding:5px 10px !important;
-}
-.navbar-nav a:hover{
-	color:#000;
-}
-.navbar-nav li:last-of-type a{
-	border:0;
-}
+
 header h2{
 	margin:19px 0 0 0;
 	line-height:30px;

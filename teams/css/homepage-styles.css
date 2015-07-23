@@ -6,20 +6,7 @@
 	margin:0 auto;
 	float:initial;
 }
-.top-nav{
-	background:#FFF;
-}
-.top-nav form{
-	margin-top:3px;
-}
-header{
-	background:#002145;
-	color:#FFF;
-	margin-bottom:22px
-}
-header nav{
-	display:block;
-}
+
 .intranet-title{
 	font-size:45px;
 	margin:0;
@@ -28,10 +15,7 @@ header nav{
 .homepage-content{
 	max-width: 1500px
 }
-.mednet-title{
-	float:right;
-	margin:65px 20px 0 0;
-}
+
 body { 
   background: url(http://localhost/mednet/teams/images/bg-sun.jpg) no-repeat center center; 
   -webkit-background-size: cover;
@@ -98,7 +82,6 @@ h2{
 }
 /*END middle column borders*/
 .date{
-	font-style: italic;
 	display:block;
 	margin-left: -5px;
 	display: table-cell;
@@ -126,9 +109,7 @@ h2{
 .btn:hover{
 	background: #64b63a;
 	color:#fff;
-	border:1px solid #FFF;
-	transition:background-color .2s, color .2s, border .2s;
-
+	transition:background-color .2s, color .2s;
 }
 .read-more{
 	color:#64b63a;
@@ -199,3 +180,7 @@ footer a:hover{
 	width:100%;
 }
 /*SLIDER END*/
+
+.staff-spotlight-name a{
+	color:#002145;
+}
