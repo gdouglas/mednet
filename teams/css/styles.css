@@ -5,6 +5,38 @@ header{
 	content:"\003e";
 
 }
+/*top nav*/
+.site-nav{
+	background:#effaf0;
+	margin-bottom: 0;
+	border:0;
+	border-top: 5px solid #fff;
+}
+.site-nav .navbar-nav>li>a{
+	color:#0c5e79;
+}
+.site-nav .navbar-nav>li>a:focus,
+.site-nav .navbar-nav>li>a:hover{
+	background: #eee;
+}
+.navbar-nav li{
+	/*padding:10px 0;*/
+	border:0;
+}
+.navbar-nav a{
+	color:#0c5e79;
+	font-size:18px;
+	font-family:"Segoe UI",Tahoma;
+	text-transform: uppercase;
+	border: 0;
+	border-right:1px solid #C2E0BC;
+	letter-spacing: 1px;
+	
+}
+.navbar-nav li:last-of-type a{
+	border:0;
+}
+/*end top nav*/
 .faculty-title{
 	margin:0;
 	line-height:55px;
@@ -42,6 +74,7 @@ header{
 }
 .content h1{
 	margin-top:5px;
+	color:#002145;
 }
 .content{
 	margin-left: 0;
@@ -49,9 +82,6 @@ header{
 .current{
 	background:#fff;
 		background:#c6d6d0;
-}
-h1{
-	color:#002145;
 }
 .whats-new{
 	background:#2e7453;

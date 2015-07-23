@@ -47,25 +47,7 @@ body {
 .logo img{
 	width:350px;
 }
-.site-nav{
-	background:#effaf0;
-	border-top: 5px solid #fff;
-}
-.navbar-nav li{
-	padding:10px 0;
-}
-.navbar-nav a{
-	color:#0c5e79;
-	font-size:18px;
-	font-family:"Segoe UI",Tahoma;
-	text-transform: uppercase;
-	border-right:1px solid #C2E0BC;
-	letter-spacing: 1px;
-	padding:5px 10px !important;
-}
-.navbar-nav li:last-of-type a{
-	border:0;
-}
+
 header h2{
 	margin:19px 0 0 0;
 	line-height:30px;
