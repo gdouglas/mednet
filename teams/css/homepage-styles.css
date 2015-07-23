@@ -1,16 +1,10 @@
 *{
 	font-family:"Segoe UI",Tahoma;
 }
-.col-xs-12{
-	max-width: 1500px;
-	margin:0 auto;
-	float:initial;
-}
 
 .intranet-title{
 	font-size:45px;
-	margin:0;
-	
+	margin:0;	
 }
 .homepage-content{
 	max-width: 1500px
