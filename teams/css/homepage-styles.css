@@ -40,9 +40,13 @@ h2{
 	line-height:40px;
 	color:#effaf0;	
 }
-
+.fp-column{
+	padding-bottom:50px;
+	overflow: hidden;
+}
 .staff-spotlight-container,
-.announcements{
+.announcements,
+.fp-column{
 	height:400px;
 }
 .staff-spotlight-container img{
@@ -90,10 +94,8 @@ h2{
 	padding-bottom: 5px;
 	margin-left:5px;
 }
-.fp-column{
-	padding:20px;
-	width:33%;
-	height:400px;
+.fp-column .list-unstyled{
+	height:275px;
 	overflow: hidden;
 }
 .btn{
