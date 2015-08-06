@@ -3,6 +3,9 @@
 	margin:0 auto;
 	float:initial;
 }
+.container-fluid{
+	max-width: 1620px
+}
 .utility-links a{
 	color:#002145;
 }
@@ -60,12 +63,12 @@ header .logo{
 	font-family:"Segoe UI",Tahoma;
 	text-transform: uppercase;
 	border: 0;
-	border-right:1px solid #C2E0BC;
 	letter-spacing: 1px;
+	margin-right:30px;
 	
 }
 .navbar-nav li:last-of-type a{
-	border:0;
+	margin-right:0;
 }
 /*end top nav*/
 .faculty-title{
