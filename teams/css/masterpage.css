@@ -1,6 +1,10 @@
 *{
 	font-family:"Segoe UI",Tahoma;
 }
+.row-content{
+	max-width: 1620px;
+	margin:0 auto;
+}
 .row{
 	/*margin: 0 !important;
 	this rule fixes a wierd overlap in the nav, probably causes issues*/
@@ -47,11 +51,48 @@ header nav{
 .logo img{
 	width:350px;
 }
+/*top nav*/
 .site-nav{
-	background:#3868A6;/*#D7E0D8;*/
-	border-top: 5px solid #fff;
+	/*background:#effaf0;*/
+	background: #3868A6;
+	margin-bottom: 0;
+	border:0;
 }
-
+div.site-nav{
+	border-top: 2px solid #fff;
+}
+.site-nav .navbar-nav>li>a{
+	/*color:#0c5e79;*/
+	color:#fff;
+}
+.site-nav .navbar-nav>li>a:focus,
+.site-nav .navbar-nav>li>a:hover{
+	background: #eee;
+	color:#002145;
+}
+.navbar-nav li{
+	/*padding:10px 0;*/
+	border:0;
+}
+.navbar-nav a{
+	font-size:18px;
+	font-family:"Segoe UI",Tahoma;
+	text-transform: uppercase;
+	border: 0;
+	letter-spacing: 1px;
+	margin-right:30px;
+	
+}
+.navbar-nav li:last-of-type a{
+	margin-right:0;
+}
+.navbar .navbar-collapse{
+	padding:0;
+}
+.navbar .container-fluid{
+	padding-left:5px;
+}
+/*end top nav*/
 header h2{
 	margin:19px 0 0 0;
 	line-height:30px;
@@ -151,6 +192,9 @@ footer a:hover{
 .footer-links li:last-of-type{
 	border:none;
 	padding:0;
+}
+#unit-social-icons strong{
+	font-size:20px;
 }
 #unit-social-icons{
 	font-size:35px;

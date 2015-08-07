@@ -1,10 +1,6 @@
 .col-xs-12{
-	max-width: 1600px;
 	margin:0 auto;
 	float:initial;
-}
-.container-fluid{
-	max-width: 1620px
 }
 .utility-links a{
 	color:#002145;
@@ -12,8 +8,8 @@
 .top-nav{
 	background:#FFF;
 }
-.top-nav form{
-	margin-top:3px;
+.top-nav .ms-srch-sb{
+	margin-top:11px;
 }
 header{
 	background:#002145;
@@ -37,40 +33,6 @@ header .logo{
 	content:"\003e";
 
 }
-/*top nav*/
-.site-nav{
-	/*background:#effaf0;*/
-	background: #3868A6;
-	margin-bottom: 0;
-	border:0;
-	border-top: 2px solid #fff;
-}
-.site-nav .navbar-nav>li>a{
-	/*color:#0c5e79;*/
-	color:#fff;
-}
-.site-nav .navbar-nav>li>a:focus,
-.site-nav .navbar-nav>li>a:hover{
-	background: #eee;
-	color:#002145;
-}
-.navbar-nav li{
-	/*padding:10px 0;*/
-	border:0;
-}
-.navbar-nav a{
-	font-size:18px;
-	font-family:"Segoe UI",Tahoma;
-	text-transform: uppercase;
-	border: 0;
-	letter-spacing: 1px;
-	margin-right:30px;
-	
-}
-.navbar-nav li:last-of-type a{
-	margin-right:0;
-}
-/*end top nav*/
 .faculty-title{
 	margin:0;
 	line-height:55px;
