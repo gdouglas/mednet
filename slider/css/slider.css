@@ -1,47 +1,56 @@
 #slider1_container{
-	width:100%;
+    width:100%;
 }
 .slides-container{
-	background:green;
-	width:100%;
+   /* border-bottom:1px solid green;*/
+    width:100%;
 }
 .slides-container div,
 .slides-container figure{
-	width:100%;
+    width:100%;
 }
 .slides-container figure img{
-	width:100%;
-	height:auto;
+    width:100%;
+    height:auto;
 }
 #slider-controls{
-	position:absolute;
-	bottom:0;
-	right:0;
-	padding:3px 10px;
-	background:#ccc;
-	cursor: pointer;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:3px 10px;
+    
+    cursor: pointer;
+    border-right:1px solid #fff;
+}
+#slider-controls span {
+    display:block;
+}
+#slider-controls span i{
+    font-size:18px;
 }
 #slider-controls span:hover{
-	color:#fff;
+    color:#fff;
 }
 .active{
-	color:red;
+    color:#000;
 }
 figure{
-	height:300px;
-	text-align: center;
+    height:100%;
+    text-align: center;
 }
 figure img{
-	max-height:80%;
-	width:auto !important;
+    max-height:80%;
+    width:auto !important;
 }
 figcaption{
-	text-align: justify;
-	margin:0 auto;
-	background:blue;
-	color:#fff;
-	min-height:20%;
-	padding:3px 55px 0 5px;
+    text-align: justify;
+    margin:0 auto;
+    background:#c3d0db;
+    border-right:1px solid #fff;
+    min-height:20%;
+    padding:3px 40px 0 5px;
+    position:relative;
+    bottom:0;
 }
 
 /* jssor slider bullet navigator*/
@@ -61,7 +70,7 @@ figcaption{
 }
 .jssorb05 div {
     background-position: -7px -7px;
-    top:-50px !important;
+    top:-70px !important;
 }
 .jssorb05 div:hover,
 .jssorb05 .av:hover {
