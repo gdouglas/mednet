@@ -9,6 +9,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../teams/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../teams/css/font-awesome.min.css" rel="stylesheet">    
     <link rel="stylesheet" type="text/css" href="css/slider.css">
     <style>
     .fp-column{
@@ -31,13 +32,13 @@
             <div id="slider1_container" style="position: relative; top: 0px; left: 0px; max-width: 600px; height: 360px;">
               <!-- Slides Container -->
               <!-- Loading Screen -->
-              <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+              <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
                   <p>Loading slides</p>
               </div>        
-              <div class="slides-container" u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; max-width: 600px; height: 360px;">
+              <div class="slides-container" data-u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; max-width: 600px;">
                   <div>
                       <figure>
-                          <img u="image" src="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/_catalogs/masterpage/images/pic1.jpg" />
+                          <img data-u="image" src="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/_catalogs/masterpage/images/pic1.jpg" />
                           <figcaption class="caption">
                               Ut leo. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aliquam eu nunc. Proin magna. Etiam ut purus mattis mauris sodales aliquam.
 
@@ -53,9 +54,9 @@
                   </div>
                   <div>
                       <figure>
-                          <img u="image" src="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/_catalogs/masterpage/images/pic2.jpg" />
+                          <img data-u="image" src="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/_catalogs/masterpage/images/pic2.jpg" />
                           <figcaption class="caption">
-                              Aenean imperdiet.
+                              Ut leo. Maecenas ullamcorper, dui et placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et lorem. Aliquam eu nunc. Proin magna. Etiam ut purus mattis mauris sodales aliquam. Plit. Fusce commodo aliquam arcu. <a href="#">Read More...</a>
                           </figcaption>
                       </figure>
                   </div>
@@ -64,37 +65,19 @@
               <!--#region Bullet Navigator Skin Begin -->
               <!-- Help: http://www.jssor.com/development/slider-with-bullet-navigator-jquery.html -->
               <!-- bullet navigator container -->
-              <div u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;">
+              <div data-u="navigator" class="jssorb05">
                   <!-- bullet navigator item prototype -->
-                  <div u="prototype"></div>
-              </div>
-              <!-- controls -->
-              <div id="slider-controls">
-                  <span class="play active"><i class="fa fa-play-circle"></i></span>
-                  <span class="pause"><i class="fa fa-pause"></i></span>
+                  <div data-u="prototype"></div>
               </div>
               <!-- Arrow Left -->
-              <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;">
+              <span data-u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;">
               </span>
               <!-- Arrow Right -->
-              <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
+              <span data-u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
               </span>
               <!--#endregion Arrow Navigator Skin End -->
-          </div>
-        </div>        
+          </div>       
         <!--END SLIDER-->
-            <!--#endregion Bullet Navigator Skin End -->
-            
-            <!--#region Arrow Navigator Skin Begin -->
-            <!-- Help: http://www.jssor.com/development/slider-with-arrow-navigator-jquery.html -->
-            <!-- Arrow Left -->
-            <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;">
-            </span>
-            <!-- Arrow Right -->
-            <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
-            </span>
-            <!--#endregion Arrow Navigator Skin End -->
-        </div>
         <!-- Jssor Slider End -->
     </div>
 
@@ -102,7 +85,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="../teams/js/bootstrap.min.js"></script>
-    <script src="js.docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
