@@ -11,27 +11,8 @@
 .top-nav .ms-srch-sb{
 	margin-top:11px;
 }
-header{
-	background:#002145;
-	color:#FFF;
-	margin-bottom:22px
-}
-header nav{
-	display:block;
-}
-header{
-	margin-bottom:5px;
-}
-.mednet-title{
-	float:left;
-	margin:65px 20px 0 0;
-}
-header .logo{
-	float:right;
-}
 .breadcrumb>li+li:before{
 	content:"\003e";
-
 }
 .faculty-title{
 	margin:0;
