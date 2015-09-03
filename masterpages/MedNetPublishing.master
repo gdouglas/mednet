@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" %>
+<%@Master language="C#"%>
 <%@Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
 <%@Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
 <%@Register TagPrefix="wssucmui" TagName="MUISelector" Src="~/_controltemplates/15/MUISelector.ascx"%>
@@ -10,25 +10,28 @@
 <!DOCTYPE HTML>
 <SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
     <head runat="server">
-        <meta http-equiv="X-UA-Compatible" content="IE=10" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="utf-8" />
         <meta name="GENERATOR" content="Microsoft SharePoint" />
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="Expires" content="0" />
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
         <!-- ===== STARTER: Robots  ======================================================================================================= -->
         <SharePoint:RobotsMetaTag runat="server" />
-
-        <!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== -->	
+		
+		<!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== -->	
 		<SharePoint:SPShortcutIcon runat="server" IconUrl="/_catalogs/masterpage/StarterBranding/favicon.ico" />
 		<SharePoint:SPPinnedSiteTile runat="server" TileUrl="/_catalogs/masterpage/StarterBranding/metrotile.png" TileColor="#0072C6" />				
 		
-		<!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
-		<SharePoint:PageTitle runat="server">
-            <asp:ContentPlaceHolder id="PlaceHolderPageTitle" Visible="false" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder>
-		</SharePoint:PageTitle>
 
-        <!-- ===== STARTER: SP Scripts and CSS  =========================================================================================== -->
+		    <!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
+		    <SharePoint:PageTitle runat="server">
+                <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder>
+		    </SharePoint:PageTitle>
+
+		
+		<!-- ===== STARTER: SP Scripts and CSS  =========================================================================================== -->
 		<SharePoint:StartScript runat="server" />
 		<SharePoint:CssLink runat="server" Version="15" />
 		<SharePoint:CacheManifestLink runat="server" />
@@ -42,329 +45,392 @@
 		<SharePoint:SoapDiscoveryLink runat="server" />
 
         <!-- Bootstrap -->
-        <link href="../masterpage/css/bootstrap.min.css" rel="stylesheet"/>
-        <link href="../masterpage/css/homepage-styles.css" rel="stylesheet"/>
-        <link href="../masterpage/css/bx-slider.css" rel="stylesheet"/>
-        <link href="../masterpage/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/homepage-styles.css" rel="stylesheet">
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/masterpage.css" rel="stylesheet">
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/styles.css" rel="stylesheet">
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/2013/MedNetBranding/_catalogs/masterpage/css/slider.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!-- WARNING: Respond.js doesnt work if you view the page via file:// -->
         <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
-        <!-- ===== STARTER: Additional header placeholder - overridden by asp:content on pages or page layouts  =========================== -->
+	
+		<!-- ===== STARTER: Additional header placeholder - overridden by asp:content on pages or page layouts  =========================== -->
 		<asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
 		<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
 
-        <!-- ===== STARTER: Core SharePoint CSS =========================================================================================== -->
+		<!-- ===== STARTER: Core SharePoint CSS =========================================================================================== -->
 		<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
-    </head>
 
+		<!-- ===== STARTER: Custom CSS  =================================================================================================== -->
+		<SharePoint:CssRegistration ID="CssRegistration1" name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/style.css %&gt;" runat="server" after="SharepointCssFile" />	
+	</head>
+	
     <body>
-
-	    <!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
-	    <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
-	    <SharePoint:ImageLink runat="server" />
-	    <SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
+		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
+		<SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+		<SharePoint:ImageLink runat="server" />
+		<SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
 		
-	    <!-- ===== STARTER: SharePoint Reqs this for adding columns ===================================================== -->
-	    <script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
+		    <!-- ===== STARTER: SharePoint Reqs this for adding columns ===================================================== -->
+		    <script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
 
-	    <!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
-	    <WebPartPages:SPWebPartManager runat="server" />		
+		    <!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
+		    <WebPartPages:SPWebPartManager runat="server" />		
 		
-	    <!-- ===== STARTER: ScriptManager ===================================================== -->
-	    <asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
-
-        <!-- ===== STARTER: Ribbon Code Starts Here ===================================================== -->
-	    <PublishingRibbon:PublishingRibbon runat="server" />
-	    <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
-
-        <!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
-		<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
-			<wssuc:Welcome runat="server" EnableViewState="false" />
-		</SharePoint:SPSecurityTrimmedControl>
-			
-		<!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
-		<div id="s4-workspace">
-		    <div id="s4-bodyContainer">
-				
-			    <!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
-			    <div class="customWidth">
-				
-				    <!-- ===== STARTER: SharePoint looks for this div ID s4-titlerow for the "Focus on Content" Button ======================== -->
-				    <div id="s4-titlerow" style="display:none!important; border:5px solid;">
-					
-			            <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
-				        <div class="ms-dialogHidden" style="display:none;">
-						    <SharePoint:SPLinkButton runat="server" NavigateUrl="~sitecollection/">
-							    <SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/logo.png %&gt;" AlternateText="Back to Home" runat="server" />
-						    </SharePoint:SPLinkButton>
-					    </div>
-						
-					    <!-- ===== STARTER: Global navigation ================================================================================= -->
-					    <div class="ms-dialogHidden">
-						    <div class="ms-displayInline ms-core-navigation ms-dialogHidden">
-							    <PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" />
-							    <SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />												
-						    </div>
-					    </div>
-						
-					    <!-- ===== STARTER: Search Control ==================================================================================== -->
-					    <div class="ms-dialogHidden">
-						    <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
-							    <!--<SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" /> -->
-						    </asp:ContentPlaceHolder>
-					    </div>
-						
-						<!-- ===== STARTER: Breadcrumbs ======================================================================================= -->
-					    <div class="ms-dialogHidden">
-						    <h1 id="pageTitle" class="ms-core-pageTitle">	
-							    <!-- ===== STARTER: SP Reqs DeltaPlaceHolderPageTitleInTitleArea and PlaceHolderPageTitleInTitleArea for adding Apps in Site Content =================== -->
-							    <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">							
-								    <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" Visible="False" runat="server">
-									    <SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
-										    <PATHSEPARATORTEMPLATE>
-											    <SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
-										    </PATHSEPARATORTEMPLATE>
-									    </SharePoint:SPTitleBreadcrumb>
-								    </asp:ContentPlaceHolder>
-							    </SharePoint:AjaxDelta>									
-
-							    <div class="ms-displayInlineBlock ms-normalWrap">
-								    <a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;">
-									    <span id="ms-pageDescriptionImage">&#160;</span>
-								    </a>
-								    <span class="ms-accessible" id="ms-pageDescription">
-									    <asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
-								    </span>
-								    <SharePoint:ScriptBlock runat="server">
-									    _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
-								    </SharePoint:ScriptBlock>
-							    </div>
-						    </h1>
-					    </div>
-			    	</div>
-
-                    <header>
-                        <div class="container-fluid">
-                            <div class="row top-nav">
-                                <div class="col-xs-12">
-                                    <ul class="nav nav-pills pull-left utility-links">
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">Contact List</a></li>
-                                        <li><a href="#">UBC Directory</a></li>
-                                        <li><a href="#">med.ubc.ca</a></li>
-                                    </ul>
-                                    <form class="search col-lg-4 pull-right">
-                                      <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search Mednet for...">
-                                        <span class="input-group-btn">
-                                          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                                        </span>                
-                                      </div>           
-                                    </form>
-                                </div>
+		    <!-- ===== STARTER: ScriptManager ===================================================== -->
+		    <asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+		
+            <!-- ===== STARTER: Ribbon Code Starts Here ===================================================== -->
+	        <div id="suiteBar" class="ms-dialogHidden noindex">
+			    <div id="suiteBarLeft">
+                    <div class="ms-table ms-fullWidth">
+                        <div class="ms-tableRow">
+                            <div class="ms-tableCell ms-verticalAlignMiddle">
+                                <SharePoint:DelegateControl id="ID_SuiteBarBrandingDelegate" ControlId="SuiteBarBrandingDelegate" runat="server" />
                             </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-xs-12">
-                            <a href="https://mednet.med.ubc.ca/" title="MedNet" class="pull-left logo"><img src="../_catalogs/masterpage/images/unit_sig.png" alt="UBC"/></a>
-                            <h1 class="intranet-title">
-                              <span class="mednet-title">MedNet</span>
-                            </h1>
-                          </div>
-                        </div>
-
-                        <div class="row site-nav">
-                          <nav class="col-xs-12">
-                            <ul class="nav navbar-nav">
-                              <li><a href="#">About Us</a></li> 
-                              <li><a href="#">Services &amp; Resources</a></li> 
-                              <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/hr/Pages/default.aspx">HR</a></li> 
-                              <li><a href="#">Teaching</a></li> 
-                              <li><a href="#">Research</a></li> 
-                              <li><a href="#">Team Sites</a></li>             
-                            </ul>
-                          </nav>
-                        </div>      
-                 </header>
-
-                <!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
-				<!-- ===== STARTER: Main Content ========================================================================================== -->
-				<div id="contentBox">
-                    <div class="container-fluid content">
-                        <div data-name="ContentPlaceHolderMain">
-                            <div class="row">
-                                <div class="col-md-2 side-nav-container">
-					                <!-- ===== STARTER: Current navigation ==================================================================================== -->
-					                <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
-					
-						                <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
-						                <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
-							                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
-								                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
-								                <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
-								                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
-								                <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
-								                <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
-								
-								                <div class="ms-core-sideNavBox-removeLeftMargin">
-									                <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
-										                <!-- ===== STARTER: Current navigation Data Provider ==================================================================================== -->
-										                <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
-											                <Template_Controls><asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server"/></Template_Controls>
-										                </SharePoint:DelegateControl>
-										
-										                <!-- ===== STARTER: Current navigation menu ==================================================================================== -->
-										                <SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
-									                </SharePoint:SPNavigationManager>
-									
-									                <!-- ===== STARTER: Tree view ==================================================================================== -->
-									                <SharePoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
-										                <SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
-											                <Template_Controls>
-											                <SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true"/>
-											                <SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;">
-												                <SharePoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=23" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=23" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=23" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=23" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=23"></SharePoint:SPTreeView>
-											                </SharePoint:SPRememberScroll>
-											                </Template_Controls>
-										                </SharePoint:DelegateControl>
-									                </SharePoint:SPNavigationManager>
-								
-									                <!-- ===== STARTER: Site Contents Link ==================================================================================== -->
-									                <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
-										                <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" /></div>
-									                </asp:ContentPlaceHolder>
-								                </div>
-							                </asp:ContentPlaceHolder>
-						                </SharePoint:AjaxDelta>
-					                </div>	
+                            <SharePoint:AjaxDelta runat="server" id="DeltaSuiteLinks" BlockElement="true" CssClass="ms-core-deltaSuiteLinks">
+                                <div id="suiteLinksBox">
+                                    <SharePoint:DelegateControl id="ID_SuiteLinksDelegate" ControlId="SuiteLinksDelegate" runat="server" />
                                 </div>
-                          </div>
-
-                          <div class="col-xs-10">
-                              <asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" />           
-                          </div>
-                          <div class="col-xs-10">
-                              <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
-                              <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">
-                              <!-- ===== STARTER: This decides where the web part menu lives ===================================================== -->
-				              <div id="DeltaPlaceHolderMain" runat="server">
-
-                
-                                    </div>
-                                </asp:ContentPlaceHolder>
-                            </div>     
-          
-          
-             
-      </div>
-  
-                    
-                
-                
-                </div>
-                </div>
-
-
+                            </SharePoint:AjaxDelta>
+                        </div>
+                    </div>
 			    </div>
+			    <div id="suiteBarRight">
+                    <SharePoint:AjaxDelta runat="server" id="DeltaSuiteBarRight" CssClass="ms-core-deltaSuiteBarRight" BlockElement="true">
+                        <div id="welcomeMenuBox">
+                            <wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" />
+
+                        </div>
+                        <div id="suiteBarButtons">
+                            <span class="ms-siteactions-root" id="siteactiontd">
+                                <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain"	PrefixHtml="" SuffixHtml="" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" ThemeKey="spcommon" MenuAlignment="Right" MenuNotVisibleHtml="&amp;nbsp;" LargeIconMode="false">
+                                    <CustomTemplate>
+                                        <SharePoint:FeatureMenuTemplate runat="server" FeatureScope="Site" Location="Microsoft.SharePoint.StandardMenu" GroupId="SiteActions" UseShortId="true">
+                                            <SharePoint:MenuItemTemplate runat="server"  id="MenuItem_ShareThisSite"  Text="<%$Resources:wss,siteactions_sharethissite%>"  Description="<%$Resources:wss,siteactions_sharethissitedescription%>"  MenuGroupId="100"  Sequence="110"  UseShortId="true"  PermissionsString="ViewPages"  PermissionMode="Any" />
+                                            <SharePoint:MenuItemTemplate runat="server" id="MenuItem_EditPage"  Text="<%$Resources:wss,siteactions_editpage15%>"  Description="<%$Resources:wss,siteactions_editpagedescriptionv4%>"  ImageUrl="/_layouts/15/images/ActionsEditPage.png?rev=23"  MenuGroupId="200"  Sequence="210"  PermissionsString="EditListItems"  ClientOnClickNavigateUrl="javascript:ChangeLayoutMode(false);" />
+                                            <SharePoint:MenuItemTemplate runat="server" id="MenuItem_CreatePage"  Text="<%$Resources:wss,siteactions_addpage15%>"  Description="<%$Resources:wss,siteactions_createpagedesc%>"  ImageUrl="/_layouts/15/images/NewContentPageHH.png?rev=23"  MenuGroupId="200"  Sequence="220"  UseShortId="true"  ClientOnClickScriptContainingPrefixedUrl="OpenCreateWebPageDialog('~siteLayouts/createwebpage.aspx')"  PermissionsString="AddListItems, EditListItems"  PermissionMode="All" />
+                                            <SharePoint:MenuItemTemplate runat="server" id="MenuItem_Create"  Text="<%$Resources:wss,siteactions_addapp15%>"  Description="<%$Resources:wss,siteactions_createdesc%>"  MenuGroupId="200"  Sequence="230"  UseShortId="true"  ClientOnClickScriptContainingPrefixedUrl="GoToPage('~siteLayouts/addanapp.aspx')"  PermissionsString="ManageLists, ManageSubwebs"  PermissionMode="Any" />
+                                            <SharePoint:MenuItemTemplate runat="server" id="MenuItem_ViewAllSiteContents"  Text="<%$Resources:wss,quiklnch_allcontent_15%>"  Description="<%$Resources:wss,siteactions_allcontentdescription%>"  ImageUrl="/_layouts/15/images/allcontent32.png?rev=23"  MenuGroupId="200"  Sequence="240"  UseShortId="true"  ClientOnClickNavigateUrl="~siteLayouts/viewlsts.aspx"  PermissionsString="ViewFormPages"  PermissionMode="Any" />
+                                            <SharePoint:MenuItemTemplate runat="server" id="MenuItem_ChangeTheLook"  Text="<%$Resources:wss,siteactions_changethelook15%>"  Description="<%$Resources:wss,siteactions_changethelookdesc15%>"  MenuGroupId="300"  Sequence="310"  UseShortId="true"  ClientOnClickNavigateUrl="~siteLayouts/designgallery.aspx"  PermissionsString="ApplyThemeAndBorder,ApplyStyleSheets,Open,ViewPages,OpenItems,ViewListItems"  PermissionMode="All" />
+                                            <SharePoint:MenuItemTemplate runat="server" id="MenuItem_Settings"  Text="<%$Resources:wss,siteactions_settings15%>"  Description="<%$Resources:wss,siteactions_sitesettingsdescriptionv4%>"  ImageUrl="/_layouts/15/images/settingsIcon.png?rev=23"  MenuGroupId="300"  Sequence="320"  UseShortId="true"  ClientOnClickScriptContainingPrefixedUrl="GoToPage('~siteLayouts/settings.aspx')"  PermissionsString="EnumeratePermissions,ManageWeb,ManageSubwebs,AddAndCustomizePages,ApplyThemeAndBorder,ManageAlerts,ManageLists,ViewUsageData"  PermissionMode="Any" />
+                                            <SharePoint:MenuItemTemplate runat="server" id="MenuItem_SwitchToMobileView"  Visible="false"  Text="<%$Resources:wss,siteactions_switchtomobileview%>"  Description="<%$Resources:wss,siteactions_switchtomobileviewdesc%>"  MenuGroupId="300"  Sequence="330"  UseShortId="true"  ClientOnClickScript="var mswlh = window.location.href; if (mswlh.indexOf('?')==-1) { window.location = mswlh + '?mobile=1'; } else { window.location = mswlh + '&mobile=1'; }" />
+                                        </SharePoint:FeatureMenuTemplate>
+                                    </CustomTemplate>
+                                </SharePoint:SiteActions>
+                            </span>
+                            <span id="ms-help">
+                                <SharePoint:ThemedClusteredHoverImage runat="server" ID="TopHelpLink" ThemeKey="spintl" TouchMode="true" TouchModeWidth="30" TouchModeHeight="30" TouchModePaddingTop="7" TouchModePaddingRight="7" TouchModePaddingBottom="7" TouchModePaddingLeft="7" ImageUrl="/_layouts/15/~lcid/images/spintl.png" Width="16" Height="16" OffsetX="19" OffsetY="1" HoverOffsetX="1" HoverOffsetY="1" NavigateUrl="#" onclick="TopHelpButtonClick('HelpHome',event);return false" AlternateText="<%$Resources:wss,multipages_helplink_text%>" AccessKey="<%$Resources:wss,multipages_helplink_accesskey%>" ToolTip="<%$Resources:wss,multipages_helplink_text%>" />
+                            </span>
+                        </div>
+                    </SharePoint:AjaxDelta>
+			    </div>
+			</div>
+			<div id="ms-hcTest"></div>
+			<div id="s4-ribbonrow">
+				<div id="globalNavBox" class="noindex">
+					<div id="ribbonBox">
+						<div id="s4-ribboncont">
+                            <SharePoint:AjaxDelta id="DeltaSPRibbon" BlockElement="true" runat="server">
+                                <SharePoint:DelegateControl runat="server" ID="GlobalDelegate0" ControlId="GlobalSiteLink0" />
+                                <SharePoint:SPRibbon runat="server"	PlaceholderElementId="RibbonContainer"	CssFile="" >
+                                    <SharePoint:SPRibbonPeripheralContent runat="server" CssClass="ms-core-defaultFont ms-dialogHidden" Location="TabRowLeft"></SharePoint:SPRibbonPeripheralContent>
+                                    <SharePoint:SPRibbonPeripheralContent runat="server" Location="TabRowRight" ID="RibbonTabRowRight" CssClass="s4-trc-container s4-notdlg ms-core-defaultFont">
+                                        <SharePoint:SPSharePromotedActionButton runat="server"/>
+                                        <SharePoint:DelegateControl runat="server" ControlId="PromotedActions" AllowMultipleControls="true" />
+                                        <SharePoint:SPSyncPromotedActionButton runat="server"/>
+                                        <SharePoint:PageStateActionButton id="PageStateActionButton" runat="server" Visible="false" />
+                                        <span id="fullscreenmodebox" class="ms-qatbutton" style="display:none;">
+                                            <span id="fullscreenmode">
+                                                <SharePoint:ThemedClusteredHoverImage runat="server" ID="fullscreenmodeBtn" ThemeKey="spcommon" TouchMode="true" TouchModeWidth="30" TouchModeHeight="30" TouchModePaddingLeft="7" TouchModePaddingTop="7" TouchModePaddingRight="7" TouchModePaddingBottom="7" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" Width="16" Height="16" OffsetX="143" OffsetY="178" HoverOffsetX="125" HoverOffsetY="178" NavigateUrl="#" onclick="SetFullScreenMode(true);PreventDefaultNavigation();return false;" AlternateText="<%$Resources:wss,multipages_fullscreenmodelinkalt_text%>" ToolTip="<%$Resources:wss,multipages_fullscreenmodelinkalt_text%>"/>
+                                            </span>
+                                            <span id="exitfullscreenmode" style="display: none;">
+                                                <SharePoint:ThemedClusteredHoverImage runat="server" ID="exitfullscreenmodeBtn" ThemeKey="spcommon" TouchMode="true" TouchModeWidth="30" TouchModeHeight="30" TouchModePaddingLeft="7" TouchModePaddingTop="7" TouchModePaddingRight="7" TouchModePaddingBottom="7" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" Width="16" Height="16" OffsetX="107" OffsetY="178" HoverOffsetX="179" HoverOffsetY="96" NavigateUrl="#" onclick="SetFullScreenMode(false);PreventDefaultNavigation();return false;" AlternateText="<%$Resources:wss,multipages_fullscreenmodelinkalt_text%>" ToolTip="<%$Resources:wss,multipages_fullscreenmodelinkalt_text%>"/>
+                                            </span>
+                                        </span>
+                                        <SharePoint:DeveloperDashboard runat="server" />
+                                        <SharePoint:DeveloperDashboardLauncher ID="DeveloperDashboardLauncher" ThemeKey="spcommon" TouchMode="true" TouchModeWidth="30" TouchModeHeight="30" TouchModePaddingLeft="7" TouchModePaddingTop="7" TouchModePaddingRight="7" TouchModePaddingBottom="7" NavigateUrl="javascript:return false" OnClick="ToggleDeveloperDashboard(window.g_ddHostBase);return false" OuterCssClass="ms-dd-button ms-qatbutton" runat="server" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" AlternateText="<%$Resources:wss,multipages_launchdevdashalt_text%>" ToolTip="<%$Resources:wss,multipages_launchdevdashalt_text%>" OffsetX="145" OffsetY="196" HoverOffsetX="163" HoverOffsetY="196" Height="16" Width="16" />
+                                    </SharePoint:SPRibbonPeripheralContent>
+                                </SharePoint:SPRibbon>
+                            </SharePoint:AjaxDelta></div>
+						<SharePoint:AjaxDelta id="DeltaSPNavigation" runat="server">
+                            <asp:ContentPlaceHolder ID="SPNavigation" runat="server">
+                                <SharePoint:DelegateControl runat="server" ControlId="PublishingConsole" Id="PublishingConsoleDelegate" />
+                            </asp:ContentPlaceHolder>
+						</SharePoint:AjaxDelta>
+					</div>
+					<SharePoint:AjaxDelta id="DeltaWebPartAdderUpdatePanelContainer" BlockElement="true" CssClass="ms-core-webpartadder" runat="server">
+                        <div id="WebPartAdderUpdatePanelContainer">
+                            <asp:UpdatePanel ID="WebPartAdderUpdatePanel" UpdateMode="Conditional" ChildrenAsTriggers="false" runat="server">
+                                <ContentTemplate>
+                                    <WebPartPages:WebPartAdder ID="WebPartAdder" runat="server" />
+                                </ContentTemplate>
+                                <Triggers>
+                                    <asp:PostBackTrigger ControlID="WebPartAdder" />
+                                </Triggers>
+                            </asp:UpdatePanel>
+                        </div>
+					</SharePoint:AjaxDelta>
 				</div>
-			    </div>
-            
-                <!-- footer -->
-    <footer>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="logo-footer pull-left">
-              <a href="https://mednet.med.ubc.ca/"><img src="../_catalogs/masterpage/images/footer-logo.png"/></a>
-              <a href="#" class="toplink">Back To Top ^</a>
-            </div>
-            <address class="pull-right">
-              <strong>Faculty of Medicine</strong><br>
-              317 - 2194 Health Sciences Mall<br>
-              Vancouver, BC Canada V6T 1Z3<br>
-              Tel: <a href="tel:604-822-2421">604.822.2421</a> | Fax: <a href="fax:604-822-6061">604.822.6061</a><br>
-            </address>
-            <div class="pull-right col-xs-12">
-                <div id="unit-social-icons">
-                  <strong>Find us on</strong>
-                  <a href="https://www.facebook.com/pages/UBC-Faculty-of-Medicine/232412823455905" title="Facebook icon">
-                    <i class="fa fa-facebook-square"></i>
-                  </a>
-                  <a href="http://twitter.com/UBCMedicine/" title="Twitter icon">
-                    <i class="fa fa-twitter-square"></i>
-                  </a>
-                  <a href="http://www.youtube.com/UBCMedicine/" title="YouTube icon">
-                    <i class="fa fa-youtube-square"></i>
-                  </a>
-                </div>
-            </div>            
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 footer-nav">
-            <ul class="list-inline center-block footer-links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services &amp; Resources</a></li>
-              <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/hr/Pages/default.aspx">HR</a></li>
-              <li><a href="#">Teaching</a></li>
-              <li><a href="#">Research</a></li>
-              <li><a href="#">Team Sites</a></li>
-            </ul>
-            <ul class="list-inline center-block footer-links">
-              <li><a href="#">Site Map</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">MedNet Support</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Copyright 2013 - UBC Faculty of Medicine</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-                </div>
-			<!-- ===== STARTER: Main Scrolling Body Ends Here ================================================================================= -->
+			</div>
+	        <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
 			
-			<!-- ===== STARTER: Needed for form stuff ========================================================================================= -->
-			<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
-				<SharePoint:formdigest runat="server" />
-			</asp:ContentPlaceHolder>
+		    <!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
+		    <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
+			    <wssuc:Welcome runat="server" EnableViewState="false" />
+		    </SharePoint:SPSecurityTrimmedControl>
+			
+		    <!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
+		    <div id="s4-workspace">
+			    <div id="s4-bodyContainer">		
+				    <!-- ===== STARTER: This decides where the web part menu lives ===================================================== -->
+				    <div id="DeltaPlaceHolderMain" runat="server">
+				
+				        <!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
+				        <div class="customWidth">
+				
+					        <!-- ===== STARTER: SharePoint looks for this div ID s4-titlerow for the "Focus on Content" Button ======================== -->
+					        <div id="s4-titlerow" style="display:none!important;">
+					
+						        <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
+						        <div class="ms-dialogHidden" style="display:none;">
+							        <SharePoint:SPLinkButton runat="server" NavigateUrl="~sitecollection/">
+								        <SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/logo.png %&gt;" AlternateText="Back to Home" runat="server" />
+							        </SharePoint:SPLinkButton>
+						        </div>
+						
+						        <!-- ===== STARTER: Global navigation ================================================================================= -->
+						        <div class="ms-dialogHidden" style="display:none;">
+							        <div class="ms-displayInline ms-core-navigation ms-dialogHidden">
+								        <PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" />
+								        <SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />												
+							        </div>
+						        </div>
+
+						        <!-- ===== STARTER: Breadcrumbs ======================================================================================= -->
+						        <div class="ms-dialogHidden" style="display:none;">
+							        <h1 id="pageTitle" class="ms-core-pageTitle">	
+								        <!-- ===== STARTER: SP Reqs DeltaPlaceHolderPageTitleInTitleArea and PlaceHolderPageTitleInTitleArea for adding Apps in Site Content =================== -->
+								        <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">							
+									        <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
+										        <SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+											        <PATHSEPARATORTEMPLATE>
+												        <SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
+											        </PATHSEPARATORTEMPLATE>
+										        </SharePoint:SPTitleBreadcrumb>
+									        </asp:ContentPlaceHolder>
+								        </SharePoint:AjaxDelta>									
+								        <div class="ms-displayInlineBlock ms-normalWrap">
+									        <a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;">
+										        <span id="ms-pageDescriptionImage">&#160;</span>
+									        </a>
+									        <span class="ms-accessible" id="ms-pageDescription">
+										        <asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
+									        </span>
+									        <SharePoint:ScriptBlock runat="server">
+										        _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
+									        </SharePoint:ScriptBlock>
+								        </div>
+							        </h1>
+						        </div>
+					        </div>
+
+                            <header>
+                                <div class="container-fluid">
+                                    <div class="row top-nav">
+                                        <div class="col-xs-12 row-content">
+                                            <ul class="nav nav-pills pull-left utility-links">
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">Contact List</a></li>
+                                                <li><a href="#">UBC Directory</a></li>
+                                                <li><a href="#">med.ubc.ca</a></li>
+                                            </ul>
+                                            <form class="search col-lg-4 pull-right">
+                                                <!-- ===== STARTER: Search Control ==================================================================================== -->
+						                        <div class="ms-dialogHidden">
+							                        <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+								                        <SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" />
+							                        </asp:ContentPlaceHolder>
+						                        </div>  
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 row-content banner-logo">
+                                            <a href="https://mednet.med.ubc.ca/" title="MedNet" class="logo"><img src="/2013/MedNetBranding/_catalogs/masterpage/images/unit_sig.png" alt="UBC"/></a>
+                                            <h1 class="intranet-title">
+                                                <span class="mednet-title">MedNet</span>
+                                            </h1>
+                                        </div>
+                                    </div>
+                                    <div class="row site-nav">
+                                        <nav class="navbar navbar-default site-nav row-content">
+                                            <div class="container-fluid">
+                                                <div class="navbar-header">
+                                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNav">
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>
+                                                        <span class="icon-bar"></span>                        
+                                                    </button>
+                                                </div>
+                                                <div class="collapse navbar-collapse" id="topNav">
+                                                    <ul class="nav navbar-nav">
+                                                        <li><a href="#">About Us</a></li> 
+                                                        <li><a href="#">Services &amp; Resources</a></li> 
+                                                        <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/HR">HR</a></li> 
+                                                        <li><a href="#">Teaching</a></li> 
+                                                        <li><a href="#">Research</a></li> 
+                                                        <li><a href="#">Office of the Dean</a></li> 
+                                                        <li><a href="#">Team Sites</a></li>  
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>         
+
+                            </header>
+
+					
+				            <!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
+					
+					        <!-- ===== STARTER: Current navigation ==================================================================================== -->
+					        <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+					
+						        <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
+						        <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
+							        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+								        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
+								        <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+								        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+								        <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+								        <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+								
+								        <div class="ms-core-sideNavBox-removeLeftMargin">
+									        <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
+										        <!-- ===== STARTER: Current navigation Data Provider ==================================================================================== -->
+										        <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
+											        <Template_Controls><asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server"/></Template_Controls>
+										        </SharePoint:DelegateControl>
+										
+										        <!-- ===== STARTER: Current navigation menu ==================================================================================== -->
+										        <SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
+									        </SharePoint:SPNavigationManager>
+									
+									        <!-- ===== STARTER: Tree view ==================================================================================== -->
+									        <SharePoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
+										        <SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
+											        <Template_Controls>
+											        <SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true"/>
+											        <SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;">
+												        <SharePoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=23" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=23" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=23" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=23" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=23"></SharePoint:SPTreeView>
+											        </SharePoint:SPRememberScroll>
+											        </Template_Controls>
+										        </SharePoint:DelegateControl>
+									        </SharePoint:SPNavigationManager>
+								
+									        <!-- ===== STARTER: Site Contents Link ==================================================================================== -->
+									        <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
+										        <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" /></div>
+									        </asp:ContentPlaceHolder>
+								        </div>
+							        </asp:ContentPlaceHolder>
+						        </SharePoint:AjaxDelta>
+					        </div>
+					
+					        <!-- ===== STARTER: Main Content ========================================================================================== -->
+					        <div id="contentBox row-content">
+						        <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+						        <SharePoint:AjaxDelta ID="AjaxDelta1" IsMainContent="true" runat="server">
+							        <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+							        <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+						        </SharePoint:AjaxDelta>
+				            </div>
+                            <!-- footer -->
+                            <footer>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-xs-12 row-content">
+                                            <div class="logo-footer pull-left">
+                                                <a href="https://mednet.med.ubc.ca/"><img src="/2013/MedNetBranding/_catalogs/masterpage/images/footer-logo.png" runat="server"/></a>
+                                                <a href="#" class="toplink">Back To Top ^</a>
+                                            </div>
+                                            <address class="pull-right">
+                                                <strong>Faculty of Medicine</strong><br>
+                                                317 - 2194 Health Sciences Mall<br>
+                                                Vancouver, BC Canada V6T 1Z3<br>
+                                                Tel: <a href="tel:604-822-2421">604.822.2421</a> | Fax: <a href="fax:604-822-6061">604.822.6061</a><br>
+                                            </address>
+                                            <div class="pull-right col-xs-12">
+                                                <div id="unit-social-icons">
+                                                    <strong>Find us on</strong>
+                                                    <a href="https://www.facebook.com/pages/UBC-Faculty-of-Medicine/232412823455905" title="Facebook icon">
+                                                    <i class="fa fa-facebook-square"></i>
+                                                    </a>
+                                                    <a href="http://twitter.com/UBCMedicine/" title="Twitter icon">
+                                                    <i class="fa fa-twitter-square"></i>
+                                                    </a>
+                                                    <a href="http://www.youtube.com/UBCMedicine/" title="YouTube icon">
+                                                    <i class="fa fa-youtube-square"></i>
+                                                    </a>
+                                                </div>
+                                            </div>            
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 footer-nav row-content">
+                                            <ul class="list-inline center-block footer-links">
+                                                <li><a href="#">About Us</a></li>
+                                                <li><a href="#">Services &amp; Resources</a></li>
+                                                <li><a href="#">HR</a></li>
+                                                <li><a href="#">Teaching</a></li>
+                                                <li><a href="#">Research</a></li>
+                                                <li><a href="#">Team Sites</a></li>
+                                            </ul>
+                                            <ul class="list-inline center-block footer-links">
+                                                <li><a href="#">Site Map</a></li>
+                                                <li><a href="#">Terms of Use</a></li>
+                                                <li><a href="#">MedNet Support</a></li>
+                                                <li><a href="#">Contact Us</a></li>
+                                                <li><a href="#">Copyright 2013 - UBC Faculty of Medicine</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+				        </div>
+			        </div>
+                </div>
+		    </div>
+		    <!-- ===== STARTER: Main Scrolling Body Ends Here ================================================================================= -->
+			
+		    <!-- ===== STARTER: Needed for form stuff ========================================================================================= -->
+		    <asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+			    <SharePoint:formdigest runat="server" />
+		    </asp:ContentPlaceHolder>
 		
-			<!-- ===== STARTER: Hidden Placeholders =========================================================================================== -->	
-			<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" />
-
-            <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" />
-            <asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
-
+		    <!-- ===== STARTER: Hidden Placeholders =========================================================================================== -->	
+		    <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
 				
 		</SharePoint:SharePointForm>
 	
 		<!-- ===== STARTER: Adds extra stuff like another form for Survey management ====================================================== -->	
 		<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
-
+    
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="../_catalogs/masterpage/js/bootstrap.min.js"></script>
-        <script src="../_catalogs/masterpage/js/bxslider.js"></script>
-        <script src="../_catalogs/masterpage/js/homepage.js"></script>
-      </body>
+        <script src="/2013/MedNetBranding/_catalogs/masterpage/js/bootstrap.min.js"></script>
+        <script src="/2013/MedNetBranding/_catalogs/masterpage/js/homepage.js"></script>
+        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/jssor.slider.mini.js"></script>    
+        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/slider.js"></script>
+
+
+	</body>
+	
+	<!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - April 21, 2013 -->
 </SharePoint:SPHtmlTag>

@@ -95,27 +95,6 @@ To build the page layout directly from this HTML file, simply fill in the conten
             <!--CE: End Page Field: Title Snippet-->
         <!--ME:</asp:ContentPlaceHolder>-->
         <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
-        <!-- TODO: THIS NEEDS TO GET PUT INTO A SEPERATE CSS / JAVASCRIPT FILE-->
-
-        <script language=”javascript”>
-
-            _spBodyOnLoadFunctionNames.push("Hidesuite");
-            function Hidesuite() {
-                document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
-            }
-
-        </script>
-
-        <style>
-            #s4-leftpanel {
-                display: none;
-            }
-
-            .s4-ca {
-                margin-left: 0px !important;
-            }
-        </style>
-        <!-- TODO END -->
             <div>
                 <!--CS: Start Page Field: Title Snippet-->
                 <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
