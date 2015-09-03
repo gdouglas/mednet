@@ -249,14 +249,12 @@
                                                 <li><a href="#">UBC Directory</a></li>
                                                 <li><a href="#">med.ubc.ca</a></li>
                                             </ul>
-                                            <form class="search col-lg-4 pull-right">
-                                                <!-- ===== STARTER: Search Control ==================================================================================== -->
-						                        <div class="ms-dialogHidden">
-							                        <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
-								                        <SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" />
-							                        </asp:ContentPlaceHolder>
-						                        </div>  
-                                            </form>
+                                            <!-- ===== STARTER: Search Control ==================================================================================== -->
+					                        <div class="ms-dialogHidden" style="display:none;">
+						                        <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+							                        <SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" />
+						                        </asp:ContentPlaceHolder>
+					                        </div>
                                         </div>
                                     </div>
                                     <div class="row">
