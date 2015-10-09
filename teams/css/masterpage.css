@@ -1,7 +1,20 @@
 *{
 	font-family:"Segoe UI",Tahoma;
 }
-
+.row-content{
+	/*max-width: 1620px;
+	margin:0 auto;*/
+}
+.row{
+	/*margin: 0 !important;
+	this rule fixes a wierd overlap in the nav, probably causes issues*/
+}
+#contentBox{
+	margin:0;
+}
+#s4-bodyContainer{
+	padding-bottom:0;
+}
 .top-nav{
 	background:#FFF;
 }
@@ -17,32 +30,84 @@ header nav{
 	display:block;
 }
 .intranet-title{
-	font-size:45px;
-	margin:0;
-	
+    display:inline-block;
+    font-size:30px;
+	position:relative;
+    top:35px;
 }
 .content{
-	max-width: 1600px
-}
-.mednet-title{
-	color: #fff;
-	float:right;
-	margin:65px 20px 0 0;
+	/*max-width: 1600px*/
 }
 
 .logo{
-	padding:25px;
+    border-right:1px solid #2f5d7c;
 	margin-right:20px;
-	background:#002145;
+    padding:45px;
 }
 .logo img{
-	width:350px;
+	width:330px;
 }
+/*top nav*/
 .site-nav{
-	background:#3868A6;/*#D7E0D8;*/
-	border-top: 5px solid #fff;
+	/*background:#effaf0;*/
+	background: #3868A6;
+	margin-bottom: 0;
+	border:0;
 }
-
+div.site-nav{
+	border-top: 2px solid #fff;
+}
+.site-nav .navbar-nav>li>a{
+	/*color:#0c5e79;*/
+	color:#fff;
+}
+.site-nav .navbar-nav>li>a:focus,
+.site-nav .navbar-nav>li>a:hover{
+	background: #eee;
+	color:#002145;
+}
+.navbar-nav li{
+	/*padding:10px 0;*/
+	border:0;
+}
+.navbar-nav a{
+	font-size:18px;
+	font-family:"Segoe UI",Tahoma;
+	text-transform: uppercase;
+	border: 0;
+	letter-spacing: 1px;
+	margin-right:30px;
+	
+}
+.navbar-nav li:last-of-type a{
+	margin-right:0;
+}
+.navbar .navbar-collapse{
+	padding:0;
+}
+.navbar .container-fluid{
+	padding-left:5px;
+}
+/*end top nav*/
+header{
+	background:#002145;
+	color:#FFF;
+	margin-bottom:5px
+}
+header nav{
+	display:block;
+}
+header .banner-logo{
+	position:relative;
+    padding:30px;
+}
+.mednet-title{
+	color: #fff;
+    display:block;
+}
+header .logo{
+    display:inline;
+}
 header h2{
 	margin:19px 0 0 0;
 	line-height:30px;
@@ -108,48 +173,15 @@ h2{
 	padding-bottom: 5px;
 	margin-left:5px;
 }
-.fp-column{
-	padding:20px;
-	width:33%;
-	height:400px;
-	overflow: hidden;
-}
-.btn{
-	
-	border-radius: 0;
-}
-.btn:hover{
-	background: #64b63a;
-	color:#fff;
-	border:1px solid #FFF;
-	transition:background-color .2s, color .2s, border .2s;
-
-}
-.read-more{
-	color:#64b63a;
-	border:1px solid #64b63a;
-	text-transform: uppercase;
-	position:absolute;
-	bottom:20px;
-}
-.fp-column li{
-	margin:10px 0;
-}
-.fp-column h2{
-	margin-bottom:10px;
-	background-image: linear-gradient(to right, #62A53A 30%, rgba(98, 165, 58, 0) 20%);
-	background-position: bottom;
-	background-size: 8px 2px;
-	background-repeat: repeat-x;
-	line-height: 40px;
-	padding-bottom:5px;
-}
 footer .row{
  padding:20px 0;
  background:#002145;
  color:#fff;
 }
 footer a{
+	color:#effaf0;
+}
+footer a:visited{
 	color:#effaf0;
 }
 footer a:hover{
@@ -176,9 +208,15 @@ footer a:hover{
 	border:none;
 	padding:0;
 }
+#unit-social-icons strong{
+	font-size:20px;
+}
 #unit-social-icons{
 	font-size:35px;
 	float:right;
+}
+a[title="Facebook icon"]:hover .fa-facebook-square:before{
+	content:"\f09a";
 }
 
 /*SLIDER BEGIN*/
