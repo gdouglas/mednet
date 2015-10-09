@@ -1,0 +1,234 @@
+*{
+	font-family:"Segoe UI",Tahoma;
+}
+.row-content{
+	/*max-width: 1620px;
+	margin:0 auto;*/
+}
+.row{
+	/*margin: 0 !important;
+	this rule fixes a wierd overlap in the nav, probably causes issues*/
+}
+#contentBox{
+	margin:0;
+}
+#s4-bodyContainer{
+	padding-bottom:0;
+}
+.top-nav{
+	background:#FFF;
+}
+.top-nav form{
+	margin-top:3px;
+}
+header{
+	background:#002145;
+	color:#FFF;
+	margin-bottom:22px
+}
+header nav{
+	display:block;
+}
+.intranet-title{
+    display:inline-block;
+    font-size:30px;
+	position:relative;
+    top:35px;
+}
+.content{
+	/*max-width: 1600px*/
+}
+
+.logo{
+    border-right:1px solid #2f5d7c;
+	margin-right:20px;
+    padding:45px;
+}
+.logo img{
+	width:330px;
+}
+/*top nav*/
+.site-nav{
+	/*background:#effaf0;*/
+	background: #3868A6;
+	margin-bottom: 0;
+	border:0;
+}
+div.site-nav{
+	border-top: 2px solid #fff;
+}
+.site-nav .navbar-nav>li>a{
+	/*color:#0c5e79;*/
+	color:#fff;
+}
+.site-nav .navbar-nav>li>a:focus,
+.site-nav .navbar-nav>li>a:hover{
+	background: #eee;
+	color:#002145;
+}
+.navbar-nav li{
+	/*padding:10px 0;*/
+	border:0;
+}
+.navbar-nav a{
+	font-size:18px;
+	font-family:"Segoe UI",Tahoma;
+	text-transform: uppercase;
+	border: 0;
+	letter-spacing: 1px;
+	margin-right:30px;
+	
+}
+.navbar-nav li:last-of-type a{
+	margin-right:0;
+}
+.navbar .navbar-collapse{
+	padding:0;
+}
+.navbar .container-fluid{
+	padding-left:5px;
+}
+/*end top nav*/
+header{
+	background:#002145;
+	color:#FFF;
+	margin-bottom:5px
+}
+header nav{
+	display:block;
+}
+header .banner-logo{
+	position:relative;
+    padding:30px;
+}
+.mednet-title{
+	color: #fff;
+    display:block;
+}
+header .logo{
+    display:inline;
+}
+header h2{
+	margin:19px 0 0 0;
+	line-height:30px;
+	font-size:22px;
+}
+
+h2{
+	margin:0;
+}
+.toplink{
+	display:block;
+	line-height:40px;
+	color:#effaf0;	
+}
+
+.staff-spotlight-container,
+.announcements{
+	height:400px;
+}
+.staff-spotlight-container img{
+	float:right;
+	margin:10px 0 0 20px;
+}
+.border-top{
+	/*pale green
+	border-top: 5px solid #cbe1d5;*/
+	border-top: 5px solid #62A53A;
+	padding-top: 10px;
+}
+/*middle column borders*/
+.row .fp-column:nth-child(even):after{
+	content:""; 
+	background: #62A53A; 
+	position: absolute; 
+	bottom: 30px; 
+	left: 0; 
+	height: 85%; 
+	width: 1px;
+}
+.row .fp-column:nth-child(even):before{
+	content:""; 
+	background: #62A53A; 
+	position: absolute; 
+	bottom: 30px; 
+	right: 0; 
+	height: 85%; 
+	width: 1px;	
+}
+/*END middle column borders*/
+.date{
+	font-style: italic;
+	display:block;
+	margin-left: -5px;
+	display: table-cell;
+	padding-right:20px;
+	color:#888;
+}
+.details{
+	display: table-cell;
+
+}
+.announcements li{
+	padding-bottom: 5px;
+	margin-left:5px;
+}
+footer .row{
+ padding:20px 0;
+ background:#002145;
+ color:#fff;
+}
+footer a{
+	color:#effaf0;
+}
+footer a:visited{
+	color:#effaf0;
+}
+footer a:hover{
+	text-decoration: underline;
+	color:#effaf0;
+}
+.footer-nav{
+	border-top:1px solid #2f5d7c;
+}
+.logo-footer img{
+	width:220px;
+}
+.center-block{
+	text-align: center;
+}
+.footer-links:first-of-type{
+	margin-top:20px;
+}
+.footer-links li{
+	border-right:1px solid #CCC;
+	padding:0 5px 0 0;
+}
+.footer-links li:last-of-type{
+	border:none;
+	padding:0;
+}
+#unit-social-icons strong{
+	font-size:20px;
+}
+#unit-social-icons{
+	font-size:35px;
+	float:right;
+}
+a[title="Facebook icon"]:hover .fa-facebook-square:before{
+	content:"\f09a";
+}
+
+/*SLIDER BEGIN*/
+.slider{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
+.slider p{
+	background:#ccc;
+}
+.slider-img{
+	width:100%;
+}
+/*SLIDER END*/

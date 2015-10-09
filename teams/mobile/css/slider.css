@@ -1,0 +1,115 @@
+#slider1_container{
+    width:100%;
+}
+.slides-container{
+   /* border-bottom:1px solid green;*/
+    width:100%;
+}
+.slides-container div,
+.slides-container figure{
+    width:100%;
+}
+.slides-container figure img{
+    height:calc(100% - 100px);
+    width:auto !important;
+}
+#slider-controls{
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:3px 10px;
+    
+    cursor: pointer;
+    border-right:1px solid #fff;
+}
+#slider-controls span {
+    display:block;
+}
+#slider-controls span i{
+    font-size:18px;
+}
+#slider-controls span:hover{
+    color:#fff;
+}
+.active{
+    color:#000;
+}
+figure{
+    height:100%;
+    text-align: center;
+}
+
+figcaption{
+    text-align: justify;
+    margin:0 auto;
+    background:#fff;
+    border-right:1px solid #fff;
+    border-top: 5px solid #62A53A;
+    height:100px;
+    padding:3px 5px 0 5px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+/* jssor slider bullet navigator*/
+.jssorb05 {
+    position: absolute;
+    right:0;
+}
+.jssorb05 div,
+.jssorb05 div:hover,
+.jssorb05 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 16px;
+    height: 16px;
+    background: url(../images/b05.png) no-repeat;
+    overflow: hidden;
+    cursor: pointer;
+}
+.jssorb05 div {
+    background-position: -7px -7px;
+}
+.jssorb05 div:hover,
+.jssorb05 .av:hover {
+    background-position: -37px -7px;
+}
+.jssorb05 .av {
+    background-position: -67px -7px;
+}
+.jssorb05 .dn,
+.jssorb05 .dn:hover {
+    background-position: -97px -7px;
+}
+
+/*slider arrows*/
+.jssora11l,
+.jssora11r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+    background: url(../images/a11.png) no-repeat;
+    overflow: hidden;
+}
+.jssora11l {
+    background-position: -11px -41px;
+}
+.jssora11r {
+    background-position: -71px -41px;
+}
+.jssora11l:hover {
+    background-position: -131px -41px;
+}
+.jssora11r:hover {
+    background-position: -191px -41px;
+}
+.jssora11l.jssora11ldn {
+    background-position: -251px -41px;
+}
+.jssora11r.jssora11rdn {
+    background-position: -311px -41px;
+}
