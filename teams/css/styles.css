@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 .site-width{
 	max-width: 1600px;
+=======
+.col-xs-12{
+>>>>>>> master
 	margin:0 auto;
 	float:initial;
 }
@@ -9,65 +13,12 @@
 .top-nav{
 	background:#FFF;
 }
-.top-nav form{
-	margin-top:3px;
-}
-header{
-	background:#002145;
-	color:#FFF;
-	margin-bottom:22px
-}
-header nav{
-	display:block;
-}
-header{
-	margin-bottom:5px;
-}
-.mednet-title{
-	float:left;
-	margin:65px 20px 0 0;
-}
-header .logo{
-	float:right;
+.top-nav .ms-srch-sb{
+	margin-top:11px;
 }
 .breadcrumb>li+li:before{
 	content:"\003e";
-
 }
-/*top nav*/
-.site-nav{
-	/*background:#effaf0;*/
-	background: #3868A6;
-	margin-bottom: 0;
-	border:0;
-	border-top: 2px solid #fff;
-}
-.site-nav .navbar-nav>li>a{
-	/*color:#0c5e79;*/
-	color:#fff;
-}
-.site-nav .navbar-nav>li>a:focus,
-.site-nav .navbar-nav>li>a:hover{
-	background: #eee;
-	color:#002145;
-}
-.navbar-nav li{
-	/*padding:10px 0;*/
-	border:0;
-}
-.navbar-nav a{
-	font-size:18px;
-	font-family:"Segoe UI",Tahoma;
-	text-transform: uppercase;
-	border: 0;
-	border-right:1px solid #C2E0BC;
-	letter-spacing: 1px;
-	
-}
-.navbar-nav li:last-of-type a{
-	border:0;
-}
-/*end top nav*/
 .faculty-title{
 	margin:0;
 	line-height:55px;
