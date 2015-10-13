@@ -1,82 +1,104 @@
 #slider1_container{
-	width:100%;
+     position: relative;
+     top: 0px;
+     left: 0px;
+     max-width: 600px;
+         width:100%;
 }
 .slides-container{
-	background:green;
-	width:100%;
+    width:100%;
+    height:360px
 }
 .slides-container div,
 .slides-container figure{
-	width:100%;
+    width:100%;
 }
 .slides-container figure img{
-	width:100%;
-	height:auto;
+    height:calc(100% - 100px);
+    width:auto !important;
 }
 #slider-controls{
-	position:absolute;
-	bottom:0;
-	right:0;
-	padding:3px 10px;
-	background:#ccc;
-	cursor: pointer;
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:3px 10px;
+    
+    cursor: pointer;
+    border-right:1px solid #fff;
+}
+#slider-controls span {
+    display:block;
+}
+#slider-controls span i{
+    font-size:18px;
 }
 #slider-controls span:hover{
-	color:#fff;
+    color:#fff;
 }
 .active{
-	color:red;
+    color:#000;
 }
 figure{
-	height:300px;
-	text-align: center;
+    height:100%;
+    text-align: center;
 }
-figure img{
-	max-height:80%;
-	width:auto !important;
-}
+
 figcaption{
-	text-align: justify;
-	margin:0 auto;
-	background:blue;
-	color:#fff;
-	min-height:20%;
-	padding:3px 55px 0 5px;
+    text-align: left;
+    margin:0 auto;
+    background:#fff;
+    border-top: 5px solid #62A53A;
+    height:100px;
+    padding:3px 5px 0 5px;
+    position:absolute;
+    bottom:0;
+    width:99.9%;
 }
 
 /* jssor slider bullet navigator*/
 .jssorb05 {
     position: absolute;
+    right:0;
 }
 .jssorb05 div,
 .jssorb05 div:hover,
 .jssorb05 .av {
+    transition:all .2s;
     position: absolute;
     /* size of bullet elment */
-    width: 16px;
-    height: 16px;
-    background: url(../images/b05.png) no-repeat;
+    width: 12px;
+    height: 12px;
+    border:1px solid #62A53A;
+    border-radius:6px;
     overflow: hidden;
     cursor: pointer;
+
+    -moz-box-shadow: 0px 0px 2px #888;
+    -webkit-box-shadow: 0px 0px 2px #888;
+    box-shadow: 0px 0px 2px #888;    
 }
-.jssorb05 div {
-    background-position: -7px -7px;
-    top:-50px !important;
-}
+
+.jssorb05 .av,
 .jssorb05 div:hover,
 .jssorb05 .av:hover {
-    background-position: -37px -7px;
+    background:#62A53A;
 }
-.jssorb05 .av {
-    background-position: -67px -7px;
-}
+
 .jssorb05 .dn,
 .jssorb05 .dn:hover {
-    background-position: -97px -7px;
+    background:yellow;
 }
 
-/*slider arrows*/
 
+
+
+
+
+
+
+
+
+/*slider arrows*/
 .jssora11l,
 .jssora11r {
     display: block;
@@ -85,24 +107,30 @@ figcaption{
     width: 37px;
     height: 37px;
     cursor: pointer;
-    background: url(../images/a11.png) no-repeat;
-    overflow: hidden;
 }
-.jssora11l {
-    background-position: -11px -41px;
+.jssora11l:after,
+.jssora11r:after{
+    transition:all .5s;
+    font-family: FontAwesome;
+    font-weight: light;
+    color:#62A53A;
+    font-size:40px;
+    padding: 0 13px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
 }
-.jssora11r {
-    background-position: -71px -41px;
+.jssora11l:after{
+    content:"\f104";
+    padding: 0 16px 0 10px;
 }
-.jssora11l:hover {
-    background-position: -131px -41px;
+.jssora11r:after {
+    content:"\f105";
+    padding: 0 11px 0 15px;
 }
-.jssora11r:hover {
-    background-position: -191px -41px;
-}
-.jssora11l.jssora11ldn {
-    background-position: -251px -41px;
-}
-.jssora11r.jssora11rdn {
-    background-position: -311px -41px;
+.jssora11l:hover:after,
+.jssora11r:hover:after{
+    transition:all .5s;
+    color:#fff;
+    background:#002145;
 }
