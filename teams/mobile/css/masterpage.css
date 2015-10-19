@@ -95,9 +95,11 @@ div.site-nav{
 .navbar-default .navbar-brand{
     color:#FFF;
 }
+.navbar-header{
+    border-bottom:1px solid #fff;
+}
 .navbar-default .navbar-brand:hover{
-	background: #eee;
-	color:#002145;
+	color:#fff;
 }
 /*end top nav*/
 header{
@@ -283,6 +285,12 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
         margin:0;    
         padding:0;
     }
+    .navbar-toggle .icon-bar{
+        width:36px;
+    }
+    .side-nav-container .side-nav{
+        margin-bottom: 0;
+    }
     #navbar .navbar-nav{
         background:#3868a6;
         magin:0;
@@ -298,6 +306,18 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     .breadcrumb{
         border-top:1px solid;
         border-bottom:1px solid;
+    }
+    .toplink{
+        width:100%;
+        position:fixed;
+        bottom:0;
+        left:0;
+        text-align:center;
+        background:#002145;
+        text-decoration:underline;   
+    }
+    footer .address{
+        width:100%;
     }
 }
 .navbar-default {
