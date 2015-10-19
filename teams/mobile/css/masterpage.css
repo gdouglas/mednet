@@ -49,13 +49,19 @@ header nav{
 }
 /*top nav*/
 .site-nav{
-	/*background:#effaf0;*/
 	background: #3868A6;
 	margin-bottom: 0;
 	border:0;
 }
+.site-nav nav{
+    border:0;
+}
 div.site-nav{
 	border-top: 2px solid #fff;
+}
+#navbar .navbar-nav{
+    background:#3868a6;
+    margin:0;
 }
 .site-nav .navbar-nav>li>a{
 	/*color:#0c5e79;*/
@@ -82,11 +88,16 @@ div.site-nav{
 .navbar-nav li:last-of-type a{
 	margin-right:0;
 }
-.navbar .navbar-collapse{
-	padding:0;
-}
+
 .navbar .container-fluid{
 	padding-left:5px;
+}
+.navbar-default .navbar-brand{
+    color:#FFF;
+}
+.navbar-default .navbar-brand:hover{
+	background: #eee;
+	color:#002145;
 }
 /*end top nav*/
 header{
@@ -272,8 +283,9 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
         margin:0;    
         padding:0;
     }
-    .navbar-nav{
+    #navbar .navbar-nav{
         background:#3868a6;
+        magin:0;
     }
     .nav.side-nav li{
         border-right:0;
@@ -287,4 +299,7 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
         border-top:1px solid;
         border-bottom:1px solid;
     }
+}
+.navbar-default {
+    background: #3868A6;
 }
