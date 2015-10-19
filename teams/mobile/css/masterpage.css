@@ -232,3 +232,59 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
 	width:100%;
 }
 /*SLIDER END*/
+@media screen and (max-width:480px){
+    /*need to zero out a lot of bootstrap*/
+    header .container-fluid,
+    header .row,
+    header .col-xs-12{
+        margin:0 auto;
+        padding:0;
+    }
+    .top-nav{
+        background:green;
+        width:100%;
+    }
+    .utility-links{
+        width:100%;
+        text-align: center;
+    }
+    .utility-links li{
+        text-align:center;  
+        float:none;
+        display:inline-block;
+        padding:0;
+        margin:0;
+    }
+    .utility-links li + li{
+        margin:0;    
+    }
+    .utility-links li a{
+        width:30vw;
+        padding:3px 0;
+        margin:0;
+    }
+    .intranet-title{
+        margin-left:15px;    
+    }
+    .nav,
+    .navbar-nav,
+    .side-nav-container{
+        margin:0;    
+        padding:0;
+    }
+    .navbar-nav{
+        background:#3868a6;
+    }
+    .nav.side-nav li{
+        border-right:0;
+    }
+    .breadcrumb-container{
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    .breadcrumb{
+        border-top:1px solid;
+        border-bottom:1px solid;
+    }
+}
