@@ -245,6 +245,9 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
 	width:100%;
 }
 /*SLIDER END*/
+
+
+/*mobile view*/
 @media screen and (max-width:480px){
     /*need to zero out a lot of bootstrap*/
     header .container-fluid,
@@ -285,12 +288,21 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
         margin:0;    
         padding:0;
     }
+    .navbar-toggle{
+    	padding:6px;
+    }
     .navbar-toggle .icon-bar{
         width:36px;
     }
+
     .side-nav-container .side-nav{
         margin-bottom: 0;
     }
+    /*hide nav by default*/
+    /*#navbar,
+    #side-nav{
+    	display:none;
+    }*/
     #navbar .navbar-nav{
         background:#3868a6;
         magin:0;
@@ -298,6 +310,7 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     .nav.side-nav li{
         border-right:0;
     }
+
     .breadcrumb-container{
         margin:0;
         padding:0;
@@ -315,6 +328,10 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
         text-align:center;
         background:#002145;
         text-decoration:underline;   
+        transition:background 300ms;
+    }
+    footer{
+    	margin-top:57px;
     }
     footer .address{
         width:100%;

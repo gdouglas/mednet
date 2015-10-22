@@ -41,3 +41,31 @@ $('a[href*=#]:not([href=#])').click(function() {
         }
     }
 });
+
+
+/*
+*
+*
+*Fix back to top to footer
+*
+*/
+function checkOffset() {
+    if($('.toplink').offset().top + $('.toplink').height()>= $('footer').offset().top - 10){
+        $('.toplink').css({
+            'position': 'absolute',
+            'bottom': '22px',
+            'background': '#3868a6'
+        });
+    }//end if
+    if($(document).scrollTop() + window.innerHeight < $('footer').offset().top){
+        $('.toplink').css({
+        'position': 'fixed',
+        'bottom': '0',
+        'background':'#002145'
+        }); // restore when you scroll up
+    }//end if
+}//end checkOffset
+
+$(document).scroll(function() {
+    checkOffset();
+});
