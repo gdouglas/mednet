@@ -135,6 +135,9 @@ h2{
 	line-height:40px;
 	color:#effaf0;	
 }
+.toplink .fa{
+	margin-left:10px;
+}
 
 .staff-spotlight-container,
 .announcements{
