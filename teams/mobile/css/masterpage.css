@@ -297,6 +297,9 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     .navbar-toggle .icon-bar{
         width:36px;
     }
+    .site-nav .navbar-toggle:focus{
+    	background: #002145;
+    }
 
     .side-nav-container .side-nav{
         margin-bottom: 0;
@@ -307,7 +310,7 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     	display:none;
     }*/
     #navbar .navbar-nav{
-        background:#3868a6;
+        background-color:#3868a6;
         magin:0;
     }
     .nav.side-nav li{
@@ -331,7 +334,7 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
         text-align:center;
         background:#002145;
         text-decoration:underline;   
-        transition:background 300ms;
+        /*transition:background 300ms;*/
     }
     footer{
     	margin-top:57px;

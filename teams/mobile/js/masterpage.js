@@ -32,12 +32,12 @@ $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
         || location.hostname == this.hostname) {
 
-        
+        var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
            if (target.length) {
              $('html,body').animate({
                  scrollTop: target.offset().top
-            }, 1000);
+            }, 500);
             return false;
         }
     }
@@ -67,30 +67,6 @@ function checkOffset() {
     }//end if
 }//end checkOffset
 
-
-
-
-var didScroll = false;
-$(window).scroll(function() {
-    didScroll = true;
-    console.log(didScroll)
-});
- 
-setInterval(function() {
-    if ( didScroll ) {
-        didScroll = false;
-        // Check your page position and then
-        // Load in more results
-        checkOffset();
-        console.log("SCROLL!");
-    }
-}, 10);
-
-// $(document).scroll(function() {
-//     checkOffset();
-// });
-// $('body').on({
-//     'touchmove':function(e) {
-//         checkOffset();
-//     }
-// });
+setInterval(function(){
+    checkOffset(); 
+},100);
