@@ -1,25 +1,9 @@
 #slider1_container{
-<<<<<<< HEAD
-	width:100% !important;
-    max-width:100% !important;
-    margin:0 auto;
-}
-#slider1_container div{
-    margin:0 auto;
-}
-#slider1_container div+div{
-    margin:0;
-}
-.slides-container{
-   /* border-bottom:1px solid green;*/
-	width:100% !important;
-=======
     width:100%;
 }
 .slides-container{
    /* border-bottom:1px solid green;*/
     width:100%;
->>>>>>> master
 }
 .slides-container div,
 .slides-container figure{

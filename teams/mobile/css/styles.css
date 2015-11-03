@@ -1,11 +1,14 @@
-<<<<<<< HEAD
-.site-width{
-	max-width: 1600px;
-=======
 .col-xs-12{
->>>>>>> master
 	margin:0 auto;
 	float:initial;
+}
+#suiteBar{
+    background:#0072c6;
+    color#fff;
+    padding:5px;
+}
+#suiteBar a{
+    color:#fff;
 }
 .utility-links a{
 	color:#002145;
@@ -114,4 +117,29 @@
 .ms-rte-layoutszone-outer td{
 	padding:0 5px 50px 5px !important;
 	vertical-align: top;
+}
+
+@media screen and (max-width:900px){
+    header .logo{
+     display:none;   
+    }
+    header .intranet-title{
+        position:initial;
+    }
+    .navbar-nav{
+        width:100%;
+    }
+    .navbar-nav li{
+        display:block;
+        float:none;
+        width:100%;
+    }
+    .navbar-nav li a{
+        margin:0;
+        padding-right:0;
+    }
+    nav.col-xs-12{
+        margin:0;
+        padding:0;
+    }
 }
