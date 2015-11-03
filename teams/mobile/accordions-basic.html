@@ -200,5 +200,12 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/masterpage.js"></script>
+    <script type="text/javascript">
+      /*position document at content */
+      jQuery(document).ready(function($){
+          $(document).scrollTop($(".breadcrumb").offset().top-20);
+      });
+
+    </script>
   </body>
 </html>
