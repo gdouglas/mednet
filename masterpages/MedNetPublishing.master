@@ -16,33 +16,33 @@
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="Expires" content="0" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		
+        
         <!-- ===== STARTER: Robots  ======================================================================================================= -->
         <SharePoint:RobotsMetaTag runat="server" />
-		
-		<!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== -->	
-		<SharePoint:SPShortcutIcon runat="server" IconUrl="/_catalogs/masterpage/StarterBranding/favicon.ico" />
-		<SharePoint:SPPinnedSiteTile runat="server" TileUrl="/_catalogs/masterpage/StarterBranding/metrotile.png" TileColor="#0072C6" />				
-		
+        
+        <!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== --> 
+        <SharePoint:SPShortcutIcon runat="server" IconUrl="/_catalogs/masterpage/StarterBranding/favicon.ico" />
+        <SharePoint:SPPinnedSiteTile runat="server" TileUrl="/_catalogs/masterpage/StarterBranding/metrotile.png" TileColor="#0072C6" />                
+        
 
-		    <!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
-		    <SharePoint:PageTitle runat="server">
+            <!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
+            <SharePoint:PageTitle runat="server">
                 <asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"><SharePoint:ProjectProperty Property="Title" runat="server" /></asp:ContentPlaceHolder>
-		    </SharePoint:PageTitle>
+            </SharePoint:PageTitle>
 
-		
-		<!-- ===== STARTER: SP Scripts and CSS  =========================================================================================== -->
-		<SharePoint:StartScript runat="server" />
-		<SharePoint:CssLink runat="server" Version="15" />
-		<SharePoint:CacheManifestLink runat="server" />
-		<SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
-		<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
-		<SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
-		<SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
-		<SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
-		<SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
-		<SharePoint:CustomJSUrl runat="server" />
-		<SharePoint:SoapDiscoveryLink runat="server" />
+        
+        <!-- ===== STARTER: SP Scripts and CSS  =========================================================================================== -->
+        <SharePoint:StartScript runat="server" />
+        <SharePoint:CssLink runat="server" Version="15" />
+        <SharePoint:CacheManifestLink runat="server" />
+        <SharePoint:PageRenderMode runat="server" RenderModeType="Standard" />
+        <SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="menu.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="callout.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="sharing.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false" />
+        <SharePoint:CustomJSUrl runat="server" />
+        <SharePoint:SoapDiscoveryLink runat="server" />
 
         <!-- Bootstrap -->
         <link href="/2013/MedNetBranding/_catalogs/masterpage/css/bootstrap.min.css" rel="stylesheet">
@@ -57,36 +57,36 @@
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-	
-		<!-- ===== STARTER: Additional header placeholder - overridden by asp:content on pages or page layouts  =========================== -->
-		<asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
-		<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
+    
+        <!-- ===== STARTER: Additional header placeholder - overridden by asp:content on pages or page layouts  =========================== -->
+        <asp:ContentPlaceHolder ID="PlaceHolderAdditionalPageHead" runat="server" />
+        <SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" />
 
-		<!-- ===== STARTER: Core SharePoint CSS =========================================================================================== -->
-		<SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
+        <!-- ===== STARTER: Core SharePoint CSS =========================================================================================== -->
+        <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
 
-		<!-- ===== STARTER: Custom CSS  =================================================================================================== -->
-		<SharePoint:CssRegistration ID="CssRegistration1" name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/style.css %&gt;" runat="server" after="SharepointCssFile" />	
-	</head>
-	
+        <!-- ===== STARTER: Custom CSS  =================================================================================================== -->
+        <SharePoint:CssRegistration ID="CssRegistration1" name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/style.css %&gt;" runat="server" after="SharepointCssFile" />  
+    </head>
+    
     <body>
-		<!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
-		<SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
-		<SharePoint:ImageLink runat="server" />
-		<SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
-		
-		    <!-- ===== STARTER: SharePoint Reqs this for adding columns ===================================================== -->
-		    <script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
+        <!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
+        <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
+        <SharePoint:ImageLink runat="server" />
+        <SharePoint:SharePointForm onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}" runat="server">
+        
+            <!-- ===== STARTER: SharePoint Reqs this for adding columns ===================================================== -->
+            <script type="text/javascript"> var submitHook = function () { return false; }; theForm._spOldSubmit = theForm.submit; theForm.submit = function () { if (!submitHook()) { this._spOldSubmit(); } }; </script>
 
-		    <!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
-		    <WebPartPages:SPWebPartManager runat="server" />		
-		
-		    <!-- ===== STARTER: ScriptManager ===================================================== -->
-		    <asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
-		
+            <!-- ===== STARTER: Web Part Manager  ============================================================================================= -->
+            <WebPartPages:SPWebPartManager runat="server" />        
+        
+            <!-- ===== STARTER: ScriptManager ===================================================== -->
+            <asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+        
             <!-- ===== STARTER: Ribbon Code Starts Here ===================================================== -->
-	        <div id="suiteBar" class="ms-dialogHidden noindex">
-			    <div id="suiteBarLeft">
+            <div id="suiteBar" class="ms-dialogHidden noindex">
+                <div id="suiteBarLeft">
                     <div class="ms-table ms-fullWidth">
                         <div class="ms-tableRow">
                             <div class="ms-tableCell ms-verticalAlignMiddle">
@@ -99,8 +99,8 @@
                             </SharePoint:AjaxDelta>
                         </div>
                     </div>
-			    </div>
-			    <div id="suiteBarRight">
+                </div>
+                <div id="suiteBarRight">
                     <SharePoint:AjaxDelta runat="server" id="DeltaSuiteBarRight" CssClass="ms-core-deltaSuiteBarRight" BlockElement="true">
                         <div id="welcomeMenuBox">
                             <wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" />
@@ -108,7 +108,7 @@
                         </div>
                         <div id="suiteBarButtons">
                             <span class="ms-siteactions-root" id="siteactiontd">
-                                <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain"	PrefixHtml="" SuffixHtml="" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" ThemeKey="spcommon" MenuAlignment="Right" MenuNotVisibleHtml="&amp;nbsp;" LargeIconMode="false">
+                                <SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain"    PrefixHtml="" SuffixHtml="" ImageUrl="/_layouts/15/images/spcommon.png?rev=23" ThemeKey="spcommon" MenuAlignment="Right" MenuNotVisibleHtml="&amp;nbsp;" LargeIconMode="false">
                                     <CustomTemplate>
                                         <SharePoint:FeatureMenuTemplate runat="server" FeatureScope="Site" Location="Microsoft.SharePoint.StandardMenu" GroupId="SiteActions" UseShortId="true">
                                             <SharePoint:MenuItemTemplate runat="server"  id="MenuItem_ShareThisSite"  Text="<%$Resources:wss,siteactions_sharethissite%>"  Description="<%$Resources:wss,siteactions_sharethissitedescription%>"  MenuGroupId="100"  Sequence="110"  UseShortId="true"  PermissionsString="ViewPages"  PermissionMode="Any" />
@@ -128,16 +128,16 @@
                             </span>
                         </div>
                     </SharePoint:AjaxDelta>
-			    </div>
-			</div>
-			<div id="ms-hcTest"></div>
-			<div id="s4-ribbonrow">
-				<div id="globalNavBox" class="noindex">
-					<div id="ribbonBox">
-						<div id="s4-ribboncont">
+                </div>
+            </div>
+            <div id="ms-hcTest"></div>
+            <div id="s4-ribbonrow">
+                <div id="globalNavBox" class="noindex">
+                    <div id="ribbonBox">
+                        <div id="s4-ribboncont">
                             <SharePoint:AjaxDelta id="DeltaSPRibbon" BlockElement="true" runat="server">
                                 <SharePoint:DelegateControl runat="server" ID="GlobalDelegate0" ControlId="GlobalSiteLink0" />
-                                <SharePoint:SPRibbon runat="server"	PlaceholderElementId="RibbonContainer"	CssFile="" >
+                                <SharePoint:SPRibbon runat="server" PlaceholderElementId="RibbonContainer"  CssFile="" >
                                     <SharePoint:SPRibbonPeripheralContent runat="server" CssClass="ms-core-defaultFont ms-dialogHidden" Location="TabRowLeft"></SharePoint:SPRibbonPeripheralContent>
                                     <SharePoint:SPRibbonPeripheralContent runat="server" Location="TabRowRight" ID="RibbonTabRowRight" CssClass="s4-trc-container s4-notdlg ms-core-defaultFont">
                                         <SharePoint:SPSharePromotedActionButton runat="server"/>
@@ -157,13 +157,13 @@
                                     </SharePoint:SPRibbonPeripheralContent>
                                 </SharePoint:SPRibbon>
                             </SharePoint:AjaxDelta></div>
-						<SharePoint:AjaxDelta id="DeltaSPNavigation" runat="server">
+                        <SharePoint:AjaxDelta id="DeltaSPNavigation" runat="server">
                             <asp:ContentPlaceHolder ID="SPNavigation" runat="server">
                                 <SharePoint:DelegateControl runat="server" ControlId="PublishingConsole" Id="PublishingConsoleDelegate" />
                             </asp:ContentPlaceHolder>
-						</SharePoint:AjaxDelta>
-					</div>
-					<SharePoint:AjaxDelta id="DeltaWebPartAdderUpdatePanelContainer" BlockElement="true" CssClass="ms-core-webpartadder" runat="server">
+                        </SharePoint:AjaxDelta>
+                    </div>
+                    <SharePoint:AjaxDelta id="DeltaWebPartAdderUpdatePanelContainer" BlockElement="true" CssClass="ms-core-webpartadder" runat="server">
                         <div id="WebPartAdderUpdatePanelContainer">
                             <asp:UpdatePanel ID="WebPartAdderUpdatePanel" UpdateMode="Conditional" ChildrenAsTriggers="false" runat="server">
                                 <ContentTemplate>
@@ -174,70 +174,70 @@
                                 </Triggers>
                             </asp:UpdatePanel>
                         </div>
-					</SharePoint:AjaxDelta>
-				</div>
-			</div>
-	        <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
-			
-		    <!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
-		    <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
-			    <wssuc:Welcome runat="server" EnableViewState="false" />
-		    </SharePoint:SPSecurityTrimmedControl>
-			
-		    <!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
-		    <div id="s4-workspace">
-			    <div id="s4-bodyContainer">		
-				    <!-- ===== STARTER: This decides where the web part menu lives ===================================================== -->
-				    <div id="DeltaPlaceHolderMain" runat="server">
-				
-				        <!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
-				        <div class="customWidth">
-				
-					        <!-- ===== STARTER: SharePoint looks for this div ID s4-titlerow for the "Focus on Content" Button ======================== -->
-					        <div id="s4-titlerow" style="display:none!important;">
-					
-						        <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
-						        <div class="ms-dialogHidden" style="display:none;">
-							        <SharePoint:SPLinkButton runat="server" NavigateUrl="~sitecollection/">
-								        <SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/logo.png %&gt;" AlternateText="Back to Home" runat="server" />
-							        </SharePoint:SPLinkButton>
-						        </div>
-						
-						        <!-- ===== STARTER: Global navigation ================================================================================= -->
-						        <div class="ms-dialogHidden" style="display:none;">
-							        <div class="ms-displayInline ms-core-navigation ms-dialogHidden">
-								        <PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" />
-								        <SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />												
-							        </div>
-						        </div>
+                    </SharePoint:AjaxDelta>
+                </div>
+            </div>
+            <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
+            
+            <!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
+            <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
+                <wssuc:Welcome runat="server" EnableViewState="false" />
+            </SharePoint:SPSecurityTrimmedControl>
+            
+            <!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
+            <div id="s4-workspace">
+                <div id="s4-bodyContainer">     
+                    <!-- ===== STARTER: This decides where the web part menu lives ===================================================== -->
+                    <div id="DeltaPlaceHolderMain" runat="server">
+                
+                        <!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
+                        <div class="customWidth">
+                
+                            <!-- ===== STARTER: SharePoint looks for this div ID s4-titlerow for the "Focus on Content" Button ======================== -->
+                            <div id="s4-titlerow" style="display:none!important;">
+                    
+                                <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
+                                <div class="ms-dialogHidden" style="display:none;">
+                                    <SharePoint:SPLinkButton runat="server" NavigateUrl="~sitecollection/">
+                                        <SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/logo.png %&gt;" AlternateText="Back to Home" runat="server" />
+                                    </SharePoint:SPLinkButton>
+                                </div>
+                        
+                                <!-- ===== STARTER: Global navigation ================================================================================= -->
+                                <div class="ms-dialogHidden" style="display:none;">
+                                    <div class="ms-displayInline ms-core-navigation ms-dialogHidden">
+                                        <PublishingNavigation:PortalSiteMapDataSource ID="topSiteMap" runat="server" EnableViewState="false" SiteMapProvider="GlobalNavigationSwitchableProvider" StartFromCurrentNode="true" StartingNodeOffset="0" ShowStartingNode="false" TrimNonCurrentTypes="Heading" />
+                                        <SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />                                             
+                                    </div>
+                                </div>
 
-						        <!-- ===== STARTER: Breadcrumbs ======================================================================================= -->
-						        <div class="ms-dialogHidden" style="display:none;">
-							        <h1 id="pageTitle" class="ms-core-pageTitle">	
-								        <!-- ===== STARTER: SP Reqs DeltaPlaceHolderPageTitleInTitleArea and PlaceHolderPageTitleInTitleArea for adding Apps in Site Content =================== -->
-								        <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">							
-									        <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
-										        <SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
-											        <PATHSEPARATORTEMPLATE>
-												        <SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
-											        </PATHSEPARATORTEMPLATE>
-										        </SharePoint:SPTitleBreadcrumb>
-									        </asp:ContentPlaceHolder>
-								        </SharePoint:AjaxDelta>									
-								        <div class="ms-displayInlineBlock ms-normalWrap">
-									        <a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;">
-										        <span id="ms-pageDescriptionImage">&#160;</span>
-									        </a>
-									        <span class="ms-accessible" id="ms-pageDescription">
-										        <asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
-									        </span>
-									        <SharePoint:ScriptBlock runat="server">
-										        _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
-									        </SharePoint:ScriptBlock>
-								        </div>
-							        </h1>
-						        </div>
-					        </div>
+                                <!-- ===== STARTER: Breadcrumbs ======================================================================================= -->
+                                <div class="ms-dialogHidden" style="display:none;">
+                                    <h1 id="pageTitle" class="ms-core-pageTitle">   
+                                        <!-- ===== STARTER: SP Reqs DeltaPlaceHolderPageTitleInTitleArea and PlaceHolderPageTitleInTitleArea for adding Apps in Site Content =================== -->
+                                        <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">                         
+                                            <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
+                                                <SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+                                                    <PATHSEPARATORTEMPLATE>
+                                                        <SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
+                                                    </PATHSEPARATORTEMPLATE>
+                                                </SharePoint:SPTitleBreadcrumb>
+                                            </asp:ContentPlaceHolder>
+                                        </SharePoint:AjaxDelta>                                 
+                                        <div class="ms-displayInlineBlock ms-normalWrap">
+                                            <a href="javascript:;" id="ms-pageDescriptionDiv" style="display:none;">
+                                                <span id="ms-pageDescriptionImage">&#160;</span>
+                                            </a>
+                                            <span class="ms-accessible" id="ms-pageDescription">
+                                                <asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server" />
+                                            </span>
+                                            <SharePoint:ScriptBlock runat="server">
+                                                _spBodyOnLoadFunctionNames.push("setupPageDescriptionCallout");
+                                            </SharePoint:ScriptBlock>
+                                        </div>
+                                    </h1>
+                                </div>
+                            </div>
 
                             <header>
                                 <div class="container-fluid">
@@ -250,16 +250,188 @@
                                                 <li><a href="#">med.ubc.ca</a></li>
                                             </ul>
                                             <!-- ===== STARTER: Search Control ==================================================================================== -->
-					                        <div class="ms-dialogHidden" style="display:none;">
-						                        <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
-							                        <SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" />
-						                        </asp:ContentPlaceHolder>
-					                        </div>
+                                            <div class="ms-dialogHidden" style="display:none;">
+                                                <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+                                                    <SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" />
+                                                </asp:ContentPlaceHolder>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xs-12 row-content banner-logo">
-                                            <a href="https://mednet.med.ubc.ca/" title="MedNet" class="logo"><img src="/2013/MedNetBranding/_catalogs/masterpage/images/unit_sig.png" alt="UBC"/></a>
+                                            <a href="https://mednet.med.ubc.ca/" title="MedNet" class="logo">
+                                                <svg id="ubc-logo" version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 274.3 80.7" enable-background="new 0 0 274.3 80.7" xml:space="preserve">
+                                                    <g class="logo-path">
+                                                        <g class="logo-top">
+                                                            <g class="coat-of-arms">
+                                                                <path fill="#FFFFFF" d="M1.8,1.7v22.7C1.8,34,7,40.9,17.2,43.6c10.2-2.7,15.3-9.6,15.3-19.2V1.7H1.8z M17.2,42.4
+                                                                    C7.6,39.7,3,33.3,3,24.3V2.9h28.4v21.4C31.4,33.3,26.8,39.7,17.2,42.4"/>
+                                                                <path fill="#FFFFFF" d="M17.2,16.4c2.1,0,2.4,0.9,4.2,0.9c1.7,0,2-0.9,4.2-0.9c2.1,0,2.4,0.9,4.2,0.9v-2c-1.7,0-2-0.8-4.2-0.8
+                                                                    c-2.1,0-2.4,0.9-4.2,0.8c-1.7,0-2-0.8-4.2-0.8c-2.1,0-2.4,0.9-4.2,0.8c-1.7,0-2-0.8-4.2-0.8c-2.1,0-2.4,0.9-4.2,0.8v2
+                                                                    c1.7,0,2-0.9,4.2-0.9c2.1,0,2.4,0.9,4.2,0.9C14.7,17.2,15,16.4,17.2,16.4"/>
+                                                                <path fill="#FFFFFF" d="M17.2,17.6l1,10.4l3.1-8.3l-1.2,9.3l4.2-7.4l-2.5,9l5.3-5.8l-3.3,7.2l5.6-4.1c-2.6,5.5-4.4,9.9-12.3,12.3
+                                                                    C9.2,37.9,7.4,33.5,4.8,28l5.6,4.1l-3.3-7.2l5.3,5.8l-2.5-9l4.2,7.4l-1.2-9.3l3.1,8.3L17.2,17.6z"/>
+                                                                <path fill="#FFFFFF" d="M4.7,23.9c1.7,0,2-0.8,4.2-0.8c0.4,0,0.7,0,1,0.1l-0.6-2c-0.1,0-0.3,0-0.4,0c-2.1,0-2.4,0.9-4.2,0.8V23.9
+                                                                    z M11.8,23.7c0.4,0.1,0.7,0.2,1.3,0.2h0l-0.3-2c-1.1,0-1.6-0.4-2.5-0.7L11.8,23.7z M15,23.5c0.3-0.1,0.7-0.2,1.1-0.3l0.2-2
+                                                                    c-0.9,0.1-1.3,0.4-1.9,0.6L15,23.5z"/>
+                                                                <path fill="#FFFFFF" d="M29.6,23.9v-2c-1.7,0-2-0.8-4.2-0.8c-0.1,0-0.3,0-0.4,0l-0.6,2c0.3,0,0.6-0.1,1-0.1
+                                                                    C27.6,23.1,27.9,23.9,29.6,23.9 M22.6,23.7l1.4-2.5c-0.9,0.2-1.4,0.6-2.5,0.7l-0.3,2h0C21.9,23.9,22.2,23.9,22.6,23.7 M19.3,23.5
+                                                                    l0.6-1.7c-0.6-0.2-1.1-0.5-1.9-0.6l0.2,2C18.7,23.2,19,23.4,19.3,23.5"/>
+                                                                <path fill="#FFFFFF" d="M4.7,20.6c1.7,0,2-0.9,4.2-0.9c2,0,2.4,0.7,3.8,0.8l-0.3-2c-1.2-0.2-1.7-0.8-3.5-0.8
+                                                                    c-2.1,0-2.4,0.9-4.2,0.8V20.6z M13.9,20.5c0.9-0.2,1.4-0.6,2.5-0.7l0.2-2c-1.6,0.1-2,0.8-3.4,0.8L13.9,20.5z"/>
+                                                                <path fill="#FFFFFF" d="M29.6,20.6v-2c-1.7,0-2-0.8-4.2-0.8c-1.8,0-2.3,0.6-3.5,0.8l-0.3,2c1.4-0.1,1.8-0.8,3.8-0.8
+                                                                    C27.6,19.7,27.9,20.6,29.6,20.6 M20.5,20.5l0.7-1.9c-1.4,0-1.8-0.7-3.4-0.8l0.2,2C19.1,19.9,19.6,20.3,20.5,20.5"/>
+                                                                <path fill="#FFFFFF" d="M29.6,4.8l-0.3,1.3h-0.2c-0.3-0.4-0.6-0.7-1-0.9C27.8,5.1,27.4,5,27,5c-0.9,0-1.6,0.4-2.3,1.1
+                                                                    c-0.6,0.8-1,1.7-1,2.7c0,1,0.3,1.8,0.9,2.6c0.6,0.8,1.4,1.2,2.3,1.2c0.4,0,0.8-0.1,1.2-0.3c0.3-0.1,0.7-0.3,1.1-0.6
+                                                                    c0,0,0.1,0,0.2,0l-0.3,1.1c-0.4,0.2-0.9,0.3-1.3,0.4c-0.5,0.1-1,0.1-1.5,0.1c-1.2,0-2.2-0.3-3.1-0.9c-1.2-0.8-1.9-2-1.9-3.6
+                                                                    c0-1.4,0.5-2.6,1.6-3.4c1-0.8,2.2-1.2,3.7-1.2c0.5,0,0.9,0,1.4,0.2C28.7,4.5,29.1,4.6,29.6,4.8"/>
+                                                                <path fill="#FFFFFF" d="M12.7,10c0,0.9-0.4,1.7-1.1,2.4c-0.7,0.7-1.6,1-2.7,1c-1,0-2-0.2-2.8-0.6c-0.9-0.5-1.3-1.1-1.3-1.7V4.4h2
+                                                                    v5.9c0,0.6,0.2,1.1,0.6,1.6c0.4,0.4,0.9,0.6,1.5,0.6h0.3c0.6,0,1.1-0.2,1.6-0.6c0.5-0.4,0.8-0.9,0.8-1.5V4.4h1.2V10z"/>
+                                                                <path fill="#FFFFFF" d="M20.1,9.1c-0.6-0.4-1.2-0.6-2-0.6l0-0.1c0.7-0.1,1.3-0.3,1.8-0.7c0.5-0.4,0.8-0.8,0.8-1.3
+                                                                    c0-0.6-0.3-1-0.8-1.4c-0.5-0.4-1.1-0.6-1.8-0.6h-4.2v8.8h3.9c0.9,0,1.6-0.2,2.2-0.8c0.6-0.5,0.9-1.1,0.9-1.9
+                                                                    C21,10,20.7,9.5,20.1,9.1 M15.9,5.1h0.8c0.2,0,0.4,0,0.6,0.1c0.3,0.1,0.5,0.2,0.7,0.4c0.3,0.3,0.5,0.6,0.5,1
+                                                                    c0,0.4-0.1,0.8-0.4,1.1c-0.2,0.3-0.5,0.4-0.8,0.5c-0.1,0-0.2,0.1-0.4,0.1h-0.9V5.1z M18.1,12c-0.2,0.3-0.5,0.5-0.9,0.5
+                                                                    c-0.1,0-0.3,0-0.4,0h-0.9V9h1.1c0.1,0,0.2,0,0.3,0c0.4,0.1,0.7,0.3,0.9,0.6c0.3,0.4,0.4,0.7,0.4,1.2C18.5,11.2,18.3,11.7,18.1,12
+                                                                    "/>
+                                                            </g>
+                                                            <g class="tagline">
+                                                                <polygon fill="#FFFFFF" points="57.9,28.6 56.7,28.6 56.7,23.5 54.8,23.5 54.8,22.5 59.7,22.5 59.9,23.5 57.9,23.5             "/>
+                                                                <polygon fill="#FFFFFF" points="67.1,28.6 65.9,28.6 65.9,25.9 63.3,25.9 63.3,28.6 62.1,28.6 62.1,22.5 63.3,22.5 63.3,24.8 
+                                                                    65.9,24.8 65.9,22.5 67.1,22.5           "/>
+                                                                <polygon fill="#FFFFFF" points="74.5,28.6 70.6,28.6 70.6,22.5 74.4,22.5 74.4,23.5 71.7,23.5 71.7,24.9 73.9,24.9 74,25.9 
+                                                                    71.7,25.9 71.7,27.5 74.5,27.5           "/>
+                                                                <path fill="#FFFFFF" d="M83.7,28.7c-1.6,0-2.5-0.9-2.5-2.5v-3.7h1.2v3.7c0,1,0.5,1.5,1.3,1.5c0.9,0,1.3-0.5,1.3-1.5v-3.7h1.2v3.7
+                                                                    C86.2,27.7,85.3,28.7,83.7,28.7"/>
+                                                                <polygon fill="#FFFFFF" points="94.5,28.6 93.5,28.6 90.6,24.3 90.6,28.6 89.5,28.6 89.5,22.5 90.6,22.5 93.4,26.6 93.4,22.5 
+                                                                    94.5,22.5           "/>
+                                                                <rect x="97.9" y="22.5" fill="#FFFFFF" width="1.2" height="6.1"/>
+                                                                <polygon fill="#FFFFFF" points="104.9,28.7 103.8,28.7 101.4,22.6 102.6,22.3 104.4,27.1 106.1,22.5 107.3,22.5            "/>
+                                                                <polygon fill="#FFFFFF" points="113.5,28.6 109.6,28.6 109.6,22.5 113.4,22.5 113.4,23.5 110.7,23.5 110.7,24.9 112.9,24.9 
+                                                                    113,25.9 110.7,25.9 110.7,27.5 113.5,27.5           "/>
+                                                                <path fill="#FFFFFF" d="M120,28.6l-1.7-2.4h-0.6v2.3h-1.2v-6.1h1.9c1.5,0,2.3,0.7,2.3,1.9c0,0.8-0.4,1.4-1.2,1.7l1.7,2.3
+                                                                    L120,28.6z M117.7,25.3h0.7c0.7,0,1.1-0.3,1.1-0.9c0-0.7-0.6-0.9-1.1-0.9h-0.7V25.3z"/>
+                                                                <path fill="#FFFFFF" d="M125.6,28.6c-0.7,0-1.4-0.2-2.1-0.5l0,0l0.2-1.1l0.1,0c0.6,0.3,1.4,0.5,1.9,0.5c0.7,0,1.1-0.3,1.1-0.8
+                                                                    c0-0.5-0.3-0.6-1.1-0.9c-1.3-0.4-1.9-0.9-1.9-1.8c0-1.1,0.9-1.8,2.1-1.8c0.6,0,1.2,0.1,1.8,0.4l0,0l-0.2,1.1l-0.1,0
+                                                                    c-0.6-0.3-1.1-0.4-1.6-0.4c-0.5,0-0.9,0.3-0.9,0.6c0,0.4,0.3,0.6,1.2,0.9c1.2,0.4,1.8,0.8,1.8,1.9
+                                                                    C127.8,27.9,126.9,28.6,125.6,28.6"/>
+                                                                <rect x="130.8" y="22.5" fill="#FFFFFF" width="1.2" height="6.1"/>
+                                                                <polygon fill="#FFFFFF" points="137.4,28.6 136.2,28.6 136.2,23.5 134.3,23.5 134.3,22.5 139.2,22.5 139.3,23.5 137.4,23.5             
+                                                                    "/>
+                                                                <polygon fill="#FFFFFF" points="143.5,28.6 142.3,28.6 142.3,26.2 140.1,22.6 141.3,22.3 142.9,25.1 144.5,22.5 145.8,22.5 
+                                                                    143.5,26.2          "/>
+                                                                <path fill="#FFFFFF" d="M153.4,28.7c-1.5,0-2.9-1.1-2.9-3.2c0-2.1,1.5-3.2,2.9-3.2c1.5,0,2.9,1.1,2.9,3.2
+                                                                    C156.4,27.6,154.9,28.7,153.4,28.7 M153.4,23.4c-1,0-1.7,0.9-1.7,2.1c0,1.3,0.7,2.2,1.7,2.2c1,0,1.7-0.9,1.7-2.1
+                                                                    C155.2,24.3,154.4,23.4,153.4,23.4"/>
+                                                                <polygon fill="#FFFFFF" points="160.3,28.6 159.1,28.6 159.1,22.5 162.9,22.5 162.9,23.5 160.3,23.5 160.3,25 162.3,25 162.5,26 
+                                                                    160.3,26            "/>
+                                                                <path fill="#FFFFFF" d="M171.3,28.6h-2v-6.1h2c1.3,0,2.1,0.6,2.1,1.6c0,0.6-0.3,1-0.8,1.3c0.7,0.2,1,0.7,1,1.4
+                                                                    C173.7,27.9,172.8,28.6,171.3,28.6 M170.5,27.6h0.9c0.8,0,1.2-0.3,1.2-0.8c0-0.6-0.4-0.9-1.2-0.9h-0.9V27.6z M170.5,24.9h0.8
+                                                                    c0.7,0,1-0.3,1-0.8c0-0.3-0.1-0.7-1-0.7h-0.8V24.9z"/>
+                                                                <path fill="#FFFFFF" d="M180,28.6l-1.7-2.4h-0.6v2.3h-1.2v-6.1h1.9c1.4,0,2.3,0.7,2.3,1.9c0,0.8-0.4,1.4-1.2,1.7l1.7,2.3
+                                                                    L180,28.6z M177.7,25.3h0.7c0.7,0,1.1-0.3,1.1-0.9c0-0.7-0.6-0.9-1.1-0.9h-0.7V25.3z"/>
+                                                                <rect x="183.9" y="22.5" fill="#FFFFFF" width="1.2" height="6.1"/>
+                                                                <polygon fill="#FFFFFF" points="190.5,28.6 189.3,28.6 189.3,23.5 187.4,23.5 187.4,22.5 192.3,22.5 192.4,23.5 190.5,23.5             
+                                                                    "/>
+                                                                <rect x="194.6" y="22.5" fill="#FFFFFF" width="1.2" height="6.1"/>
+                                                                <path fill="#FFFFFF" d="M200.8,28.6c-0.6,0-1.4-0.2-2.1-0.5l0,0l0.2-1.1l0.1,0c0.6,0.3,1.4,0.5,1.9,0.5c0.7,0,1.1-0.3,1.1-0.8
+                                                                    c0-0.5-0.3-0.6-1.1-0.9c-1.3-0.4-1.9-0.9-1.9-1.8c0-1.1,0.9-1.8,2.1-1.8c0.6,0,1.2,0.1,1.8,0.4l0,0l-0.2,1.1l-0.1,0
+                                                                    c-0.6-0.3-1.1-0.4-1.6-0.4c-0.5,0-0.9,0.3-0.9,0.6c0,0.4,0.3,0.6,1.2,0.9c1.2,0.4,1.8,0.8,1.8,1.9
+                                                                    C203,27.9,202.1,28.6,200.8,28.6"/>
+                                                                <polygon fill="#FFFFFF" points="210.6,28.6 209.4,28.6 209.4,25.9 206.8,25.9 206.8,28.6 205.6,28.6 205.6,22.5 206.8,22.5 
+                                                                    206.8,24.8 209.4,24.8 209.4,22.5 210.6,22.5             "/>
+                                                                <path fill="#FFFFFF" d="M219.8,28.7c-1.8,0-2.9-1.3-2.9-3.2c0-1.9,1.2-3.2,2.9-3.2c0.7,0,1.3,0.1,1.8,0.5l0,0l-0.2,1.1l-0.1-0.1
+                                                                    c-0.5-0.4-1-0.5-1.5-0.5c-1.1,0-1.8,0.8-1.8,2.2c0,1.3,0.7,2.2,1.8,2.2c0.5,0,1.1-0.2,1.6-0.5l0.1-0.1l0.2,1l0,0
+                                                                    C221.1,28.5,220.5,28.7,219.8,28.7"/>
+                                                                <path fill="#FFFFFF" d="M226.9,28.7c-1.5,0-2.9-1.1-2.9-3.2c0-2.1,1.5-3.2,2.9-3.2c1.5,0,2.9,1.1,2.9,3.2
+                                                                    C229.8,27.6,228.3,28.7,226.9,28.7 M226.9,23.4c-1,0-1.7,0.9-1.7,2.1c0,1.3,0.7,2.2,1.7,2.2c1,0,1.7-0.9,1.7-2.1
+                                                                    C228.6,24.3,227.8,23.4,226.9,23.4"/>
+                                                                <polygon fill="#FFFFFF" points="236,28.6 232.4,28.6 232.4,22.5 233.6,22.5 233.6,27.5 235.8,27.5             "/>
+                                                                <path fill="#FFFFFF" d="M240.6,28.7c-1.6,0-2.5-0.9-2.5-2.5v-3.7h1.2v3.7c0,1,0.5,1.5,1.3,1.5c0.9,0,1.3-0.5,1.3-1.5v-3.7h1.2
+                                                                    v3.7C243.2,27.7,242.2,28.7,240.6,28.7"/>
+                                                                <polygon fill="#FFFFFF" points="250.3,28.6 249.1,28.6 247.5,24 247.1,28.6 246.1,28.6 246.5,22.5 248.1,22.5 249.7,27.1 
+                                                                    251.4,22.5 252.9,22.5 253.4,28.6 252.2,28.6 251.9,24            "/>
+                                                                <path fill="#FFFFFF" d="M258.6,28.6h-2v-6.1h2c1.3,0,2.1,0.6,2.1,1.6c0,0.6-0.3,1-0.8,1.3c0.7,0.2,1,0.7,1,1.4
+                                                                    C261,27.9,260.1,28.6,258.6,28.6 M257.8,27.6h0.9c0.8,0,1.2-0.3,1.2-0.8c0-0.6-0.4-0.9-1.2-0.9h-0.9V27.6z M257.8,24.9h0.8
+                                                                    c0.7,0,1-0.3,1-0.8c0-0.3-0.1-0.7-1-0.7h-0.8V24.9z"/>
+                                                                <rect x="264" y="22.5" fill="#FFFFFF" width="1.2" height="6.1"/>
+                                                                <path fill="#FFFFFF" d="M272.3,28.7l-0.6-1.6h-2.6l-0.6,1.5h-1.2l2.4-6.2h1.3l2.4,6L272.3,28.7z M269.6,26h1.8
+                                                                    c-0.1-0.3-0.6-1.5-0.9-2.4L269.6,26z"/>
+                                                                <path fill="#FFFFFF" d="M56.9,13.3c-1.1,0-1.8-0.7-1.8-1.7c0-1.4,1.1-2.1,3.6-2.4V9.1c0-0.6-0.3-0.8-1-0.8c-0.6,0-1.2,0.2-2,0.5
+                                                                    l-0.1,0l-0.2-1.3l0,0C56.2,7.2,57,7,58,7c1.6,0,2.4,0.6,2.4,2.1v4.2H59l-0.1-0.7C58.3,13.1,57.7,13.3,56.9,13.3 M58.8,10.2
+                                                                    c-1.8,0.2-2,0.8-2,1.2c0,0.4,0.2,0.6,0.7,0.6c0.5,0,0.9-0.2,1.4-0.6V10.2z"/>
+                                                                <path fill="#FFFFFF" d="M65.5,15.5V7.1h1.4L67,7.9C67.5,7.3,68.1,7,68.8,7c1.1,0,2.3,0.8,2.3,3c0,2.4-1.4,3.3-2.7,3.3
+                                                                    c-0.5,0-0.9-0.1-1.3-0.2v2.2L65.5,15.5z M67.1,11.7c0.3,0.2,0.6,0.2,1.1,0.2c0.8,0,1.3-0.7,1.3-1.9c0-1-0.4-1.7-1.1-1.7
+                                                                    c-0.5,0-0.9,0.3-1.3,0.8V11.7z"/>
+                                                                <polygon fill="#FFFFFF" points="74.8,13.2 73.2,13.2 73.2,4.4 74.8,4.1           "/>
+                                                                <path fill="#FFFFFF" d="M78.7,13.3c-1.1,0-1.8-0.7-1.8-1.7c0-1.4,1.1-2.1,3.6-2.4V9.1c0-0.6-0.3-0.8-1-0.8c-0.6,0-1.2,0.2-2,0.5
+                                                                    l-0.1,0l-0.2-1.3l0,0C78,7.2,78.8,7,79.8,7c1.6,0,2.4,0.6,2.4,2.1v4.2h-1.4l-0.1-0.7C80.1,13.1,79.5,13.3,78.7,13.3 M80.6,10.2
+                                                                    c-1.8,0.2-2,0.8-2,1.2c0,0.4,0.2,0.6,0.7,0.6c0.5,0,0.9-0.2,1.4-0.6V10.2z"/>
+                                                                <path fill="#FFFFFF" d="M87.2,13.3c-1.8,0-2.9-1.2-2.9-3.1c0-2,1.2-3.2,3-3.2c0.7,0,1.4,0.2,1.9,0.5l0,0L88.9,9l-0.1-0.1
+                                                                    c-0.5-0.4-1-0.6-1.5-0.6c-0.9,0-1.4,0.7-1.4,1.8c0,1.1,0.6,1.8,1.5,1.8c0.6,0,1-0.2,1.5-0.6l0.1-0.1l0.2,1.4l0,0
+                                                                    C88.6,13.1,88,13.3,87.2,13.3"/>
+                                                                <path fill="#FFFFFF" d="M94,13.3c-1.9,0-3-1.2-3-3.2C91,8.3,92.1,7,93.8,7c1.7,0,2.7,1.2,2.7,3.1c0,0.1,0,0.1,0,0.2
+                                                                    c0,0.1,0,0.1,0,0.1v0.1h-3.9c0.1,1,0.6,1.6,1.6,1.6c0.7,0,1.3-0.2,2-0.7l0.1,0l0.2,1.3l0,0C95.7,13.1,94.9,13.3,94,13.3
+                                                                     M92.6,9.5h2.3c-0.1-0.9-0.5-1.3-1.1-1.3C93.1,8.1,92.7,8.6,92.6,9.5"/>
+                                                                <path fill="#FFFFFF" d="M103.4,13.3c-1.7,0-2.9-1.3-2.9-3.2c0-1.9,1.2-3.2,2.9-3.2c1.7,0,2.9,1.3,2.9,3.2
+                                                                    C106.3,12.1,105.1,13.3,103.4,13.3 M103.4,8.3c-0.8,0-1.3,0.7-1.3,1.9c0,1.1,0.5,1.8,1.3,1.8c0.8,0,1.3-0.7,1.3-1.8
+                                                                    C104.7,9,104.2,8.3,103.4,8.3"/>
+                                                                <path fill="#FFFFFF" d="M110.4,13.2h-1.6V8.4H108V7.1h0.9v-1c0-1.2,0.7-1.9,2.1-1.9c0.3,0,0.5,0,0.6,0.1l0,0l0.2,1.3l-0.1,0
+                                                                    c-0.1,0-0.3,0-0.6,0c-0.5,0-0.7,0.2-0.7,0.7v0.8h1.1l0.2,1.3h-1.3V13.2z"/>
+                                                                <path fill="#FFFFFF" d="M125.4,13.2h-1.6v-4c0-0.6-0.2-0.8-0.7-0.8c-0.4,0-0.8,0.2-1.3,0.7v4.1h-1.6v-4c0-0.6-0.2-0.8-0.7-0.8
+                                                                    c-0.4,0-0.8,0.2-1.3,0.7v4.1h-1.6V7.1h1.4l0.1,0.8c0.5-0.5,1.1-0.9,1.9-0.9c0.8,0,1.3,0.3,1.6,0.9c0.6-0.6,1.3-0.9,2-0.9
+                                                                    c1.1,0,1.7,0.7,1.7,1.9V13.2z"/>
+                                                                <path fill="#FFFFFF" d="M129.6,13.2H128V7.1h1.6V13.2z M128.9,6.2c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9
+                                                                    c0.5,0,0.9,0.4,0.9,0.9C129.8,5.8,129.4,6.2,128.9,6.2"/>
+                                                                <path fill="#FFFFFF" d="M137.6,13.2H136v-4c0-0.4-0.1-0.8-0.7-0.8c-0.4,0-0.9,0.2-1.3,0.7v4.1h-1.6V7.1h1.4l0.1,0.8
+                                                                    c0.5-0.4,1.1-0.9,2-0.9c1.1,0,1.8,0.7,1.8,1.9V13.2z"/>
+                                                                <path fill="#FFFFFF" d="M142.1,13.3c-1.1,0-2.3-0.8-2.3-3c0-2.4,1.4-3.3,2.7-3.3c0.5,0,0.9,0.1,1.3,0.2V4.4l1.6-0.3v9.1H144
+                                                                    l-0.1-0.8C143.4,13.1,142.8,13.3,142.1,13.3 M142.7,8.3c-0.8,0-1.3,0.7-1.3,1.9c0,1,0.4,1.7,1.1,1.7c0.5,0,0.9-0.2,1.3-0.8V8.6
+                                                                    C143.4,8.4,143.2,8.3,142.7,8.3"/>
+                                                            </g>
+                                                        </g>
+                                                        <g class="medicine">
+                                                            <path fill="#FFFFFF" d="M57.7,46.3v3.9h4.3l0.4,2.5h-4.7V59h-2.9V43.8h8.5v2.5H57.7z"/>
+                                                            <path fill="#FFFFFF" d="M71.2,59l-0.2-1.4c-0.9,0.9-2,1.6-3.5,1.6c-1.8,0-3-1.1-3-2.9c0-2.6,2.1-3.7,6.4-4.1v-0.3
+                                                                c0-1.1-0.7-1.6-1.8-1.6c-1.2,0-2.4,0.4-3.5,0.9L65.1,49c1.2-0.5,2.5-0.9,4.2-0.9c2.8,0,4.1,1,4.1,3.6V59H71.2z M70.8,53.7
+                                                                C67.7,54,67,54.9,67,55.9c0,0.8,0.5,1.2,1.3,1.2c0.9,0,1.8-0.4,2.5-1.1V53.7z"/>
+                                                            <path fill="#FFFFFF" d="M81.2,59.2c-3,0-5.1-2-5.1-5.5c0-3.7,2.3-5.6,5.1-5.6c1.4,0,2.5,0.4,3.3,0.9l-0.4,2.4
+                                                                c-0.9-0.7-1.8-1-2.8-1c-1.5,0-2.6,1.1-2.6,3.2c0,2.2,1.2,3.3,2.8,3.3c0.9,0,1.8-0.2,2.8-1l0.3,2.2C83.6,58.9,82.5,59.2,81.2,59.2z
+                                                                "/>
+                                                            <path fill="#FFFFFF" d="M94.3,59l-0.2-1.5c-1,0.9-2.1,1.7-3.5,1.7c-2,0-3-1.2-3-3.2v-7.6h2.6v7c0,0.9,0.4,1.5,1.3,1.5
+                                                                c0.8,0,1.7-0.5,2.4-1.3v-7.2h2.6V59H94.3z"/>
+                                                            <path fill="#FFFFFF" d="M100.4,59V43.5l2.6-0.4V59H100.4z"/>
+                                                            <path fill="#FFFFFF" d="M110.7,59.1c-2.1,0-3.5-0.8-3.5-3.2v-5.5h-1.5v-2.2h1.5V45l2.6-0.4v3.8h2.2l0.3,2.2h-2.5v5
+                                                                c0,0.9,0.4,1.3,1.4,1.3c0.3,0,0.6,0,0.8-0.1l0.3,2.2C112,59.1,111.5,59.1,110.7,59.1z"/>
+                                                            <path fill="#FFFFFF" d="M120.5,59.5c-0.9,2.6-2.2,3.4-4.2,3.4c-0.5,0-0.7,0-1-0.1l-0.4-2.2c0.4,0.1,0.7,0.2,1.2,0.2
+                                                                c0.8,0,1.4-0.4,1.7-1.1l0.2-0.7l-3.9-10.5l2.8-0.4l2.5,7.6l2.4-7.4h2.6L120.5,59.5z"/>
+                                                            <path fill="#FFFFFF" d="M134.7,59.2c-2.9,0-5-2.1-5-5.5c0-3.5,2.1-5.5,5-5.5c2.9,0,5,2.1,5,5.5C139.7,57.1,137.6,59.2,134.7,59.2z
+                                                                 M134.7,50.3c-1.6,0-2.4,1.4-2.4,3.4c0,1.9,0.9,3.4,2.4,3.4c1.6,0,2.5-1.4,2.5-3.4C137.2,51.7,136.3,50.3,134.7,50.3z"/>
+                                                            <path fill="#FFFFFF" d="M147,45.4c-0.9,0-1.4,0.4-1.4,1.3v1.6h2l0.3,2.2h-2.4V59H143v-8.5h-1.5v-2.2h1.5v-1.8
+                                                                c0-2.4,1.5-3.2,3.7-3.2c0.4,0,0.8,0,1.1,0.1l0.4,2.2C147.9,45.5,147.5,45.4,147,45.4z"/>
+                                                            <path fill="#FFFFFF" d="M169.1,59V48l-4.3,11h-2.4l-4.3-11V59h-2.5V43.8h3.8l4.4,11.4l4.4-11.4h3.7V59H169.1z"/>
+                                                            <path fill="#FFFFFF" d="M180.1,59.2c-3,0-5.2-1.7-5.2-5.5c0-3.5,2.1-5.5,4.8-5.5c3.2,0,4.6,2.4,4.6,5.4c0,0.2,0,0.5,0,0.6h-6.8
+                                                                c0.1,2.1,1.3,3,2.9,3c1.4,0,2.5-0.5,3.7-1.3l0.3,2.1C183.2,58.7,181.8,59.2,180.1,59.2z M177.6,52.5h4.2c-0.2-1.7-0.8-2.6-2.1-2.6
+                                                                C178.7,49.9,177.8,50.8,177.6,52.5z"/>
+                                                            <path fill="#FFFFFF" d="M194.3,59l-0.2-1.5c-0.7,0.9-1.8,1.7-3.3,1.7c-2.2,0-4-1.7-4-5.2c0-4,2.2-5.7,4.6-5.7c1,0,1.8,0.2,2.5,0.4
+                                                                v-5.1l2.6-0.4V59H194.3z M193.9,50.8c-0.7-0.3-1.2-0.5-2.1-0.5c-1.4,0-2.4,1.1-2.4,3.5c0,2.1,0.9,3,2,3c1,0,1.7-0.6,2.4-1.5V50.8z
+                                                                "/>
+                                                            <path fill="#FFFFFF" d="M201.6,46.6c-0.9,0-1.6-0.6-1.6-1.5c0-0.9,0.7-1.5,1.6-1.5c0.9,0,1.6,0.6,1.6,1.5
+                                                                C203.2,45.9,202.5,46.6,201.6,46.6z M200.3,59V48.3h2.6V59H200.3z"/>
+                                                            <path fill="#FFFFFF" d="M210.7,59.2c-3,0-5.1-2-5.1-5.5c0-3.7,2.3-5.6,5.1-5.6c1.4,0,2.5,0.4,3.3,0.9l-0.4,2.4
+                                                                c-0.9-0.7-1.8-1-2.8-1c-1.5,0-2.6,1.1-2.6,3.2c0,2.2,1.2,3.3,2.8,3.3c0.9,0,1.8-0.2,2.8-1l0.3,2.2
+                                                                C213.1,58.9,212.1,59.2,210.7,59.2z"/>
+                                                            <path fill="#FFFFFF" d="M218.4,46.6c-0.9,0-1.6-0.6-1.6-1.5c0-0.9,0.7-1.5,1.6-1.5c0.9,0,1.6,0.6,1.6,1.5
+                                                                C219.9,45.9,219.2,46.6,218.4,46.6z M217,59V48.3h2.6V59H217z"/>
+                                                            <path fill="#FFFFFF" d="M229.9,59v-7c0-0.9-0.4-1.6-1.4-1.6c-0.8,0-1.7,0.5-2.4,1.3V59h-2.6V48.3h2.2l0.2,1.5
+                                                                c1-0.9,2.1-1.7,3.5-1.7c2,0,3,1.2,3,3.2V59H229.9z"/>
+                                                            <path fill="#FFFFFF" d="M240.5,59.2c-3,0-5.2-1.7-5.2-5.5c0-3.5,2.1-5.5,4.8-5.5c3.2,0,4.6,2.4,4.6,5.4c0,0.2,0,0.5,0,0.6h-6.8
+                                                                c0.1,2.1,1.3,3,2.9,3c1.4,0,2.5-0.5,3.7-1.3l0.3,2.1C243.6,58.7,242.2,59.2,240.5,59.2z M237.9,52.5h4.2c-0.2-1.7-0.8-2.6-2.1-2.6
+                                                                C239,49.9,238.1,50.8,237.9,52.5z"/>
+
+                                                        </g>
+                                                    </g>
+                                                </svg>                                                
+                                            </a>
                                             <h1 class="intranet-title">
                                                 <span class="mednet-title">MedNet</span>
                                             </h1>
@@ -293,68 +465,120 @@
 
                             </header>
 
-					
-				            <!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
-					
-					        <!-- ===== STARTER: Current navigation ==================================================================================== -->
-					        <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
-					
-						        <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
-						        <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
-							        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
-								        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
-								        <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
-								        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
-								        <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
-								        <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
-								
-								        <div class="ms-core-sideNavBox-removeLeftMargin">
-									        <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
-										        <!-- ===== STARTER: Current navigation Data Provider ==================================================================================== -->
-										        <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
-											        <Template_Controls><asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server"/></Template_Controls>
-										        </SharePoint:DelegateControl>
-										
-										        <!-- ===== STARTER: Current navigation menu ==================================================================================== -->
-										        <SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
-									        </SharePoint:SPNavigationManager>
-									
-									        <!-- ===== STARTER: Tree view ==================================================================================== -->
-									        <SharePoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
-										        <SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
-											        <Template_Controls>
-											        <SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true"/>
-											        <SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;">
-												        <SharePoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=23" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=23" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=23" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=23" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=23"></SharePoint:SPTreeView>
-											        </SharePoint:SPRememberScroll>
-											        </Template_Controls>
-										        </SharePoint:DelegateControl>
-									        </SharePoint:SPNavigationManager>
-								
-									        <!-- ===== STARTER: Site Contents Link ==================================================================================== -->
-									        <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
-										        <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" /></div>
-									        </asp:ContentPlaceHolder>
-								        </div>
-							        </asp:ContentPlaceHolder>
-						        </SharePoint:AjaxDelta>
-					        </div>
-					
-					        <!-- ===== STARTER: Main Content ========================================================================================== -->
-					        <div id="contentBox row-content">
-						        <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
-						        <SharePoint:AjaxDelta ID="AjaxDelta1" IsMainContent="true" runat="server">
-							        <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
-							        <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
-						        </SharePoint:AjaxDelta>
-				            </div>
+                    
+                            <!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
+                    
+                            <!-- ===== STARTER: Current navigation ==================================================================================== -->
+                            <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+                    
+                                <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
+                                <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
+                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+                                        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+                                        <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
+                                
+                                        <div class="ms-core-sideNavBox-removeLeftMargin">
+                                            <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
+                                                <!-- ===== STARTER: Current navigation Data Provider ==================================================================================== -->
+                                                <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
+                                                    <Template_Controls><asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server"/></Template_Controls>
+                                                </SharePoint:DelegateControl>
+                                        
+                                                <!-- ===== STARTER: Current navigation menu ==================================================================================== -->
+                                                <SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
+                                            </SharePoint:SPNavigationManager>
+                                    
+                                            <!-- ===== STARTER: Tree view ==================================================================================== -->
+                                            <SharePoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
+                                                <SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
+                                                    <Template_Controls>
+                                                    <SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true"/>
+                                                    <SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;">
+                                                        <SharePoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=23" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=23" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=23" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=23" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=23"></SharePoint:SPTreeView>
+                                                    </SharePoint:SPRememberScroll>
+                                                    </Template_Controls>
+                                                </SharePoint:DelegateControl>
+                                            </SharePoint:SPNavigationManager>
+                                
+                                            <!-- ===== STARTER: Site Contents Link ==================================================================================== -->
+                                            <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
+                                                <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" /></div>
+                                            </asp:ContentPlaceHolder>
+                                        </div>
+                                    </asp:ContentPlaceHolder>
+                                </SharePoint:AjaxDelta>
+                            </div>
+                    
+                            <!-- ===== STARTER: Main Content ========================================================================================== -->
+                            <div id="contentBox row-content">
+                                <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+                                <SharePoint:AjaxDelta ID="AjaxDelta1" IsMainContent="true" runat="server">
+                                    <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+                                    <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+                                </SharePoint:AjaxDelta>
+                            </div>
                             <!-- footer -->
                             <footer>
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-xs-12 row-content">
                                             <div class="logo-footer pull-left">
-                                                <a href="https://mednet.med.ubc.ca/"><img src="/2013/MedNetBranding/_catalogs/masterpage/images/footer-logo.png" runat="server"/></a>
+                                                <a href="https://mednet.med.ubc.ca/">
+                                                    <svg id="footer-logo" version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                         viewBox="0 0 241.7 21.8" enable-background="new 0 0 241.7 21.8" xml:space="preserve">
+                                                        <g>
+                                                            <path fill="#FFFFFF" d="M8,17.1c-4.4,0-7-2.3-7-6.2V1.5h3.6v9.2c0,2.3,1.2,3.5,3.4,3.5c2.2,0,3.4-1.2,3.4-3.5V1.5H15v9.3
+                                                                C15,14.7,12.3,17.1,8,17.1"/>
+                                                            <path fill="#FFFFFF" d="M21.6,7.7h1.3c1.8,0,2.7-0.7,2.7-1.9c0-1.2-0.8-1.7-2.6-1.7h-1.5V7.7z M21.6,14.3h1.6
+                                                                c1.4,0,3.1-0.4,3.1-2.1c0-1.8-1.7-2.1-3.1-2.1h-1.5V14.3z M23.2,16.9h-5V1.5h5.1C27,1.5,29,3,29,5.6C29,7,28.3,8,26.9,8.7
+                                                                c1.8,0.7,2.8,1.9,2.8,3.6C29.7,15.2,27.4,16.9,23.2,16.9"/>
+                                                            <path fill="#FFFFFF" d="M39.8,17.1c-5,0-8.2-3.1-8.2-7.9c0-4.8,3.3-8,8.3-8c1.8,0,3.4,0.4,4.7,1.1l0.1,0.1l-0.5,3.1L44,5.4
+                                                                c-1.3-0.9-2.6-1.3-3.9-1.3c-3,0-4.7,1.9-4.7,5.1c0,3.1,1.8,5.1,4.8,5.1c1.4,0,2.8-0.4,4.2-1.3l0.2-0.1l0.5,2.9l-0.1,0.1
+                                                                C43.5,16.7,41.6,17.1,39.8,17.1"/>
+                                                            <g>
+                                                                <path fill="#FFFFFF" d="M53.1,4.2v3.9h4.3l0.4,2.5h-4.7v6.3h-2.9V1.7h8.5v2.5H53.1z"/>
+                                                                <path fill="#FFFFFF" d="M66.6,16.9l-0.2-1.4c-0.9,0.9-2,1.6-3.5,1.6c-1.8,0-3-1.1-3-2.9c0-2.6,2.1-3.7,6.4-4.1V9.7
+                                                                    c0-1.1-0.7-1.6-1.8-1.6c-1.2,0-2.4,0.4-3.5,0.9l-0.3-2.1C61.7,6.4,63,6,64.7,6c2.8,0,4.1,1,4.1,3.6v7.3H66.6z M66.2,11.6
+                                                                    c-3.1,0.4-3.8,1.3-3.8,2.3c0,0.8,0.5,1.2,1.3,1.2c0.9,0,1.8-0.4,2.5-1.1V11.6z"/>
+                                                                <path fill="#FFFFFF" d="M76.5,17.1c-3,0-5.1-2-5.1-5.5c0-3.7,2.3-5.6,5.1-5.6C78,6,79.1,6.4,80,6.9l-0.4,2.4c-0.9-0.7-1.8-1-2.8-1
+                                                                    c-1.5,0-2.6,1.1-2.6,3.2c0,2.2,1.2,3.3,2.8,3.3c0.9,0,1.8-0.2,2.8-1L80,16C79,16.8,77.9,17.1,76.5,17.1z"/>
+                                                                <path fill="#FFFFFF" d="M89.7,16.9l-0.2-1.5c-1,0.9-2.1,1.7-3.5,1.7c-2,0-3-1.2-3-3.2V6.3h2.6v7c0,0.9,0.4,1.5,1.3,1.5
+                                                                    c0.8,0,1.7-0.5,2.4-1.3V6.3H92v10.6H89.7z"/>
+                                                                <path fill="#FFFFFF" d="M95.7,16.9V1.4L98.4,1v15.9H95.7z"/>
+                                                                <path fill="#FFFFFF" d="M106.1,17.1c-2.1,0-3.5-0.8-3.5-3.2V8.4h-1.5V6.3h1.5V2.9l2.6-0.4v3.8h2.2l0.3,2.2h-2.5v5
+                                                                    c0,0.9,0.4,1.3,1.4,1.3c0.3,0,0.6,0,0.8-0.1l0.3,2.2C107.4,17,106.9,17.1,106.1,17.1z"/>
+                                                                <path fill="#FFFFFF" d="M115.9,17.5c-0.9,2.6-2.2,3.4-4.2,3.4c-0.5,0-0.7,0-1-0.1l-0.4-2.2c0.4,0.1,0.7,0.2,1.2,0.2
+                                                                    c0.8,0,1.4-0.4,1.7-1.1l0.2-0.7l-3.9-10.5l2.8-0.4l2.5,7.6l2.4-7.4h2.6L115.9,17.5z"/>
+                                                                <path fill="#FFFFFF" d="M129.6,17.1c-2.9,0-5-2.1-5-5.5c0-3.5,2.1-5.5,5-5.5c2.9,0,5,2.1,5,5.5C134.7,15,132.6,17.1,129.6,17.1z
+                                                                     M129.6,8.2c-1.6,0-2.4,1.4-2.4,3.4c0,1.9,0.9,3.4,2.4,3.4c1.6,0,2.5-1.4,2.5-3.4C132.1,9.6,131.2,8.2,129.6,8.2z"/>
+                                                                <path fill="#FFFFFF" d="M142,3.4c-0.9,0-1.4,0.4-1.4,1.3v1.6h2l0.3,2.2h-2.4v8.5H138V8.4h-1.5V6.3h1.5V4.4c0-2.4,1.5-3.2,3.7-3.2
+                                                                    c0.4,0,0.8,0,1.1,0.1l0.4,2.2C142.8,3.4,142.4,3.4,142,3.4z"/>
+                                                                <path fill="#FFFFFF" d="M163.9,16.9V6l-4.3,11h-2.4l-4.3-11v10.9h-2.5V1.7h3.8l4.4,11.4l4.4-11.4h3.7v15.2H163.9z"/>
+                                                                <path fill="#FFFFFF" d="M174.9,17.1c-3,0-5.2-1.7-5.2-5.5c0-3.5,2.1-5.5,4.8-5.5c3.2,0,4.6,2.4,4.6,5.4c0,0.2,0,0.5,0,0.6h-6.8
+                                                                    c0.1,2.1,1.3,3,2.9,3c1.4,0,2.5-0.5,3.7-1.3l0.3,2.1C178,16.6,176.6,17.1,174.9,17.1z M172.3,10.4h4.2c-0.2-1.7-0.8-2.6-2.1-2.6
+                                                                    C173.4,7.9,172.5,8.7,172.3,10.4z"/>
+                                                                <path fill="#FFFFFF" d="M189.1,16.9l-0.2-1.5c-0.7,0.9-1.8,1.7-3.3,1.7c-2.2,0-4-1.7-4-5.2c0-4,2.2-5.7,4.6-5.7
+                                                                    c1,0,1.8,0.2,2.5,0.4V1.4l2.6-0.4v15.9H189.1z M188.7,8.7c-0.7-0.3-1.2-0.5-2.1-0.5c-1.4,0-2.4,1.1-2.4,3.5c0,2.1,0.9,3,2,3
+                                                                    c1,0,1.7-0.6,2.4-1.5V8.7z"/>
+                                                                <path fill="#FFFFFF" d="M196.5,4.5c-0.9,0-1.6-0.6-1.6-1.5c0-0.9,0.7-1.5,1.6-1.5c0.9,0,1.6,0.6,1.6,1.5
+                                                                    C198,3.9,197.3,4.5,196.5,4.5z M195.1,16.9V6.3h2.6v10.6H195.1z"/>
+                                                                <path fill="#FFFFFF" d="M205.6,17.1c-3,0-5.1-2-5.1-5.5c0-3.7,2.3-5.6,5.1-5.6c1.4,0,2.5,0.4,3.3,0.9l-0.4,2.4
+                                                                    c-0.9-0.7-1.8-1-2.8-1c-1.5,0-2.6,1.1-2.6,3.2c0,2.2,1.2,3.3,2.8,3.3c0.9,0,1.8-0.2,2.8-1l0.3,2.2C208,16.8,206.9,17.1,205.6,17.1
+                                                                    z"/>
+                                                                <path fill="#FFFFFF" d="M213.2,4.5c-0.9,0-1.6-0.6-1.6-1.5c0-0.9,0.7-1.5,1.6-1.5c0.9,0,1.6,0.6,1.6,1.5
+                                                                    C214.8,3.9,214.1,4.5,213.2,4.5z M211.9,16.9V6.3h2.6v10.6H211.9z"/>
+                                                                <path fill="#FFFFFF" d="M224.7,16.9v-7c0-0.9-0.4-1.6-1.4-1.6c-0.8,0-1.7,0.5-2.4,1.3v7.2h-2.6V6.3h2.2l0.2,1.5
+                                                                    c1-0.9,2.1-1.7,3.5-1.7c2,0,3,1.2,3,3.2v7.7H224.7z"/>
+                                                                <path fill="#FFFFFF" d="M235.3,17.1c-3,0-5.2-1.7-5.2-5.5c0-3.5,2.1-5.5,4.8-5.5c3.2,0,4.6,2.4,4.6,5.4c0,0.2,0,0.5,0,0.6h-6.8
+                                                                    c0.1,2.1,1.3,3,2.9,3c1.4,0,2.5-0.5,3.7-1.3l0.3,2.1C238.4,16.6,237,17.1,235.3,17.1z M232.8,10.4h4.2c-0.2-1.7-0.8-2.6-2.1-2.6
+                                                                    C233.8,7.9,233,8.7,232.8,10.4z"/>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </a>
                                                 <a href="#" class="toplink">Back To Top ^</a>
                                             </div>
                                             <address class="pull-right">
@@ -400,24 +624,24 @@
                                     </div>
                                 </div>
                             </footer>
-				        </div>
-			        </div>
+                        </div>
+                    </div>
                 </div>
-		    </div>
-		    <!-- ===== STARTER: Main Scrolling Body Ends Here ================================================================================= -->
-			
-		    <!-- ===== STARTER: Needed for form stuff ========================================================================================= -->
-		    <asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
-			    <SharePoint:formdigest runat="server" />
-		    </asp:ContentPlaceHolder>
-		
-		    <!-- ===== STARTER: Hidden Placeholders =========================================================================================== -->	
-		    <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
-				
-		</SharePoint:SharePointForm>
-	
-		<!-- ===== STARTER: Adds extra stuff like another form for Survey management ====================================================== -->	
-		<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
+            </div>
+            <!-- ===== STARTER: Main Scrolling Body Ends Here ================================================================================= -->
+            
+            <!-- ===== STARTER: Needed for form stuff ========================================================================================= -->
+            <asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+                <SharePoint:formdigest runat="server" />
+            </asp:ContentPlaceHolder>
+        
+            <!-- ===== STARTER: Hidden Placeholders =========================================================================================== --> 
+            <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
+                
+        </SharePoint:SharePointForm>
+    
+        <!-- ===== STARTER: Adds extra stuff like another form for Survey management ====================================================== --> 
+        <asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
     
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -428,7 +652,7 @@
         <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/slider.js"></script>
 
 
-	</body>
-	
-	<!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - April 21, 2013 -->
+    </body>
+    
+    <!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - April 21, 2013 -->
 </SharePoint:SPHtmlTag>
