@@ -52,7 +52,6 @@
         <link href="/2013/MedNetBranding/_catalogs/masterpage/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/2013/MedNetBranding/_catalogs/masterpage/css/slider.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesnt work if you view the page via file:// -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -89,14 +88,10 @@
                 <div id="suiteBarLeft">
                     <div class="ms-table ms-fullWidth">
                         <div class="ms-tableRow">
-                            <div class="ms-tableCell ms-verticalAlignMiddle">
-                                <SharePoint:DelegateControl id="ID_SuiteBarBrandingDelegate" ControlId="SuiteBarBrandingDelegate" runat="server" />
+                            <div class="ms-tableCell ms-verticalAlignMiddle branding-label">
+                                MedNet
                             </div>
-                            <SharePoint:AjaxDelta runat="server" id="DeltaSuiteLinks" BlockElement="true" CssClass="ms-core-deltaSuiteLinks">
-                                <div id="suiteLinksBox">
-                                    <SharePoint:DelegateControl id="ID_SuiteLinksDelegate" ControlId="SuiteLinksDelegate" runat="server" />
-                                </div>
-                            </SharePoint:AjaxDelta>
+
                         </div>
                     </div>
                 </div>
@@ -118,7 +113,6 @@
                                             <SharePoint:MenuItemTemplate runat="server" id="MenuItem_ViewAllSiteContents"  Text="<%$Resources:wss,quiklnch_allcontent_15%>"  Description="<%$Resources:wss,siteactions_allcontentdescription%>"  ImageUrl="/_layouts/15/images/allcontent32.png?rev=23"  MenuGroupId="200"  Sequence="240"  UseShortId="true"  ClientOnClickNavigateUrl="~siteLayouts/viewlsts.aspx"  PermissionsString="ViewFormPages"  PermissionMode="Any" />
                                             <SharePoint:MenuItemTemplate runat="server" id="MenuItem_ChangeTheLook"  Text="<%$Resources:wss,siteactions_changethelook15%>"  Description="<%$Resources:wss,siteactions_changethelookdesc15%>"  MenuGroupId="300"  Sequence="310"  UseShortId="true"  ClientOnClickNavigateUrl="~siteLayouts/designgallery.aspx"  PermissionsString="ApplyThemeAndBorder,ApplyStyleSheets,Open,ViewPages,OpenItems,ViewListItems"  PermissionMode="All" />
                                             <SharePoint:MenuItemTemplate runat="server" id="MenuItem_Settings"  Text="<%$Resources:wss,siteactions_settings15%>"  Description="<%$Resources:wss,siteactions_sitesettingsdescriptionv4%>"  ImageUrl="/_layouts/15/images/settingsIcon.png?rev=23"  MenuGroupId="300"  Sequence="320"  UseShortId="true"  ClientOnClickScriptContainingPrefixedUrl="GoToPage('~siteLayouts/settings.aspx')"  PermissionsString="EnumeratePermissions,ManageWeb,ManageSubwebs,AddAndCustomizePages,ApplyThemeAndBorder,ManageAlerts,ManageLists,ViewUsageData"  PermissionMode="Any" />
-                                            <SharePoint:MenuItemTemplate runat="server" id="MenuItem_SwitchToMobileView"  Visible="false"  Text="<%$Resources:wss,siteactions_switchtomobileview%>"  Description="<%$Resources:wss,siteactions_switchtomobileviewdesc%>"  MenuGroupId="300"  Sequence="330"  UseShortId="true"  ClientOnClickScript="var mswlh = window.location.href; if (mswlh.indexOf('?')==-1) { window.location = mswlh + '?mobile=1'; } else { window.location = mswlh + '&mobile=1'; }" />
                                         </SharePoint:FeatureMenuTemplate>
                                     </CustomTemplate>
                                 </SharePoint:SiteActions>
@@ -199,10 +193,37 @@
                                 <!-- ===== STARTER: Site Logo with link to root ======================================================================= -->
                                 <div class="ms-dialogHidden" style="display:none;">
                                     <SharePoint:SPLinkButton runat="server" NavigateUrl="~sitecollection/">
-                                        <SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/logo.png %&gt;" AlternateText="Back to Home" runat="server" />
+                                        <SharePoint:SiteLogoImage ID="x63829de2201a4365a3904788f682d0a3" LogoImageUrl=='data:image/svg+xml;utf8,<svg><g><path fill="#FFFFFF" d="M1.8,1.7v22.7C1.8,34,7,40.9,17.2,43.6c10.2-2.7,15.3-9.6,15.3-19.2V1.7H1.8z M17.2,42.4
+        C7.6,39.7,3,33.3,3,24.3V2.9h28.4v21.4C31.4,33.3,26.8,39.7,17.2,42.4"></path>
+    <path fill="#FFFFFF" d="M17.2,16.4c2.1,0,2.4,0.9,4.2,0.9c1.7,0,2-0.9,4.2-0.9c2.1,0,2.4,0.9,4.2,0.9v-2c-1.7,0-2-0.8-4.2-0.8
+        c-2.1,0-2.4,0.9-4.2,0.8c-1.7,0-2-0.8-4.2-0.8c-2.1,0-2.4,0.9-4.2,0.8c-1.7,0-2-0.8-4.2-0.8c-2.1,0-2.4,0.9-4.2,0.8v2
+        c1.7,0,2-0.9,4.2-0.9c2.1,0,2.4,0.9,4.2,0.9C14.7,17.2,15,16.4,17.2,16.4"></path>
+    <path fill="#FFFFFF" d="M17.2,17.6l1,10.4l3.1-8.3l-1.2,9.3l4.2-7.4l-2.5,9l5.3-5.8l-3.3,7.2l5.6-4.1c-2.6,5.5-4.4,9.9-12.3,12.3
+        C9.2,37.9,7.4,33.5,4.8,28l5.6,4.1l-3.3-7.2l5.3,5.8l-2.5-9l4.2,7.4l-1.2-9.3l3.1,8.3L17.2,17.6z"></path>
+    <path fill="#FFFFFF" d="M4.7,23.9c1.7,0,2-0.8,4.2-0.8c0.4,0,0.7,0,1,0.1l-0.6-2c-0.1,0-0.3,0-0.4,0c-2.1,0-2.4,0.9-4.2,0.8V23.9
+        z M11.8,23.7c0.4,0.1,0.7,0.2,1.3,0.2h0l-0.3-2c-1.1,0-1.6-0.4-2.5-0.7L11.8,23.7z M15,23.5c0.3-0.1,0.7-0.2,1.1-0.3l0.2-2
+        c-0.9,0.1-1.3,0.4-1.9,0.6L15,23.5z"></path>
+    <path fill="#FFFFFF" d="M29.6,23.9v-2c-1.7,0-2-0.8-4.2-0.8c-0.1,0-0.3,0-0.4,0l-0.6,2c0.3,0,0.6-0.1,1-0.1
+        C27.6,23.1,27.9,23.9,29.6,23.9 M22.6,23.7l1.4-2.5c-0.9,0.2-1.4,0.6-2.5,0.7l-0.3,2h0C21.9,23.9,22.2,23.9,22.6,23.7 M19.3,23.5
+        l0.6-1.7c-0.6-0.2-1.1-0.5-1.9-0.6l0.2,2C18.7,23.2,19,23.4,19.3,23.5"></path>
+    <path fill="#FFFFFF" d="M4.7,20.6c1.7,0,2-0.9,4.2-0.9c2,0,2.4,0.7,3.8,0.8l-0.3-2c-1.2-0.2-1.7-0.8-3.5-0.8
+        c-2.1,0-2.4,0.9-4.2,0.8V20.6z M13.9,20.5c0.9-0.2,1.4-0.6,2.5-0.7l0.2-2c-1.6,0.1-2,0.8-3.4,0.8L13.9,20.5z"></path>
+    <path fill="#FFFFFF" d="M29.6,20.6v-2c-1.7,0-2-0.8-4.2-0.8c-1.8,0-2.3,0.6-3.5,0.8l-0.3,2c1.4-0.1,1.8-0.8,3.8-0.8
+        C27.6,19.7,27.9,20.6,29.6,20.6 M20.5,20.5l0.7-1.9c-1.4,0-1.8-0.7-3.4-0.8l0.2,2C19.1,19.9,19.6,20.3,20.5,20.5"></path>
+    <path fill="#FFFFFF" d="M29.6,4.8l-0.3,1.3h-0.2c-0.3-0.4-0.6-0.7-1-0.9C27.8,5.1,27.4,5,27,5c-0.9,0-1.6,0.4-2.3,1.1
+        c-0.6,0.8-1,1.7-1,2.7c0,1,0.3,1.8,0.9,2.6c0.6,0.8,1.4,1.2,2.3,1.2c0.4,0,0.8-0.1,1.2-0.3c0.3-0.1,0.7-0.3,1.1-0.6
+        c0,0,0.1,0,0.2,0l-0.3,1.1c-0.4,0.2-0.9,0.3-1.3,0.4c-0.5,0.1-1,0.1-1.5,0.1c-1.2,0-2.2-0.3-3.1-0.9c-1.2-0.8-1.9-2-1.9-3.6
+        c0-1.4,0.5-2.6,1.6-3.4c1-0.8,2.2-1.2,3.7-1.2c0.5,0,0.9,0,1.4,0.2C28.7,4.5,29.1,4.6,29.6,4.8"></path>
+    <path fill="#FFFFFF" d="M12.7,10c0,0.9-0.4,1.7-1.1,2.4c-0.7,0.7-1.6,1-2.7,1c-1,0-2-0.2-2.8-0.6c-0.9-0.5-1.3-1.1-1.3-1.7V4.4h2
+        v5.9c0,0.6,0.2,1.1,0.6,1.6c0.4,0.4,0.9,0.6,1.5,0.6h0.3c0.6,0,1.1-0.2,1.6-0.6c0.5-0.4,0.8-0.9,0.8-1.5V4.4h1.2V10z"></path>
+    <path fill="#FFFFFF" d="M20.1,9.1c-0.6-0.4-1.2-0.6-2-0.6l0-0.1c0.7-0.1,1.3-0.3,1.8-0.7c0.5-0.4,0.8-0.8,0.8-1.3
+        c0-0.6-0.3-1-0.8-1.4c-0.5-0.4-1.1-0.6-1.8-0.6h-4.2v8.8h3.9c0.9,0,1.6-0.2,2.2-0.8c0.6-0.5,0.9-1.1,0.9-1.9
+        C21,10,20.7,9.5,20.1,9.1 M15.9,5.1h0.8c0.2,0,0.4,0,0.6,0.1c0.3,0.1,0.5,0.2,0.7,0.4c0.3,0.3,0.5,0.6,0.5,1
+        c0,0.4-0.1,0.8-0.4,1.1c-0.2,0.3-0.5,0.4-0.8,0.5c-0.1,0-0.2,0.1-0.4,0.1h-0.9V5.1z M18.1,12c-0.2,0.3-0.5,0.5-0.9,0.5
+        c-0.1,0-0.3,0-0.4,0h-0.9V9h1.1c0.1,0,0.2,0,0.3,0c0.4,0.1,0.7,0.3,0.9,0.6c0.3,0.4,0.4,0.7,0.4,1.2C18.5,11.2,18.3,11.7,18.1,12
+        "></path></g></svg>'  AlternateText="Back to Home" runat="server" />
                                     </SharePoint:SPLinkButton>
-                                </div>
-                        
+                                </div>                               
                                 <!-- ===== STARTER: Global navigation ================================================================================= -->
                                 <div class="ms-dialogHidden" style="display:none;">
                                     <div class="ms-displayInline ms-core-navigation ms-dialogHidden">
@@ -210,7 +231,6 @@
                                         <SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="1" SkipLinkText="" />                                             
                                     </div>
                                 </div>
-
                                 <!-- ===== STARTER: Breadcrumbs ======================================================================================= -->
                                 <div class="ms-dialogHidden" style="display:none;">
                                     <h1 id="pageTitle" class="ms-core-pageTitle">   
@@ -244,10 +264,10 @@
                                     <div class="row top-nav">
                                         <div class="col-xs-12 row-content">
                                             <ul class="nav nav-pills pull-left utility-links">
-                                                <li><a href="#">Home</a></li>
-                                                <li><a href="#">Contact List</a></li>
-                                                <li><a href="#">UBC Directory</a></li>
-                                                <li><a href="#">med.ubc.ca</a></li>
+                                                <li><a href="#" class="home hidden-xs hidden-sm">Home</a></li>
+                                                <li><a href="#" class="contact">Contact List</a></li>
+                                                <li><a href="#" class="directory">UBC Directory</a></li>
+                                                <li><a href="#" class="public-site">med.ubc.ca</a></li>
                                             </ul>
                                             <!-- ===== STARTER: Search Control ==================================================================================== -->
                                             <div class="ms-dialogHidden" style="display:none;">
@@ -258,7 +278,7 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-xs-12 row-content banner-logo">
+                                        <div class="col-xs-12 row-content banner-logo  hidden-xs">
                                             <a href="https://mednet.med.ubc.ca/" title="MedNet" class="logo">
                                                 <svg id="ubc-logo" version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 274.3 64" enable-background="new 0 0 274.3 80.7" xml:space="preserve">
                                                     <g class="logo-path">
@@ -438,6 +458,30 @@
                                         </div>
                                     </div>
                                     <div class="row site-nav">
+                                      <nav id="top-navbar" class="col-xs-12 navbar navbar-default" role="navigation">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle">
+                                                <span class="sr-only">Toggle navigation</span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="menu-label">Menu</span>
+                                            </button>
+                                            <h1 class="intranet-title"><span class="hidden-lg hidden-md hidden-sm mednet-title">MedNet</span></h1>
+                                        </div>
+                                          <div id="navbar" class="navbar-expand expand">
+                                            <ul class="nav navbar-nav">
+                                                <li><a href="homepage4.html">Home</a></li>
+                                                <li><a href="#">About Us</a></li> 
+                                                <li><a href="#">Services &amp; Resources</a></li> 
+                                                <li><a href="#">HR</a></li> 
+                                                <li><a href="#">Teaching</a></li> 
+                                                <li><a href="#">Research</a></li> 
+                                                <li><a href="#">Team Sites</a></li>             
+                                            </ul>
+                                          </div>
+                                        </div>
+                                    <!-- <div class="row site-nav">
                                         <nav class="navbar navbar-default site-nav row-content">
                                             <div class="container-fluid">
                                                 <div class="navbar-header">
@@ -459,7 +503,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </nav>
+                                        </nav> -->
                                     </div>
                                 </div>         
 
@@ -579,7 +623,7 @@
                                                         </g>
                                                     </svg>
                                                 </a>
-                                                <a href="#" class="toplink">Back To Top ^</a>
+                                                <a href="#suiteBar" class="toplink">Back To Top ^</a>
                                             </div>
                                             <address class="pull-right">
                                                 <strong>Faculty of Medicine</strong><br>
@@ -650,6 +694,7 @@
         <script src="/2013/MedNetBranding/_catalogs/masterpage/js/homepage.js"></script>
         <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/jssor.slider.mini.js"></script>    
         <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/slider.js"></script>
+        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/masterpage.js"></script>
 
 
     </body>
