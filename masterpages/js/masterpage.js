@@ -6,9 +6,8 @@
 */
 $(".navbar-toggle").click(function() 
 {  
-    // hides children divs if shown, shows if hidden 
     $('#navbar').slideToggle();
-    jQuery('#side-nav').slideToggle();
+    $('#sideNavBox').slideToggle();
 });
 
 /*
@@ -63,7 +62,6 @@ function bottomTopLink(){
 }//end defaultTopLink
 
 function fixTopLink(){
-    console.log("fix");
     $('.toplink').css({
         'position': 'fixed',
         'bottom': '0',
@@ -72,12 +70,18 @@ function fixTopLink(){
 }//end fixTopLink
 
 
-/*set timer to compensate for safari ios scrolling issue*/
+/*position toplink with timer*/
 setInterval(function(){
     if ($(window).width() < 768) {
         checkOffset(); 
     }else{
         defaultTopLink();
     }
-
 },100);
+
+$(window).resize(function(){
+    if($(window).width() >= 768){
+        $('#sideNavBox').show();
+        $('#navbar').show();
+    }
+});

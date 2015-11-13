@@ -270,7 +270,7 @@
                                                 <li><a href="#" class="public-site">med.ubc.ca</a></li>
                                             </ul>
                                             <!-- ===== STARTER: Search Control ==================================================================================== -->
-                                            <div class="ms-dialogHidden" style="display:none;">
+                                            <div class="ms-dialogHidden">
                                                 <asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
                                                     <SearchWC:SearchBoxScriptWebPart UseSiteCollectionSettings="true" EmitStyleReference="false" ShowQuerySuggestions="true" ChromeType="None" UseSharedSettings="true" TryInplaceQuery="false" ServerInitialRender="true" runat="server" />
                                                 </asp:ContentPlaceHolder>
@@ -474,46 +474,22 @@
                                                 <li><a href="homepage4.html">Home</a></li>
                                                 <li><a href="#">About Us</a></li> 
                                                 <li><a href="#">Services &amp; Resources</a></li> 
-                                                <li><a href="#">HR</a></li> 
+                                                <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/HR">HR</a></li>  
                                                 <li><a href="#">Teaching</a></li> 
                                                 <li><a href="#">Research</a></li> 
                                                 <li><a href="#">Team Sites</a></li>             
                                             </ul>
                                           </div>
                                         </div>
-                                    <!-- <div class="row site-nav">
-                                        <nav class="navbar navbar-default site-nav row-content">
-                                            <div class="container-fluid">
-                                                <div class="navbar-header">
-                                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNav">
-                                                        <span class="icon-bar"></span>
-                                                        <span class="icon-bar"></span>
-                                                        <span class="icon-bar"></span>                        
-                                                    </button>
-                                                </div>
-                                                <div class="collapse navbar-collapse" id="topNav">
-                                                    <ul class="nav navbar-nav">
-                                                        <li><a href="#">About Us</a></li> 
-                                                        <li><a href="#">Services &amp; Resources</a></li> 
-                                                        <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/HR">HR</a></li> 
-                                                        <li><a href="#">Teaching</a></li> 
-                                                        <li><a href="#">Research</a></li> 
-                                                        <li><a href="#">Office of the Dean</a></li> 
-                                                        <li><a href="#">Team Sites</a></li>  
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </nav> -->
                                     </div>
                                 </div>         
-
                             </header>
 
                     
                             <!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
                     
                             <!-- ===== STARTER: Current navigation ==================================================================================== -->
-                            <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+                            <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList col-sm-2">
                     
                                 <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
                                 <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
@@ -692,9 +668,11 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/2013/MedNetBranding/_catalogs/masterpage/js/bootstrap.min.js"></script>
         <script src="/2013/MedNetBranding/_catalogs/masterpage/js/homepage.js"></script>
+        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/masterpage.js"></script>
+
+        <!-- for homepage layout -->
         <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/jssor.slider.mini.js"></script>    
         <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/slider.js"></script>
-        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/masterpage.js"></script>
 
 
     </body>

@@ -1,6 +1,9 @@
 *{
 	font-family:"Segoe UI",Tahoma;
 }
+.branding-label{
+	padding-left:5px;
+}
 .row-content{
 	/*max-width: 1620px;
 	margin:0 auto;*/
@@ -58,6 +61,10 @@ header nav{
 }
 div.site-nav{
 	border-top: 2px solid #fff;
+}
+#top-navbar {
+	background: #3868A6;
+	border:0;
 }
 .site-nav .navbar-nav>li>a{
 	/*color:#0c5e79;*/
@@ -124,7 +131,12 @@ h2{
 	line-height:40px;
 	color:#effaf0;	
 }
-
+#sideNavBox
+{
+	margin-left:20px; 
+/* margin-right:20px; */
+/* width:180px; */
+}
 
 .border-top{
 	/*pale green
@@ -155,7 +167,6 @@ h2{
 .date{
 	font-style: italic;
 	display:block;
-	margin-left: -5px;
 	display: table-cell;
 	padding-right:20px;
 	color:#888;
@@ -227,3 +238,139 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
 	width:100%;
 }
 /*SLIDER END*/
+
+/*xs*/
+@media screen and (max-width:767px){
+    /*need to zero out a lot of bootstrap*/
+    header .container-fluid,
+    header .row,
+    header .col-xs-12{
+        margin:0 auto;
+        padding:0;
+    }
+    #ubc-logo{
+    	display:none;
+    }
+    .top-nav{
+        width:100%;
+    }
+    #navbar{
+    	display:none;
+    }
+    .utility-links{
+        width:100%;
+        text-align: center;
+    }
+    .utility-links li{
+        text-align:center;  
+        float:none;
+        display:inline-block;
+        padding:0;
+        margin:0;
+    }
+    .utility-links li + li{
+        margin:0;    
+    }
+    .utility-links li a{
+        width:30vw;
+        padding:3px 0;
+        margin:0;
+    }
+    .intranet-title{
+        margin-left:15px;    
+        top:15px;
+    }
+    .nav,
+    .navbar-nav,
+    .side-nav-container{
+        margin:0;    
+        padding:0;
+    }
+    .navbar-toggle{
+    	padding:6px;
+    	border-color: #ddd;
+    }
+    .navbar-toggle .icon-bar{
+        width:36px;
+        background-color:#888;
+    }
+    .site-nav .navbar-toggle:focus{
+    	background: #002145;
+    }
+
+    .side-nav-container .side-nav{
+        margin-bottom: 0;
+    }
+    #navbar .navbar-nav{
+        background-color:#3868a6;
+    }
+    .navbar-header{
+    	background:#002145;
+    }
+
+    .nav.side-nav li{
+        border-right:0;
+    }
+    #sideNavBox{
+    	display:none;
+    	width:100%;
+    }
+	.ms-core-listMenu-selected:link,
+	.ms-core-listMenu-selected:visited,
+	.ms-core-listMenu-selected{
+	    background-color:#c6d6d0;
+	}
+    .breadcrumb-container{
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    .breadcrumb{
+        border-top:1px solid;
+        border-bottom:1px solid;
+    }
+    .toplink{
+        width:100%;
+        position:fixed;
+        bottom:0;
+        left:0;
+        text-align:center;
+        background:#002145;
+        text-decoration:underline;   
+        /*transition:background 300ms;*/
+    }
+    footer{
+    	margin-top:57px;
+    }
+    footer .address{
+        width:100%;
+    }
+}
+@media screen and (min-width: 768px){
+	#sideNavBox{
+		width: 16.66666667%;
+		margin:0;
+		padding: 0 0 0 15px;
+		border-right-width: 1px;
+	    border-right-style: solid;
+	    border-right-color: rgb(0, 33, 69);
+	}
+	#sideNavBox a{
+		color:#000
+	}
+
+}
+/*md*/
+@media screen and (max-width:992px){
+	.fp-column{
+		width:100%;
+	}
+}
+/*md-lg*/
+@media screen and (max-width:1200px){
+
+}
+/*lg*/
+@media screen and (min-width:1200px){
+
+}
