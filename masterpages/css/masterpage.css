@@ -22,11 +22,20 @@
 	height:0;
 	padding:0;
 }
+.utility-links a{
+	color:#002145;
+}
+#SearchBox{
+	text-align: right;
+}
 .top-nav{
 	background:#FFF;
 }
-.top-nav form{
-	margin-top:3px;
+.top-nav .ms-srch-sb{
+	margin-top:7px;
+}
+.top-nav{
+	background:#FFF;
 }
 header{
 	background:#002145;
@@ -35,6 +44,11 @@ header{
 }
 header nav{
 	display:block;
+}
+.ms-srch-sb>input{
+	height: auto;
+	font-size: 14px;
+
 }
 .intranet-title{
     display:inline-block;
@@ -109,6 +123,7 @@ header nav{
 header .banner-logo{
 	position:relative;
     padding:15px 0 10px 20px;
+    margin-left:125px;
 }
 .mednet-title{
 	color: #fff;
@@ -257,9 +272,10 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     #navbar{
     	display:none;
     }
-    .utility-links{
+    header .utility-links{
         width:100%;
         text-align: center;
+        margin-top:10px;
     }
     .utility-links li{
         text-align:center;  
@@ -278,7 +294,8 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     }
     .intranet-title{
         margin-left:15px;    
-        top:15px;
+        top:11px;
+        left:20px;
     }
     .nav,
     .navbar-nav,
@@ -287,12 +304,16 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
         padding:0;
     }
     .navbar-toggle{
+    	min-width:48px;
     	padding:6px;
     	border-color: #ddd;
+    	margin-right:20px;
     }
     .navbar-toggle .icon-bar{
         width:36px;
         background-color:#888;
+        margin-left:auto;
+        margin-right:auto;
     }
     .site-nav .navbar-toggle:focus{
     	background: #002145;
@@ -345,7 +366,24 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     footer .address{
         width:100%;
     }
+    .ms-srch-sb{
+    	width:100%;
+    }
+    #SearchBox input{
+    	width:85%;
+    	height:30px;
+    	text-align: center;
+    }  
+	div.site-nav{
+		border-top: 0;
+	}  
+	.ms-srch-sb-navLink,
+	.ms-srch-sb-searchLink{
+		vertical-align: middle;
+	}
 }
+
+
 @media screen and (min-width: 768px){
 	#sideNavBox{
 		width: 16.66666667%;
@@ -363,7 +401,7 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
 /*md*/
 @media screen and (max-width:992px){
 	.fp-column{
-		width:100%;
+		width:90%;
 	}
 }
 /*md-lg*/
