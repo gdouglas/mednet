@@ -21,12 +21,8 @@
         <SharePoint:RobotsMetaTag runat="server" />
         
         <!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== --> 
-        <SharePoint:SPShortcutIcon runat="server" IconUrl="/2013/MedNetBranding/_catalogs/masterpage/ubc-branding/favicon.ico" />
-        <SharePoint:SPPinnedSiteTile runat="server" TileUrl="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-57-precomposed.png" TileColor="#0072C6" />
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-57-precomposed.png">             
+        <SharePoint:SPShortcutIcon runat="server" IconUrl="/_catalogs/masterpage/StarterBranding/favicon.ico" />
+        <SharePoint:SPPinnedSiteTile runat="server" TileUrl="/_catalogs/masterpage/StarterBranding/metrotile.png" TileColor="#0072C6" />                
         
 
             <!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
@@ -48,6 +44,11 @@
         <SharePoint:CustomJSUrl runat="server" />
         <SharePoint:SoapDiscoveryLink runat="server" />
 
+        <!-- Bootstrap -->
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/masterpage.css" rel="stylesheet">
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/styles.css" rel="stylesheet">
+        <link href="/2013/MedNetBranding/_catalogs/masterpage/css/font-awesome.min.css" rel="stylesheet">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -62,11 +63,7 @@
         <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
 
         <!-- ===== STARTER: Custom CSS  =================================================================================================== -->
-        <SharePoint:CssRegistration ID="bootstrap" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/bootstrap.min.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="masterpage" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/masterpage.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="commonstyles" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/styles.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="fontAwesome" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/font-awesome.min.css %&gt;" runat="server" after="SharepointCssFile" />   
-
+        <SharePoint:CssRegistration ID="CssRegistration1" name="&lt;% $SPUrl:~sitecollection/_catalogs/masterpage/StarterBranding/style.css %&gt;" runat="server" after="SharepointCssFile" />  
     </head>
     
     <body>
@@ -668,9 +665,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/2013/MedNetBranding/_catalogs/masterpage/js/bootstrap.min.js"></script>
+        <script src="/2013/MedNetBranding/_catalogs/masterpage/js/homepage.js"></script>
         <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/masterpage.js"></script>
 
-
+        <!-- for homepage layout -->
+        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/jssor.slider.mini.js"></script>    
+        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/slider.js"></script>
 
 
     </body>

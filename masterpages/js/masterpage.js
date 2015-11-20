@@ -85,3 +85,4 @@ $(window).resize(function(){
         $('#navbar').show();
     }
 });
+

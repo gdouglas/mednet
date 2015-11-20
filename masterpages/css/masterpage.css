@@ -1,8 +1,11 @@
 *{
-	font-family:"Segoe UI",Tahoma;
+	font-family:"Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
 }
 .branding-label{
 	padding-left:5px;
+}
+#s4-workspace {
+	-webkit-overflow-scrolling: touch;
 }
 .row-content{
 	/*max-width: 1620px;
@@ -24,6 +27,9 @@
 }
 .utility-links a{
 	color:#002145;
+}
+.nav-pills>li>a {
+    border-radius: 0;
 }
 #SearchBox{
 	text-align: right;
@@ -123,7 +129,6 @@ header nav{
 header .banner-logo{
 	position:relative;
     padding:15px 0 10px 20px;
-    margin-left:125px;
 }
 .mednet-title{
 	color: #fff;
@@ -146,16 +151,13 @@ h2{
 	line-height:40px;
 	color:#effaf0;	
 }
-#sideNavBox
-{
-	margin-left:20px; 
-/* margin-right:20px; */
-/* width:180px; */
+.page-content{
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: rgb(0, 33, 69);
 }
 
 .border-top{
-	/*pale green
-	border-top: 5px solid #cbe1d5;*/
 	border-top: 5px solid #62A53A;
 	padding-top: 10px;
 }
@@ -236,8 +238,9 @@ footer a:hover{
 	font-size:35px;
 	float:right;
 }
-a[title="Facebook icon"]:hover .fa-facebook-square:before{
-	content:"\f09a";
+#unit-social-icons a:hover{
+	text-decoration: none;
+	color:#c6d6d0;
 }
 
 /*SLIDER BEGIN*/
@@ -352,7 +355,7 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     }
     .toplink{
         width:100%;
-        position:fixed;
+        /*position:fixed;*/
         bottom:0;
         left:0;
         text-align:center;
@@ -381,17 +384,19 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
 	.ms-srch-sb-searchLink{
 		vertical-align: middle;
 	}
+	/*.ms-cui-tts-scale-2{
+		width:100%;
+	}
+	.ms-cui-tts-scale-2 .ms-cui-tt-a{
+		width:initial;
+	}*/
 }
-
 
 @media screen and (min-width: 768px){
 	#sideNavBox{
 		width: 16.66666667%;
 		margin:0;
 		padding: 0 0 0 15px;
-		border-right-width: 1px;
-	    border-right-style: solid;
-	    border-right-color: rgb(0, 33, 69);
 	}
 	#sideNavBox a{
 		color:#000
@@ -399,9 +404,13 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
 
 }
 /*md*/
-@media screen and (max-width:992px){
-	.fp-column{
+@media screen and (max-width:992px)
+{	.fp-column{
 		width:90%;
+	}
+	.page-content{
+		border:0;
+		width:100%;
 	}
 }
 /*md-lg*/

@@ -24,9 +24,6 @@ h2{
 #sideNavBox {
     display: none !important;
 }
-.announcements{
-	height:400px;
-}
 .staff-spotlight-container-img{
 	height:150px;
 	width:150px;
@@ -48,6 +45,13 @@ h2{
 	padding-top: 10px;
 }
 /*middle column borders*/
+.homepage-content .row:first-of-type{
+	padding-top:10px;
+	padding-bottom:0;
+}
+.homepage-content .row{
+	padding-bottom:20px;
+}
 .row .fp-column:nth-child(even):after{
 	content:""; 
 	background: #62A53A; 
@@ -75,10 +79,9 @@ h2{
 }
 
 .fp-column{
-	padding:20px;
 	width:33%;
-	height:400px;
-	overflow: hidden;
+	min-height:400px;
+	padding-bottom:40px;
 }
 .fp-column li{
 	margin:10px 0;
@@ -106,7 +109,7 @@ h2{
 	border:1px solid #64b63a;
 	text-transform: uppercase;
 	position:absolute;
-	bottom:20px;
+	bottom:10px;
 }
 .read-more:visited{
 	color:#64b63a;
@@ -143,11 +146,6 @@ h2{
 @media screen and (max-width:992px){
 	.fp-column{
 		width:100%;
-		height:auto;
-		padding-bottom:40px;
-	}
-	.fp-column .read-more{
-		bottom:0;
 	}
 	.fp-column .staff-spotlight-container{
 		height:auto;
