@@ -3,7 +3,8 @@
 }
 iframe,
 div[role="dialog"],
-div[role="dialog"] *{
+div[role="dialog"] *,
+#suiteBar *{
 	box-sizing:content-box;
 }
 .branding-label{
@@ -39,6 +40,10 @@ div[role="dialog"] *{
 }
 #SearchBox{
 	text-align: right;
+}
+.ms-qSuggest-container{
+	color:#000;
+	text-align: left;
 }
 .top-nav{
 	background:#FFF;
@@ -410,8 +415,8 @@ footer a:hover{
 
 }
 /*md*/
-@media screen and (max-width:992px)
-{	.fp-column{
+@media screen and (max-width:992px){
+	.fp-column{
 		width:90%;
 	}
 	.page-content{

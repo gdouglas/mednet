@@ -401,7 +401,7 @@
                                             </div>
                                               <div id="navbar" class="navbar-expand expand">
                                                 <ul class="nav navbar-nav">
-                                                    <li><a href="homepage4.html">Home</a></li>
+                                                    <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/Pages/default.aspx">Home</a></li>
                                                     <li><a href="#">About Us</a></li> 
                                                     <li><a href="#">Services &amp; Resources</a></li> 
                                                     <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/HR">HR</a></li>  
@@ -665,13 +665,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/2013/MedNetBranding/_catalogs/masterpage/js/bootstrap.min.js"></script>
-        <script src="/2013/MedNetBranding/_catalogs/masterpage/js/homepage.js"></script>
         <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/masterpage.js"></script>
-
-        <!-- for homepage layout -->
-        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/jssor.slider.mini.js"></script>    
-        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/slider.js"></script>
-
 
     </body>
     
