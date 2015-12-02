@@ -57,7 +57,7 @@
 
 	var pictureURL = $getItemValue(ctx, "Picture URL");
 	var pictureId = encodedId + "picture";
-	var pictureMarkup = Srch.ContentBySearch.getPictureMarkup(pictureURL, 100, 100, ctx.CurrentItem, "cbs-picture3LinesImg staff-spotlight img-circle", line1, pictureId);
+	var pictureMarkup = Srch.ContentBySearch.getPictureMarkup(pictureURL, 100, 100, ctx.CurrentItem, "cbs-picture3LinesImg staff-spotlight ", line1, pictureId);
 
 	line1.overrideValueRenderer($contentLineText);
 	line2.overrideValueRenderer($contentLineText);
@@ -76,16 +76,13 @@
 
 	 _#-->
 		        <div class="cbs-pictureSpotlightHomepageContainer" id="_#= containerId =#_" data-displaytemplate="_#= $htmlEncode(dataDisplayTemplateTitle) =#_">
-		            <div class="col-md-4 fp-column staff-spotlight-container" id="_#= pictureContainerId =#_">
-
+		            <div class="staff-spotlight-container" id="_#= pictureContainerId =#_">
+		            	<h2 class="spotlight-title">Staff Spotlight</h2>
 						<div class="staff-spotlight-container-img"><a class="cbs-pictureImgLink" href="_#= linkURL =#_" title="_#= $htmlEncode(line1.defaultValueRenderer(line1)) =#_" id="_#= pictureLinkId =#_">_#= pictureMarkup =#_</a></div>
 
 						<h3 class="staff-spotlight-name"><a href="_#= linkURL =#_">_#= line1 =#_</a></h3>
 
 						<p class="staff-spotlight-text" title="_#= $htmlEncode(line2.defaultValueRenderer(line2)) =#_">_#= line2 =#_</p>
-
-						<a href="#" class="read-more btn">Read More</a>
-
 	           		</div>
 				</div>
 	        </div>

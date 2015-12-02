@@ -34,7 +34,7 @@ h2{
 .staff-spotlight-container img{
 	/*!important overwrites odd inline styles from content query*/
 	margin:0 !important;
-	float:none !important;
+	min-height:150px;
 	position:initial;
 
 }
@@ -94,6 +94,7 @@ h2{
 	background-repeat: repeat-x;
 	line-height: 40px;
 	padding-bottom:5px;
+	font-size:1.46em
 }
 .btn{
 	border-radius: 0;

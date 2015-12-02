@@ -1,11 +1,104 @@
+/*sticky footer
+html{
+	min-height:100%;
+	position:relative;
+}
+#s4-bodyContainer{
+	position:relative;
+	min-height:100%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}*/
+
+
+
+
+
 *{
 	font-family:"Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
 }
 iframe,
 div[role="dialog"],
 div[role="dialog"] *,
-#suiteBar *{
-	box-sizing:content-box;
+#suiteBar *,
+#ribbonBox, 
+#ribbonBox *,
+.js-webpart-titleCell, 
+.ms-webpart-controlBox,
+.js-webpart-menuCell,
+.ms-webpart-checkboxTd,
+/*suggested*/
+#s4-ribbonrow *,
+#s4-ribbonrow *:before,
+#s4-ribbonrow *:after,
+#ms-help *,
+*[class*='ms-core-menu'],
+*[class*='ms-dlg'],
+*[class*='ms-dlg']:before,
+*[class*='ms-dlg']:after,
+.ms-dlgFrameContainer > div,
+.ms-dlgFrameContainer > div:before,
+.ms-dlgFrameContainer > div:after,
+.ms-dlgFrameContainer > div > div,
+.ms-dlgFrameContainer > div > div:before,
+.ms-dlgFrameContainer > div > div:after,
+.ms-MenuUIPopupBody,
+.ms-MenuUIPopupBody:before,
+.ms-MenuUIPopupBody:after,
+.ms-MenuUIPopupBody *,
+.ms-MenuUIPopupBody *:before,
+.ms-MenuUIPopupBody *:after,
+.ms-ToolPaneOuter,
+.ms-ToolPaneOuter:before,
+.ms-ToolPaneOuter:after,
+.ms-ToolPaneOuter *,
+.ms-ToolPaneOuter *:before,
+.ms-ToolPaneOuter *:after,
+*[class*='ms-cui'],
+*[class*='ms-cui']:before,
+*[class*='ms-cui']:after,
+*[class*='ms-cui'] *,
+*[class*='ms-cui'] *:before,
+*[class*='ms-cui'] *:after,
+*[class*='ms-dlg'] *,
+*[class*='ms-dlg'] *:before,
+*[class*='ms-dlg'] *:after,
+*[class*='ms-webpart'] * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.ms-h1,
+.ms-h2,
+.ms-h3,
+.ms-h4,
+.ms-h5,
+.ms-h6 {
+   /*margin:auto;*/
+   font-weight:normal;
+}
+h2{
+	margin:0;
+}
+
+.fp-column .ms-webpart-menuArrowImg{
+	position:absolute;
+}
+
+
+#fullscreenmodebox{
+	display:none !important;
 }
 .branding-label{
 	padding-left:5px;
@@ -13,16 +106,8 @@ div[role="dialog"] *,
 #s4-workspace {
 	-webkit-overflow-scrolling: touch;
 }
-.row-content{
-	/*max-width: 1620px;
-	margin:0 auto;*/
-}
-.row{
-	/*margin: 0 !important;
-	this rule fixes a wierd overlap in the nav, probably causes issues*/
-}
 #contentBox{
-	margin:0;
+	padding:0 0 50px 0;
 }
 #s4-bodyContainer{
 	padding-bottom:0;
@@ -154,19 +239,15 @@ header h2{
 	font-size:22px;
 }
 
-h2{
-	margin:0;
+#sideNavBox{
+	padding-bottom:50px;
 }
 .toplink{
 	display:block;
 	line-height:40px;
 	color:#effaf0;	
 }
-.page-content{
-	border-left-width: 1px;
-	border-left-style: solid;
-	border-left-color: rgb(0, 33, 69);
-}
+
 
 .border-top{
 	border-top: 5px solid #62A53A;
@@ -206,6 +287,9 @@ h2{
 .announcements li{
 	padding-bottom: 5px;
 	margin-left:5px;
+}
+footer{
+	margin-top:13px;
 }
 footer .row{
  padding:20px 0;

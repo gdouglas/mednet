@@ -485,58 +485,61 @@
 
                     
                             <!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
-                    
-                            <!-- ===== STARTER: Current navigation ==================================================================================== -->
-                            <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList col-sm-2">
-                    
-                                <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
-                                <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
-                                    <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
-                                        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
-                                        <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
-                                        <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
-                                        <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
-                                        <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
-                                
-                                        <div class="ms-core-sideNavBox-removeLeftMargin">
-                                            <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
-                                                <!-- ===== STARTER: Current navigation Data Provider ==================================================================================== -->
-                                                <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
-                                                    <Template_Controls><asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server"/></Template_Controls>
-                                                </SharePoint:DelegateControl>
+                            <div class="container page-content-container">
+                                <!-- ===== STARTER: Current navigation ==================================================================================== -->
+                                <div class="row">
+                                    <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList col-sm-2 no-float">
+                            
+                                        <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
+                                        <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
+                                            <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">
+                                                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
+                                                <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
                                         
-                                                <!-- ===== STARTER: Current navigation menu ==================================================================================== -->
-                                                <SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
-                                            </SharePoint:SPNavigationManager>
-                                    
-                                            <!-- ===== STARTER: Tree view ==================================================================================== -->
-                                            <SharePoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
-                                                <SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
-                                                    <Template_Controls>
-                                                    <SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true"/>
-                                                    <SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;">
-                                                        <SharePoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=23" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=23" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=23" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=23" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=23"></SharePoint:SPTreeView>
-                                                    </SharePoint:SPRememberScroll>
-                                                    </Template_Controls>
-                                                </SharePoint:DelegateControl>
-                                            </SharePoint:SPNavigationManager>
-                                
-                                            <!-- ===== STARTER: Site Contents Link ==================================================================================== -->
-                                            <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
-                                                <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" /></div>
+                                                <div class="ms-core-sideNavBox-removeLeftMargin">
+                                                    <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
+                                                        <!-- ===== STARTER: Current navigation Data Provider ==================================================================================== -->
+                                                        <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
+                                                            <Template_Controls><asp:SiteMapDataSource SiteMapProvider="SPNavigationProvider" ShowStartingNode="False" id="QuickLaunchSiteMap" StartingNodeUrl="sid:1025" runat="server"/></Template_Controls>
+                                                        </SharePoint:DelegateControl>
+                                                
+                                                        <!-- ===== STARTER: Current navigation menu ==================================================================================== -->
+                                                        <SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
+                                                    </SharePoint:SPNavigationManager>
+                                            
+                                                    <!-- ===== STARTER: Tree view ==================================================================================== -->
+                                                    <SharePoint:SPNavigationManager id="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">
+                                                        <SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
+                                                            <Template_Controls>
+                                                            <SharePoint:SPHierarchyDataSourceControl runat="server" id="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true"/>
+                                                            <SharePoint:SPRememberScroll runat="server" id="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;">
+                                                                <SharePoint:SPTreeView id="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/_layouts/15/images/tvclosed.png?rev=23" ExpandImageUrlRtl="/_layouts/15/images/tvclosedrtl.png?rev=23" CollapseImageUrl="/_layouts/15/images/tvopen.png?rev=23" CollapseImageUrlRtl="/_layouts/15/images/tvopenrtl.png?rev=23" NoExpandImageUrl="/_layouts/15/images/tvblank.gif?rev=23"></SharePoint:SPTreeView>
+                                                            </SharePoint:SPRememberScroll>
+                                                            </Template_Controls>
+                                                        </SharePoint:DelegateControl>
+                                                    </SharePoint:SPNavigationManager>
+                                        
+                                                    <!-- ===== STARTER: Site Contents Link ==================================================================================== -->
+                                                    <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
+                                                        <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" /></div>
+                                                    </asp:ContentPlaceHolder>
+                                                </div>
                                             </asp:ContentPlaceHolder>
-                                        </div>
-                                    </asp:ContentPlaceHolder>
-                                </SharePoint:AjaxDelta>
-                            </div>
-                    
-                            <!-- ===== STARTER: Main Content ========================================================================================== -->
-                            <div id="contentBox row-content">
-                                <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
-                                <SharePoint:AjaxDelta ID="AjaxDelta1" IsMainContent="true" runat="server">
-                                    <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
-                                    <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
-                                </SharePoint:AjaxDelta>
+                                        </SharePoint:AjaxDelta>
+
+                                    </div>
+                                    <!-- ===== STARTER: Main Content ========================================================================================== -->
+                                    <div id="contentBox" class="col-sm-10 no-float">
+                                        <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+                                        <SharePoint:AjaxDelta ID="AjaxDelta1" IsMainContent="true" runat="server">
+                                            <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+                                            <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+                                        </SharePoint:AjaxDelta>
+                                    </div>
+                                </div>
                             </div>
                             <!-- footer -->
                             <footer>
