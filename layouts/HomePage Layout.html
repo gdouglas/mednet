@@ -62,35 +62,9 @@ To build the page layout directly from this HTML file, simply fill in the conten
 <mso:PublishingHidden msdt:dt="string">0</mso:PublishingHidden>
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
-        <title>HomePage Layout
-        </title>
+        <title>HomePage Layout</title>
     </head>
     <body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">//<![CDATA[
-                
-                
-        //]]>
-        </script>
-        <script src="js/bootstrap.min.js">//<![CDATA[
-                
-                
-        //]]>
-        </script>
-        <script src="js/bxslider.js">//<![CDATA[
-                
-                
-        //]]>
-        </script>
-        <script src="js/homepage.js">//<![CDATA[
-                
-                
-        //]]>
-        </script>
-
-
-
-
-
         <!--MS:<asp:Content id="Content1" runat="server" contentplaceholderid="PlaceHolderLeftNavBar" />-->
         <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server">-->
             <!--CS: Start Page Field: Title Snippet-->
@@ -101,16 +75,6 @@ To build the page layout directly from this HTML file, simply fill in the conten
         <!--ME:</asp:ContentPlaceHolder>-->
         <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
         <!-- TODO: THIS NEEDS TO GET PUT INTO A SEPERATE CSS / JAVASCRIPT FILE-->
-
-        <script language=”javascript”>
-
-            _spBodyOnLoadFunctionNames.push("Hidesuite");
-            function Hidesuite() {
-                document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
-            }
-
-        </script>
-
         <style>
             #s4-leftpanel {
                 display: none;
@@ -136,10 +100,10 @@ To build the page layout directly from this HTML file, simply fill in the conten
             <div class="row">
                 <!--BEGIN SLIDER-->
                 <div class="col-md-4 fp-column">
-                    <div data-name="WebPartZone">
+                    <div class="web-part-zone" data-name="WebPartZone">
                         <!--CS: Start Web Part Zone Snippet-->
                         <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                        <div xmlns:ie="ie">
+                        <div class="web-part-content" xmlns:ie="ie">
                             <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xb6f649a2d1e640f19b3fd290b25a079b" FrameType="TitleBarOnly" Orientation="Vertical">-->
                             <!--MS:<ZoneTemplate>-->
                             <!--DC: Replace this comment with default web parts for new pages. -->
@@ -152,7 +116,7 @@ To build the page layout directly from this HTML file, simply fill in the conten
                 <!--END SLIDER-->
                 <div class="col-md-4 fp-column announcements">
                     <div class="border-top">
-                        <div data-name="WebPartZone">
+                        <div class="web-part-zone" data-name="WebPartZone">
                             <!--CS: Start Web Part Zone Snippet-->
                             <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
                             <div xmlns:ie="ie">
@@ -168,10 +132,10 @@ To build the page layout directly from this HTML file, simply fill in the conten
                 </div>
                 <div class="col-md-4 fp-column staff-spotlight-container">
                     <div class="border-top">
-                        <div data-name="WebPartZone">
+                        <div class="web-part-zone" data-name="WebPartZone">
                             <!--CS: Start Web Part Zone Snippet-->
                             <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
+                            <div class="web-part-content" xmlns:ie="ie">
                                 <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xd564f2b3fdfb4ed28a983b2d638dac53" FrameType="TitleBarOnly" Orientation="Vertical">-->
                                 <!--MS:<ZoneTemplate>-->
                                 <!--DC: Replace this comment with default web parts for new pages. -->
@@ -186,10 +150,10 @@ To build the page layout directly from this HTML file, simply fill in the conten
             <div class="row">
                 <div class="col-md-4 fp-column news-honours">
                     <div class="border-top">
-                        <div data-name="WebPartZone">
+                        <div class="web-part-zone" data-name="WebPartZone">
                             <!--CS: Start Web Part Zone Snippet-->
                             <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
+                            <div class="web-part-content" xmlns:ie="ie">
                                 <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="x35ede2c6ef0a4dfbb653819b4b2c2a8f" FrameType="TitleBarOnly" Orientation="Vertical">-->
                                 <!--MS:<ZoneTemplate>-->
                                 <!--DC: Replace this comment with default web parts for new pages. -->
@@ -202,10 +166,10 @@ To build the page layout directly from this HTML file, simply fill in the conten
                 </div>
                 <div class="col-md-4 dates-deadlines fp-column">
                     <div class="border-top">
-                        <div data-name="WebPartZone">
+                        <div class="web-part-zone" data-name="WebPartZone">
                             <!--CS: Start Web Part Zone Snippet-->
                             <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
+                            <div class="web-part-content" xmlns:ie="ie">
                                 <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xef88206682ff45f7a3536f067087ed7f" FrameType="TitleBarOnly" Orientation="Vertical">-->
                                 <!--MS:<ZoneTemplate>-->
                                 <!--DC: Replace this comment with default web parts for new pages. -->
@@ -218,10 +182,10 @@ To build the page layout directly from this HTML file, simply fill in the conten
                 </div>
                 <div class="col-md-4 events fp-column">
                     <div class="border-top">
-                        <div data-name="WebPartZone">
+                        <div class="web-part-zone" data-name="WebPartZone">
                             <!--CS: Start Web Part Zone Snippet-->
                             <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
+                            <div class="web-part-content" xmlns:ie="ie">
                                 <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xb2ae510359d6487b892bbf55b36a713e" FrameType="TitleBarOnly" Orientation="Vertical">-->
                                 <!--MS:<ZoneTemplate>-->
                                 <!--DC: Replace this comment with default web parts for new pages. -->

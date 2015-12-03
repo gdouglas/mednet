@@ -15,7 +15,40 @@ footer{
 
 }*/
 
+html,
+body,
+.container,
+.page-content-container
+{
+    height:100%;
+}
+.page-content-container
+{
+    display:table;
+    width: 100%;
+    margin-top: -50px;
+    padding: 50px 0 0 0; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
+.page-content-container > .row
+{
+    height: 100%;
+    display: table-row;
+}
+.no-float{
+    float: none !important; 
+}
+.page-content-container .col-sm-2
+{
+    display: table-cell;
+    border-right:1px solid black;
+}
+.page-content-container .col-sm-10
+{
+    display: table-cell;
+}
 
 
 
@@ -72,6 +105,9 @@ div[role="dialog"] *,
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+}
+.web-part-content {
+	overflow-x:scroll;
 }
 h1,
 h2,
