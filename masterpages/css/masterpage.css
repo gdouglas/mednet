@@ -66,6 +66,9 @@ div[role="dialog"] *,
 .js-webpart-menuCell,
 .ms-webpart-checkboxTd,
 /*suggested*/
+/*conflicts: ,
+*[class*='ms-webpart'] *;
+*/
 #s4-ribbonrow *,
 #s4-ribbonrow *:before,
 #s4-ribbonrow *:after,
@@ -101,13 +104,16 @@ div[role="dialog"] *,
 *[class*='ms-dlg'] *,
 *[class*='ms-dlg'] *:before,
 *[class*='ms-dlg'] *:after,
-*[class*='ms-webpart'] * {
+.ms-webpart-menuLink {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
 }
-.web-part-content {
-	overflow-x:scroll;
+.web-part-zone {
+	overflow:auto;
+}
+h1 input[title="Title"]{
+	width:100%;
 }
 h1,
 h2,
@@ -194,16 +200,30 @@ header nav{
 	position:relative;
     bottom:6px;
 }
-.content{
-	/*max-width: 1600px*/
+header .logo{
+	float:left;
+	line-height:0;
+}
+#ubc-logo{
+	width:50px;
+	padding:10px 30px 20px 16px;
+	box-sizing:content-box;
+	border-right: 1px solid rgb(47, 93, 124);
+	margin:15px 0;
+}
+header span{
+	font-size:18px;
+	margin-left:30px;
+	line-height: 26px;
+}
+header .faculty{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+header .mednet-title{
+	
 }
 
-.logo svg{
-	width:395px;
-    border-right:1px solid #2f5d7c;
-	margin-right:20px;
-    padding:15px 20px 0 0;
-}
 /*top nav*/
 .site-nav{
 	/*background:#effaf0;*/
@@ -258,17 +278,12 @@ header{
 header nav{
 	display:block;
 }
-header .banner-logo{
-	position:relative;
-    padding:15px 0 10px 20px;
-}
+
 .mednet-title{
 	color: #fff;
     display:block;
 }
-header .logo{
-    display:inline-block;
-}
+
 header h2{
 	margin:19px 0 0 0;
 	line-height:30px;
@@ -278,6 +293,7 @@ header h2{
 #sideNavBox{
 	padding-bottom:50px;
 }
+
 .toplink{
 	display:block;
 	line-height:40px;
@@ -362,8 +378,8 @@ footer a:hover{
 	border:none;
 	padding:0;
 }
-#unit-social-icons strong{
-	font-size:20px;
+#unit-social-icons .social-title{
+	font-size:14px;
 }
 #unit-social-icons{
 	font-size:35px;

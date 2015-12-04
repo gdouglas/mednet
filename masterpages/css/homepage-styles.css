@@ -30,6 +30,8 @@ h2{
 	overflow: hidden;
 	border-radius: 50%;
 	text-align:center;
+	float:left;
+	margin-right:20px;
 }
 .staff-spotlight-container img{
 	/*!important overwrites odd inline styles from content query*/
