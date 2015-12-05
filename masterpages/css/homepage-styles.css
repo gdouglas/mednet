@@ -30,6 +30,8 @@ h2{
 	overflow: hidden;
 	border-radius: 50%;
 	text-align:center;
+	float:left;
+	margin-right:20px;
 }
 .staff-spotlight-container img{
 	/*!important overwrites odd inline styles from content query*/
@@ -51,6 +53,37 @@ h2{
 }
 .homepage-content .row{
 	padding-bottom:20px;
+}
+/*middle column borders*/
+.row .fp-column:nth-child(even):after{
+	content:""; 
+	background: #62A53A; 
+	position: absolute; 
+	bottom: 30px; 
+	left: 0; 
+	height: 85%; 
+	width: 1px;
+}
+.row .fp-column:nth-child(even):before{
+	content:""; 
+	background: #62A53A; 
+	position: absolute; 
+	bottom: 30px; 
+	right: 0; 
+	height: 85%; 
+	width: 1px;	
+}
+/*END middle column borders*/
+.date{
+	font-style: italic;
+	display:block;
+	display: table-cell;
+	padding-right:20px;
+	color:#888;
+}
+.details{
+	display: table-cell;
+
 }
 .row .fp-column:nth-child(even):after{
 	content:""; 
@@ -156,5 +189,18 @@ h2{
 	}
 	.staff-spotlight-container-img{
 		float:none;
+	}
+}
+@media screen and (min-width:992px){
+	.homepage-content{
+		display:table;
+	}
+	.homepage-content .row{
+		display:table-row;
+	}
+	.fp-column{
+		display:table-cell;
+		float:none;
+		vertical-align: top;
 	}
 }
