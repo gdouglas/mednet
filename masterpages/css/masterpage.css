@@ -93,6 +93,7 @@ div[role="dialog"] *,
     box-sizing: content-box;
 }
 .web-part-zone {
+<<<<<<< HEAD
     overflow:auto;
 }
 h1 input[title="Title"]{
@@ -100,6 +101,12 @@ h1 input[title="Title"]{
 }
 #s4-statusbarcontainer #pageStatusBar{
     margin-bottom:0;
+=======
+	overflow:auto;
+}
+h1 input[title="Title"]{
+	width:100%;
+>>>>>>> origin/master
 }
 h1,
 h2,
@@ -192,6 +199,7 @@ header nav{
     bottom:6px;
 }
 header .logo{
+<<<<<<< HEAD
     float:left;
     line-height:0;
 }
@@ -214,6 +222,30 @@ header .faculty{
 header .mednet-title{
     
 }
+=======
+	float:left;
+	line-height:0;
+}
+#ubc-logo{
+	width:50px;
+	padding:10px 30px 20px 16px;
+	box-sizing:content-box;
+	border-right: 1px solid rgb(47, 93, 124);
+	margin:15px 0;
+}
+header span{
+	font-size:18px;
+	margin-left:30px;
+	line-height: 26px;
+}
+header .faculty{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+header .mednet-title{
+	
+}
+>>>>>>> origin/master
 
 /*top nav*/
 .site-nav{
@@ -267,7 +299,11 @@ header{
     margin-bottom:5px
 }
 header nav{
+<<<<<<< HEAD
     display:block;
+=======
+	display:block;
+>>>>>>> origin/master
 }
 
 .mednet-title{
@@ -370,7 +406,11 @@ footer a:hover{
     padding:0;
 }
 #unit-social-icons .social-title{
+<<<<<<< HEAD
     font-size:14px;
+=======
+	font-size:14px;
+>>>>>>> origin/master
 }
 #unit-social-icons{
     font-size:35px;
