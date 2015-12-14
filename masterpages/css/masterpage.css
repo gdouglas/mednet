@@ -17,21 +17,20 @@ body,
     box-sizing: border-box;
 }
 
-.page-content-container > .row
-{
+.page-content-container > .row,
+.bottom-wp-zones {
     height: 100%;
     display: table-row;
 }
 .no-float{
     float: none !important; 
 }
-.page-content-container .col-sm-2
-{
+.page-content-container .col-sm-2{
     display: table-cell;
     border-right:1px solid black;
 }
-.page-content-container .col-sm-10
-{
+.page-content-container .col-sm-10,
+.bottom-wp-zones .col-md-4 {
     display: table-cell;
 }
 
