@@ -7,7 +7,7 @@
 }
 .slides-container{
     width:100%;
-    height:360px
+    height:360px;
 }
 .slides-container div,
 .slides-container figure{
@@ -47,12 +47,16 @@ figcaption{
     text-align: left;
     margin:0 auto;
     background:#fff;
-    border-top: 5px solid #62A53A;
+    border-top: 5px solid #538B31;
+    border-top: 5px solid #538b31;
     height:100px;
     padding:3px 5px 0 5px;
     position:absolute;
     bottom:0;
     width:99.9%;
+}
+figcaption a{
+    display: inline-block;
 }
 
 /* jssor slider bullet navigator*/
@@ -68,7 +72,8 @@ figcaption{
     /* size of bullet elment */
     width: 12px;
     height: 12px;
-    border:1px solid #62A53A;
+    border:1px solid #538B31;
+    border:1px solid #538b31;
     border-radius:6px;
     overflow: hidden;
     cursor: pointer;
@@ -77,11 +82,9 @@ figcaption{
 .jssorb05 .av,
 .jssorb05 div:hover,
 .jssorb05 .av:hover {
-    background:#62A53A;
+    background:#538B31;
+    background:#538b31;
 }
-
-
-
 
 
 /*slider arrows*/
@@ -99,7 +102,8 @@ figcaption{
     transition:all .5s;
     font-family: FontAwesome;
     font-weight: light;
-    color:#62A53A;
+    color:#538B31;
+    color:#538b31;
     font-size:40px;
     padding: 0 13px;
     -moz-border-radius: 50%;

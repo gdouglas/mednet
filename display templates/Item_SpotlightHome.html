@@ -1,11 +1,11 @@
 <html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
 	<head>
-		<title>Spotlight Homepage</title>
+		<title>Spotlight for Homepage</title>
 
 		<!--[if gte mso 9]><xml>
 		<mso:CustomDocumentProperties>
 		<mso:TemplateHidden msdt:dt="string">0</mso:TemplateHidden>
-		<mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{Picture URL}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{Link URL}:'Path','Line 1'{Line 1}:'Title','Line 2'{Line 2}:'Description','Line 3'{Line 3}:'','SecondaryFileExtension','ContentTypeId'</mso:ManagedPropertyMapping>
+		<mso:ManagedPropertyMapping msdt:dt="string">&#39;Picture URL&#39;{Picture URL}:&#39;PublishingImage;PictureURL;PictureThumbnailURL&#39;,&#39;Link URL&#39;{Link URL}:&#39;Path&#39;,&#39;Line 1&#39;{Line 1}:&#39;Title&#39;,&#39;Line 2&#39;{Line 2}:&#39;Description&#39;,&#39;Line 3&#39;{Line 3}:&#39;&#39;,&#39;SecondaryFileExtension&#39;,&#39;ContentTypeId&#39;</mso:ManagedPropertyMapping>
 		<mso:MasterPageDescription msdt:dt="string">This Item Display Template will show a 100x100 picture of the item on the left. The title and the default item description will display to the right of the picture with an additional line that is available for a custom managed property.</mso:MasterPageDescription>
 		<mso:ContentTypeId msdt:dt="string">0x0101002039C03B61C64EC4A04F5361F385106603</mso:ContentTypeId>
 		<mso:TargetControlType msdt:dt="string">;#Content Web Parts;#</mso:TargetControlType>
@@ -78,9 +78,9 @@
 		        <div class="cbs-pictureSpotlightHomepageContainer" id="_#= containerId =#_" data-displaytemplate="_#= $htmlEncode(dataDisplayTemplateTitle) =#_">
 		            <div class="staff-spotlight-container" id="_#= pictureContainerId =#_">
 		            	<h2 class="spotlight-title">Staff Spotlight</h2>
-						<div class="staff-spotlight-container-img"><a class="cbs-pictureImgLink" href="_#= linkURL =#_" title="_#= $htmlEncode(line1.defaultValueRenderer(line1)) =#_" id="_#= pictureLinkId =#_">_#= pictureMarkup =#_</a></div>
+						<div class="staff-spotlight-container-img"><a class="cbs-pictureImgLink" href="_#= linkURL.value =#_" title="_#= $htmlEncode(line1.defaultValueRenderer(line1)) =#_" id="_#= pictureLinkId =#_">_#= pictureMarkup =#_</a></div>
 
-						<h3 class="staff-spotlight-name"><a href="_#= linkURL =#_">_#= line1 =#_</a></h3>
+						<h3 class="staff-spotlight-name"><a href="_#= linkURL.value =#_">_#= line1 =#_</a></h3>
 
 						<p class="staff-spotlight-text" title="_#= $htmlEncode(line2.defaultValueRenderer(line2)) =#_">_#= line2 =#_</p>
 	           		</div>

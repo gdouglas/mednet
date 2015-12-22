@@ -23,9 +23,9 @@
         <!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== --> 
         <SharePoint:SPShortcutIcon runat="server" IconUrl="/2013/MedNetBranding/_catalogs/masterpage/favicon.ico" />
         <SharePoint:SPPinnedSiteTile runat="server" TileUrl="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-114-precomposed.png" TileColor="#002145" />     
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-57-precomposed.png">           
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/clf/7.0.4/img/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/clf/7.0.4/img/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/clf/7.0.4/img/apple-touch-icon-57-precomposed.png">           
         
 
             <!-- ===== STARTER: Page Title loaded from page or page layout ==================================================================== -->
