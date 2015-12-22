@@ -62,13 +62,13 @@
         <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
 
         <!-- ===== Custom CSS  =================================================================================================== -->
-        <SharePoint:CssRegistration ID="bootstrap" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/bootstrap.min.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="masterpage" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/masterpage.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="commonstyles" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/styles.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="fontAwesome" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/font-awesome.min.css %&gt;" runat="server" after="SharepointCssFile" />  
+        <SharePoint:CssRegistration ID="bootstrap" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/bootstrap.min.css %&gt;" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration ID="masterpage" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/masterpage.css %&gt;" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration ID="commonstyles" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/styles.css %&gt;" runat="server" after="SharepointCssFile" />
+        <SharePoint:CssRegistration ID="fontAwesome" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/font-awesome.min.css %&gt;" runat="server" after="SharepointCssFile" />  
         
         <PublishingWebControls:EditModePanel runat="server" PageDisplayMode="Edit">
-            <SharePoint:CssRegistration ID="CssRegistration5" Name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/edit-mode.css %&gt;" runat="server" After="SharepointCssFile" />            
+            <SharePoint:CssRegistration ID="CssRegistration5" Name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/edit-mode.css %&gt;" runat="server" After="SharepointCssFile" />            
         </PublishingWebControls:EditModePanel>
 
 
@@ -212,10 +212,10 @@
                                         <div class="row top-nav">
                                             <div class="col-xs-12 row-content">
                                                 <ul class="nav nav-pills pull-left utility-links">
-                                                    <li><a href="#" class="home hidden-xs hidden-sm">Home</a></li>
-                                                    <li><a href="#" class="contact">Contact List</a></li>
-                                                    <li><a href="#" class="directory">UBC Directory</a></li>
-                                                    <li><a href="#" class="public-site">med.ubc.ca</a></li>
+                                                    <li><a href="../../Pages/Default.aspx" runat="server" class="home hidden-xs hidden-sm">Home</a></li>
+                                                    <li><a href="../../AboutUs/ContactUs/DeansOffice/Lists/FoM%20Contact%20List/AllItems.aspx" runat="server" class="contact">Contact List</a></li>
+                                                    <li><a href="https://directory.ubc.ca/index.cfm" target="_blank" class="directory">UBC Directory</a></li>
+                                                    <li><a href="http://med.ubc.ca" target="_blank" class="public-site">med.ubc.ca</a></li>
                                                 </ul>
                                                 <!-- ===== STARTER: Search Control ==================================================================================== -->
                                                 <div class="ms-dialogHidden">
@@ -227,7 +227,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-xs-12 row-content banner-logo  hidden-xs">
-                                                <a href="https://mednet.med.ubc.ca/" title="MedNet" class="logo">
+                                                <a href="../../Pages/Default.aspx" runat="server" title="MedNet" class="logo">
                                                     <svg id="ubc-logo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                          viewBox="0 0 99 135" enable-background="new 0 0 99 135" xml:space="preserve">
                                                         <g>
@@ -286,14 +286,14 @@
                                             </div>
                                               <div id="navbar" class="navbar-expand expand">
                                                 <ul class="nav navbar-nav">
-                                                    <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/Pages/default.aspx">Home</a></li>
-                                                    <li><a href="#">About Us</a></li> 
-                                                    <li><a href="#">Services &amp; Resources</a></li> 
-                                                    <li><a href="https://playground.mednet.med.ubc.ca/2013/MedNetBranding/HR">HR</a></li>  
-                                                    <li><a href="#">Teaching</a></li> 
-                                                    <li><a href="#">Research</a></li> 
-                                                    <li><a href="#">Office of The Dean</a></li>
-                                                    <li><a href="#">Team Sites</a></li>             
+                                                    <li><a href="../../Pages/default.aspx" runat="server">Home</a></li>
+                                                    <li><a href="../../AboutUs" runat="server">About Us</a></li> 
+                                                    <li><a href="../../ServicesAndResources" runat="server">Services &amp; Resources</a></li> 
+                                                    <li><a href="../../HR" runat="server">HR</a></li>  
+                                                    <li><a href="../../Teaching" runat="server">Teaching</a></li> 
+                                                    <li><a href="../../Research" runat="server">Research</a></li> 
+                                                    <li><a href="../../office-of-the-dean" runat="server">Office of The Dean</a></li>
+                                                    <li><a href="../../TeamSites" runat="server">Team Sites</a></li>             
                                                 </ul>
                                               </div>
                                             </div>
@@ -446,7 +446,7 @@
                                                     <a href="#suiteBar" class="toplink hidden-md hidden-lg">Back To Top ^</a>
                                                 </div>                                                
                                             <address class="pull-left">
-                                                <a class="address-title" href="https://mednet.med.ubc.ca/">
+                                                <a class="address-title" href="../../Pages/default.aspx" runat="server">
                                                     <svg id="footer-logo" role="img" aria-label="Faculty of Medicine Intranet" version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                          viewBox="0 0 241.7 21.8" enable-background="new 0 0 241.7 21.8" xml:space="preserve">
                                                          <title>Faculty of Medicine Intranet</title>
@@ -510,19 +510,19 @@
                                     <div class="row">
                                         <div class="col-xs-12 footer-nav row-content">
                                             <ul class="list-inline center-block footer-links">
-                                                <li><a href="#">About Us</a></li>
-                                                <li><a href="#">Services &amp; Resources</a></li>
-                                                <li><a href="#">HR</a></li>
-                                                <li><a href="#">Teaching</a></li>
-                                                <li><a href="#">Research</a></li>
-                                                <li><a href="#">Team Sites</a></li>
+                                                <li><a href="../../AboutUs" runat="server">About Us</a></li>
+                                                <li><a href="../../ServicesAndResources" runat="server">Services &amp; Resources</a></li>
+                                                <li><a href="../../HR" runat="server">HR</a></li>
+                                                <li><a href="../../Teaching" runat="server">Teaching</a></li>
+                                                <li><a href="../../Research" runat="server">Research</a></li>
+                                                <li><a href="../../TeamSites" runat="server">Team Sites</a></li>
                                             </ul>
                                             <ul class="list-inline center-block footer-links">
-                                                <li><a href="#">Site Map</a></li>
-                                                <li><a href="#">Terms of Use</a></li>
-                                                <li><a href="#">MedNet Support</a></li>
-                                                <li><a href="#">Contact Us</a></li>
-                                                <li><a href="#">Copyright 2013 - UBC Faculty of Medicine</a></li>
+                                                <li><a href="../../Pages/SiteMap.aspx" runat="server">Site Map</a></li>
+                                                <li><a href="../../Pages/TermsOfUse.aspx" runat="server">Terms of Use</a></li>
+                                                <li><a href="../../Pages/MedNetSupport.aspx" runat="server">MedNet Support</a></li>
+                                                <li><a href="../../AboutUs/ContactUs/Pages/default.aspx" runat="server">Contact Us</a></li>
+                                                <li><a href="http://copyright.ubc.ca/" target="_blank">Copyright 2013 - UBC Faculty of Medicine</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -548,10 +548,10 @@
         <asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
     
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <SharePoint:ScriptLink ID="ScriptjQuery" Name="~SiteCollection/_layouts/15/MedNetBranding/js/jquery-1.11.3.min.js" runat="server" />
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="/2013/MedNetBranding/_catalogs/masterpage/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/masterpage.js"></script>
+        <SharePoint:ScriptLink ID="ScriptLinkBootstrap" Name="~SiteCollection/_layouts/15/MedNetBranding/js/bootstrap.min.js" runat="server" />
+        <SharePoint:ScriptLink ID="ScriptMasterpage" Name="~SiteCollection/_layouts/15/MedNetBranding/js/masterpage.js" runat="server" />
 
     </body>
     
