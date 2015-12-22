@@ -1,0 +1,130 @@
+#slider1_container{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    max-width: 600px;
+    width:100%;
+}
+.slides-container{
+    width:100%;
+    height:360px
+}
+.slides-container div,
+.slides-container figure{
+    width:100%;
+}
+.slides-container figure img{
+    height:calc(100% - 100px);
+    width:auto !important;
+}
+#slider-controls{
+    position:absolute;
+    bottom:0;
+    right:0;
+    padding:3px 10px;
+    
+    cursor: pointer;
+    border-right:1px solid #fff;
+}
+#slider-controls span {
+    display:block;
+}
+#slider-controls span i{
+    font-size:18px;
+}
+#slider-controls span:hover{
+    color:#fff;
+}
+.active{
+    color:#000;
+}
+figure{
+    height:100%;
+    text-align: center;
+}
+
+figcaption{
+    text-align: left;
+    margin:0 auto;
+    background:#fff;
+    border-top: 5px solid #62A53A;
+    height:100px;
+    padding:3px 5px 0 5px;
+    position:absolute;
+    bottom:0;
+    width:99.9%;
+}
+
+/* jssor slider bullet navigator*/
+.jssorb05 {
+    position: absolute;
+    right:0;
+}
+.jssorb05 div,
+.jssorb05 div:hover,
+.jssorb05 .av {
+    transition:all .2s;
+    position: absolute;
+    /* size of bullet elment */
+    width: 12px;
+    height: 12px;
+    border:1px solid #62A53A;
+    border-radius:6px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.jssorb05 .av,
+.jssorb05 div:hover,
+.jssorb05 .av:hover {
+    background:#62A53A;
+}
+
+
+
+
+
+/*slider arrows*/
+.jssora11l,
+.jssora11r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */
+    width: 37px;
+    height: 37px;
+    cursor: pointer;
+}
+.jssora11l:after,
+.jssora11r:after{
+    transition:all .5s;
+    font-family: FontAwesome;
+    font-weight: light;
+    color:#62A53A;
+    font-size:40px;
+    padding: 0 13px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.jssora11l:after{
+    content:"\f104";
+    padding: 0 16px 0 10px;
+}
+.jssora11r:after {
+    content:"\f105";
+    padding: 0 11px 0 15px;
+}
+.jssora11l:hover:after,
+.jssora11r:hover:after{
+    transition:all .5s;
+    color:#fff;
+    background:#002145;
+}
+
+@media screen and (max-width:992px){
+    #slider1_container,
+    #slider1_container  div:first-of-type div{
+        width:100% !important;
+        max-width: 100%!important;
+    }
+}
