@@ -21,8 +21,8 @@ To build the page layout directly from this HTML file, simply fill in the conten
             <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
             <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
 
-            <link href="/2013/MedNetBranding/_catalogs/masterpage/css/homepage-styles.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
-            <link href="/2013/MedNetBranding/_catalogs/masterpage/css/slider.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
+            <!--MS:<SharePoint:CssRegistration ID="homepageStyles" name="&#60;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/homepage-styles.css %&#62;" runat="server" after="SharepointCssFile"/>-->
+            <!--MS:<SharePoint:CssRegistration ID="SliderStyles" name="&#60;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/slider.css %&#62;" runat="server" after="SharepointCssFile"/>-->
             
 
 
@@ -199,8 +199,8 @@ To build the page layout directly from this HTML file, simply fill in the conten
             </div>
         </div>
                 <!-- for homepage layout -->
-        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/jssor.slider.mini.js"></script>    
-        <script type="text/javascript" src="/2013/MedNetBranding/_catalogs/masterpage/js/slider.js"></script>
+                <!--MS:<SharePoint:ScriptLink ID="ScriptLinkjssor" Name="~SiteCollection/_layouts/15/MedNetBranding/js/jssor.slider.mini.js" runat="server"/> -->
+                <!--MS:<SharePoint:ScriptLink ID="ScriptLinkslider" Name="~SiteCollection/_layouts/15/MedNetBranding/js/slider.js" runat="server"/> -->
         <!--ME:</asp:ContentPlaceHolder>-->
     </body>
 </html>
