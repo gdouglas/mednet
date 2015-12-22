@@ -6,6 +6,7 @@
 <%@Register TagPrefix="SearchWC" Namespace="Microsoft.Office.Server.Search.WebControls" Assembly="Microsoft.Office.Server.Search, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
 <%@Register TagPrefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>
 <%@Register TagPrefix="PublishingRibbon" TagName="PublishingRibbon" Src="~/_controltemplates/15/Ribbon.ascx"%>
+<%@ Register TagPrefix="PublishingWebControls" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 
 <!DOCTYPE HTML>
 <SharePoint:SPHtmlTag runat="server" id="SPHtmlTag" dir="&lt;%$Resources:wss,multipages_direction_dir_value%&gt;">
@@ -65,9 +66,19 @@
         <SharePoint:CssRegistration ID="masterpage" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/masterpage.css %&gt;" runat="server" after="SharepointCssFile" />
         <SharePoint:CssRegistration ID="commonstyles" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/styles.css %&gt;" runat="server" after="SharepointCssFile" />
         <SharePoint:CssRegistration ID="fontAwesome" name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/font-awesome.min.css %&gt;" runat="server" after="SharepointCssFile" />  
+        
+        <PublishingWebControls:EditModePanel runat="server" PageDisplayMode="Edit">
+            <SharePoint:CssRegistration ID="CssRegistration5" Name="&lt;% $SPUrl:/2013/MedNetBranding/_catalogs/masterpage/css/edit-mode.css %&gt;" runat="server" After="SharepointCssFile" />            
+        </PublishingWebControls:EditModePanel>
+
+
+
     </head>
     
     <body>
+   
+
+
         <!-- ===== STARTER: SP IDs / Prefetch SP images / SP Form  =========================================================================== -->
         <SharePoint:SPClientIDGenerator runat="server" ServerControlID="DeltaPlaceHolderMain;DeltaPlaceHolderPageTitleInTitleArea;DeltaPlaceHolderUtilityContent" />
         <SharePoint:ImageLink runat="server" />
@@ -171,6 +182,7 @@
                     </SharePoint:AjaxDelta>
                 </div>
             </div>
+
             <div class="s4-notdlg">
                 <div id="s4-statusbarcontainer" class="s4-notdlg">
                     <div id="pageStatusBar" class="s4-status-s1">
@@ -195,7 +207,7 @@
                 
                             <!-- ===== STARTER: SharePoint looks for this div ID s4-titlerow for the "Focus on Content" Button ======================== -->
                             <div id="s4-titlerow">
-                                <header>
+                                <header class="ms-dialogHidden">
                                     <div class="container-fluid">
                                         <div class="row top-nav">
                                             <div class="col-xs-12 row-content">
@@ -416,14 +428,29 @@
                                 </div>
                             </div>
                             <!-- footer -->
-                            <footer>
+                            <footer class="ms-dialogHidden">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-xs-12 row-content">
-                                            <div class="logo-footer pull-left">
-                                                <a href="https://mednet.med.ubc.ca/">
-                                                    <svg id="footer-logo" version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                <div id="unit-social-icons">
+                                                    <span class="social-title">Find us on</span>
+                                                    <a href="https://www.facebook.com/pages/UBC-Faculty-of-Medicine/232412823455905" title="Facebook icon">
+                                                        <i class="fa fa-facebook-square"></i>
+                                                    </a>
+                                                    <a href="http://twitter.com/UBCMedicine/" title="Twitter icon">
+                                                        <i class="fa fa-twitter-square"></i>
+                                                    </a>
+                                                    <a href="http://www.youtube.com/UBCMedicine/" title="YouTube icon">
+                                                        <i class="fa fa-youtube-square"></i>
+                                                    </a>
+                                                    <a href="#suiteBar" class="toplink hidden-md hidden-lg">Back To Top ^</a>
+                                                </div>                                                
+                                            <address class="pull-left">
+                                                <a class="address-title" href="https://mednet.med.ubc.ca/">
+                                                    <svg id="footer-logo" role="img" aria-label="Faculty of Medicine Intranet" version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                          viewBox="0 0 241.7 21.8" enable-background="new 0 0 241.7 21.8" xml:space="preserve">
+                                                         <title>Faculty of Medicine Intranet</title>
+                                                         <desc>Link to the Faculty of Medicine Intranet homepage</desc>
                                                         <g>
                                                             <path fill="#FFFFFF" d="M8,17.1c-4.4,0-7-2.3-7-6.2V1.5h3.6v9.2c0,2.3,1.2,3.5,3.4,3.5c2.2,0,3.4-1.2,3.4-3.5V1.5H15v9.3
                                                                 C15,14.7,12.3,17.1,8,17.1"/>
@@ -473,29 +500,11 @@
                                                             </g>
                                                         </g>
                                                     </svg>
-                                                </a>
-                                                <a href="#suiteBar" class="toplink">Back To Top ^</a>
-                                            </div>
-                                            <address class="pull-right">
-                                                <span class="address-title">Faculty of Medicine</span><br>
+                                                </a><br>
                                                 317 - 2194 Health Sciences Mall<br>
                                                 Vancouver, BC Canada V6T 1Z3<br>
-                                                Tel: <a href="tel:604-822-2421">604.822.2421</a> | Fax: <a href="fax:604-822-6061">604.822.6061</a><br>
-                                            </address>
-                                            <div class="pull-right col-xs-12">
-                                                <div id="unit-social-icons">
-                                                    <span class="social-title">Find us on</strong>
-                                                    <a href="https://www.facebook.com/pages/UBC-Faculty-of-Medicine/232412823455905" title="Facebook icon">
-                                                    <i class="fa fa-facebook-square"></i>
-                                                    </a>
-                                                    <a href="http://twitter.com/UBCMedicine/" title="Twitter icon">
-                                                    <i class="fa fa-twitter-square"></i>
-                                                    </a>
-                                                    <a href="http://www.youtube.com/UBCMedicine/" title="YouTube icon">
-                                                    <i class="fa fa-youtube-square"></i>
-                                                    </a>
-                                                </div>
-                                            </div>            
+                                                Tel: <a rel="tel" href="tel:604-822-2421">604.822.2421</a> | Fax: <a rel="fax" href="fax:604-822-6061">604.822.6061</a><br>
+                                            </address>           
                                         </div>
                                     </div>
                                     <div class="row">

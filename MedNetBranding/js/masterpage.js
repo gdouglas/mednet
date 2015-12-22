@@ -1,3 +1,15 @@
+/*prevent focus on content by default*/
+window.onload = function() 
+{
+  SetFullScreenMode(false);
+    
+    _spBodyOnLoadFunctionNames.push("Hidesuite");
+    function Hidesuite() {
+        document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
+    }  
+}
+
+
 /*
 *
 *

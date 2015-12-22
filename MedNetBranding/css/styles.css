@@ -1,7 +1,4 @@
-.col-xs-12{
-	margin:0 auto;
-	float:initial;
-}
+
 
 .breadcrumb>li+li:before{
 	content:"\003e";
