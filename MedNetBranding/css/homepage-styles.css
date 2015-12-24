@@ -41,6 +41,7 @@ h2{
 	border-top: 5px solid #538b31;
 	padding-top: 10px;
 }
+
 /*middle column borders*/
 .homepage-content .row:first-of-type{
 	padding-top:10px;
@@ -50,29 +51,26 @@ h2{
 	padding-bottom:20px;
 }
 /*middle column borders*/
+.row .fp-column:nth-child(even):before,
 .row .fp-column:nth-child(even):after{
 	content:""; 
 	background: #62A53A;
 	background:#2E7453;
 	background:#538B31; 
 	background:#538b31 ;
+	/*min-height:340px;*/
 	position: absolute; 
-	bottom: 30px; 
-	left: 0; 
-	height: 85%; 
-	width: 1px;
+	top:15px; 
+	bottom: 15px;
+	height:100%;
+	width: 1px;	
+	display:block;
 }
 .row .fp-column:nth-child(even):before{
-	content:""; 
-	background: #62A53A;
-	background:#2E7453;
-	background:#538B31; 
-	background:#538b31 ;
-	position: absolute; 
-	bottom: 30px; 
 	right: 0; 
-	height: 85%; 
-	width: 1px;	
+}
+.row .fp-column:nth-child(even):after{
+	left:0;
 }
 /*END middle column borders*/
 .date{
@@ -122,6 +120,7 @@ h2{
 	width:33%;
 	min-height:400px;
 	padding-bottom:40px;
+	line-height:24px;
 }
 .fp-column .ms-webpart-menuArrowImg{
 	position:absolute;
@@ -200,4 +199,6 @@ h2{
 		float:none;
 		vertical-align: top;
 	}
+
+
 }
