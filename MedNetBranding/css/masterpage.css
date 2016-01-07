@@ -7,13 +7,13 @@ body,
 {
     height:100%;
 }
-
+ 
 .page-content .body-text{
     max-width:970px;
 }
 
 .page-content-container {
-    display:table;
+    /*display:table;*/
     width: 100%;
     margin-top: -50px;
     padding: 50px 0 0 0; 
@@ -26,7 +26,7 @@ body,
 .page-content-container > .row
 {
     height: 100%;
-    display: table-row;
+/*    display: table-row;*/
 }
 .no-float{
     float: none !important; 
