@@ -1,12 +1,3 @@
-html,
-body,
-#s4-workspace,
-#s4-bodyContainer,
-.container,
-.page-content-container {
-    height:100%;
-}
- 
 .page-content .body-text {
     max-width:970px;
 }
@@ -19,10 +10,6 @@ body,
     box-sizing: border-box;
     max-width: 1355px;
     margin: 0;
-}
-
-.page-content-container > .row {
-    height: 100%;
 }
 .no-float {
     float: none !important; 
