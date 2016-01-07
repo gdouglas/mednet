@@ -143,11 +143,12 @@ h2{
 	padding-bottom:5px;*/
 	font-size:20px;
 }
+a.btn,
 .btn{
 	border-radius: 0;
 }
 
-.read-more{
+div .read-more{
 	color:#64b63a;
 	border:1px solid #64b63a;
 	border-color:#2E7453; 
@@ -196,7 +197,7 @@ h2{
 	.homepage-content .row{
 		display:table-row;
 	}
-	.fp-column{
+	.homepage-content .fp-column{
 		display:table-cell;
 		float:none;
 		vertical-align: top;
