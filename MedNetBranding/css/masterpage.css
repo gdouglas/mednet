@@ -133,6 +133,9 @@ h1 input[title="Title"] {
 .container .ms-h6  * {
     font-size:inherit;
 }
+a {
+    color: #3868a6;
+}
 a:hover,
 .btn:hover {
     -webkit-transition: all 0.2s ease-out;
@@ -169,7 +172,7 @@ h2.ms-rteElement-SpecialHeading {
     color:#fff;
 }
 /*Custom editor styles*/
-.ms-rteStyle-link-item {
+.ms-rteElement-levelfourlinks {
     -ms-name: "Link Item";  
     line-height: 28px;
     margin-left: 18px;
@@ -177,7 +180,7 @@ h2.ms-rteElement-SpecialHeading {
     display: block;
     list-style-type:none;
 }
-.ms-rteStyle-link-item:before {
+.ms-rteElement-levelfourlinks:before {
     content:"\f0da";
     margin-right:5px;
     display: inline-block;
@@ -207,6 +210,7 @@ th.ms-rteTableFooterFirstCol-ubctable {
     padding-top: 5px;
     border-top-width: 0px;
     border-bottom-width: 0px;
+    vertical-align:top;
 }
 .ms-rteTableHeaderRow-ubctable th,
 table.ms-rteTable-ubctable > tbody > tr:first-child td,
@@ -227,6 +231,7 @@ table.ms-rteTable-ubctable > tbody > tr:first-child th {
     border-right-style: solid;
     border-right-color: #002144;
     font-weight: normal;
+    vertical-align:top;
 }
 .ms-rteTable-ubctable > tbody > tr > td, 
 th.ms-rteTableFirstCol-ubctable, 
@@ -473,6 +478,12 @@ header h2{
 
 #sideNavBox {
     padding-bottom:50px;
+}
+#sideNavBox ul ul {
+    display:none;
+}
+#sideNavBox .selected ul {
+    display:block;
 }
 li > a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, 
 li > a.ms-core-listMenu-item:hover, 
