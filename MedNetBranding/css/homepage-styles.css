@@ -1,4 +1,6 @@
-
+#s4-bodyContainer .page-content-container {
+    max-width: 100%;
+}
 .homepage-content{
 	/*max-width: 1620px;*/
     margin:0;
