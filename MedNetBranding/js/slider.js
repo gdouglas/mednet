@@ -1,12 +1,14 @@
 var everythingLoaded = setInterval(function() {
   if (window.jQuery) {
     clearInterval(everythingLoaded);
-    init(); // this is the function that gets called when everything is loaded
+    _spBodyOnLoadFunctionNames.push("init"); // this is the function that gets called when everything is loaded
   }else{
     console.log("slider is loading");
   }
 }, 10);
+
 function init(){
+console.log("init");
     jQuery(document).ready(function ($) {
 
     var _SlideshowTransitions = [
@@ -44,4 +46,14 @@ function init(){
 
     var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 
+    $(window).resize(scaleSlider());
 })};
+
+
+function scaleSlider(){
+    console.log("scale slider");
+    var slider = $("#slider1_container");
+    $("#slider1_container").remove();
+    $('#ctl00_ctl45_g_2fe9f5be_09e2_4483_9af9_e8bb8ea1b1eb .ms-rte-embedwp').append(slider);
+    //call init again without creating a loop
+}
