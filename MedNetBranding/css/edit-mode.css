@@ -5,3 +5,8 @@
 	margin-bottom:10px;
 	padding:0 10px;
 }
+.top-webpart .ms-webpart-zone,
+.mid-webpart .ms-webpart-zone,
+.bot-webpart .ms-webpart-zone{
+	margin:0;
+}

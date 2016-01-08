@@ -554,9 +554,10 @@ footer a:hover {
 #unit-social-icons a:first-of-type {
     margin-left:10px;
 }
-.top-webpart,
-.mid-webpart,
-.bot-webpart {
+
+.top-webpart .ms-webpart-zone,
+.mid-webpart .ms-webpart-zone,
+.bot-webpart .ms-webpart-zone {
     padding:15px;
     /*width: 27.333333333334%;*/
     margin: 0 0 0 4%;
