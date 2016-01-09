@@ -385,7 +385,7 @@
                                                     <asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server" />
                                                     <asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server" />
                                             
-                                                    <div class="ms-core-sideNavBox-removeLeftMargin">
+                                                    <div class="ms-core-sideNavBox">
                                                         <SharePoint:SPNavigationManager id="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="V4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">
                                                             <!-- ===== STARTER: Current navigation Data Provider ==================================================================================== -->
                                                             <SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">
@@ -393,7 +393,18 @@
                                                             </SharePoint:DelegateControl>
                                                     
                                                             <!-- ===== STARTER: Current navigation menu ==================================================================================== -->
-                                                            <SharePoint:AspMenu id="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="1" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="" />
+                                                            <SharePoint:AspMenu
+                                                                id="V4QuickLaunchMenu"
+                                                                runat="server"
+                                                                EnableViewState="false"
+                                                                DataSourceId="QuickLaunchSiteMap"
+                                                                UseSimpleRendering="true"
+                                                                Orientation="Vertical"
+                                                                StaticDisplayLevels="6"
+                                                                AdjustForShowStartingNode="false"
+                                                                MaximumDynamicDisplayLevels="6"
+                                                                SkipLinkText=""
+                                                            />
                                                         </SharePoint:SPNavigationManager>
                                                 
                                                         <!-- ===== STARTER: Tree view ==================================================================================== -->
@@ -412,6 +423,15 @@
                                                         <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
                                                             <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" /></div>
                                                         </asp:ContentPlaceHolder>
+                                                        <!-- recyle bin -->              
+                                                        <SharePoint:SPLinkButton
+                                                          runat="server" 
+                                                          NavigateUrl="~site/_layouts/recyclebin.aspx" 
+                                                          id="v3idNavLinkRecycleBin" 
+                                                          ImageUrl="/_layouts/images/recycbin.gif" 
+                                                          Text="<%$Resources:wss,StsDefault_RecycleBin%>" 
+                                                          PermissionsString="DeleteListItems" />
+
                                                     </div>
                                                 </asp:ContentPlaceHolder>
                                             </SharePoint:AjaxDelta>
@@ -555,4 +575,4 @@
     </body>
     
     <!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - April 21, 2013 -->
-</SharePoint:SPHtmlTag> 
+</SharePoint:SPHtmlTag>
