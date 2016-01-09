@@ -488,8 +488,14 @@ header h2{
 #ctl00_PlaceHolderLeftNavBar_QuickLaunchNavigationManager{
     
 }
-#sideNavBox .ms-splinkbutton-text{
+.ms-core-listMenu-verticalBox{
     border-top: 1px solid #515151;
+}
+.ms-core-listMenu-verticalBox a{
+    padding: 5px 20px;
+}
+
+#sideNavBox .ms-splinkbutton-text{
     color:#515151;
 }
 #ctl00_PlaceHolderLeftNavBar_PlaceHolderQuickLaunchBottom_idNavLinkViewAll:before{

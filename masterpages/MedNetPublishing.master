@@ -421,16 +421,18 @@
                                             
                                                         <!-- ===== STARTER: Site Contents Link ==================================================================================== -->
                                                         <asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
-                                                            <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" /></div>
+                                                            <div class="ms-core-listMenu-verticalBox"><SharePoint:ClusteredSPLinkButton runat="server" id="idNavLinkViewAll" PermissionsString="ViewFormPages" NavigateUrl="~site/_layouts/15/viewlsts.aspx" Text="<%$Resources:wss,AllSiteContentMore%>" accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" CssClass="ms-core-listMenu-item ms-core-listMenu-heading" />
+                                                                <!-- recycle bin -->              
+                                                                <SharePoint:SPLinkButton
+                                                                  runat="server" 
+                                                                  NavigateUrl="~site/_layouts/recyclebin.aspx" 
+                                                                  id="v3idNavLinkRecycleBin" 
+                                                                  ImageUrl="/_layouts/images/recycbin.gif" 
+                                                                  Text="<%$Resources:wss,StsDefault_RecycleBin%>" 
+                                                                  PermissionsString="DeleteListItems" />
+                                                            </div>
                                                         </asp:ContentPlaceHolder>
-                                                        <!-- recyle bin -->              
-                                                        <SharePoint:SPLinkButton
-                                                          runat="server" 
-                                                          NavigateUrl="~site/_layouts/recyclebin.aspx" 
-                                                          id="v3idNavLinkRecycleBin" 
-                                                          ImageUrl="/_layouts/images/recycbin.gif" 
-                                                          Text="<%$Resources:wss,StsDefault_RecycleBin%>" 
-                                                          PermissionsString="DeleteListItems" />
+                                                        
 
                                                     </div>
                                                 </asp:ContentPlaceHolder>
