@@ -479,16 +479,14 @@ header h2{
 #sideNavBox {
     padding-bottom:50px;
 }
-#sideNavBox ul ul {
-    display:none;
-}
+
 #sideNavBox .selected ul {
     display:block;
 }
 #ctl00_PlaceHolderLeftNavBar_QuickLaunchNavigationManager{
     
 }
-.ms-core-listMenu-verticalBox{
+.adm-site-links{
     border-top: 1px solid #515151;
 }
 .ms-core-listMenu-verticalBox a{

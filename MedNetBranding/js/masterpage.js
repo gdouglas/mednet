@@ -137,9 +137,14 @@ function calcFooter(){
     $footer.show();
 }
 
+/*hide extra pages on top level nav*/
+function pruneSideNav(){
+    $('#zz13_V4QuickLaunchMenu li').hasClass('selected') ? true : $('#zz13_V4QuickLaunchMenu ul ul').css('display','none');
+}
+
 $(document).ready(function() {
     calcFooter();
-    
+    pruneSideNav();
     //change footer with window resize
     $(window).resize(calcFooter);
 });
