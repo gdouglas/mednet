@@ -512,8 +512,8 @@ header h2{
 }
 li > a.ms-core-listMenu-item.ms-core-listMenu-selected:hover, 
 li > a.ms-core-listMenu-item:hover, 
-li > a.ms-core-listMenu-item:active {
-    background-color: rgba( 205,230,247,0.75);
+li > a.ms-core-listMenu-item:active 
+{    background-color: rgba( 205,230,247,0.75);
     font-weight: 500;
 }
 .ms-core-listMenu-selected:link, 
@@ -684,6 +684,45 @@ footer a:hover {
     margin-bottom: 15px;
     color: #3868A6;
 }
+/*Overview Pages*/
+.overview h3 {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.overview h3 a:visited {
+    color: #3868a6;
+}
+
+.overview .col-md-4 {
+    max-width: 400px;
+}
+
+
+
+/*Pathway Pages*/
+.pathway h3 {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.pathway h3 a:visited {
+    color: #3868a6;
+}
+
+.pathway .col-md-4 {
+    max-width: 400px;
+}
+
+@media (max-width: 991px) {
+    .overview hr {
+        display: none;
+    }
+    .pathway hr {
+        display: none;
+    }    
+}
+
 /*media queries*/
 /*xs*/
 @media screen and (max-width:767px){
