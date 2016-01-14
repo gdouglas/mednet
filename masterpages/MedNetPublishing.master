@@ -63,13 +63,13 @@
         <SharePoint:CssRegistration Name="Themable/corev15.css" runat="server" />
 
         <!-- ===== Custom CSS  =================================================================================================== -->
-        <SharePoint:CssRegistration ID="bootstrap" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/bootstrap.min.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="masterpage" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/masterpage.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="commonstyles" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/styles.css %&gt;" runat="server" after="SharepointCssFile" />
-        <SharePoint:CssRegistration ID="fontAwesome" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/font-awesome.min.css %&gt;" runat="server" after="SharepointCssFile" />  
+        <SharePoint:CssRegistration ID="bootstrap" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/bootstrap.min.css %&gt;" runat="server" after="corev15.css" />
+        <SharePoint:CssRegistration ID="masterpage" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/masterpage.css %&gt;" runat="server" after="corev15.css" />
+        <SharePoint:CssRegistration ID="commonstyles" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/styles.css %&gt;" runat="server" after="corev15.css" />
+        <SharePoint:CssRegistration ID="fontAwesome" name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/font-awesome.min.css %&gt;" runat="server" after="corev15.css" />  
         
         <PublishingWebControls:EditModePanel runat="server" PageDisplayMode="Edit">
-            <SharePoint:CssRegistration ID="CssRegistration5" Name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/edit-mode.css %&gt;" runat="server" After="SharepointCssFile" />            
+            <SharePoint:CssRegistration ID="CssRegistration5" Name="&lt;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/edit-mode.css %&gt;" runat="server" After="corev15.css" />            
         </PublishingWebControls:EditModePanel>
 
 
@@ -367,7 +367,7 @@
                                                 </SharePoint:ScriptBlock>
                                             </div>
                                         </h1>
-                                    </div>
+                                    </div>                                    
                                 </div>
 
                         
@@ -440,6 +440,17 @@
                                         </div>
                                         <!-- ===== STARTER: Main Content ========================================================================================== -->
                                         <div id="contentBox" class="col-sm-10 no-float">
+                                            <!-- Breadcrumb -->
+                                            <SharePoint:AjaxDelta ID="deltabreadcrumbnav" runat="server">
+                                               <div id="breadcrumbnavigation">
+                                                 <span class="breadcrumb-nav"> 
+                                                   <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" >
+                                                     <asp:SiteMapPath SiteMapProvider="SPContentMapProvider" id="ContentMap" SkipLinkText="" runat="server"/>
+                                                   </asp:ContentPlaceHolder>
+                                                 </span>
+                                              </div>
+                                            </SharePoint:AjaxDelta>
+
                                             <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
                                             <SharePoint:AjaxDelta ID="AjaxDelta1" IsMainContent="true" runat="server">
                                                 <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
@@ -561,7 +572,7 @@
             </asp:ContentPlaceHolder>
         
             <!-- ===== STARTER: Hidden Placeholders =========================================================================================== --> 
-            <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
+            <asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" Visible="True" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigationSiteMap" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTopNavBar" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderSiteName" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderPageImage" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderMiniConsole" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderNavSpacer" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" Visible="False" runat="server" /><asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" Visible="False" runat="server" /><asp:ContentPlaceHolder id="WSSDesignConsole" Visible="False" runat="server" />
                 
         </SharePoint:SharePointForm>
     
