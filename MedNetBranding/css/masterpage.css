@@ -409,7 +409,12 @@ header .mednet-title {
     text-transform: none;
     letter-spacing: 2px;
 }
-
+#breadcrumbnavigation{
+    margin-left:30px;
+}
+.breadcrumb-separator{
+    border:none
+}
 /*top nav*/
 .site-nav {
     /*background:#effaf0;*/
@@ -645,9 +650,6 @@ footer a:hover {
 .two-column .sidebar .mid-webpart h4{
     color:#000;
 }
-.two-column .mid-webpart {
-    /*width:50%;*/
-}
 
 #two-col-bl,
 #two-col-br {
@@ -699,8 +701,6 @@ footer a:hover {
     max-width: 400px;
 }
 
-
-
 /*Pathway Pages*/
 .pathway h3 {
     margin-top: 5px;
@@ -715,6 +715,11 @@ footer a:hover {
     max-width: 400px;
 }
 
+/*Settings page*/
+.ms-siteSettings-root{
+    margin-left:30px;
+}
+/*media queries*/
 @media (max-width: 991px) {
     .overview hr {
         display: none;
@@ -724,7 +729,6 @@ footer a:hover {
     }    
 }
 
-/*media queries*/
 /*xs*/
 @media screen and (max-width:767px){
     /*need to zero out a lot of bootstrap*/

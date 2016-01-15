@@ -139,7 +139,7 @@ function calcFooter(){
 
 /*hide extra pages on top level nav*/
 function pruneSideNav(){
-    $('#zz13_V4QuickLaunchMenu li').hasClass('selected') ? true : $('#zz13_V4QuickLaunchMenu ul ul').css('display','none');
+    $('#sideNavBox li').hasClass('selected') ? true : $('#sideNavBox ul ul').css('display','none');
 }
 
 $(document).ready(function() {

@@ -348,7 +348,7 @@
                                             <!-- ===== STARTER: SP Reqs DeltaPlaceHolderPageTitleInTitleArea and PlaceHolderPageTitleInTitleArea for adding Apps in Site Content =================== -->
                                             <SharePoint:AjaxDelta id="DeltaPlaceHolderPageTitleInTitleArea" runat="server">                         
                                                 <asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">
-                                                    <SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider">
+                                                    <SharePoint:SPTitleBreadcrumb runat="server" RenderCurrentNodeAsLink="true" SiteMapProvider="SPContentMapProvider" CentralAdminSiteMapProvider="SPXmlAdminContentMapProvider" hideinteriorrootnodes="true">
                                                         <PATHSEPARATORTEMPLATE>
                                                             <SharePoint:ClusteredDirectionalSeparatorArrow runat="server" />
                                                         </PATHSEPARATORTEMPLATE>
@@ -400,9 +400,9 @@
                                                                 DataSourceId="QuickLaunchSiteMap"
                                                                 UseSimpleRendering="true"
                                                                 Orientation="Vertical"
-                                                                StaticDisplayLevels="6"
-                                                                AdjustForShowStartingNode="false"
-                                                                MaximumDynamicDisplayLevels="6"
+                                                                StaticDisplayLevels="3"
+                                                                AdjustForShowStartingNode="true"
+                                                                MaximumDynamicDisplayLevels="0"
                                                                 SkipLinkText=""
                                                             />
                                                         </SharePoint:SPNavigationManager>
@@ -445,7 +445,7 @@
                                                <div id="breadcrumbnavigation">
                                                  <span class="breadcrumb-nav"> 
                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" >
-                                                     <asp:SiteMapPath SiteMapProvider="SPContentMapProvider" id="ContentMap" SkipLinkText="" runat="server"/>
+                                                     <asp:SiteMapPath SiteMapProvider="CurrentNavSiteMapProviderNoEncode" id="ContentMap" PathSeparatorStyle-CssClass ="breadcrumb-separator" SkipLinkText="" CurrentNodeStyle-CssClass="current-breadcrumb" NodeStyle-CssClass="breadcrumb-node" runat="server" hideinteriorrootnodes="true"/>
                                                    </asp:ContentPlaceHolder>
                                                  </span>
                                               </div>
