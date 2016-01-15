@@ -16,33 +16,37 @@ window.onload = function()
 *Navbar Controls
 *
 */
-$(".navbar-toggle").click(function() 
-{  
-    $('#navbar').slideToggle();
-    $('#sideNavBox').slideToggle();
-});
-
+function addListeners(){
+    console.log("addListeners");
+    $(".navbar-toggle").click(function() {  
+        console.log("click");
+        $('#navbar').slideToggle();
+        $('#sideNavBox').slideToggle();
+    });
+}
 /*
 *
 *
 *Smooth scrolling on bookmarks
 *
 */
-$('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-        || location.hostname == this.hostname) {
+function addSmoothScroll(){
+    console.log("addSmoothScroll");
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+            || location.hostname == this.hostname) {
 
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-           if (target.length) {
-             $('#s4-workspace').animate({
-                 scrollTop: target.offset().top
-            }, 'fast');
-            return false;
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+               if (target.length) {
+                 $('#s4-workspace').animate({
+                     scrollTop: target.offset().top
+                }, 'fast');
+                return false;
+            }
         }
-    }
-});
-
+    });
+}
 
 /*
 *
@@ -147,4 +151,6 @@ $(document).ready(function() {
     pruneSideNav();
     //change footer with window resize
     $(window).resize(calcFooter);
+    addSmoothScroll();
+    addListeners();
 });

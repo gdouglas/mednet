@@ -8,14 +8,11 @@ var everythingLoaded = setInterval(function() {
 }, 10);
 
 function init(){
-console.log("init");
     jQuery(document).ready(function ($) {
-
     var _SlideshowTransitions = [
         //Fade
         { $Duration: 1200, $Opacity: 2 }
     ];
-
     var options = { 
             $AutoPlay: true,
             $FillMode:4,
@@ -51,9 +48,8 @@ console.log("init");
 
 
 function scaleSlider(){
-    console.log("scale slider");
     var slider = $("#slider1_container");
     $("#slider1_container").remove();
-    $('#ctl00_ctl45_g_2fe9f5be_09e2_4483_9af9_e8bb8ea1b1eb .ms-rte-embedwp').append(slider);
+    $('.fp-slider-zone-container .ms-rte-embedwp').append(slider);
     //call init again without creating a loop
 }

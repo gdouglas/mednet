@@ -9,6 +9,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
+    border:0;
 }
 .no-float {
     float: none !important; 
@@ -281,10 +282,7 @@ h2,
 .ms-rtestate-field h2,
 h2.ms-rteElement-H2,
 h2.ms-rteElement-H2B {
-    color:#62a53a;
-    color:#2E7453;
-    color:#538B31;
-    color:#4c6c3a;
+    color:#447128;
     margin:20px 0 10px 0;
 }
 
@@ -600,24 +598,8 @@ footer a:hover {
     margin-top:0;
 }
 .two-column .sidebar .mid-webpart {
-    background:#62A53A;
-    background:#2E7453;
-    background:#2DBF73;
-    background:#538B31;
-    background:#27A564;
-    background:#0072c6;
-    background:#2d4b1b;
-    background:rgb(242, 248, 238);
-    background:rgb(235, 241, 231);
-    background:#afccb6;
-
-    /*
-    background:#2CCA9A;
-    background:#28D6A2;
-    background:#2CBF5E;
-    */
+    background:#bad0ac;
     min-height: 0;
-    color:#fff;
     color:#000;
 }
 .two-column .sidebar img {
