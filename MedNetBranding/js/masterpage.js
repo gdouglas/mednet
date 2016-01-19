@@ -127,7 +127,7 @@ function calcFooter(){
     
     //if no ms-designer-ribbon try to calculate with suitebar + ribbonrow
     if(ribbonheight==null){
-        ribbonheight = $("#suiteBar").height() + $("#s4-ribbonrow").height();
+        ribbonheight = $("#suiteBar").height() + $("#s4-ribbonrow").height() + $('#s4-statusbarcontainer').height();
     }
     
     //handle null if something wasn't found
