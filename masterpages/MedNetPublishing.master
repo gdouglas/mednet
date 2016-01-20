@@ -374,7 +374,7 @@
                                 <!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
                                 <div class="container page-content-container">
                                     <!-- ===== STARTER: Current navigation ================ff==================================================================== -->
-                                    <div class="row">
+                                    <div class="row page-content-row">
                                         <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList col-sm-2 no-float">
                                             <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->
                                             <SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">
@@ -440,22 +440,24 @@
                                         </div>
                                         <!-- ===== STARTER: Main Content ========================================================================================== -->
                                         <div id="contentBox" class="col-sm-10 no-float">
-                                            <!-- Breadcrumb -->
-                                            <SharePoint:AjaxDelta ID="deltabreadcrumbnav" runat="server">
-                                               <div id="breadcrumbnavigation">
-                                                 <span class="breadcrumb-nav"> 
-                                                   <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" >
-                                                     <asp:SiteMapPath SiteMapProvider="CurrentNavSiteMapProviderNoEncode" id="ContentMap" PathSeparatorStyle-CssClass ="breadcrumb-separator" SkipLinkText="" CurrentNodeStyle-CssClass="current-breadcrumb" NodeStyle-CssClass="breadcrumb-node" runat="server" hideinteriorrootnodes="true"/>
-                                                   </asp:ContentPlaceHolder>
-                                                 </span>
-                                              </div>
-                                            </SharePoint:AjaxDelta>
+                                            <div class="container-fluid">                                            
+                                                <!-- Breadcrumb -->
+                                                <SharePoint:AjaxDelta ID="deltabreadcrumbnav" runat="server">
+                                                   <div id="breadcrumbnavigation">
+                                                     <span class="breadcrumb-nav"> 
+                                                       <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" >
+                                                         <asp:SiteMapPath SiteMapProvider="CurrentNavSiteMapProviderNoEncode" id="ContentMap" PathSeparatorStyle-CssClass ="breadcrumb-separator" SkipLinkText="" CurrentNodeStyle-CssClass="current-breadcrumb" NodeStyle-CssClass="breadcrumb-node" runat="server" hideinteriorrootnodes="true"/>
+                                                       </asp:ContentPlaceHolder>
+                                                     </span>
+                                                  </div>
+                                                </SharePoint:AjaxDelta>
 
-                                            <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
-                                            <SharePoint:AjaxDelta ID="AjaxDelta1" IsMainContent="true" runat="server">
                                                 <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
-                                                <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
-                                            </SharePoint:AjaxDelta>
+                                                <SharePoint:AjaxDelta ID="AjaxDelta1" IsMainContent="true" runat="server">
+                                                    <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->
+                                                    <asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server" />
+                                                </SharePoint:AjaxDelta>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -483,8 +485,8 @@
                                         <a class="address-title" href="../../Pages/default.aspx" runat="server">
                                             <svg id="footer-logo" role="img" aria-label="Faculty of Medicine Intranet" version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                  viewBox="0 0 241.7 21.8" enable-background="new 0 0 241.7 21.8" xml:space="preserve">
-                                                 <title>Faculty of Medicine Intranet</title>
-                                                 <desc>Link to the Faculty of Medicine Intranet homepage</desc>
+                                                 <title>UBC Faculty of Medicine</title>
+                                                 <desc>UBC Faculty of Medicine</desc>
                                                 <g>
                                                     <path fill="#FFFFFF" d="M8,17.1c-4.4,0-7-2.3-7-6.2V1.5h3.6v9.2c0,2.3,1.2,3.5,3.4,3.5c2.2,0,3.4-1.2,3.4-3.5V1.5H15v9.3
                                                         C15,14.7,12.3,17.1,8,17.1"/>
@@ -586,6 +588,5 @@
         <SharePoint:ScriptLink ID="ScriptMasterpage" Name="~SiteCollection/_layouts/15/MedNetBranding/js/masterpage.js" runat="server" />
 
     </body>
-    
     <!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - April 21, 2013 -->
 </SharePoint:SPHtmlTag>

@@ -1,7 +1,10 @@
 .page-content .body-text {
     max-width:970px;
 }
-
+.page-content-row{
+    display:table;
+    width:100%;
+}
 .page-content-container {
     width: 100%;
     margin-top: -50px;
@@ -305,7 +308,10 @@ h4.ms-rteElement-H4B {
 }
 
 .error-content {
-    padding:15px;
+    padding:0 15px 0 30px;
+}
+.error-content h2{
+    margin-top:0;
 }
 .ms-formfieldlabel {
     text-transform: initial;
@@ -610,9 +616,9 @@ footer a:hover {
     -webkit-box-shadow: 0 0 15px rgba(0,0,0,.3);
     -moz-box-shadow: 0 0 15px rgba(0,0,0,.3);
 }
-/*width issue, find out what is preventing this from 100% width*/
+/*todo width issue, find out what is preventing this from 100% width*/
 .bottom-wp-zones {
-    display:table;
+    display: table;
     table-layout: fixed;
     height:100%;
     width: 100%;    
@@ -620,7 +626,7 @@ footer a:hover {
     /*border-spacing:15px 0;*/
 }
 .bottom-wp-zones div[data-name="WebPartZone"] {
-    display:table-cell;
+    display: table-cell;
     float:none;
     margin:0 15px;
     min-width: 230px;
@@ -860,9 +866,6 @@ footer a:hover {
 
 }
 
-/*tbody,table,td,tr {
-    display:inline !important;
-}*/
 /*md*/
 @media screen and (max-width:992px){
 
