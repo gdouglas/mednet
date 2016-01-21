@@ -721,6 +721,9 @@ footer a:hover {
         font-size:27px;
         margin-top:0;
     }
+    .page-content{
+        padding:0;
+    }
     .page-content-container .col-sm-10{
         display: inline;
     }
