@@ -716,6 +716,15 @@ footer a:hover {
         display: none;
     }    
 }
+@media screen and (max-width: 400px){
+    .container h1{
+        font-size:27px;
+        margin-top:0;
+    }
+    .page-content-container .col-sm-10{
+        display: inline;
+    }
+}
 
 /*xs*/
 @media screen and (max-width:767px){
