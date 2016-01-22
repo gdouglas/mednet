@@ -440,7 +440,7 @@
                                         </div>
                                         <!-- ===== STARTER: Main Content ========================================================================================== -->
                                         <div id="contentBox" class="col-sm-10 no-float">
-                                            <div class="container-fluid">                                            
+                                            <div class="container-fluid">
                                                 <!-- Breadcrumb -->
                                                 <SharePoint:AjaxDelta ID="deltabreadcrumbnav" runat="server">
                                                    <div id="breadcrumbnavigation">
@@ -485,8 +485,8 @@
                                         <a class="address-title" href="../../Pages/default.aspx" runat="server">
                                             <svg id="footer-logo" role="img" aria-label="Faculty of Medicine Intranet" version="1.1" id="text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                  viewBox="0 0 241.7 21.8" enable-background="new 0 0 241.7 21.8" xml:space="preserve">
-                                                 <title>UBC Faculty of Medicine</title>
-                                                 <desc>UBC Faculty of Medicine</desc>
+                                                 <title>Faculty of Medicine Intranet</title>
+                                                 <desc>Link to the Faculty of Medicine Intranet homepage</desc>
                                                 <g>
                                                     <path fill="#FFFFFF" d="M8,17.1c-4.4,0-7-2.3-7-6.2V1.5h3.6v9.2c0,2.3,1.2,3.5,3.4,3.5c2.2,0,3.4-1.2,3.4-3.5V1.5H15v9.3
                                                         C15,14.7,12.3,17.1,8,17.1"/>
@@ -588,5 +588,6 @@
         <SharePoint:ScriptLink ID="ScriptMasterpage" Name="~SiteCollection/_layouts/15/MedNetBranding/js/masterpage.js" runat="server" />
 
     </body>
+    
     <!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - April 21, 2013 -->
 </SharePoint:SPHtmlTag>
