@@ -175,6 +175,11 @@ h2.ms-rteElement-SpecialHeading {
     color:#fff;
 }
 /*Custom editor styles*/
+.ms-rteElement-links{
+    -ms-name: "test item";
+    color:red;
+    border:1px solid black;
+}
 .ms-rteElement-levelfourlinks {
     -ms-name: "Link Item";  
     line-height: 28px;
