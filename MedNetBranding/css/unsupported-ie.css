@@ -28,3 +28,12 @@
 	padding:5px 10px;
 	cursor:pointer;
 }
+table{
+	width:100%;
+}
+th,
+td{
+	padding:10px;
+	text-align: center;
+	vertical-align: top;
+}
