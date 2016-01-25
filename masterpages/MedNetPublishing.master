@@ -194,11 +194,6 @@
             </div>
             <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
             
-            <!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
-            <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
-                <wssuc:Welcome runat="server" EnableViewState="false" />
-            </SharePoint:SPSecurityTrimmedControl>
-            
             <!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
             <div id="s4-workspace">
                     <div id="s4-bodyContainer">     
