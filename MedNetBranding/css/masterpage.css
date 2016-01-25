@@ -81,10 +81,15 @@ div[role="dialog"] *,
 *[class*='ms-dlg'] *,
 *[class*='ms-dlg'] *:before,
 *[class*='ms-dlg'] *:after,
-.ms-webpart-menuLink {
+.ms-webpart-menuLink,
+.js-callout-closeButton,
+.ms-InlineSearch-Outline-Baseline {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
+}
+.ms-InlineSearch-Outline-Baseline{
+    height:24px;
 }
 .web-part-zone {
     overflow:auto;
@@ -98,20 +103,15 @@ h1 input[title="Title"] {
     border:none;
 }
 /*make div work like p for editor*/
-/*.page-content div,
-.page-content .row .sidebar div*/
 .ms-rtestate-field {
     margin: 0px 0px 10px 0px;
     line-height: 1.6
 }
-/*.page-content div[*],
-.page-content div[class] {
-    line-height:1.42857143;
-    margin:0 -15px;
+span div.article,
+span div.welcome{
+    padding-left:30px;
+    padding-right:30px;
 }
-.page-content div[class^="col"] {
-    margin:0;
-}*/
 .container p,
 .container li,
 .container span,
