@@ -102,6 +102,9 @@ h1 input[title="Title"] {
     padding:0;
     border:none;
 }
+#scriptWPQ2{
+    padding-left:30px;
+}
 /*make div work like p for editor*/
 .ms-rtestate-field {
     margin: 0px 0px 10px 0px;
@@ -500,8 +503,9 @@ header h2{
 #ctl00_PlaceHolderLeftNavBar_QuickLaunchNavigationManager{
     
 }
-.adm-site-links{
+.adm-site-links .adm-site-links-border{
     margin-top:23px;
+    padding-top:23px;
     border-top: 1px solid #515151;
 }
 .ms-core-listMenu-verticalBox a{
@@ -871,16 +875,12 @@ footer a:hover {
     #sideNavBox {
         width: 16.66666667%;
         margin:0;
-        padding: 0 0 0 15px;
+        padding: 0 0 0 0;
     }
     #sideNavBox a {
         color:#000;
         /*margin-left:16px;*/
     }
-/*  .ms-core-listMenu-root ul {
-        padding-left:37px !important;
-    }*/
-
 }
 
 /*md*/
