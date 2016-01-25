@@ -1,12 +1,7 @@
 /*prevent focus on content by default*/
 window.onload = function() 
 {
-  SetFullScreenMode(false);
-    
-    _spBodyOnLoadFunctionNames.push("Hidesuite");
-    function Hidesuite() {
-        document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
-    }  
+    SetFullScreenMode(false);
 }
 
 
@@ -17,6 +12,7 @@ window.onload = function()
 *
 */
 function addListeners(){
+    console.log("addListeners");
     $(".navbar-toggle").click(function() {  
         $('#navbar').slideToggle();
         $('#sideNavBox').slideToggle();
@@ -29,6 +25,7 @@ function addListeners(){
 *
 */
 function addSmoothScroll(){
+    console.log("smooth");
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
             || location.hostname == this.hostname) {
@@ -96,6 +93,7 @@ $(window).resize(function(){
     if($(window).width() >= 768){
         $('#sideNavBox').show();
         $('#navbar').show();
+        calcFooter();
     }
 });
 
@@ -107,14 +105,16 @@ $(window).resize(function(){
 */
 
 function calcFooter(){
+    console.log("footer");
     var $footer = $("footer");
     var footerheight = $footer.outerHeight();
     //hide footer allows for smoother window resizing
     $footer.hide();
 
     var bodyheight = $("#s4-bodyContainer").outerHeight();
-    var $ribbon = $("#top-ribbon")
+    var $ribbon = $("#top-ribbon");
     var ribbonheight = $ribbon.outerHeight();
+    console.log("ribbon height is "+ribbonheight);
     var windowheight = $(window).height();
 
     //if ribbon is hidden size is zero
@@ -140,14 +140,16 @@ function calcFooter(){
 
 /*hide extra pages on top level nav*/
 function pruneSideNav(){
+    console.log("prune");
     $('#sideNavBox li').hasClass('selected') ? true : $('#sideNavBox ul ul').css('display','none');
 }
+/*prevent focusOnContent*/
+function Hidesuite() {
+    console.log("Hidesuite");
+    document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
+} 
 
+/*load functions*/
 $(document).ready(function() {
-    calcFooter();
-    pruneSideNav();
-    //change footer with window resize
-    $(window).resize(calcFooter);
-    addSmoothScroll();
-    addListeners();
+    _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
 });

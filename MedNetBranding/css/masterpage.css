@@ -205,6 +205,7 @@ h2.ms-rteElement-SpecialHeading {
 /*Custom editor elements*/
 hr.ms-rteElement-hrrl {
     -ms-name: "Horizontal Rule";
+    border-top:1px solid #ababab;
 }
 /*Custom editor table styles*/
 table.ms-rteTable-ubctable {
@@ -506,7 +507,7 @@ header h2{
 .adm-site-links .adm-site-links-border{
     margin-top:23px;
     padding-top:23px;
-    border-top: 1px solid #515151;
+    border-top: 1px solid #ccc;
 }
 .ms-core-listMenu-verticalBox a{
     padding: 5px 20px;

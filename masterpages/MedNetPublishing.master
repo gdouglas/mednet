@@ -402,13 +402,13 @@
                                 <div class="col-xs-12 row-content">
                                         <div id="unit-social-icons">
                                             <span class="social-title">Find us on</span>
-                                            <a href="https://www.facebook.com/pages/UBC-Faculty-of-Medicine/232412823455905" title="Facebook">
+                                            <a href="https://www.facebook.com/pages/UBC-Faculty-of-Medicine/232412823455905" title="Facebook" target="_blank">
                                                 <i class="fa fa-facebook-square"></i>
                                             </a>
-                                            <a href="http://twitter.com/UBCMedicine/" title="Twitter">
+                                            <a href="http://twitter.com/UBCMedicine/" title="Twitter" target="_blank">
                                                 <i class="fa fa-twitter-square"></i>
                                             </a>
-                                            <a href="http://www.youtube.com/UBCMedicine/" title="YouTube">
+                                            <a href="http://www.youtube.com/UBCMedicine/" title="YouTube" target="_blank">
                                                 <i class="fa fa-youtube-square"></i>
                                             </a>
                                             <a href="#suiteBar" class="toplink hidden-md hidden-lg">Back To Top ^</a>
