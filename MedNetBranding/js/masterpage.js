@@ -17,9 +17,7 @@ window.onload = function()
 *
 */
 function addListeners(){
-    console.log("addListeners");
     $(".navbar-toggle").click(function() {  
-        console.log("click");
         $('#navbar').slideToggle();
         $('#sideNavBox').slideToggle();
     });
@@ -31,7 +29,6 @@ function addListeners(){
 *
 */
 function addSmoothScroll(){
-    console.log("addSmoothScroll");
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
             || location.hostname == this.hostname) {
