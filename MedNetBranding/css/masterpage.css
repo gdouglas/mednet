@@ -99,8 +99,11 @@ h1 input[title="Title"] {
 }
 #s4-statusbarcontainer #pageStatusBar {
     margin-bottom:0;
-    padding:0;
+    padding:0 0 0 15px;
     border:none;
+    position:fixed;
+    width:100%;
+    z-index: 1;
 }
 #scriptWPQ2{
     padding-left:30px;
@@ -648,17 +651,23 @@ footer a:hover {
 .two-column .sidebar .mid-webpart h4{
     color:#000;
 }
-
 #two-col-bl,
-#two-col-br {
+#two-col-br,
+#two-col-ml {
+    min-height: 0;
+}
+#two-col-bl > div,
+#two-col-br > div{
     background:rgb(235, 241, 231);
     background:#ddd;
     border-right: 3px solid #fff;
+    padding:15px;
 }
-#two-col-ml {
+#two-col-ml > div{
     background:rgb(242, 248, 238);
     background:#ccc;
     border-right: 3px solid #fff;
+    padding:15px;
 }
 /*maps*/
 .google-maps {
@@ -837,7 +846,6 @@ footer a:hover {
     }
     .toplink {
         width:100%;
-        /*position:fixed;*/
         bottom:0;
         left:0;
         text-align:center;
@@ -919,6 +927,9 @@ footer a:hover {
     #two-col-ml,
     #two-col-br {
         border:0;
+    }
+    #s4-statusbarcontainer #pageStatusBar {
+        position: initial;
     }
 
 }

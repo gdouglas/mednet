@@ -184,18 +184,18 @@
                         </SharePoint:AjaxDelta>
                     </div>
                 </div>
-
-                <div class="s4-notdlg">
-                    <div id="s4-statusbarcontainer" class="s4-notdlg">
-                        <div id="pageStatusBar" class="s4-status-s1">
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
             
             <!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
             <div id="s4-workspace">
+                <div class="s4-notdlg">
+                    <div id="s4-statusbarcontainer" class="s4-notdlg">
+                        <SharePoint:AjaxDelta ID="DeltaPageStatusBar" BlockElement="true" runat="server">
+                            <div id="pageStatusBar"></div>
+                        </SharePoint:AjaxDelta>
+                    </div>
+                </div>            
                     <div id="s4-bodyContainer">     
                         <!-- ===== STARTER: This decides where the web part menu lives ===================================================== -->
                         <div id="DeltaPlaceHolderMain" runat="server">
