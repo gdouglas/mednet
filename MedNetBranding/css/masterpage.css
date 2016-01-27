@@ -836,6 +836,9 @@ footer a:hover {
 }
 
 @media screen and (max-width: 400px) {
+    #breadcrumbnavigation {
+        margin-left:15px;
+    }
     .container h1 {
         font-size: 27px;
         margin-top: 10px;
@@ -848,6 +851,13 @@ footer a:hover {
     .page-content-container .col-sm-10 {
         display: inline;
     }
+    #contentBox {
+        margin:0;
+    }
+    #unit-social-icons {
+        float: left;
+        margin-bottom: 10px;
+    }    
 }
 
 /*xs*/
@@ -1018,7 +1028,6 @@ footer a:hover {
     .page-content-row {
         display: table;
         width: 100%;
-        margin: 0 auto;
     }
 }
 

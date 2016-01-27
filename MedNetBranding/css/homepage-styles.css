@@ -4,6 +4,9 @@
 #deltabreadcrumbnav{
 	display:none;
 }
+.row.page-content-row {
+	margin:0 auto;
+}
 .homepage-content{
 	/*max-width: 1620px;*/
     margin:0;
