@@ -2,7 +2,7 @@
 
 This HTML file has been associated with a SharePoint Page Layout (.aspx file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .aspx file, and any rename, move, or deletion operations will be reciprocated.
 
-To build the page layout directly from this HTML file, simply fill in the contents of content placeholders.  Use the Snippet Generator at https://playground.mednet.med.ubc.ca/2013/MedNetBranding/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Fplayground%2Emednet%2Emed%2Eubc%2Eca%2F2013%2FMedNetBranding%2F%5Fcatalogs%2Fmasterpage%2FHomePage%20Layout%2Easpx to create and customize additional content placeholders and other useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file within content placeholders will automatically sync to the associated page layout.
+To build the page layout directly from this HTML file, simply fill in the contents of content placeholders.  Use the Snippet Generator at https://test.mednet.med.ubc.ca/sites/intranetNG91/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2Fsites%2FintranetNG91%2F%5Fcatalogs%2Fmasterpage%2FHomePageLayout%2Easpx to create and customize additional content placeholders and other useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file within content placeholders will automatically sync to the associated page layout.
 
 -->
 <!DOCTYPE html[]>
@@ -18,25 +18,26 @@ To build the page layout directly from this HTML file, simply fill in the conten
             <!--CE: End Page Field: Title Snippet-->
         <!--ME:</asp:ContentPlaceHolder>-->
         <!--MS:<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">-->
-            <!--CS: Start Edit Mode Panel Snippet-->
             <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
             <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-            <!--MS:<Publishing:EditModePanel runat="server" id="editmodestyles">-->
-                <!--MS:<SharePoint:CssRegistration name="&#60;% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %&#62;" After="&#60;% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %&#62;" runat="server">-->
-                <!--ME:</SharePoint:CssRegistration>-->
-            <!--ME:</Publishing:EditModePanel>-->
-            <!--CE: End Edit Mode Panel Snippet-->
-        <!--ME:</asp:ContentPlaceHolder>-->
-        <!--MS:<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">-->
-        <!--ME:</asp:ContentPlaceHolder>-->
-        <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link href="css/homepage-styles.css" rel="stylesheet" />
-        <link href="css/bx-slider.css" rel="stylesheet" />
-        <!--[if gte mso 9]><xml>
+            <!--MS:<SharePoint:CssRegistration ID="homepageStyles" name="&#60;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/homepage-styles.css %&#62;" runat="server" after="bootstrap"/>-->
+                <!--MS:<SharePoint:CssRegistration ID="SliderStyles" name="&#60;% $SPUrl:~SiteCollection/_layouts/15/MedNetBranding/css/slider.css %&#62;" runat="server" after="SharepointCssFile"/>-->
+                    <!--CS: Start Edit Mode Panel Snippet-->
+                    <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                    <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                    <!--MS:<Publishing:EditModePanel runat="server" id="editmodestyles">-->
+                        <!--MS:<SharePoint:CssRegistration name="&#60;% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %&#62;" After="&#60;% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %&#62;" runat="server">-->
+                        <!--ME:</SharePoint:CssRegistration>-->
+                    <!--ME:</Publishing:EditModePanel>-->
+                    <!--CE: End Edit Mode Panel Snippet-->
+                <!--ME:</asp:ContentPlaceHolder>-->
+                <!--MS:<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">-->
+                <!--ME:</asp:ContentPlaceHolder>-->
+                <!--[if gte mso 9]><xml>
 <mso:CustomDocumentProperties>
 <mso:ContentPlaceHolderHashPlaceHolderPageTitleInTitleArea msdt:dt="string">1</mso:ContentPlaceHolderHashPlaceHolderPageTitleInTitleArea>
 <mso:ContentPlaceHolderHashPlaceHolderMain msdt:dt="string">1</mso:ContentPlaceHolderHashPlaceHolderMain>
-<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://playground.mednet.med.ubc.ca/2013/MedNetBranding/_catalogs/masterpage/HomePage Layout.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+<mso:HtmlDesignStatusAndPreview msdt:dt="string">https://playground.mednet.med.ubc.ca/2013/MedNetBranding/_catalogs/masterpage/HomePage%20Layout.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
 <mso:ContentTypeId msdt:dt="string">0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE8110003D357F861E29844953D5CAA1D4D8A3B</mso:ContentTypeId>
 <mso:ContentPlaceHolderHashPlaceHolderAdditionalPageHead msdt:dt="string">1</mso:ContentPlaceHolderHashPlaceHolderAdditionalPageHead>
 <mso:ContentPlaceHolderHashPlaceHolderPageTitle msdt:dt="string">1</mso:ContentPlaceHolderHashPlaceHolderPageTitle>
@@ -55,180 +56,139 @@ To build the page layout directly from this HTML file, simply fill in the conten
 <mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
 <mso:PublishingAssociatedVariations msdt:dt="string"></mso:PublishingAssociatedVariations>
 <mso:PublishingHidden msdt:dt="string">0</mso:PublishingHidden>
+<mso:ContentPlaceHolderChangedPlaceHolderBodyAreaClass msdt:dt="string">True</mso:ContentPlaceHolderChangedPlaceHolderBodyAreaClass>
 </mso:CustomDocumentProperties>
 </xml><![endif]-->
-        <title>HomePage Layout
-        </title>
-    </head>
-    <body>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">//<![CDATA[
+                <title>HomePage Layout
                 
-                
-        //]]>
-        </script>
-        <script src="js/bootstrap.min.js">//<![CDATA[
-                
-                
-        //]]>
-        </script>
-        <script src="js/bxslider.js">//<![CDATA[
-                
-                
-        //]]>
-        </script>
-        <script src="js/homepage.js">//<![CDATA[
-                
-                
-        //]]>
-        </script>
-
-
-
-
-
-        <!--MS:<asp:Content id="Content1" runat="server" contentplaceholderid="PlaceHolderLeftNavBar" />-->
-        <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server">-->
-            <!--CS: Start Page Field: Title Snippet-->
-            <!--SPM:<%@Register Tagprefix="PageFieldFieldValue" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-            <!--MS:<PageFieldFieldValue:FieldValue FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server">-->
-            <!--ME:</PageFieldFieldValue:FieldValue>-->
-            <!--CE: End Page Field: Title Snippet-->
-        <!--ME:</asp:ContentPlaceHolder>-->
-        <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
-        <!-- TODO: THIS NEEDS TO GET PUT INTO A SEPERATE CSS / JAVASCRIPT FILE-->
-
-        <script language=”javascript”>
-
-            _spBodyOnLoadFunctionNames.push("Hidesuite");
-            function Hidesuite() {
-                document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
-            }
-
-        </script>
-
-        <style>
-            #s4-leftpanel {
-                display: none;
-            }
-
-            .s4-ca {
-                margin-left: 0px !important;
-            }
-        </style>
-        <!-- TODO END -->
-            <div>
-                <!--CS: Start Page Field: Title Snippet-->
-                <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                <!--MS:<Publishing:EditModePanel runat="server" CssClass="edit-mode-panel">-->
-                    <!--MS:<PageFieldTextField:TextField FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server">-->
-                    <!--ME:</PageFieldTextField:TextField>-->
-                <!--ME:</Publishing:EditModePanel>-->
-                <!--CE: End Page Field: Title Snippet-->
-            </div>
-        <!-- body content -->
-        <div class="container-fluid homepage-content">
-            <div class="row">
-                <!--BEGIN SLIDER-->
-                <div class="col-md-4 fp-column">
-                    <div data-name="WebPartZone">
-                        <!--CS: Start Web Part Zone Snippet-->
-                        <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                        <div xmlns:ie="ie">
-                            <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xb6f649a2d1e640f19b3fd290b25a079b" FrameType="TitleBarOnly" Orientation="Vertical">-->
-                            <!--MS:<ZoneTemplate>-->
-                            <!--DC: Replace this comment with default web parts for new pages. -->
-                            <!--ME:</ZoneTemplate>-->
-                            <!--ME:</WebPartPages:WebPartZone>-->
+                </title>
+            </head>
+            <body>
+                <!--MS:<asp:Content id="Content1" runat="server" contentplaceholderid="PlaceHolderLeftNavBar"/>-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server">-->
+                        <!--CS: Start Page Field: Title Snippet-->
+                        <!--SPM:<%@Register Tagprefix="PageFieldFieldValue" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                        <!--MS:<PageFieldFieldValue:FieldValue FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server">-->
+                        <!--ME:</PageFieldFieldValue:FieldValue>-->
+                        <!--CE: End Page Field: Title Snippet-->
+                    <!--ME:</asp:ContentPlaceHolder>-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
+                        <div>
+                            <!--CS: Start Page Field: Title Snippet-->
+                            <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                            <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                            <!--MS:<Publishing:EditModePanel runat="server" CssClass="edit-mode-panel">-->
+                                <!--MS:<PageFieldTextField:TextField FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server">-->
+                                <!--ME:</PageFieldTextField:TextField>-->
+                            <!--ME:</Publishing:EditModePanel>-->
+                            <!--CE: End Page Field: Title Snippet-->
                         </div>
-                        <!--CE: End Web Part Zone Snippet-->
-                    </div>
-                </div>
-                <!--END SLIDER-->
-                <div class="col-md-4 fp-column announcements">
-                    <div class="border-top">
-                        <div data-name="WebPartZone">
-                            <!--CS: Start Web Part Zone Snippet-->
-                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
-                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xa5dd3fce114244378fcaacefaf978b43" FrameType="TitleBarOnly" Orientation="Vertical">-->
-                                <!--MS:<ZoneTemplate>-->
-                                <!--DC: Replace this comment with default web parts for new pages. -->
-                                <!--ME:</ZoneTemplate>-->
-                                <!--ME:</WebPartPages:WebPartZone>-->
+                        <!-- body content -->
+                        <div class="container-fluid homepage-content">
+                            <div class="row">
+                                <!--BEGIN SLIDER-->
+                                <div class="col-md-4 fp-column border-top">
+                                    <div class="web-part-zone" data-name="WebPartZone">
+                                        <!--CS: Start Web Part Zone Snippet-->
+                                        <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                        <div class="web-part-content fp-slider-zone-container" xmlns:ie="ie">
+                                            <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xb6f649a2d1e640f19b3fd290b25a079b" CssClass="fp-slider-zone" FrameType="TitleBarOnly" Orientation="Vertical">-->
+                                                <!--MS:<ZoneTemplate>-->
+                                                    <!--DC: Replace this comment with default web parts for new pages. -->
+                                                <!--ME:</ZoneTemplate>-->
+                                            <!--ME:</WebPartPages:WebPartZone>-->
+                                        </div>
+                                        <!--CE: End Web Part Zone Snippet-->
+                                    </div>
+                                </div>
+                                <!--END SLIDER-->
+                                <div class="col-md-4 fp-column announcements">
+                                    <div class="border-top">
+                                        <div class="web-part-zone" data-name="WebPartZone">
+                                            <!--CS: Start Web Part Zone Snippet-->
+                                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                            <div xmlns:ie="ie">
+                                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xa5dd3fce114244378fcaacefaf978b43" FrameType="TitleBarOnly" Orientation="Vertical">-->
+                                                    <!--MS:<ZoneTemplate>-->
+                                                        <!--DC: Replace this comment with default web parts for new pages. -->
+                                                    <!--ME:</ZoneTemplate>-->
+                                                <!--ME:</WebPartPages:WebPartZone>-->
+                                            </div>
+                                            <!--CE: End Web Part Zone Snippet-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 fp-column staff-spotlight-container">
+                                    <div class="border-top">
+                                        <div class="web-part-zone" data-name="WebPartZone">
+                                            <!--CS: Start Web Part Zone Snippet-->
+                                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                            <div class="web-part-content" xmlns:ie="ie">
+                                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xd564f2b3fdfb4ed28a983b2d638dac53" FrameType="TitleBarOnly" Orientation="Vertical">-->
+                                                    <!--MS:<ZoneTemplate>-->
+                                                        <!--DC: Replace this comment with default web parts for new pages. -->
+                                                    <!--ME:</ZoneTemplate>-->
+                                                <!--ME:</WebPartPages:WebPartZone>-->
+                                            </div>
+                                            <!--CE: End Web Part Zone Snippet-->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <!--CE: End Web Part Zone Snippet-->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 fp-column staff-spotlight-container">
-                    <div class="border-top">
-                        <div data-name="WebPartZone">
-                            <!--CS: Start Web Part Zone Snippet-->
-                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
-                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xd564f2b3fdfb4ed28a983b2d638dac53" FrameType="TitleBarOnly" Orientation="Vertical">-->
-                                <!--MS:<ZoneTemplate>-->
-                                <!--DC: Replace this comment with default web parts for new pages. -->
-                                <!--ME:</ZoneTemplate>-->
-                                <!--ME:</WebPartPages:WebPartZone>-->
+                            <div class="row">
+                                <div class="col-md-4 fp-column news-honours">
+                                    <div class="border-top">
+                                        <div class="web-part-zone" data-name="WebPartZone">
+                                            <!--CS: Start Web Part Zone Snippet-->
+                                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                            <div class="web-part-content" xmlns:ie="ie">
+                                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="x35ede2c6ef0a4dfbb653819b4b2c2a8f" FrameType="TitleBarOnly" Orientation="Vertical">-->
+                                                    <!--MS:<ZoneTemplate>-->
+                                                        <!--DC: Replace this comment with default web parts for new pages. -->
+                                                    <!--ME:</ZoneTemplate>-->
+                                                <!--ME:</WebPartPages:WebPartZone>-->
+                                            </div>
+                                            <!--CE: End Web Part Zone Snippet-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 dates-deadlines fp-column">
+                                    <div class="border-top">
+                                        <div class="web-part-zone" data-name="WebPartZone">
+                                            <!--CS: Start Web Part Zone Snippet-->
+                                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                            <div class="web-part-content" xmlns:ie="ie">
+                                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xef88206682ff45f7a3536f067087ed7f" FrameType="TitleBarOnly" Orientation="Vertical">-->
+                                                    <!--MS:<ZoneTemplate>-->
+                                                        <!--DC: Replace this comment with default web parts for new pages. -->
+                                                    <!--ME:</ZoneTemplate>-->
+                                                <!--ME:</WebPartPages:WebPartZone>-->
+                                            </div>
+                                            <!--CE: End Web Part Zone Snippet-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 events fp-column">
+                                    <div class="border-top">
+                                        <div class="web-part-zone" data-name="WebPartZone">
+                                            <!--CS: Start Web Part Zone Snippet-->
+                                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                            <div class="web-part-content" xmlns:ie="ie">
+                                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xb2ae510359d6487b892bbf55b36a713e" FrameType="TitleBarOnly" Orientation="Vertical">-->
+                                                    <!--MS:<ZoneTemplate>-->
+                                                        <!--DC: Replace this comment with default web parts for new pages. -->
+                                                    <!--ME:</ZoneTemplate>-->
+                                                <!--ME:</WebPartPages:WebPartZone>-->
+                                            </div>
+                                            <!--CE: End Web Part Zone Snippet-->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <!--CE: End Web Part Zone Snippet-->
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 fp-column news-honours">
-                    <div class="border-top">
-                        <div data-name="WebPartZone">
-                            <!--CS: Start Web Part Zone Snippet-->
-                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
-                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="x35ede2c6ef0a4dfbb653819b4b2c2a8f" FrameType="TitleBarOnly" Orientation="Vertical">-->
-                                <!--MS:<ZoneTemplate>-->
-                                <!--DC: Replace this comment with default web parts for new pages. -->
-                                <!--ME:</ZoneTemplate>-->
-                                <!--ME:</WebPartPages:WebPartZone>-->
-                            </div>
-                            <!--CE: End Web Part Zone Snippet-->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 dates-deadlines fp-column">
-                    <div class="border-top">
-                        <div data-name="WebPartZone">
-                            <!--CS: Start Web Part Zone Snippet-->
-                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
-                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xef88206682ff45f7a3536f067087ed7f" FrameType="TitleBarOnly" Orientation="Vertical">-->
-                                <!--MS:<ZoneTemplate>-->
-                                <!--DC: Replace this comment with default web parts for new pages. -->
-                                <!--ME:</ZoneTemplate>-->
-                                <!--ME:</WebPartPages:WebPartZone>-->
-                            </div>
-                            <!--CE: End Web Part Zone Snippet-->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 events fp-column">
-                    <div class="border-top">
-                        <div data-name="WebPartZone">
-                            <!--CS: Start Web Part Zone Snippet-->
-                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                            <div xmlns:ie="ie">
-                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xb2ae510359d6487b892bbf55b36a713e" FrameType="TitleBarOnly" Orientation="Vertical">-->
-                                <!--MS:<ZoneTemplate>-->
-                                <!--DC: Replace this comment with default web parts for new pages. -->
-                                <!--ME:</ZoneTemplate>-->
-                                <!--ME:</WebPartPages:WebPartZone>-->
-                            </div>
-                            <!--CE: End Web Part Zone Snippet-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--ME:</asp:ContentPlaceHolder>-->
-    </body>
-</html>
+                        <!-- for homepage layout -->
+                        <!--MS:<SharePoint:ScriptLink ID="ScriptLinkjssor" Name="~SiteCollection/_layouts/15/MedNetBranding/js/jssor.slider.mini.js" runat="server"/> -->
+                            <!--MS:<SharePoint:ScriptLink ID="ScriptLinkslider" Name="~SiteCollection/_layouts/15/MedNetBranding/js/slider.js" runat="server"/> -->
+                            <!--ME:</asp:ContentPlaceHolder>-->
+                        </body>
+                    </html>

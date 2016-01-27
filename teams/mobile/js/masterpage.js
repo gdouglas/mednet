@@ -1,14 +1,3 @@
-/*position document at content *
-*
-*
-
-*
-*
-*needs to be done only for mobile*/
-jQuery(document).ready(function($){
-    $(document).scrollTop($(".breadcrumb").offset().top-20);
-});
-
 /*
 *
 *
@@ -47,7 +36,7 @@ $('a[href*=#]:not([href=#])').click(function() {
 /*
 *
 *
-*Fix back to top to footer
+*Fix back to top at top of footer
 *
 */
 function checkOffset() {
@@ -66,7 +55,7 @@ function checkOffset() {
         }); // restore when you scroll up
     }//end if
 }//end checkOffset
-
+/*set timer to compensate for safari ios scrolling issue*/
 setInterval(function(){
     checkOffset(); 
 },100);

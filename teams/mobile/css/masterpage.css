@@ -1,6 +1,9 @@
 *{
 	font-family:"Segoe UI",Tahoma;
 }
+.branding-label{
+	padding-left:5px;
+}
 .row-content{
 	/*max-width: 1620px;
 	margin:0 auto;*/
@@ -14,6 +17,10 @@
 }
 #s4-bodyContainer{
 	padding-bottom:0;
+}
+#s4-titlerow{
+	height:0;
+	padding:0;
 }
 .top-nav{
 	background:#FFF;
@@ -33,35 +40,30 @@ header nav{
     display:inline-block;
     font-size:30px;
 	position:relative;
-    top:35px;
+    bottom:6px;
 }
 .content{
 	/*max-width: 1600px*/
 }
 
-.logo{
+.logo svg{
+	width:395px;
     border-right:1px solid #2f5d7c;
 	margin-right:20px;
-    padding:45px;
-}
-.logo img{
-	width:330px;
+    padding:15px 20px 0 0;
 }
 /*top nav*/
 .site-nav{
+	/*background:#effaf0;*/
 	background: #3868A6;
 	margin-bottom: 0;
 	border:0;
 }
-.site-nav nav{
-    border:0;
-}
 div.site-nav{
 	border-top: 2px solid #fff;
 }
-#navbar .navbar-nav{
-    background:#3868a6;
-    margin:0;
+#top-navbar {
+	background: #3868A6;
 }
 .site-nav .navbar-nav>li>a{
 	/*color:#0c5e79;*/
@@ -88,18 +90,11 @@ div.site-nav{
 .navbar-nav li:last-of-type a{
 	margin-right:0;
 }
-
+.navbar .navbar-collapse{
+	padding:0;
+}
 .navbar .container-fluid{
 	padding-left:5px;
-}
-.navbar-default .navbar-brand{
-    color:#FFF;
-}
-.navbar-header{
-    border-bottom:1px solid #fff;
-}
-.navbar-default .navbar-brand:hover{
-	color:#fff;
 }
 /*end top nav*/
 header{
@@ -112,14 +107,14 @@ header nav{
 }
 header .banner-logo{
 	position:relative;
-    padding:30px;
+    padding:15px 0 10px 20px;
 }
 .mednet-title{
 	color: #fff;
     display:block;
 }
 header .logo{
-    display:inline;
+    display:inline-block;
 }
 header h2{
 	margin:19px 0 0 0;
@@ -135,18 +130,8 @@ h2{
 	line-height:40px;
 	color:#effaf0;	
 }
-.toplink .fa{
-	margin-left:10px;
-}
 
-.staff-spotlight-container,
-.announcements{
-	height:400px;
-}
-.staff-spotlight-container img{
-	float:right;
-	margin:10px 0 0 20px;
-}
+
 .border-top{
 	/*pale green
 	border-top: 5px solid #cbe1d5;*/
@@ -176,7 +161,6 @@ h2{
 .date{
 	font-style: italic;
 	display:block;
-	margin-left: -5px;
 	display: table-cell;
 	padding-right:20px;
 	color:#888;
@@ -207,7 +191,7 @@ footer a:hover{
 .footer-nav{
 	border-top:1px solid #2f5d7c;
 }
-.logo-footer img{
+.logo-footer #footer-logo{
 	width:220px;
 }
 .center-block{
@@ -249,9 +233,8 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
 }
 /*SLIDER END*/
 
-
-/*mobile view*/
-@media screen and (max-width:480px){
+/*xs*/
+@media screen and (max-width:767px){
     /*need to zero out a lot of bootstrap*/
     header .container-fluid,
     header .row,
@@ -259,9 +242,14 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
         margin:0 auto;
         padding:0;
     }
+    #ubc-logo{
+    	display:none;
+    }
     .top-nav{
-        background:green;
         width:100%;
+    }
+    #navbar{
+    	display:none;
     }
     .utility-links{
         width:100%;
@@ -284,6 +272,7 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     }
     .intranet-title{
         margin-left:15px;    
+        top:15px;
     }
     .nav,
     .navbar-nav,
@@ -293,9 +282,11 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     }
     .navbar-toggle{
     	padding:6px;
+    	border-color: #ddd;
     }
     .navbar-toggle .icon-bar{
         width:36px;
+        background-color:#888;
     }
     .site-nav .navbar-toggle:focus{
     	background: #002145;
@@ -304,15 +295,13 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     .side-nav-container .side-nav{
         margin-bottom: 0;
     }
-    /*hide nav by default*/
-    /*#navbar,
-    #side-nav{
-    	display:none;
-    }*/
     #navbar .navbar-nav{
         background-color:#3868a6;
-        magin:0;
     }
+    .navbar-header{
+    	background:#002145;
+    }
+
     .nav.side-nav li{
         border-right:0;
     }
@@ -342,7 +331,20 @@ a[title="Facebook icon"]:hover .fa-facebook-square:before{
     footer .address{
         width:100%;
     }
+
+
 }
-.navbar-default {
-    background: #3868A6;
+/*sm*/
+@media screen and (max-width:992px){
+	.fp-column{
+		width:100%;
+	}
+}
+/*md*/
+@media screen and (max-width:1200px){
+
+}
+/*lg*/
+@media screen and (min-width:1200px){
+
 }
