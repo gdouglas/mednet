@@ -464,6 +464,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <SharePoint:ScriptLink ID="ScriptLinkBootstrap" Name="~SiteCollection/_layouts/15/MedNetBranding/js/bootstrap.min.js" runat="server" />
         <SharePoint:ScriptLink ID="ScriptMasterpage" Name="~SiteCollection/_layouts/15/MedNetBranding/js/masterpage.js" runat="server" />
+        <SharePoint:ScriptLink ID="tabsToAccordions" Name="~SiteCollection/_layouts/15/MedNetBranding/js/plugins/jquery.responsiveTabs.min.js" runat="server" />
 
     </body>
     

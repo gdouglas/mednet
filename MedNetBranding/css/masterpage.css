@@ -784,6 +784,100 @@ footer a:hover {
     color: #3868A6;
 }
 
+/*
+ *
+ *  Resoponsive tabs
+ *  breakpoint is set through 931px media query
+ * 
+ */
+
+/* Tabs container */
+.r-tabs {
+    position: relative;
+    min-width:100%;
+}
+/* Tab element */
+
+.r-tabs .r-tabs-nav .r-tabs-tab {
+    position: relative;
+}
+/* Tab anchor */
+
+.r-tabs .r-tabs-nav .r-tabs-anchor {
+    display: inline-block;
+    padding: 10px 12px;
+    text-decoration: none;
+    padding: .5em .7em;
+    color: #fff;
+    background: #2f5d7c;
+    margin: 1px .2em 0 0;
+}
+.r-tabs .r-tabs-nav .r-tabs-anchor:hover {
+    background-color: #002145;
+    transition: background-color 0.2s;
+    color: #fff;
+}
+
+/* Disabled tab */
+.r-tabs-nav {
+    border-bottom: 1px solid #002145;
+}
+.r-tabs .r-tabs-nav .r-tabs-state-disabled {
+    opacity: 0.5;
+}
+/* Active state tab anchor */
+
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
+    text-shadow: none;
+    background-color: #002145;
+}
+/* Accordion anchor */
+
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
+    display: block;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    padding:10px;
+    background: #2f5d7c;
+    margin-top: 1px;
+    color:#fff;
+}
+/* Active accordion anchor */
+
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+    background-color: #002145;
+    color: #fff;
+    text-shadow: none;
+}
+/* Disabled accordion button */
+
+.r-tabs .r-tabs-accordion-title.r-tabs-state-disabled {
+    opacity: 0.5;
+}
+.r-tabs .r-tabs-nav {
+    margin: 0;
+    padding: 0;
+}
+.r-tabs .r-tabs-tab {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+}
+.r-tabs .r-tabs-panel {
+    padding: 15px;
+    display: none;
+}
+.r-tabs .r-tabs-accordion-title {
+    display: none;
+}
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+    display: block;
+}
+/* end responsive tabs */
+
+
+
 /*Overview Pages*/
 .overview h3 {
     margin-top: 5px;
@@ -810,10 +904,6 @@ footer a:hover {
 
 .pathway .col-md-4 {
     max-width: 400px;
-}
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-    padding: .5em .7em;
-    color: #fff;
 }
 
 /*Settings page*/
@@ -1142,6 +1232,15 @@ footer a:hover {
 /*lg*/
 @media screen and (min-width:1200px) {
     
+}
+
+@media only screen and (max-width: 931px) {
+    .r-tabs .r-tabs-nav {
+        display: none;
+    }
+    .r-tabs .r-tabs-accordion-title {
+        display: block;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:1350px) {

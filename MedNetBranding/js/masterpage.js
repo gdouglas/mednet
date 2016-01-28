@@ -1,6 +1,5 @@
 /*prevent focus on content by default*/
-window.onload = function() 
-{
+window.onload = function() {
     SetFullScreenMode(false);
 }
 
@@ -12,7 +11,6 @@ window.onload = function()
 *
 */
 function addListeners(){
-    console.log("addListeners");
     $(".navbar-toggle").click(function() {  
         $('#navbar').slideToggle();
         $('#sideNavBox').slideToggle();
@@ -25,7 +23,6 @@ function addListeners(){
 *
 */
 function addSmoothScroll(){
-    console.log("smooth");
     $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
             || location.hostname == this.hostname) {
@@ -95,6 +92,7 @@ $(window).resize(function(){
         $('#navbar').show();
         calcFooter();
     }
+    resizeUiTabs();
 });
 
 /*
@@ -105,7 +103,6 @@ $(window).resize(function(){
 */
 
 function calcFooter(){
-    console.log("footer");
     var $footer = $("footer");
     var footerheight = $footer.outerHeight();
     //hide footer allows for smoother window resizing
@@ -114,7 +111,6 @@ function calcFooter(){
     var bodyheight = $("#s4-bodyContainer").outerHeight();
     var $ribbon = $("#top-ribbon");
     var ribbonheight = $ribbon.outerHeight();
-    console.log("ribbon height is "+ribbonheight);
     var windowheight = $(window).height();
 
     //if ribbon is hidden size is zero
@@ -140,14 +136,22 @@ function calcFooter(){
 
 /*hide extra pages on top level nav*/
 function pruneSideNav(){
-    console.log("prune");
     $('#sideNavBox li').hasClass('selected') ? true : $('#sideNavBox ul ul').css('display','none');
 }
 /*prevent focusOnContent*/
 function Hidesuite() {
-    console.log("Hidesuite");
     document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
 } 
+
+function resizeUiTabs(){
+    var tabWidth = $(".ui-tabs-nav").width();
+    if (tabWidth < 625){
+        $(".ui-tabs-nav").addClass('tabs-narrow');
+        console.log("resize");
+    } else {
+        $(".ui-tabs-nav").removeClass('tabs-narrow');
+    }
+}
 
 /*load functions*/
 $(document).ready(function() {
