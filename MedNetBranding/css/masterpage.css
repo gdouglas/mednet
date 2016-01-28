@@ -91,7 +91,7 @@ div[role="dialog"] *,
     box-sizing: content-box;
 }
 
-img {
+.page-content-container img {
     max-width: 100%;
     height: auto;
 }
@@ -381,6 +381,7 @@ div.welcome {
 #s4-workspace {
     -webkit-overflow-scrolling: touch;
     box-sizing: content-box;
+    min-width: 320px !important;
 }
 
 #contentBox {
@@ -609,6 +610,9 @@ li > a.ms-core-listMenu-item:hover,
 li > a.ms-core-listMenu-item:active {
     background-color: rgba(205, 230, 247, 0.75);
     font-weight: 500;
+}
+.address-title:hover {
+    text-decoration: none;
 }
 
 .ms-core-listMenu-selected:link,
@@ -860,6 +864,22 @@ footer a:hover {
         margin-bottom: 10px;
     }    
 }
+@media screen and (max-width: 430px) {
+    header .faculty {
+        letter-spacing: initial;
+    }
+    .intranet-title span {
+        font-size: 18px;
+        margin:0;
+    }
+    .ubc-logo {
+        padding: 0 10px;
+        border: 0;
+    }
+    .banner-logo .navbar-toggle {
+        margin-right: 10px;
+    }
+}
 
 /*xs*/
 @media screen and (max-width:767px) {
@@ -871,13 +891,6 @@ footer a:hover {
         padding: 0;
     }
 
-    .top-nav {
-        width: 100%;
-    }
-
-    #navbar {
-        display: none;
-    }
 
     header .utility-links {
         width: 100%;
@@ -916,11 +929,20 @@ footer a:hover {
         padding: 0;
     }
 
+    .top-nav {
+        width: 100%;
+    }
+
+    #navbar {
+        display: none;
+    }
+
     .navbar-toggle {
         min-width: 48px;
         padding: 6px;
         border-color: #ddd;
         margin-right: 20px;
+        margin-top: 24px
     }
 
     .navbar-toggle .icon-bar {
@@ -929,6 +951,19 @@ footer a:hover {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .ubc-logo {
+        padding-top: 0;
+        padding-bottom:0;
+        width:auto;
+        height: 60px;
+    }
+
+    .intranet-title {
+        margin-left: 0;
+        top: initial;
+        left: 0;
+    }    
 
     .site-nav .navbar-toggle:focus {
         background: #002145;

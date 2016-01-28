@@ -147,7 +147,7 @@
                                         <SharePoint:SPRibbonPeripheralContent runat="server" CssClass="ms-core-defaultFont ms-dialogHidden" Location="TabRowLeft"></SharePoint:SPRibbonPeripheralContent>
                                         <SharePoint:SPRibbonPeripheralContent runat="server" Location="TabRowRight" ID="RibbonTabRowRight" CssClass="s4-trc-container s4-notdlg ms-core-defaultFont">
                                             <SharePoint:SPSharePromotedActionButton runat="server"/>
-                                            <SharePoint:DelegateControl runat="server" ControlId="PromotedActions" AllowMultipleControls="true" />
+                                            
                                             <SharePoint:SPSyncPromotedActionButton runat="server"/>
                                             <SharePoint:PageStateActionButton id="PageStateActionButton" runat="server" Visible="false" />
                                             <span id="fullscreenmodebox" class="ms-qatbutton" style="display:none;">
