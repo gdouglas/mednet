@@ -499,6 +499,7 @@ div.site-nav {
 #top-navbar {
     background: #3868A6;
     border: 0;
+    min-height: 0;
 }
 
 .site-nav .navbar-nav>li>a {
@@ -868,10 +869,6 @@ footer a:hover {
     header .col-xs-12 {
         margin: 0 auto;
         padding: 0;
-    }
-
-    .ubc-logo {
-        display: none;
     }
 
     .top-nav {
