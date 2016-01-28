@@ -811,6 +811,10 @@ footer a:hover {
 .pathway .col-md-4 {
     max-width: 400px;
 }
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    padding: .5em .7em;
+    color: #fff;
+}
 
 /*Settings page*/
 .ms-siteSettings-root {
