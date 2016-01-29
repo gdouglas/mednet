@@ -23,7 +23,7 @@
         <SharePoint:RobotsMetaTag runat="server" />
         
         <!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== --> 
-        <SharePoint:SPShortcutIcon runat="server" IconUrl="/2013/MedNetBranding/_catalogs/masterpage/favicon.ico" />
+        <SharePoint:SPShortcutIcon runat="server" IconUrl="/_layouts/15/template/layouts/mednetbranding/images/favicon.ico" />
         <SharePoint:SPPinnedSiteTile runat="server" TileUrl="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-114-precomposed.png" TileColor="#002145" />     
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/clf/7.0.4/img/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/clf/7.0.4/img/apple-touch-icon-72-precomposed.png">
@@ -219,7 +219,7 @@
                                             <div class="row">
                                                 <div class="col-xs-12 row-content banner-logo">
                                                     <a href="../../Pages/Default.aspx" runat="server" title="MedNet" class="logo">
-                                                        <image src="~SiteCollection/_layouts/15/MedNetBranding/images/ubc-logo.png" class="ubc-logo">
+                                                        <img src="~SiteCollection/_layouts/15/MedNetBranding/images/ubc-logo.png" class="ubc-logo">
                                                     </a>
                                                     <h1 class="intranet-title">
                                                         <span class="faculty">Faculty of Medicine</span>
@@ -249,7 +249,7 @@
                                                         <li><a href="../../TeamSites" runat="server">Team Sites</a></li>             
                                                     </ul>
                                                   </div>
-                                                </div>
+                                                </nav>
                                             </div>
                                         </div>         
                                     </header>
@@ -371,7 +371,7 @@
                                                    <div id="breadcrumbnavigation">
                                                      <span class="breadcrumb-nav"> 
                                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" >
-                                                         <asp:SiteMapPath SiteMapProvider="CurrentNavSiteMapProviderNoEncode" id="ContentMap" PathSeparatorStyle-CssClass ="breadcrumb-separator" SkipLinkText="" CurrentNodeStyle-CssClass="current-breadcrumb" NodeStyle-CssClass="breadcrumb-node" runat="server" hideinteriorrootnodes="true"/>
+                                                         <asp:SiteMapPath runat="server" SiteMapProviders="SPSiteMapProvider,SPXmlContentMapProvider" RenderCurrentNodeAsLink="false" NodeStyle-CssClass="breadcrumb-node" CurrentNodeStyle-CssClass="current-breadcrumb" id="ContentMap" RootNodeStyle-CssClass="breadcrumbRootNode" hideinteriorrootnodes="true" PathSeparatorStyle-CssClass ="breadcrumb-separator" SkipLinkText="" />
                                                        </asp:ContentPlaceHolder>
                                                      </span>
                                                   </div>

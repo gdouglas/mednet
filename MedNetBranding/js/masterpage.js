@@ -92,7 +92,6 @@ $(window).resize(function(){
         $('#navbar').show();
         calcFooter();
     }
-    resizeUiTabs();
 });
 
 /*
@@ -142,17 +141,6 @@ function pruneSideNav(){
 function Hidesuite() {
     document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
 } 
-
-function resizeUiTabs(){
-    var tabWidth = $(".ui-tabs-nav").width();
-    if (tabWidth < 625){
-        $(".ui-tabs-nav").addClass('tabs-narrow');
-        console.log("resize");
-    } else {
-        $(".ui-tabs-nav").removeClass('tabs-narrow');
-    }
-}
-
 /*load functions*/
 $(document).ready(function() {
     _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
