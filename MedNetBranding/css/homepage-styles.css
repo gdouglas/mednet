@@ -62,11 +62,7 @@ h2{
 .row .fp-column:nth-child(even):before,
 .row .fp-column:nth-child(even):after{
 	content:""; 
-	background: #62A53A;
-	background:#2E7453;
-	background:#538B31; 
 	background:#538b31 ;
-	/*min-height:340px;*/
 	position: absolute; 
 	top:15px; 
 	bottom: 15px;
@@ -78,50 +74,19 @@ h2{
 	right: 0; 
 }
 .row .fp-column:nth-child(even):after{
-	left:0;
+	left: 0;
 }
 /*END middle column borders*/
-.date{
-	font-style: italic;
-	display:block;
-	display: table-cell;
-	padding-right:20px;
-	color:#888;
-}
-.details{
-	display: table-cell;
 
-}
-/*.row .fp-column:nth-child(even):after{
-	content:""; 
-	background: #62A53A;
-	background:#2E7453;
-	background:#538B31; 
-	background:#538b31 ;
-	position: absolute; 
-	bottom: 30px; 
-	left: 0; 
-	height: 85%; 
-	width: 1px;
-}
-.row .fp-column:nth-child(even):before{
-	content:""; 
-	background: #62A53A;
-	background:#2E7453;
-	background:#538B31; 
-	background:#538b31 ;
-	position: absolute; 
-	bottom: 30px; 
-	right: 0; 
-	height: 85%; 
-	width: 1px;	
-}*/
-/*END middle column borders*/
 
-/*date*/
+#colleft {
+	margin-bottom: 5px;
+}
+
 #colleft #col1{
 	color:#595959;
-	margin-bottom:5px;
+	margin-right:20px;
+	font-style: italic;
 }
 
 .fp-column{

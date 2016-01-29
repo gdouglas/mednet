@@ -16,7 +16,7 @@ function init(){
     var options = { 
             $AutoPlay: true,
             $FillMode:4,
-            $AutoPlayInterval:3000,
+            $AutoPlayInterval:8600,
             $SlideDuration:1200,
 
             $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
