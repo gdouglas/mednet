@@ -120,8 +120,9 @@ h1 input[title="Title"] {
     border: none;
 }*/
 
-#scriptWPQ2 {
-    padding-left: 30px;
+/*Likely to cause issues on the settings pages. Needed for embedding iframes*/
+.ms-rte-embedcode {
+    display:block;
 }
 #scriptWPQ2 img {
     max-width: initial;
@@ -209,13 +210,7 @@ h2.ms-rteElement-SpecialHeading {
 }
 
 /*Custom editor styles*/
-.ms-rteElement-links {
-    -ms-name: "test item";
-    color: red;
-    border: 1px solid #000;
-}
-
-.ms-rteElement-levelfourlinks {
+.ms-rteStyle-levelfourlinks {
     -ms-name: "Link Item";
     line-height: 28px;
     margin-left: 18px;
@@ -224,7 +219,29 @@ h2.ms-rteElement-SpecialHeading {
     list-style-type: none;
 }
 
-.ms-rteElement-levelfourlinks:before {
+.ms-rteStyle-levelfourlinks:before {
+    content: "\f0da";
+    margin-right: 5px;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+
+.ms-rteElement-levelfourlinks li{
+    -ms-name: "L4 Link Item";
+    line-height: 28px;
+    margin-left: 18px;
+    color: #002145;
+    display: block;
+    list-style-type: none;
+}
+
+.ms-rteElement-levelfourlinks:before li {
     content: "\f0da";
     margin-right: 5px;
     display: inline-block;
