@@ -179,19 +179,19 @@
                         </SharePoint:AjaxDelta>
                     </div>
                 </div>
-            </div>
-            <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
-            
-            <!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
-            <div id="s4-workspace">
                 <div class="s4-notdlg">
                     <div id="s4-statusbarcontainer" class="s4-notdlg">
                         <SharePoint:AjaxDelta ID="DeltaPageStatusBar" BlockElement="true" runat="server">
                             <div id="pageStatusBar"></div>
                         </SharePoint:AjaxDelta>
                     </div>
-                </div>            
-                    <div id="s4-bodyContainer">     
+                </div> 
+            </div>
+            <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
+            
+            <!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
+            <div id="s4-workspace">        
+                    <div id="s4-bodyContainer">                          
                         <!-- ===== STARTER: This decides where the web part menu lives ===================================================== -->
                         <div id="DeltaPlaceHolderMain" runat="server">
                             <!-- ===== STARTER: style.css adds width and margin =========================================================================================== -->
@@ -297,7 +297,7 @@
                         
                                 <!-- ===== STARTER: Body Area (includes left nav and body) ==================================================================== -->
                                 <div class="container page-content-container">
-                                    <!-- ===== STARTER: Current navigation ================ff==================================================================== -->
+                                    <!-- ===== STARTER: Current navigation ==================================================================================== -->
                                     <div class="row page-content-row">
                                         <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList col-sm-2 no-float">
                                             <!-- ===== STARTER: SP Reqs PlaceHolderLeftNavBar for adding Apps in Site Content =================== -->

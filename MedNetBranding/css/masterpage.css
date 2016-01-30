@@ -1,3 +1,6 @@
+#s4-bodyContainer {
+    padding-bottom: 0;
+}
 .page-content .body-text {
     max-width: 970px;
 }
@@ -111,17 +114,17 @@ h1 input[title="Title"] {
     width: 100%;
 }
 
-#s4-statusbarcontainer #pageStatusBar {
+/*#s4-statusbarcontainer #pageStatusBar {
     margin-bottom: 0;
     padding: 0 0 0 15px;
     border: none;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-}
+}*/
 
 #scriptWPQ2 {
     padding-left: 30px;
+}
+#scriptWPQ2 img {
+    max-width: initial;
 }
 
 /*make div work like p for editor*/
@@ -726,15 +729,12 @@ footer a:hover {
     -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .3);
 }
 
-/*todo width issue,
- find out what is preventing this from 100% width*/
 .bottom-wp-zones {
     display: table;
     table-layout: fixed;
     height: 100%;
     width: 100%;
     margin: 0;
-/*border-spacing:15px 0;*/
 }
 
 .bottom-wp-zones div[data-name="WebPartZone"] {
@@ -1184,14 +1184,12 @@ footer a:hover {
         background: #ebf1e7;
         background: #ddd;
         border-right: 0;
-        padding: 15px;
     }
 
     #two-col-ml > div {
         background: #f2f8ee;
         background: #ccc;
         border-right: 0;
-        padding: 15px;
     }
 
     #two-col-bl,
@@ -1202,10 +1200,6 @@ footer a:hover {
         border: 0;
         padding: 0;
     }
-
-    #s4-statusbarcontainer #pageStatusBar {
-        position: initial;
-    }
 }
 @media screen and (min-width:993px) {
     #two-col-bl,
@@ -1213,14 +1207,12 @@ footer a:hover {
         background: #ebf1e7;
         background: #ddd;
         border-right: 3px solid #fff;
-        padding: 15px;
     }
 
     #two-col-ml {
         background: #f2f8ee;
         background: #ccc;
         border-right: 3px solid #fff;
-        padding: 15px;
     }
 }
 
