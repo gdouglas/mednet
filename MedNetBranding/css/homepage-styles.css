@@ -97,9 +97,11 @@ h2{
 .fp-column .ms-webpart-menuArrowImg{
 	position:absolute;
 }
+.dfwp-column {
+	padding-left: 0;
+}
 .fp-column li{
-	margin:10px 0;
-	display: inline:block;
+	margin: 10px 0;
 }
 .fp-column li *{
 	float:none;
@@ -172,6 +174,4 @@ div .read-more{
 		float:none;
 		vertical-align: top;
 	}
-
-
 }

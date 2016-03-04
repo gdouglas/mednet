@@ -136,6 +136,7 @@ function calcFooter(){
 /*hide extra pages on top level nav*/
 function pruneSideNav(){
     $('#sideNavBox li').hasClass('selected') ? true : $('#sideNavBox ul ul').css('display','none');
+    $('#sideNavBox a').css('color','#000');
 }
 /*prevent focusOnContent*/
 function Hidesuite() {
