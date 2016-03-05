@@ -1,5 +1,4 @@
 function init() {
-    console.log("init");
     var _SlideshowTransitions = [
         //Fade
         {
@@ -42,16 +41,12 @@ function init() {
 var everythingLoaded = setInterval(function() {
     var sw = $('.fp-slider-zone-container').width();    
     if (window.jQuery && sw !== null) {
-        var sw = $('#slider1_container').width();
-        $('#slider1_container').width(sw);
-        $('.slides-container').width(sw);
-        console.log(sw);
+            var sc = $('#slider1_container').width();
+            $('#slider1_container').width(sc);
+            $('.slides-container').width(sc);
 
-        clearInterval(everythingLoaded);
-        _spBodyOnLoadFunctions.push(init); // this is the function that gets called when everything is loaded
-        } else {
-        console.log("slider is loading");
-        console.log("sw is "+sw);
-    }
+            clearInterval(everythingLoaded);
+            _spBodyOnLoadFunctions.push(init); // this is the function that gets called when everything is loaded
+        }
 }, 100);
 

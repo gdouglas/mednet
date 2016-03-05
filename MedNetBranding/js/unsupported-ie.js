@@ -1,5 +1,6 @@
 // IE 7 and 8 alert 
 function setCookie(cname, cvalue, exdays) {
+    consle.log("set cookie");
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toUTCString();
@@ -7,6 +8,7 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 function getCookie(cname) {
+    consle.log("get cookie");
     var name = cname + "=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {
@@ -18,6 +20,7 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
+    consle.log("check cookie");
     var medNetAlert = getCookie("medNetAlert");
     if (medNetAlert == "alerted today") {
         //do not show alert
@@ -29,6 +32,7 @@ function checkCookie() {
 }
 
 function showAlert() {
+    consle.log("show alert");
     var browserAlertDiv = document.createElement('div');
     browserAlertDiv.innerHTML = 
     "<div id='browser-alert'>"+
@@ -65,7 +69,8 @@ function addCloseListener() {
         $('#browser-alert').remove();
     });
 }
-$(document).ready(function() {
+$(document).ready(function() {.
+    consle.log("ready");
     checkCookie();
 });
 
