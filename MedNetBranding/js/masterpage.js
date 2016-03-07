@@ -27,10 +27,9 @@ function addListeners(){
 *
 */
 function addSmoothScroll(){
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('a[href*=#]:not([href=#],#accordion a[href*=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
             || location.hostname == this.hostname) {
-
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                if (target.length) {
@@ -139,6 +138,7 @@ function calcFooter(){
 
 /*hide extra pages on top level nav*/
 function pruneSideNav(){
+    console.log("prune");
     $('#sideNavBox li').hasClass('selected') ? true : $('#sideNavBox ul ul').css('display','none');
     $('#sideNavBox a').css('color','#000');
 }
@@ -151,8 +151,6 @@ $(document).ready(function() {
     _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
 });
 
-
-
 function isIE () {
   var myNav = navigator.userAgent.toLowerCase();
   return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
@@ -162,12 +160,10 @@ if (isIE () && isIE () < 9) {
  checkCookie();
 } else {
  // is IE 9 and later or not IE
- console.log("modern browser");
 }
 
 // IE 7 and 8 alert 
 function setCookie(cname, cvalue, exdays) {
-    console.log("set cookie");
     var d = new Date();
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     var expires = "expires=" + d.toUTCString();
@@ -175,7 +171,6 @@ function setCookie(cname, cvalue, exdays) {
 }
 
 function getCookie(cname) {
-    console.log("get cookie");
     var name = cname + "=";
     var ca = document.cookie.split(';');
     for (var i = 0; i < ca.length; i++) {
@@ -187,20 +182,16 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    console.log("check cookie");
     var medNetAlert = getCookie("medNetAlert");
     if (medNetAlert == "alerted today") {
         //do not show alert
-        console.log(medNetAlert);
     } else {
-        console.log("cookie is "+medNetAlert)
         medNetAlert = "alerted today";
         showAlert();
     }
 }
 
 function showAlert() {
-    console.log("show alert");
    
    var bamAlert = 
        "<div id='browser-alert'>"+
@@ -237,7 +228,6 @@ function addCloseListener() {
     });
 }
 $(document).ready(function() {
-    console.log("ready");
     // checkCookie();
 });
 

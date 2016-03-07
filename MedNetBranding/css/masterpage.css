@@ -110,6 +110,9 @@ div[role="dialog"] *,
 img[src*="/_layouts/15/images"] {
   max-width: inherit;
 }
+td img[src*="/_layouts/15/images/blank.gif?rev=23"]{
+    height:1px;
+}
 
 .ms-InlineSearch-Outline-Baseline {
     height: 24px;
