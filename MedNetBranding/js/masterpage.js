@@ -138,10 +138,20 @@ function calcFooter(){
 
 /*hide extra pages on top level nav*/
 function pruneSideNav(){
-    console.log("prune");
-    $('#sideNavBox li').hasClass('selected') ? true : $('#sideNavBox ul ul').css('display','none');
+     if ($('li').hasClass('selected')){
+        console.log("no item");
+        $('li.selected').parent().css('display','block');
+        $('li.selected').children().css('display','block');
+     } else {
+        console.log("item");
+        $('#sideNavBox ul ul').css('display','none');
+    }
+    //set nav to visible
     $('#sideNavBox a').css('color','#000');
 }
+$(document).ready(function(){
+  pruneSideNav();
+});
 /*prevent focusOnContent*/
 function Hidesuite() {
     document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';

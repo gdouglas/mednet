@@ -604,7 +604,9 @@ header h2 {
     margin: 0;
     padding: 0;
 }
-
+#sideNavBox ul ul {
+    display: none;
+}
 #sideNavBox .selected ul {
     display: block;
 }
