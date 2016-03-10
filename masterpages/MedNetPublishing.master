@@ -49,12 +49,6 @@
         <SharePoint:CustomJSUrl runat="server" />
         <SharePoint:SoapDiscoveryLink runat="server" />
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <SharePoint:ScriptLink ID="ScriptjQuery" Name="~SiteCollection/_layouts/15/MedNetBranding/js/jquery-1.11.3.min.js" runat="server" />
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <SharePoint:ScriptLink ID="ScriptLinkBootstrap" Name="~SiteCollection/_layouts/15/MedNetBranding/js/bootstrap.min.js" runat="server" />
-        <SharePoint:ScriptLink ID="ScriptMasterpage" Name="~SiteCollection/_layouts/15/MedNetBranding/js/masterpage.js" runat="server" />
-
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -199,11 +193,6 @@
                 </div>
             </div>
             <!-- ===== STARTER: Ribbon Code Ends Here  ======================================================================================== -->
-            
-            <!-- ===== STARTER: Authentication / Login link hidden for everyone by anonymous users  =========================================== -->
-            <SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">
-                <wssuc:Welcome runat="server" EnableViewState="false" />
-            </SharePoint:SPSecurityTrimmedControl>
             
             <!-- ===== STARTER: Main Scrolling Body Starts Here =============================================================================== -->
             <div id="s4-workspace">
@@ -471,6 +460,12 @@
         <!-- ===== STARTER: Adds extra stuff like another form for Survey management ====================================================== --> 
         <asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
     
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <SharePoint:ScriptLink ID="ScriptjQuery" Name="~SiteCollection/_layouts/15/MedNetBranding/js/jquery-1.11.3.min.js" runat="server" />
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <SharePoint:ScriptLink ID="ScriptLinkBootstrap" Name="~SiteCollection/_layouts/15/MedNetBranding/js/bootstrap.min.js" runat="server" />
+        <SharePoint:ScriptLink ID="ScriptMasterpage" Name="~SiteCollection/_layouts/15/MedNetBranding/js/masterpage.js" runat="server" />
+
     </body>
     
     <!-- Created from Starter SP2013 Master Page originally by Randy Drisgill (http://blog.drisgill.com) - April 21, 2013 -->
