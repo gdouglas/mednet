@@ -126,12 +126,14 @@ td img[src*="/_layouts/15/images/blank.gif?rev=23"]{
 h1 input[title="Title"] {
     width: 100%;
 }
-
-/*#s4-statusbarcontainer #pageStatusBar {
-    margin-bottom: 0;
-    padding: 0 0 0 15px;
-    border: none;
-}*/
+#pageStatusBar[class],
+.ms-status-msg {
+    margin-bottom:0;
+}
+#s4-statusbarcontainer .s4-status-s1 {
+    border:0;
+    padding: 0;
+}
 
 /*Likely to cause issues on the settings pages. Needed for embedding iframes*/
 .ms-rte-embedcode {
@@ -208,9 +210,6 @@ h2.ms-rteElement-SpecialHeading {
     font-style: bold;
     color: green;
 }*/
-.btn {
-/*font-weight: bold;*/
-}
 
 .btn:hover,
 .btn:hover:visited {
@@ -460,16 +459,6 @@ div.welcome {
     background: #FFF;
 }
 
-header {
-    background: #002145;
-    color: #FFF;
-    margin-bottom: 22px;
-}
-
-header nav {
-    display: block;
-}
-
 .ms-srch-sb>input {
     height: auto;
     font-size: 14px;
@@ -605,14 +594,9 @@ header h2 {
     margin: 0;
     padding: 0;
 }
-#sideNavBox ul ul {
-    display: none;
-}
+
 #sideNavBox .selected ul {
     display: block;
-}
-
-#ctl00_PlaceHolderLeftNavBar_QuickLaunchNavigationManager {
 }
 
 .adm-site-links .adm-site-links-border {
@@ -1133,15 +1117,6 @@ footer a:hover {
 
     }
 
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2f5d7c+0,ffffff+100 */
-background: #2f5d7c; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmNWQ3YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #2f5d7c 0%, #ffffff 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #2f5d7c 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #2f5d7c 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f5d7c', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
-
 
     .ms-core-listMenu-selected:link,
     .ms-core-listMenu-selected:visited,
@@ -1201,6 +1176,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f5d7c', end
 @media screen and (max-width: 768px) {
     #top-navbar li a {
         margin-right: 0;
+    }
+    #s4-titlerow {
+        padding-bottom: 0;
+    }
+    header {
+        margin-bottom: 0;
     }
 }
 

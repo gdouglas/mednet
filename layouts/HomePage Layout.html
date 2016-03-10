@@ -2,19 +2,12 @@
 
 This HTML file has been associated with a SharePoint Page Layout (.aspx file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .aspx file, and any rename, move, or deletion operations will be reciprocated.
 
-To build the page layout directly from this HTML file, simply fill in the contents of content placeholders.  Use the Snippet Generator at https://test.mednet.med.ubc.ca/sites/intranetng201/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2Fsites%2Fintranetng201%2F%5Fcatalogs%2Fmasterpage%2FHomePageLayout%2Easpx to create and customize additional content placeholders and other useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file within content placeholders will automatically sync to the associated page layout.
+To build the page layout directly from this HTML file, simply fill in the contents of content placeholders.  Use the Snippet Generator at https://test.mednet.med.ubc.ca/_layouts/15/ComponentHome.aspx?Url=https%3A%2F%2Ftest%2Emednet%2Emed%2Eubc%2Eca%2F%5Fcatalogs%2Fmasterpage%2FHomePageLayout%2Easpx to create and customize additional content placeholders and other useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file within content placeholders will automatically sync to the associated page layout.
 
 -->
 <!DOCTYPE html[]>
 <html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
     <head>
-        <!--MS:<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">-->
-            <!--CS: Start Page Field: Title Snippet-->
-            <!--SPM:<%@Register Tagprefix="PageFieldFieldValue" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-            <!--MS:<PageFieldFieldValue:FieldValue FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server">-->
-            <!--ME:</PageFieldFieldValue:FieldValue>-->
-            <!--CE: End Page Field: Title Snippet-->
-        <!--ME:</asp:ContentPlaceHolder>-->
         <!--MS:<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">-->
             <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
             <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
@@ -59,7 +52,6 @@ To build the page layout directly from this HTML file, simply fill in the conten
 </xml><![endif]-->
                 <title>HomePage Layout
                 
-                
                 </title>
             </head>
             <body>
@@ -86,20 +78,18 @@ To build the page layout directly from this HTML file, simply fill in the conten
                         <div class="container-fluid homepage-content">
                             <div class="row">
                                 <!--BEGIN SLIDER-->
-                                <div class="col-md-4 fp-column">
-                                    <div class="border-top">
-                                        <div class="web-part-zone" data-name="WebPartZone">
-                                            <!--CS: Start Web Part Zone Snippet-->
-                                            <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-                                            <div class="web-part-content fp-slider-zone-container" xmlns:ie="ie">
-                                                <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xb6f649a2d1e640f19b3fd290b25a079b" CssClass="fp-slider-zone" FrameType="TitleBarOnly" Orientation="Vertical">-->
-                                                    <!--MS:<ZoneTemplate>-->
-                                                        <!--DC: Replace this comment with default web parts for new pages. -->
-                                                    <!--ME:</ZoneTemplate>-->
-                                                <!--ME:</WebPartPages:WebPartZone>-->
-                                            </div>
-                                            <!--CE: End Web Part Zone Snippet-->
+                                <div class="col-md-4 fp-column border-top">
+                                    <div class="web-part-zone" data-name="WebPartZone">
+                                        <!--CS: Start Web Part Zone Snippet-->
+                                        <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                                        <div class="web-part-content" xmlns:ie="ie">
+                                            <!--MS:<WebPartPages:WebPartZone runat="server" AllowPersonalization="false" ID="xb6f649a2d1e640f19b3fd290b25a079b" FrameType="TitleBarOnly" Orientation="Vertical">-->
+                                                <!--MS:<ZoneTemplate>-->
+                                                    <!--DC: Replace this comment with default web parts for new pages. -->
+                                                <!--ME:</ZoneTemplate>-->
+                                            <!--ME:</WebPartPages:WebPartZone>-->
                                         </div>
+                                        <!--CE: End Web Part Zone Snippet-->
                                     </div>
                                 </div>
                                 <!--END SLIDER-->
