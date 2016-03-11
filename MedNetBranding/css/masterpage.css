@@ -559,7 +559,7 @@ div.site-nav {
 
 .navbar-nav a {
     font-size: 18px;
-    font-family: 'Segoe UI', 'Helvetica Neue', Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
     border: 0;
     letter-spacing: 1px;
@@ -1044,6 +1044,11 @@ footer a:hover {
         top: 11px;
         left: 20px;
     }
+    #s4-titlerow,
+    #s4-titlerow header{
+        margin-bottom: 0;
+        padding-bottom: 
+    }
 
     .nav,
     .navbar-nav,
@@ -1105,6 +1110,9 @@ footer a:hover {
         float:right;
     }
 
+    #breadcrumbnavigation {
+        margin-top: 15px;
+    }
     .nav.side-nav li {
         border-right: 0;
     }
