@@ -139,11 +139,9 @@ function calcFooter(){
 /*hide extra pages on top level nav*/
 function pruneSideNav(){
      if ($('li').hasClass('selected')){
-        console.log("no item");
         $('li.selected').parent().css('display','block');
         $('li.selected').children().css('display','block');
      } else {
-        console.log("item");
         $('#sideNavBox ul ul').css('display','none');
     }
     //set nav to visible

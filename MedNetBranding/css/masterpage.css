@@ -103,13 +103,24 @@ div[role="dialog"] *,
 #site_follow_button {
     display:none !important;
 }
-
+.ms-wpadder-buttonArea {
+    z-index: 10;
+    position: relative;
+    background:#f5f5f5;
+    margin-top:1px;
+}
 .page-content-container img {
     max-width: 100%;
     height: auto;
 }
-img[src*="/_layouts/15/images"] {
+img[src*="/_layouts/15/images"],
+.ms-cui-ribbon a img,
+.ms-cui-menu a img,
+.ms-cui-QAT a img,
+.ms-cui-toolbar-toolbar a img
+#rtePasteFlyoutOptions img{
   max-width: inherit;
+  border-radius: 0;
 }
 td img[src*="/_layouts/15/images/blank.gif?rev=23"]{
     height:1px;
@@ -757,7 +768,7 @@ footer a:hover {
     color: #000;
 }
 
-.two-column .sidebar img {
+.sidebar .mid-webpart img:first-of-type {
     border-radius: 50%;
     float: left;
     margin: 0 20px 0 0 !important;
@@ -1047,7 +1058,7 @@ footer a:hover {
     #s4-titlerow,
     #s4-titlerow header{
         margin-bottom: 0;
-        padding-bottom: 
+        padding-bottom: 0;
     }
 
     .nav,
