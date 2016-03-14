@@ -222,41 +222,41 @@
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-xs-12 row-content banner-logo  hidden-xs">
+                                                <div class="col-xs-12 row-content banner-logo">
                                                     <a href="../../Pages/Default.aspx" runat="server" title="MedNet" class="logo">
-                                                        <image src="~SiteCollection/_layouts/15/MedNetBranding/images/ubc-logo.png" class="ubc-logo">                                                   
+                                                        <img src="~SiteCollection/_layouts/15/MedNetBranding/images/ubc-logo.png" class="ubc-logo">                                                   
                                                     </a>
                                                     <h1 class="intranet-title">
                                                         <span class="faculty">Faculty of Medicine</span>
                                                         <span class="mednet-title">MedNet</span>
                                                     </h1>
+                                                    <div class="navbar-header">
+                                                        <button type="button" class="navbar-toggle">
+                                                            <span class="sr-only">Toggle navigation</span>
+                                                            <span class="icon-bar"></span>
+                                                            <span class="icon-bar"></span>
+                                                            <span class="icon-bar"></span>
+                                                            <span class="menu-label">Menu</span>
+                                                        </button>
+                                                    </div>                                                    
                                                 </div>
+
                                             </div>
                                             <div class="row site-nav">
-                                              <nav id="top-navbar" class="col-xs-12 navbar navbar-default" role="navigation">
-                                                <div class="navbar-header">
-                                                    <button type="button" class="navbar-toggle">
-                                                        <span class="sr-only">Toggle navigation</span>
-                                                        <span class="icon-bar"></span>
-                                                        <span class="icon-bar"></span>
-                                                        <span class="icon-bar"></span>
-                                                        <span class="menu-label">Menu</span>
-                                                    </button>
-                                                    <h1 class="intranet-title"><span class="hidden-lg hidden-md hidden-sm mednet-title">MedNet</span></h1>
-                                                </div>
-                                                  <div id="navbar" class="navbar-expand expand">
-                                                    <ul class="nav navbar-nav">
-                                                        <li><a href="../../Pages/default.aspx" runat="server">Home</a></li>
-                                                        <li><a href="../../AboutUs" runat="server">About Us</a></li> 
-                                                        <li><a href="../../ServicesAndResources" runat="server">Services &amp; Resources</a></li> 
-                                                        <li><a href="../../HR" runat="server">HR</a></li>  
-                                                        <li><a href="../../Teaching" runat="server">Teaching</a></li> 
-                                                        <li><a href="../../Research" runat="server">Research</a></li> 
-                                                        <li><a href="../../office-of-the-dean" runat="server">Office of The Dean</a></li>
-                                                        <li><a href="../../TeamSites" runat="server">Team Sites</a></li>             
-                                                    </ul>
-                                                  </div>
-                                                </div>
+                                                <nav id="top-navbar" class="col-xs-12 navbar navbar-default" role="navigation">
+                                                    <div id="navbar" class="navbar-expand expand">
+                                                        <ul class="nav navbar-nav">
+                                                            <li><a href="../../Pages/default.aspx" runat="server">Home</a></li>
+                                                            <li><a href="../../AboutUs" runat="server">About Us</a></li> 
+                                                            <li><a href="../../ServicesAndResources" runat="server">Services &amp; Resources</a></li> 
+                                                            <li><a href="../../HR" runat="server">HR</a></li>  
+                                                            <li><a href="../../Teaching" runat="server">Teaching</a></li> 
+                                                            <li><a href="../../Research" runat="server">Research</a></li> 
+                                                            <li><a href="../../office-of-the-dean" runat="server">Office of The Dean</a></li>
+                                                            <li><a href="../../TeamSites" runat="server">Team Sites</a></li>             
+                                                        </ul>
+                                                    </div>
+                                                </nav>
                                             </div>
                                         </div>         
                                     </header>
