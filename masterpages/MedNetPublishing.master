@@ -184,7 +184,6 @@
                         </SharePoint:AjaxDelta>
                     </div>
                 </div>
-
                 <div class="s4-notdlg">
                     <div id="s4-statusbarcontainer" class="s4-notdlg">
                         <div id="pageStatusBar" class="s4-status-s1">
@@ -208,7 +207,9 @@
                                             <div class="row top-nav">
                                                 <div class="col-xs-12 row-content">
                                                     <ul class="nav nav-pills pull-left utility-links">
-                                                        <li><a href="../../Pages/Default.aspx" runat="server" class="home hidden-xs hidden-sm">Home</a></li>
+                                                        <li>
+                                                            <a href="../../Pages/Default.aspx" runat="server" class="home hidden-xs hidden-sm">Home</a>
+                                                        </li>
                                                         <li><a href="../../AboutUs/ContactUs/DeansOffice/Lists/FoM%20Contact%20List/AllItems.aspx" runat="server" class="contact">Contact List</a></li>
                                                         <li><a href="https://directory.ubc.ca/index.cfm" target="_blank" class="directory">UBC Directory</a></li>
                                                         <li><a href="http://med.ubc.ca" target="_blank" class="public-site">med.ubc.ca</a></li>
@@ -240,7 +241,6 @@
                                                         </button>
                                                     </div>                                                    
                                                 </div>
-
                                             </div>
                                             <div class="row site-nav">
                                                 <nav id="top-navbar" class="col-xs-12 navbar navbar-default" role="navigation">
@@ -374,9 +374,9 @@
                                             <div class="container-fluid">
                                                 <!-- Breadcrumb -->
                                                 <SharePoint:AjaxDelta ID="deltabreadcrumbnav" runat="server">
-                                                   <div id="breadcrumbnavigation">
+                                                   <div id="breadcrumbnavigation" class="ms-dialogHidden">
                                                      <span class="breadcrumb-nav"> 
-                                                       <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server" >
+                                                       <asp:ContentPlaceHolder ID="BreadCrumbPlaceHolder" runat="server" >
                                                          <asp:SiteMapPath SiteMapProvider="CurrentNavSiteMapProviderNoEncode" id="ContentMap" PathSeparatorStyle-CssClass ="breadcrumb-separator" SkipLinkText="" CurrentNodeStyle-CssClass="current-breadcrumb" NodeStyle-CssClass="breadcrumb-node" runat="server" hideinteriorrootnodes="true"/>
                                                        </asp:ContentPlaceHolder>
                                                      </span>
