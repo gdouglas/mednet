@@ -14,7 +14,8 @@
     margin: 0;
     border: 0;
 }
-img[src$=".gif"], img[src$=".png"] {
+img[src$=".gif"],
+img[src$=".png"] {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
     image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
@@ -106,8 +107,8 @@ div[role="dialog"] *,
 .ms-wpadder-buttonArea {
     z-index: 10;
     position: relative;
-    background:#f5f5f5;
-    margin-top:1px;
+    background: #f5f5f5;
+    margin-top: 1px;
 }
 .page-content-container img {
     max-width: 100%;
@@ -118,12 +119,34 @@ img[src*="/_layouts/15/images"],
 .ms-cui-menu a img,
 .ms-cui-QAT a img,
 .ms-cui-toolbar-toolbar a img,
-#rtePasteFlyoutOptions img{
-  max-width: inherit;
-  border-radius: 0;
+#rtePasteFlyoutOptions img {
+    max-width: inherit;
+    border-radius: 0;
+    margin: 0 !important;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+.page-content .sidebar .mid-webpart .ms-asset-icon {
+    margin: 0 5px !important;
+    box-shadow: none;
+    float:none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
 }
 td img[src*="/_layouts/15/images/blank.gif?rev=23"]{
-    height:1px;
+    height: 1px;
+}
+#rtePasteFlyoutLink {
+    height: auto;
+}
+
+.ms-webpart-menuArrowImg img,
+.ms-core-menu-icon img{
+    margin: 0;
+}
+.sidebar .mid-webpart .ms-core-menu-box .ms-core-menu-icon img {
+    margin: 0 !important;
 }
 
 .ms-InlineSearch-Outline-Baseline {
@@ -188,6 +211,7 @@ span div.welcome {
 .container .ms-h5 *,
 .container .ms-h6 * {
     font-size: inherit;
+    word-wrap: normal;
 }
 
 a {
@@ -529,7 +553,9 @@ header .mednet-title {
 #appsTable {
     margin-left: 30px;
 }
-
+.ms-v4propertysheetspacing .ms-descriptiontext {
+    max-width:300px;
+}
 .breadcrumb-separator {
     border: none;
 }
@@ -626,7 +652,7 @@ header h2 {
 #ctl00_PlaceHolderLeftNavBar_QuickLaunchNavigationManager {
 }
 
-.adm-site-links .adm-site-links-border {
+.adm-site-links {
     margin-top: 23px;
     padding-top: 23px;
     border-top: 1px solid #ccc;
@@ -751,7 +777,7 @@ footer a:hover {
 .bot-webpart .ms-webpart-zone {
     padding: 15px;
 /*width: 27.333333333334%;*/
-    margin: 0 0 0 4%;
+    /*margin: 0 0 0 4%;*/
 }
 
 .top-webpart {
@@ -776,6 +802,12 @@ footer a:hover {
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .3);
     -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .3);
 }
+.two-column .sidebar .mid-webpart h1,
+.two-column .sidebar .mid-webpart h2,
+.two-column .sidebar .mid-webpart h3,
+.two-column .sidebar .mid-webpart h4 {
+    color: #000;
+}
 
 .bottom-wp-zones {
     display: table;
@@ -791,19 +823,23 @@ footer a:hover {
     margin: 0 15px;
     min-width: 230px;
     overflow: auto;
-}
-
-.two-column .sidebar .mid-webpart h1,
-.two-column .sidebar .mid-webpart h2,
-.two-column .sidebar .mid-webpart h3,
-.two-column .sidebar .mid-webpart h4 {
-    color: #000;
+    padding:0;
 }
 
 #two-col-bl,
 #two-col-br,
 #two-col-ml {
     min-height: 0;
+}
+.bottom-wp-zones .ms-webpart-zone {
+    padding: 0 15px;
+}
+#two-col-bl .ms-webpart-zone,
+#two-col-br .ms-webpart-zone {
+    background: #ddd;
+}
+#two-col-ml .ms-webpart-zone {
+    background: #ccc;
 }
 
 /*maps*/
@@ -1264,21 +1300,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f5d7c', end
 
     .bottom-wp-zones div[data-name="WebPartZone"] {
         display: block;
-        float: none;
         margin: 0;
         min-width: 150px;
         border: 0;
     }
     #two-col-bl > div,
     #two-col-br > div {
-        background: #ebf1e7;
-        background: #ddd;
         border-right: 0;
     }
 
     #two-col-ml > div {
-        background: #f2f8ee;
-        background: #ccc;
         border-right: 0;
     }
 
@@ -1293,15 +1324,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f5d7c', end
 }
 @media screen and (min-width:993px) {
     #two-col-bl,
-    #two-col-br {
-        background: #ebf1e7;
-        background: #ddd;
-        border-right: 3px solid #fff;
-    }
-
+    #two-col-br,
     #two-col-ml {
-        background: #f2f8ee;
-        background: #ccc;
         border-right: 3px solid #fff;
     }
 }

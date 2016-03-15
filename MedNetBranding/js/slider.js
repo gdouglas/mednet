@@ -36,17 +36,21 @@ function init() {
 
     var jssor_slider1 = new $JssorSlider$('slider1_container', options);
 }
-
+function resizeSlider(){
+    if (window.jQuery) {
+        var sc = $('#slider1_container').width();
+        $('#slider1_container').width(sc);
+        $('.slides-container').width(sc);
+        _spBodyOnLoadFunctions.push(init); // this is the function that gets called when everything is loaded
+    } else {
+        
+    }
+}
 
 var everythingLoaded = setInterval(function() {
     var sw = $('.fp-slider-zone-container').width();    
     if (window.jQuery && sw !== null) {
-            var sc = $('#slider1_container').width();
-            $('#slider1_container').width(sc);
-            $('.slides-container').width(sc);
-
-            clearInterval(everythingLoaded);
-            _spBodyOnLoadFunctions.push(init); // this is the function that gets called when everything is loaded
-        }
+        resizeSlider();
+        clearInterval(everythingLoaded);
+    }
 }, 100);
-
