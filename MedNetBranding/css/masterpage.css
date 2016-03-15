@@ -812,32 +812,36 @@ footer a:hover {
 .bottom-wp-zones {
     display: table;
     table-layout: fixed;
-    height: 100%;
+    height: 100px;
     width: 100%;
     margin: 0;
 }
 
-.bottom-wp-zones div[data-name="WebPartZone"] {
+#two-col-bl,
+#two-col-br,
+#two-col-ml {
     display: table-cell;
     float: none;
     margin: 0 15px;
     min-width: 230px;
     overflow: auto;
     padding:0;
-}
-
-#two-col-bl,
-#two-col-br,
-#two-col-ml {
     min-height: 0;
+}
+#two-col-bl > div,
+#two-col-br > div,
+#two-col-ml > div {
+    height: 100%;
 }
 .bottom-wp-zones .ms-webpart-zone {
     padding: 0 15px;
+    height:100%;
 }
 #two-col-bl .ms-webpart-zone,
 #two-col-br .ms-webpart-zone {
     background: #ddd;
 }
+
 #two-col-ml .ms-webpart-zone {
     background: #ccc;
 }
@@ -1000,6 +1004,11 @@ footer a:hover {
 }
 
 /*media queries*/
+@media screen and (min-width:991px) and (max-width: 1133px) {
+    h3 {
+        font-size:21px;
+    }
+}
 @media (max-width: 991px) {
     .overview hr {
         display: none;
