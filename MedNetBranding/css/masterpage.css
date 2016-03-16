@@ -94,6 +94,9 @@ div[role="dialog"] *,
 [class*='ms-dlg'] *,
 [class*='ms-dlg'] :before,
 [class*='ms-dlg'] :after,
+.ms-promlink-button-image,
+.s4-ctx,
+.s4-ctx-grid,
 .ms-webpart-menuLink,
 .js-callout-closeButton,
 .ms-InlineSearch-Outline-Baseline {
@@ -550,7 +553,8 @@ header .mednet-title {
 /*Align admin pages with bootstrap containers*/
 #breadcrumbnavigation,
 #idStorefrontLayoutRoot,
-#appsTable {
+#appsTable,
+#MSOZoneCell_WebPartWPQ2 {
     margin-left: 30px;
 }
 .ms-v4propertysheetspacing .ms-descriptiontext {
