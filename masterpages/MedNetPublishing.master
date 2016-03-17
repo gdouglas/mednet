@@ -375,12 +375,23 @@
                                                 <!-- Breadcrumb -->
                                                 <SharePoint:AjaxDelta ID="deltabreadcrumbnav" runat="server">
                                                    <div id="breadcrumbnavigation" class="ms-dialogHidden">
-                                                     <span class="breadcrumb-nav"> 
-                                                       <asp:ContentPlaceHolder ID="BreadCrumbPlaceHolder" runat="server" >
-                                                         <asp:SiteMapPath SiteMapProvider="CurrentNavSiteMapProviderNoEncode" id="ContentMap" PathSeparatorStyle-CssClass ="breadcrumb-separator" SkipLinkText="" CurrentNodeStyle-CssClass="current-breadcrumb" NodeStyle-CssClass="breadcrumb-node" runat="server" hideinteriorrootnodes="true"/>
-                                                       </asp:ContentPlaceHolder>
-                                                     </span>
-                                                  </div>
+                                                        <span class="breadcrumb-nav"> 
+                                                            <asp:ContentPlaceHolder ID="BreadCrumbPlaceHolder" runat="server" >
+                                                                    <span class="breadcrumb-pub"><asp:SiteMapPath
+                                                                        runat="server"
+                                                                        SiteMapProviders="SPSiteMapProvider,SPXmlContentMapProvider"
+                                                                        RenderCurrentNodeAsLink="false"
+                                                                        PathSeparatorStyle-CssClass ="breadcrumb-separator"
+                                                                        NodeStyle-CssClass="breadcrumbNode"
+                                                                        CurrentNodeStyle-CssClass="breadcrumbCurrentNode"
+                                                                        RootNodeStyle-CssClass="breadcrumbRootNode"
+                                                                        HideInteriorRootNodes="true"
+                                                                        SkipLinkText=""
+                                                                    /></span>
+                                                                    <span class="breadcrumb-nonpub"><asp:SiteMapPath runat="server" SiteMapProvider="SPContentMapProvider" RenderCurrentNodeAsLink="false" NodeStyle-CssClass="breadcrumbNode" CurrentNodeStyle-CssClass="breadcrumbCurrentNode" RootNodeStyle-CssClass="breadcrumbRootNode" HideInteriorRootNodes="true" SkipLinkText=""/></span> 
+                                                            </asp:ContentPlaceHolder>
+                                                        </span>
+                                                    </div>
                                                 </SharePoint:AjaxDelta>
 
                                                 <!-- ===== STARTER: Main Placeholder gets replaced with content of the page ======================================= -->

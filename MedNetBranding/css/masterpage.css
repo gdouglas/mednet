@@ -259,7 +259,10 @@ h2.ms-rteElement-SpecialHeading {
     background: #3868a6;
     color: #fff;
 }
-
+/*remove elements from style editor*/
+#Ribbon\.EditingTools\.CPEditTab\.Paragraph\.ElementWithStyle\.Menu\.Styles\.Gallery tr:nth-child(2) {
+    display:none !important;
+}
 /*Custom editor styles*/
 .ms-rteStyle-levelfourlinks {
     -ms-name: "Link Item";
@@ -554,12 +557,27 @@ header .mednet-title {
 #breadcrumbnavigation,
 #idStorefrontLayoutRoot,
 #appsTable,
-#MSOZoneCell_WebPartWPQ2 {
+form[action*="Forms"] #MSOZoneCell_WebPartWPQ2,
+form[action*="Lists"] #MSOZoneCell_WebPartWPQ2 {
     margin-left: 30px;
 }
 .ms-v4propertysheetspacing .ms-descriptiontext {
     max-width:300px;
 }
+.breadcrumb-nonpub {
+    display: none;
+}
+
+form[action*="Forms"] .breadcrumb-pub,
+form[action*="Lists"] .breadcrumb-pub {
+  display: none;
+}
+ 
+form[action*="Forms"] .breadcrumb-nonpub,
+form[action*="Lists"] .breadcrumb-nonpub {
+  display: inline-block;
+}
+
 .breadcrumb-separator {
     border: none;
 }
