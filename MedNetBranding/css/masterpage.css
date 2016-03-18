@@ -13,6 +13,8 @@
     box-sizing: border-box;
     margin: 0;
     border: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 img[src$=".gif"],
 img[src$=".png"] {
@@ -25,7 +27,6 @@ img[src$=".png"] {
 .no-float {
     float: none !important;
 }
-
 .page-content-container .col-sm-2 {
     display: table-cell;
     border-right: 1px solid #ccc;
@@ -55,10 +56,9 @@ div[role="dialog"] *,
 .ms-webpart-controlBox,
 .js-webpart-menuCell,
 .ms-webpart-checkboxTd,
-/*suggested*/
-/*conflicts:,
-[class*='ms-webpart'] *;
-*/
+.ms-commandLink, 
+.ms-promlink-button,
+.ms-promlink-button-enabled,
 #s4-ribbonrow *,
 #s4-ribbonrow :before,
 #s4-ribbonrow :after,
@@ -140,6 +140,27 @@ img[src*="/_layouts/15/images"],
 td img[src*="/_layouts/15/images/blank.gif?rev=23"]{
     height: 1px;
 }
+.ms-picker-table {
+    border-collapse: separate;
+}
+#DatePickerDiv .ms-picker-monthselected a,
+#DatePickerDiv .ms-picker-monthselected a:active,
+#DatePickerDiv .ms-picker-monthselected a:link,
+#DatePickerDiv .ms-picker-monthselected a:hover, 
+#DatePickerDiv .ms-picker-monthselected a:visited,
+#DatePickerDiv .ms-picker-monthcenterOn a{
+    color: #444;
+}
+#DatePickerDiv .ms-picker-monthcenter a,
+#DatePickerDiv .ms-picker-monthcenter a:active, 
+#DatePickerDiv .ms-picker-monthcenter a:link, 
+#DatePickerDiv .ms-picker-monthcenter a:visited {
+    color: #777;
+}
+#DatePickerDiv .ms-picker-footer a {
+    color: #3868a6;
+}
+
 #rtePasteFlyoutLink {
     height: auto;
 }
@@ -246,9 +267,6 @@ h2.ms-rteElement-SpecialHeading {
     font-style: bold;
     color: green;
 }*/
-.btn {
-/*font-weight: bold;*/
-}
 
 .btn:hover,
 .btn:hover:visited {
@@ -398,21 +416,31 @@ h1.ms-rteElement-H1B {
     text-transform: uppercase;
     font-weight: 600;
 }
+.ms-rtestate-field span[title*="News & Honours"] h2 {
+    margin-top: 0;
+}
 
 h2,
 h2 a,
 .ms-h2,
 .ms-rtestate-field h2,
 h2.ms-rteElement-H2,
-h2.ms-rteElement-H2B {
+h2.ms-rteElement-H2B,
+.ms-webpart-titleText.ms-webpart-titleText,
+.ms-webpart-titleText > a {
     color: #447128;
     margin: 20px 0 10px;
 }
 
 h3,
 .ms-h3,
-h3.ms-rteElement-H3B {
+h3.ms-rteElement-H3B,
+h3.ms-standardheader {
     color: #3868a6;
+    font-size: 24px;
+    margin: 20px 0 10px 0;
+    text-align: left;
+    font-weight: 500;
 }
 
 h4,
@@ -572,10 +600,11 @@ header .mednet-title {
 #appsTable,
 form[action*="Forms"] #MSOZoneCell_WebPartWPQ2,
 form[action*="Lists"] #MSOZoneCell_WebPartWPQ2,*/
-form[action*="Forms"] #breadcrumbnavigation,
-form[action*="Lists"] #breadcrumbnavigation,
+form[action*="Form"] #breadcrumbnavigation,
+form[action*="List"] #breadcrumbnavigation,
 form[action*="RecycleBin"] #breadcrumbnavigation,
-form[action*="viewlsts"] #breadcrumbnavigation {
+form[action*="viewlsts"] #breadcrumbnavigation,
+form[action*="/ReusableContent/Content"] #breadcrumbnavigation {
     margin-left: 0;
 }
 form[action="/_layouts/15/DesignPageLayouts.aspx"] #sideNavBox {
@@ -591,13 +620,17 @@ form[action="/_layouts/15/DesignPageLayouts.aspx"] #sideNavBox {
     display: none;
 }
 
-form[action*="Forms"] .breadcrumb-pub,
-form[action*="Lists"] .breadcrumb-pub {
+form[action*="Form"] .breadcrumb-pub,
+form[action*="List"] .breadcrumb-pub,
+form[action*="/ReusableContent/Content"] .breadcrumb-pub {
   display: none;
 }
+
+form[action*="/ReusableContent/Content"] 
  
-form[action*="Forms"] .breadcrumb-nonpub,
-form[action*="Lists"] .breadcrumb-nonpub {
+form[action*="Form"] .breadcrumb-nonpub,
+form[action*="List"] .breadcrumb-nonpub,
+form[action*="/ReusableContent/Content"]  .breadcrumb-nonpub {
   display: inline-block;
 }
 
@@ -831,6 +864,9 @@ footer a:hover {
 
 .top-webpart .ms-webpart-titleText {
     margin-top: 0;
+}
+.sidebar div {
+    display: block;
 }
 
 .two-column .sidebar .mid-webpart {
@@ -1242,16 +1278,6 @@ footer a:hover {
 
     }
 
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2f5d7c+0,ffffff+100 */
-background: #2f5d7c; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJmNWQ3YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #2f5d7c 0%, #ffffff 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #2f5d7c 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #2f5d7c 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f5d7c', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
-
-
     .ms-core-listMenu-selected:link,
     .ms-core-listMenu-selected:visited,
     .ms-core-listMenu-selected {
@@ -1374,6 +1400,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f5d7c', end
         background: initial;
         border: 0;
         padding: 0;
+    }
+}
+@media screen and (max-width:1080px) {
+    #two-col-bl,
+    #two-col-br,
+    #two-col-ml {
+        display: block;
+        width: 100%;
+        margin: 0;
     }
 }
 @media screen and (min-width:993px) {

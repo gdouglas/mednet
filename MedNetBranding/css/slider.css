@@ -4,6 +4,7 @@
     left: 0px;
     max-width: 600px;
     width:100%;
+    margin:0 auto;
 }
 
 .slides-container{
@@ -17,6 +18,7 @@
 .slides-container figure img{
     height:calc(100% - 100px);
     width:auto !important;
+    max-width:initial;
 }
 #slider-controls{
     position:absolute;
