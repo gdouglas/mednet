@@ -164,11 +164,11 @@ h1 input[title="Title"] {
     width: 100%;
 }
 
-/*#s4-statusbarcontainer #pageStatusBar {
+#s4-statusbarcontainer .s4-status-s1 {
     margin-bottom: 0;
-    padding: 0 0 0 15px;
+    padding: 0;
     border: none;
-}*/
+}
 
 /*Likely to cause issues on the settings pages. Needed for embedding iframes*/
 .ms-rte-embedcode {
@@ -400,6 +400,7 @@ h1.ms-rteElement-H1B {
 }
 
 h2,
+h2 a,
 .ms-h2,
 .ms-rtestate-field h2,
 h2.ms-rteElement-H2,
@@ -437,14 +438,23 @@ h4.ms-rteElement-H4B {
 .ms-formfieldlabel {
     text-transform: initial;
 }
+label {
+    margin-bottom:0;
+}
+input[type=checkbox],
+input[type=radio] {
+    margin: 0 4px 0 0;
+}
+.ms-authoringcontrols img {
+    margin-right: 10px !important;
+}
+.ms-authoringcontrols {
+    background: #ddd;
+}
 
 div.article,
 div.welcome {
     padding: 10px 50px;
-}
-
-.page-content iframe {
-    width: 100%;
 }
 
 #fullscreenmodebox {
@@ -553,13 +563,26 @@ header .mednet-title {
     text-transform: none;
     letter-spacing: 2px;
 }
+#breadcrumbnavigation {
+    margin-left:30px;
+}
 /*Align admin pages with bootstrap containers*/
-#breadcrumbnavigation,
+/*#breadcrumbnavigation,
 #idStorefrontLayoutRoot,
 #appsTable,
 form[action*="Forms"] #MSOZoneCell_WebPartWPQ2,
-form[action*="Lists"] #MSOZoneCell_WebPartWPQ2 {
-    margin-left: 30px;
+form[action*="Lists"] #MSOZoneCell_WebPartWPQ2,*/
+form[action*="Forms"] #breadcrumbnavigation,
+form[action*="Lists"] #breadcrumbnavigation,
+form[action*="RecycleBin"] #breadcrumbnavigation,
+form[action*="viewlsts"] #breadcrumbnavigation {
+    margin-left: 0;
+}
+form[action="/_layouts/15/DesignPageLayouts.aspx"] #sideNavBox {
+    display: none !important;
+    position:absolute;
+    left:-99999px;
+    width: 0;
 }
 .ms-v4propertysheetspacing .ms-descriptiontext {
     max-width:300px;

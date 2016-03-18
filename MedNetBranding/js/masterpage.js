@@ -1,3 +1,6 @@
+var DesignPageLayouts = false;
+console.log(DesignPageLayouts);
+
 /*prevent focus on content by default*/
 window.onload = function() {
     if(SetFullScreenMode !== undefined && SetFullScreenMode !== null) {
@@ -5,9 +8,18 @@ window.onload = function() {
     } else {
         var SetFullScreenMode = false;
     }
+    if (checkURL) {
+        DesignPageLayouts = true;
+    } else {
+        DesignPageLayouts = false;
+    }
 }
 
-
+function checkURL() {
+    if (window.location.href.indexOf("DesignPageLayouts") > -1) {
+        return true;
+    }
+}
 /*
 *
 *
@@ -90,8 +102,11 @@ setInterval(function(){
 },100);
 
 $(window).resize(function(){
+    /*check if designpagelayouts page and do not show sideNavBox*/
     if($(window).width() >= 768){
-        $('#sideNavBox').show();
+        if (!checkURL){
+            $('#sideNavBox').show();
+        }
         $('#navbar').show();
         calcFooter();
     }
@@ -138,26 +153,25 @@ function calcFooter(){
 
 /*hide extra pages on top level nav*/
 function pruneSideNav(){
-     if ($('li').hasClass('selected')){
-        $('li.selected').parent().css('display','block');
-        $('li.selected').children().css('display','block');
-     } else {
-        $('#sideNavBox ul ul').css('display','none');
+    if(DesignPageLayouts) {
+       console.log("its DesignPageLayouts")
+    } else {
+         if ($('li').hasClass('selected')){
+            $('li.selected').parent().css('display','block');
+            $('li.selected').children().css('display','block');
+         } else {
+            $('#sideNavBox ul ul').css('display','none');
+        }
+        //set nav to visible
+        $('#sideNavBox a').css('color','#000');
     }
-    //set nav to visible
-    $('#sideNavBox a').css('color','#000');
 }
-$(document).ready(function(){
-  pruneSideNav();
-});
+
 /*prevent focusOnContent*/
 function Hidesuite() {
     document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
 } 
-/*load functions*/
-$(document).ready(function() {
-    _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
-});
+
 
 function isIE () {
   var myNav = navigator.userAgent.toLowerCase();
@@ -235,7 +249,11 @@ function addCloseListener() {
         $('#browser-alert').remove();
     });
 }
-$(document).ready(function() {
-    // checkCookie();
-});
 
+$(document).ready(function(){
+    pruneSideNav();
+});
+/*load functions*/
+$(document).ready(function() {
+    _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
+});
