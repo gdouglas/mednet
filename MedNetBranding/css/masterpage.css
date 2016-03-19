@@ -197,6 +197,7 @@ h1 input[title="Title"] {
 }
 #scriptWPQ2 img {
     max-width: initial;
+    vertical-align: baseline;
 }
 
 /*make div work like p for editor*/
@@ -415,9 +416,6 @@ h1.ms-rteElement-H1B {
     color: #002145;
     text-transform: uppercase;
     font-weight: 600;
-}
-.ms-rtestate-field span[title*="News & Honours"] h2 {
-    margin-top: 0;
 }
 
 h2,
@@ -927,6 +925,9 @@ footer a:hover {
     background: #ccc;
 }
 
+.dfwp-list .dfwp-item #colmask {
+    margin-top: 10px;
+}
 /*maps*/
 .google-maps {
     position: relative;
