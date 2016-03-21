@@ -453,6 +453,18 @@ h4.ms-rteElement-H4B {
     font-weight: 400;
 }
 
+.ms-rte-layoutszone-outer h2{
+    font-size:1.46em;
+    font-family: "Segoe UI Semilight","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    color: #0072C6;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+}
+.ms-rte-layoutszone-outer td{
+    padding:0 5px 50px 5px !important;
+    vertical-align: top;
+}
+
 .error-content {
     padding: 0 15px 0 30px;
 }

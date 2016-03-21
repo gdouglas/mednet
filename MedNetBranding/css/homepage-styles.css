@@ -79,11 +79,6 @@ h2{
 }
 /*END middle column borders*/
 
-
-#colleft {
-	margin-bottom: 5px;
-}
-
 #colleft #col1{
 	color:#595959;
 	margin-right:20px;
@@ -111,9 +106,6 @@ h2{
 	font-size: inherit;
 }
 .fp-column h2{
-/*	margin-bottom:10px;
-	line-height: 40px;
-	padding-bottom:5px;*/
 	font-size:20px;
 }
 a.btn,
