@@ -79,11 +79,6 @@ h2{
 }
 /*END middle column borders*/
 
-#colleft #col1{
-	color:#595959;
-	margin-right:20px;
-}
-
 .fp-column{
 	width:33%;
 	min-height:400px;
@@ -108,33 +103,9 @@ h2{
 .fp-column h2{
 	font-size:20px;
 }
-a.btn,
-.btn{
-	border-radius: 0;
-}
-
-div .read-more{
-	color:#64b63a;
-	border:1px solid #64b63a;
-	border-color:#2E7453; 
-	border-color:#538B31;
-	border-color:#538b31;
-	border-color:#002145;
-	color:#2E7453;
-	color:#538B31;
-	color:#538b31;
-	color:#002145;
-	text-transform: uppercase;
-	position:absolute;
-	bottom:10px;
-}
-
 #contentBox{
 	width:100%;
 }
-
-
-
 .staff-spotlight-name a{
 	color:#002145;
 }

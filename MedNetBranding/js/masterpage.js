@@ -13,6 +13,7 @@ window.onload = function() {
     } else {
         DesignPageLayouts = false;
     }
+    accordionTabs();
 }
 
 function checkURL() {
@@ -249,11 +250,13 @@ function addCloseListener() {
         $('#browser-alert').remove();
     });
 }
-
-$(document).ready(function(){
-    pruneSideNav();
-});
+function accordionTabs(){
+    $('.nav-tabs').parent().each(function() {
+      $(this).tabCollapse();
+    });
+}
 /*load functions*/
 $(document).ready(function() {
+    pruneSideNav();
     _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
 });

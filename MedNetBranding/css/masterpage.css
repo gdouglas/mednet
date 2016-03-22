@@ -190,6 +190,10 @@ h1 input[title="Title"] {
     padding: 0;
     border: none;
 }
+#pageStatusBar[class],
+.ms-status-msg {
+    margin-bottom: 0;
+}
 
 /*Likely to cause issues on the settings pages. Needed for embedding iframes*/
 .ms-rte-embedcode {
@@ -944,6 +948,29 @@ footer a:hover {
 .dfwp-list .dfwp-item #colmask {
     margin-top: 10px;
 }
+#colleft #col1{
+    color:#595959;
+    margin-right:20px;
+}
+a.btn,
+.btn{
+    border-radius: 0;
+}
+div .read-more{
+    color:#64b63a;
+    border:1px solid #64b63a;
+    border-color:#2E7453; 
+    border-color:#538B31;
+    border-color:#538b31;
+    border-color:#002145;
+    color:#2E7453;
+    color:#538B31;
+    color:#538b31;
+    color:#002145;
+    text-transform: uppercase;
+    position:absolute;
+    bottom:10px;
+}
 /*maps*/
 .google-maps {
     position: relative;
@@ -978,51 +1005,52 @@ footer a:hover {
  */
 
 /* Tabs container */
-.tabs {
+.nav-tabs {
     position: relative;
     min-width:100%;
 }
 /* Tab element */
-
-.tabs .tabs-nav .tabs-tab {
-    position: relative;
+.nav-tabs li a[role="tab"] {
+    border-radius: 0;
+    background:#002145;
+    color:#fff;
+    margin-top:3px;
 }
 /* Tab anchor */
 
-.tabs .tabs-nav .tabs-anchor {
-    display: inline-block;
-    padding: 10px 12px;
-    text-decoration: none;
-    padding: .5em .7em;
-    color: #fff;
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
     background: #2f5d7c;
-    margin: 1px .2em 0 0;
-}
-.tabs .tabs-nav .tabs-anchor:hover {
-    background-color: #002145;
     transition: background-color 0.2s;
     color: #fff;
 }
 
-/* Disabled tab */
-.tabs-nav {
+.nav-tabs {
     border-bottom: 1px solid #002145;
-}
-.tabs .tabs-nav .tabs-state-disabled {
-    opacity: 0.5;
 }
 /* Active state tab anchor */
 
-.tabs .tabs-nav .tabs-state-active .tabs-anchor {
+.nav-tabs a.active {
     text-shadow: none;
     background-color: #002145;
 }
 /* Accordion anchor */
-
-.tabs .tabs-accordion-title .tabs-anchor {
+.panel-heading {
+    margin:0;
+    padding:0;
+}
+h4.panel-title {
+    color:#fff;
+}
+.js-tabcollapse-panel-heading,
+.js-tabcollapse-panel-heading:visited,
+.js-tabcollapse-panel-heading:focus,
+.js-tabcollapse-panel-heading:hover,
+.js-tabcollapse-panel-heading:active {
     display: block;
     text-decoration: none;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+    
     font-size: 14px;
     padding:10px;
     background: #2f5d7c;
@@ -1031,34 +1059,14 @@ footer a:hover {
 }
 /* Active accordion anchor */
 
-.tabs .tabs-accordion-title.tabs-state-active .tabs-anchor {
+.js-tabcollapse-panel-heading {
     background-color: #002145;
     color: #fff;
     text-shadow: none;
 }
-/* Disabled accordion button */
-
-.tabs .tabs-accordion-title.tabs-state-disabled {
-    opacity: 0.5;
-}
-.tabs .tabs-nav {
-    margin: 0;
-    padding: 0;
-}
-.tabs .tabs-tab {
-    display: inline-block;
-    margin: 0;
-    list-style: none;
-}
-.tabs .tabs-panel {
-    padding: 15px;
-    display: none;
-}
-.tabs .tabs-accordion-title {
-    display: none;
-}
-.tabs .tabs-panel.tabs-state-active {
-    display: block;
+.js-tabcollapse-panel-body div {
+    display:list-item;
+    margin-left:15px;
 }
 /* end responsive tabs */
 
