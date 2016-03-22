@@ -1,9 +1,7 @@
 var DesignPageLayouts = false;
-console.log(DesignPageLayouts);
-
 /*prevent focus on content by default*/
 window.onload = function() {
-    if(SetFullScreenMode !== undefined && SetFullScreenMode !== null) {
+    if (SetFullScreenMode !== undefined && SetFullScreenMode !== null) {
         // SetFullScreenMode(false);
     } else {
         var SetFullScreenMode = false;
@@ -14,7 +12,10 @@ window.onload = function() {
         DesignPageLayouts = false;
     }
     accordionTabs();
+    console.log("window.load "+ajaxProgress);
 }
+
+
 
 function checkURL() {
     if (window.location.href.indexOf("DesignPageLayouts") > -1) {
@@ -22,32 +23,31 @@ function checkURL() {
     }
 }
 /*
-*
-*
-*Navbar Controls
-*
-*/
-function addListeners(){
-    $(".navbar-toggle").click(function() {  
+ *
+ *
+ *Navbar Controls
+ *
+ */
+function addListeners() {
+    $(".navbar-toggle").click(function() {
         $('#navbar').slideToggle();
         $('#sideNavBox').slideToggle();
     });
 }
 /*
-*
-*
-*Smooth scrolling on bookmarks
-*
-*/
-function addSmoothScroll(){
+ *
+ *
+ *Smooth scrolling on bookmarks
+ *
+ */
+function addSmoothScroll() {
     $('a[href*=#]:not([href=#],#accordion a[href*=#])').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
-            || location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
             var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-               if (target.length) {
-                 $('#s4-workspace').animate({
-                     scrollTop: target.offset().top
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('#s4-workspace').animate({
+                    scrollTop: target.offset().top
                 }, 'fast');
                 return false;
             }
@@ -56,56 +56,56 @@ function addSmoothScroll(){
 }
 
 /*
-*
-*
-*Fix back to top at top of footer
-*
-*/
+ *
+ *
+ *Fix back to top at top of footer
+ *
+ */
 function checkOffset() {
-    if($('.toplink').offset().top + $('.toplink').height()>= $('footer').offset().top - 10){
+    if ($('.toplink').offset().top + $('.toplink').height() >= $('footer').offset().top - 10) {
         bottomTopLink();
-    }//end if
-    if($(document).scrollTop() + window.innerHeight < $('footer').offset().top){
+    } //end if
+    if ($(document).scrollTop() + window.innerHeight < $('footer').offset().top) {
         fixTopLink();
-    }//end if
-}//end checkOffset
+    } //end if
+} //end checkOffset
 
-function defaultTopLink(){
+function defaultTopLink() {
     $('.toplink').css({
-        'position':'static'
+        'position': 'static'
     });
 }
 
-function bottomTopLink(){
+function bottomTopLink() {
     $('.toplink').css({
         'position': 'absolute',
         'bottom': '22px',
         'background': '#3868a6'
     });
-}//end defaultTopLink
+} //end defaultTopLink
 
-function fixTopLink(){
+function fixTopLink() {
     $('.toplink').css({
         'position': 'fixed',
         'bottom': '0',
-        'background':'#002145'
+        'background': '#002145'
     }); // restore when you scroll up
-}//end fixTopLink
+} //end fixTopLink
 
 
 /*position toplink with timer*/
-setInterval(function(){
+setInterval(function() {
     if ($(window).width() < 768) {
-        checkOffset(); 
-    }else{
+        checkOffset();
+    } else {
         defaultTopLink();
     }
-},100);
+}, 100);
 
-$(window).resize(function(){
+$(window).resize(function() {
     /*check if designpagelayouts page and do not show sideNavBox*/
-    if($(window).width() >= 768){
-        if (!checkURL){
+    if ($(window).width() >= 768) {
+        if (!checkURL) {
             $('#sideNavBox').show();
         }
         $('#navbar').show();
@@ -114,13 +114,13 @@ $(window).resize(function(){
 });
 
 /*
-*
-*
-*Sticky Footer
-*
-*/
+ *
+ *
+ *Sticky Footer
+ *
+ */
 
-function calcFooter(){
+function calcFooter() {
     var $footer = $("footer");
     var footerheight = $footer.outerHeight();
     //hide footer allows for smoother window resizing
@@ -132,57 +132,57 @@ function calcFooter(){
     var windowheight = $(window).height();
 
     //if ribbon is hidden size is zero
-    if($ribbon.css('display') == 'none'){
+    if ($ribbon.css('display') == 'none') {
         ribbonheight = 0;
     }
-    
+
     //if no ms-designer-ribbon try to calculate with suitebar + ribbonrow
-    if(ribbonheight==null){
+    if (ribbonheight == null) {
         ribbonheight = $("#suiteBar").height() + $("#s4-ribbonrow").height() + $('#s4-statusbarcontainer').height();
     }
-    
+
     //handle null if something wasn't found
     ribbonheight == null && (ribbonheight = 0);
-    
+
     //if content is less than the window size add margin to customFooter
-    var difference = windowheight-(bodyheight+ribbonheight+footerheight);
+    var difference = windowheight - (bodyheight + ribbonheight + footerheight);
     if (difference > 0) $('footer').css('margin-top', difference);
-    
+
     //show footer after calculating
     $footer.show();
 }
 
 /*hide extra pages on top level nav*/
-function pruneSideNav(){
-    if(DesignPageLayouts) {
-       console.log("its DesignPageLayouts")
+function pruneSideNav() {
+    if (DesignPageLayouts) {
+        //do nothing
     } else {
-         if ($('li').hasClass('selected')){
-            $('li.selected').parent().css('display','block');
-            $('li.selected').children().css('display','block');
-         } else {
-            $('#sideNavBox ul ul').css('display','none');
+        if ($('li').hasClass('selected')) {
+            $('li.selected').parent().css('display', 'block');
+            $('li.selected').children().css('display', 'block');
+        } else {
+            $('#sideNavBox ul ul').css('display', 'none');
         }
         //set nav to visible
-        $('#sideNavBox a').css('color','#000');
+        $('#sideNavBox a').css('color', '#000');
     }
 }
 
 /*prevent focusOnContent*/
 function Hidesuite() {
     document.getElementById('ctl00_fullscreenmodeBtn').style.visibility = 'hidden';
-} 
-
-
-function isIE () {
-  var myNav = navigator.userAgent.toLowerCase();
-  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
 }
 
-if (isIE () && isIE () < 9) {
- checkCookie();
+
+function isIE() {
+    var myNav = navigator.userAgent.toLowerCase();
+    return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+}
+
+if (isIE() && isIE() < 9) {
+    checkCookie();
 } else {
- // is IE 9 and later or not IE
+    // is IE 9 and later or not IE
 }
 
 // IE 7 and 8 alert 
@@ -215,32 +215,32 @@ function checkCookie() {
 }
 
 function showAlert() {
-   
-   var bamAlert = 
-       "<div id='browser-alert'>"+
-        "<div class='alert-wrapper'>"+
-            "<p>You are using Internet Explorer 7 or 8 which is an outdated browser. For the best experience on MedNet, please use one of the following browsers:</p>"+
-            "<table class='icons'>"+
-            "  <tr>"+
-            "    <th><image src='~SiteCollection/_layouts/15/MedNetBranding/images/ie.png' class='browser-icon'></th>"+
-            "    <th><image src='~SiteCollection/_layouts/15/MedNetBranding/images/chrome.png' class='browser-icon'></th>"+
-            "    <th><image src='~SiteCollection/_layouts/15/MedNetBranding/images/ff.png' class='browser-icon'></th>"+
-            "    <th><image src='~SiteCollection/_layouts/15/MedNetBranding/images/safari.png' class='browser-icon'></th>"+
-            "  </tr>"+
-            "  <tr class='titles'>"+
-            "    <td>Internet Explorer<br>Version 9+</td>"+
-            "    <td>Chrome</td>"+
-            "    <td>Firefox</td>"+
-            "    <td>Safari</td>"+
-            "  </tr>"+
-            "</table>"+
-            "<p><strong>Need help?</strong><br>"+
-            "If you have any questions or to get support upgrading or installing a new browser, please contact the MedIT Service Desk at 1-877-266-0666 or <a href='mailto:medit.servicedesk@ubc.ca'>medit.servicedesk@ubc.ca</a>.</p>"+
-            "<span id='close'>X</span>"+
-        "</div>"+
-    "</div>"; 
 
-    var wHeight = $(window).height()+'px';
+    var bamAlert =
+        "<div id='browser-alert'>" +
+        "<div class='alert-wrapper'>" +
+        "<p>You are using Internet Explorer 7 or 8 which is an outdated browser. For the best experience on MedNet, please use one of the following browsers:</p>" +
+        "<table class='icons'>" +
+        "  <tr>" +
+        "    <th><image src='~SiteCollection/_layouts/15/MedNetBranding/images/ie.png' class='browser-icon'></th>" +
+        "    <th><image src='~SiteCollection/_layouts/15/MedNetBranding/images/chrome.png' class='browser-icon'></th>" +
+        "    <th><image src='~SiteCollection/_layouts/15/MedNetBranding/images/ff.png' class='browser-icon'></th>" +
+        "    <th><image src='~SiteCollection/_layouts/15/MedNetBranding/images/safari.png' class='browser-icon'></th>" +
+        "  </tr>" +
+        "  <tr class='titles'>" +
+        "    <td>Internet Explorer<br>Version 9+</td>" +
+        "    <td>Chrome</td>" +
+        "    <td>Firefox</td>" +
+        "    <td>Safari</td>" +
+        "  </tr>" +
+        "</table>" +
+        "<p><strong>Need help?</strong><br>" +
+        "If you have any questions or to get support upgrading or installing a new browser, please contact the MedIT Service Desk at 1-877-266-0666 or <a href='mailto:medit.servicedesk@ubc.ca'>medit.servicedesk@ubc.ca</a>.</p>" +
+        "<span id='close'>X</span>" +
+        "</div>" +
+        "</div>";
+
+    var wHeight = $(window).height() + 'px';
     document.write(bamAlert);
     addCloseListener();
 }
@@ -250,13 +250,18 @@ function addCloseListener() {
         $('#browser-alert').remove();
     });
 }
-function accordionTabs(){
+
+function accordionTabs() {
     $('.nav-tabs').parent().each(function() {
-      $(this).tabCollapse();
+        $(this).tabCollapse();
     });
 }
+
+
+
 /*load functions*/
 $(document).ready(function() {
     pruneSideNav();
     _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
+    console.log("document ready "+ajaxProgress);
 });

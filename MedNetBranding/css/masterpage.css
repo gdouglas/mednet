@@ -948,7 +948,8 @@ footer a:hover {
 .dfwp-list .dfwp-item #colmask {
     margin-top: 10px;
 }
-#colleft #col1{
+#colleft #col1,
+.date-col {
     color:#595959;
     margin-right:20px;
 }
