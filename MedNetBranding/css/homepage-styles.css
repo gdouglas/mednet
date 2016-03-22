@@ -112,6 +112,11 @@ h2{
 .spotlight-title{
 	color:#444;
 }
+.fa.fallback-image {
+	font-size: 195px;
+	background: #002145;
+	color: #fff;
+}
 @media screen and (max-width:992px){
 	.fp-column{
 		width:100%;

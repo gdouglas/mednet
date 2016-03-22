@@ -257,8 +257,9 @@ a:hover,
     transition: all .2s ease-out;
 }
 
-a:visited {
-    color: #002145;
+a:visited,
+a.ms-link:visited {
+    color: #5c5c5c;
 }
 
 /*how to add more styles 
@@ -947,6 +948,7 @@ footer a:hover {
 }
 .dfwp-list .dfwp-item #colmask {
     margin-top: 10px;
+    line-height: 24px;
 }
 #colleft #col1,
 .date-col {
@@ -1030,6 +1032,10 @@ div .read-more{
 .nav-tabs {
     border-bottom: 1px solid #002145;
 }
+.tab-content>.tab-pane {
+    margin-top: 12px;
+    margin-left: 3px;
+}
 /* Active state tab anchor */
 
 .nav-tabs a.active {
@@ -1048,10 +1054,13 @@ h4.panel-title {
 .js-tabcollapse-panel-heading:visited,
 .js-tabcollapse-panel-heading:focus,
 .js-tabcollapse-panel-heading:hover,
-.js-tabcollapse-panel-heading:active {
+.js-tabcollapse-panel-heading:active,
+.panel-title a:visited,
+.panel-title a:focus,
+.panel-title a:hover,
+.panel-title a:active {
     display: block;
     text-decoration: none;
-    
     font-size: 14px;
     padding:10px;
     background: #2f5d7c;
@@ -1059,7 +1068,11 @@ h4.panel-title {
     color:#fff;
 }
 /* Active accordion anchor */
-
+.panel-title a {
+    display:block;
+    padding:10px;
+}
+.panel-title a,
 .js-tabcollapse-panel-heading {
     background-color: #002145;
     color: #fff;
@@ -1128,6 +1141,20 @@ h4.panel-title {
 #cbqwpctl00_ctl45_g_c3720a20_b276_4e93_9040_8fde5cc23feb  .link-item>a {
     font-size: 38px;
     margin-bottom: 15px;
+}
+#cbqwpctl00_ctl45_g_c3720a20_b276_4e93_9040_8fde5cc23feb .link-item:first-child:not(.image-area-left):before {
+    color: #fff;
+    content: '?';
+    background: #ccc;
+    width: 150px;
+    height: 150px;
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 150px;
+    line-height: 150px;
+    float: left;
+    margin-right: 22px;
 }
 /*media queries*/
 @media screen and (min-width:991px) and (max-width: 1133px) {

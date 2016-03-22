@@ -12,7 +12,7 @@ window.onload = function() {
         DesignPageLayouts = false;
     }
     accordionTabs();
-    console.log("window.load "+ajaxProgress);
+    // console.log("window.load "+ajaxProgress);
 }
 
 
@@ -263,5 +263,7 @@ function accordionTabs() {
 $(document).ready(function() {
     pruneSideNav();
     _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
-    console.log("document ready "+ajaxProgress);
+    // console.log("document ready "+ajaxProgress);
+    $('.page-content').fitVids();
+    // $('.page-content').html($('.page-content').html().replace(/\u200B/g,''));
 });
