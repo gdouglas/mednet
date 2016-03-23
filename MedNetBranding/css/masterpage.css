@@ -244,7 +244,7 @@ span div.welcome {
 }
 
 a {
-    color: #3868a6;
+    color: #0072c6;
 }
 
 a:hover,
@@ -259,7 +259,7 @@ a:hover,
 
 a:visited,
 a.ms-link:visited {
-    color: #5c5c5c;
+    color: #3868a6;
 }
 
 /*how to add more styles 
@@ -477,7 +477,11 @@ h4.ms-rteElement-H4B {
 .error-content h2 {
     margin-top: 0;
 }
-
+.ms-formtable .ms-standardheader {
+    margin: 0;
+    font-size: 16px;
+    line-height: 25.6px;
+}
 .ms-formfieldlabel {
     text-transform: initial;
 }
@@ -610,11 +614,6 @@ header .mednet-title {
     margin-left:30px;
 }
 /*Align admin pages with bootstrap containers*/
-/*#breadcrumbnavigation,
-#idStorefrontLayoutRoot,
-#appsTable,
-form[action*="Forms"] #MSOZoneCell_WebPartWPQ2,
-form[action*="Lists"] #MSOZoneCell_WebPartWPQ2,*/
 form[action*="Form"] #breadcrumbnavigation,
 form[action*="List"] #breadcrumbnavigation,
 form[action*="RecycleBin"] #breadcrumbnavigation,

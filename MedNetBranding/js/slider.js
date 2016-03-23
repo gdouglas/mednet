@@ -42,6 +42,7 @@ function resizeSlider(){
         $('#slider1_container').width(sc);
         $('.slides-container').width(sc);
         _spBodyOnLoadFunctions.push(init); // this is the function that gets called when everything is loaded
+
     } else {
         
     }
@@ -49,7 +50,7 @@ function resizeSlider(){
 
 var everythingLoaded = setInterval(function() {
     var sw = $('.fp-slider-zone-container').width();    
-    if (window.jQuery && sw !== null) {
+    if (window.jQuery && sw !== null && createSliderStatus) {
         resizeSlider();
         clearInterval(everythingLoaded);
     }
