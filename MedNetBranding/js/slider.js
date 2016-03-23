@@ -41,8 +41,8 @@ function resizeSlider(){
         var sc = $('#slider1_container').width();
         $('#slider1_container').width(sc);
         $('.slides-container').width(sc);
-        _spBodyOnLoadFunctions.push(init); // this is the function that gets called when everything is loaded
-
+        //_spBodyOnLoadFunctions.push(init); // this is the function that gets called when everything is loaded
+        init();
     } else {
         
     }
