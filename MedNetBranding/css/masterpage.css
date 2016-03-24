@@ -129,9 +129,9 @@ img[src*="/_layouts/15/images"],
     max-width: inherit;
     border-radius: 0;
     margin: 0 !important;
-    box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    box-shadow: none;
 }
 .page-content .sidebar .mid-webpart .ms-asset-icon {
     margin: 0 5px !important;
@@ -193,9 +193,26 @@ h1 input[title="Title"] {
     padding: 0;
     border: none;
 }
+#s4-statusbarcontainer {
+    position: relative;
+}
 #pageStatusBar[class],
 .ms-status-msg {
     margin-bottom: 0;
+}
+#pageStatusBar .close-btn {
+    color: #777;
+    font: 14px/100% arial, sans-serif;
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    top: -1px;
+    cursor: pointer;
+    padding: 10px;
+}
+#pageStatusBar .close-btn:hover {
+    color: #000;
 }
 
 /*Likely to cause issues on the settings pages. Needed for embedding iframes*/
@@ -437,7 +454,10 @@ h2.ms-rteElement-H2B,
     color: #447128;
     margin: 20px 0 10px;
 }
-
+.sidebar .ms-webpart-titleText nobr,
+.bottom-wp-zones .ms-webpart-titleText nobr {
+    white-space: normal;
+}
 h3,
 .ms-h3,
 h3.ms-rteElement-H3B,
@@ -744,9 +764,6 @@ header h2 {
     display: block;
 }
 
-#ctl00_PlaceHolderLeftNavBar_QuickLaunchNavigationManager {
-}
-
 .adm-site-links {
     margin-top: 23px;
     padding-top: 23px;
@@ -896,9 +913,9 @@ footer a:hover {
     border-radius: 50%;
     float: left;
     margin: 0 20px 0 0 !important;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .3);
     -moz-box-shadow: 0 0 15px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .3);
 }
 .mid-webpart a[href^="mailto"] {
     display: inline-block;
@@ -935,7 +952,6 @@ footer a:hover {
     height: 100%;
     margin: 0 15px;
     min-width: 230px;
-    overflow: auto;
     padding:0;
     min-height: 0;
 }
@@ -975,16 +991,9 @@ a.btn,
     border-radius: 0;
 }
 div .read-more{
-    color:#64b63a;
     border:1px solid #64b63a;
-    border-color:#2E7453; 
-    border-color:#538B31;
-    border-color:#538b31;
     border-color:#002145;
-    color:#2E7453;
-    color:#538B31;
-    color:#538b31;
-    color:#002145;
+    color: #002145;
     text-transform: uppercase;
     position:absolute;
     bottom:10px;
@@ -1185,31 +1194,30 @@ h4.panel-title {
     margin-right: 22px;
 }
 .staff-spotlight-container .staff-spotlight-container-img{
-    height:150px;
-    width:150px;
+    height: 150px;
+    width: 150px;
     overflow: hidden;
     border-radius: 50%;
-    text-align:center;
-    margin:20px 20px 20px 0;
+    text-align: center;
+    margin: 20px 20px 20px 0;
 }
 .staff-spotlight-container img{
     /*!important overwrites odd inline styles from content query*/
-    margin:0 !important;
-    min-height:150px;
-    min-width:150px;
-    position:initial;
-
+    margin: 0 !important;
+    min-height: 150px;
+    min-width: 150px;
+    position: initial;
 }
 .staff-spotlight-name a{
-    color:#002145;
+    color: #002145;
 }
 .spotlight-title{
-    color:#444;
+    color: #444;
 }
 /*media queries*/
 @media screen and (min-width:991px) and (max-width: 1133px) {
     h3 {
-        font-size:21px;
+        font-size: 21px;
     }
 }
 @media (max-width: 991px) {
@@ -1541,6 +1549,7 @@ h4.panel-title {
         display: block;
         width: 100%;
         margin: 0;
+        height: auto;
     }
 }
 @media screen and (min-width:993px) {

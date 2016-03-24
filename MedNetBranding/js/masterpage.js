@@ -259,15 +259,23 @@ function accordionTabs() {
 function clean8203(target){
     //$(target).html($(target).html().replace(/\u200B/g, ""));
 }
-
+function addStatusCloseBtn(){
+    if ($('#pageStatusBar')){
+        $('#pageStatusBar').append("<div id='close_btn' class='close-btn'>x</div>");
+        $('#close_btn').click(function() {
+             $('#pageStatusBar').remove();
+        });
+    }
+}
 
 /*load functions*/
 $(document).ready(function() {
     pruneSideNav();
-    _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
+    _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter","addStatusCloseBtn");
     // console.log("document ready "+ajaxProgress);
     $('.page-content').fitVids();
-    //clean8203('.page-content');    
+    //clean8203('.page-content'); 
+
 });
   
   
