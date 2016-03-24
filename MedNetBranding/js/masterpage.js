@@ -256,7 +256,9 @@ function accordionTabs() {
         $(this).tabCollapse();
     });
 }
-
+function clean8203(target){
+    //$(target).html($(target).html().replace(/\u200B/g, ""));
+}
 
 
 /*load functions*/
@@ -265,5 +267,10 @@ $(document).ready(function() {
     _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter");
     // console.log("document ready "+ajaxProgress);
     $('.page-content').fitVids();
-    // $('.page-content').html($('.page-content').html().replace(/\u200B/g,''));
+    //clean8203('.page-content');    
 });
+  
+  
+ 
+ 
+ 

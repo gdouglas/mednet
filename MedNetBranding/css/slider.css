@@ -62,6 +62,7 @@ figcaption a,
 figcaption a:visited{
     display: inline-block;
     color:#4c6c3a;
+    margin-left: 5px;
  }
 
 /* jssor slider bullet navigator*/
