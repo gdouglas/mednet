@@ -23,7 +23,7 @@
         <SharePoint:RobotsMetaTag runat="server" />
         
         <!-- ===== STARTER: Favicon / Windows Tile ======================================================================================== --> 
-        <SharePoint:SPShortcutIcon runat="server" IconUrl="/2013/MedNetBranding/_catalogs/masterpage/favicon.ico" />
+        <SharePoint:SPShortcutIcon runat="server" IconUrl="https://mednet.med.ubc.ca/_layouts/15/MedNetBranding/images/favicon.ico" />
         <SharePoint:SPPinnedSiteTile runat="server" TileUrl="//cdn.ubc.ca/clf/7.0.4/img/apple-touch-icon-114-precomposed.png" TileColor="#002145" />     
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/clf/7.0.4/img/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/clf/7.0.4/img/apple-touch-icon-72-precomposed.png">
@@ -217,9 +217,9 @@
                                                 <div class="col-xs-12 row-content">
                                                     <ul class="nav nav-pills pull-left utility-links">
                                                         <li>
-                                                            <a href="../../Pages/Default.aspx" runat="server" class="home hidden-xs hidden-sm">Home</a>
+                                                            <a href="https://mednet.med.ubc.ca/Pages/Default.aspx" runat="server" class="home hidden-xs hidden-sm">Home</a>
                                                         </li>
-                                                        <li><a href="../../AboutUs/ContactUs/DeansOffice/Lists/FoM%20Contact%20List/AllItems.aspx" runat="server" class="contact">Contact List</a></li>
+                                                        <li><a href="https://mednet.med.ubc.ca/AboutUs/ContactUs/DeansOffice/Lists/FoM%20Contact%20List/AllItems.aspx" runat="server" class="contact">Contact List</a></li>
                                                         <li><a href="https://directory.ubc.ca/index.cfm" target="_blank" class="directory">UBC Directory</a></li>
                                                         <li><a href="http://med.ubc.ca" target="_blank" class="public-site">med.ubc.ca</a></li>
                                                     </ul>
@@ -233,8 +233,8 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-xs-12 row-content banner-logo">
-                                                    <a href="../../Pages/Default.aspx" runat="server" title="MedNet" class="logo">
-                                                        <img src="~SiteCollection/_layouts/15/MedNetBranding/images/ubc-logo.png" class="ubc-logo">                                                   
+                                                    <a href="https://mednet.med.ubc.ca/Pages/Default.aspx" runat="server" title="MedNet" class="logo">
+                                                        <img src="https://mednet.med.ubc.ca/_layouts/15/MedNetBranding/images/ubc-logo.png" class="ubc-logo">                                                   
                                                     </a>
                                                     <h1 class="intranet-title">
                                                         <span class="faculty">Faculty of Medicine</span>
@@ -255,14 +255,14 @@
                                                 <nav id="top-navbar" class="col-xs-12 navbar navbar-default" role="navigation">
                                                     <div id="navbar" class="navbar-expand expand">
                                                         <ul class="nav navbar-nav">
-                                                            <li><a href="../../Pages/default.aspx" runat="server">Home</a></li>
-                                                            <li><a href="../../AboutUs" runat="server">About Us</a></li> 
-                                                            <li><a href="../../ServicesAndResources" runat="server">Services &amp; Resources</a></li> 
-                                                            <li><a href="../../HR" runat="server">HR</a></li>  
-                                                            <li><a href="../../Teaching" runat="server">Teaching</a></li> 
-                                                            <li><a href="../../Research" runat="server">Research</a></li> 
-                                                            <li><a href="../../office-of-the-dean" runat="server">Office of The Dean</a></li>
-                                                            <li><a href="../../TeamSites" runat="server">Team Sites</a></li>             
+                                                            <li><a href="https://mednet.med.ubc.ca/Pages/default.aspx">Home</a></li>
+                                                            <li><a href="https://mednet.med.ubc.ca/AboutUs">About Us</a></li> 
+                                                            <li><a href="https://mednet.med.ubc.ca/ServicesAndResources">Services &amp; Resources</a></li> 
+                                                            <li><a href="https://mednet.med.ubc.ca/HR">HR</a></li>  
+                                                            <li><a href="https://mednet.med.ubc.ca/Teaching">Teaching</a></li> 
+                                                            <li><a href="https://mednet.med.ubc.ca/Research">Research</a></li> 
+                                                            <li><a href="https://mednet.med.ubc.ca/office-of-the-dean">Office of The Dean</a></li>
+                                                            <li><a href="https://mednet.med.ubc.ca/TeamSites">Team Sites</a></li>             
                                                         </ul>
                                                     </div>
                                                 </nav>
@@ -433,8 +433,8 @@
                                             <a href="#suiteBar" class="toplink hidden-md hidden-lg">Back To Top ^</a>
                                         </div>                                                
                                     <address class="pull-left">
-                                        <a class="address-title" href="../../Pages/default.aspx" runat="server">
-                                            <img src="~SiteCollection/_layouts/15/MedNetBranding/images/footer-logo.gif" class="footer-logo">
+                                        <a class="address-title" href="https://mednet.med.ubc.ca/Pages/default.aspx" runat="server">
+                                            <img src="https://mednet.med.ubc.ca/_layouts/15/MedNetBranding/images/footer-logo.gif" class="footer-logo">
                                         </a><br>
                                         317 - 2194 Health Sciences Mall<br>
                                         Vancouver, BC Canada V6T 1Z3<br>
@@ -445,18 +445,18 @@
                             <div class="row">
                                 <div class="col-xs-12 footer-nav row-content">
                                     <ul class="list-inline center-block footer-links">
-                                        <li><a href="../../AboutUs" runat="server">About Us</a></li>
-                                        <li><a href="../../ServicesAndResources" runat="server">Services &amp; Resources</a></li>
-                                        <li><a href="../../HR" runat="server">HR</a></li>
-                                        <li><a href="../../Teaching" runat="server">Teaching</a></li>
-                                        <li><a href="../../Research" runat="server">Research</a></li>
-                                        <li><a href="../../TeamSites" runat="server">Team Sites</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/AboutUs">About Us</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/ServicesAndResources">Services &amp; Resources</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/HR">HR</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/Teaching">Teaching</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/Research">Research</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/TeamSites">Team Sites</a></li>
                                     </ul>
                                     <ul class="list-inline center-block footer-links">
-                                        <li><a href="../../Pages/SiteMap.aspx" runat="server">Site Map</a></li>
-                                        <li><a href="../../Pages/TermsOfUse.aspx" runat="server">Terms of Use</a></li>
-                                        <li><a href="../../Pages/MedNetSupport.aspx" runat="server">MedNet Support</a></li>
-                                        <li><a href="../../AboutUs/ContactUs/Pages/default.aspx" runat="server">Contact Us</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/Pages/SiteMap.aspx">Site Map</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/Pages/TermsOfUse.aspx">Terms of Use</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/Pages/MedNetSupport.aspx">MedNet Support</a></li>
+                                        <li><a href="https://mednet.med.ubc.ca/AboutUs/ContactUs/Pages/default.aspx">Contact Us</a></li>
                                         <li><a href="http://copyright.ubc.ca/" target="_blank">Copyright 2013 - UBC Faculty of Medicine</a></li>
                                     </ul>
                                 </div>

@@ -11,10 +11,21 @@ window.onload = function() {
     } else {
         DesignPageLayouts = false;
     }
-    accordionTabs();
-    // console.log("window.load "+ajaxProgress);
-}
+    if (typeof ajaxProgress === 'undefined' || ajaxProgress === null) {
+        //no ajax in progress flagged with ajaxProgress
+    } else {
+        checkAjax(accordionTabs,ajaxProgress);
+    }
+};
 
+function checkAjax(target,condition) {
+    interval = setInterval(function(){
+        if (ajaxProgress === false){
+            target();
+            clearInterval(interval);
+        }
+    }, 100);
+}
 
 
 function checkURL() {
@@ -137,12 +148,13 @@ function calcFooter() {
     }
 
     //if no ms-designer-ribbon try to calculate with suitebar + ribbonrow
-    if (ribbonheight == null) {
+    if (ribbonheight === null) {
         ribbonheight = $("#suiteBar").height() + $("#s4-ribbonrow").height() + $('#s4-statusbarcontainer').height();
+        console.log("s4-statusbarcontainer height is "+$('#s4-statusbarcontainer').height());
     }
 
     //handle null if something wasn't found
-    ribbonheight == null && (ribbonheight = 0);
+    ribbonheight === null && (ribbonheight = 0);
 
     //if content is less than the window size add margin to customFooter
     var difference = windowheight - (bodyheight + ribbonheight + footerheight);
@@ -277,8 +289,3 @@ $(document).ready(function() {
     //clean8203('.page-content'); 
 
 });
-  
-  
- 
- 
- 

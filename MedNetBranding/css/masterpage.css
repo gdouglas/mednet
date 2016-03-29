@@ -163,11 +163,16 @@ td img[src*="/_layouts/15/images/blank.gif?rev=23"]{
 #DatePickerDiv .ms-picker-footer a {
     color: #3868a6;
 }
-
+th .s4-ctx span {
+    display: none;
+}
 #rtePasteFlyoutLink {
     height: auto;
 }
-
+.ms-vb-user .ms-imnSpan,
+.ms-vb-user .ms-imnSpan + a {
+    display: table-cell;
+}
 .ms-webpart-menuArrowImg img,
 .ms-core-menu-icon img{
     margin: 0;
@@ -520,6 +525,10 @@ input[type=radio] {
 }
 .ms-authoringcontrols {
     background: #ddd;
+}
+.ms-toolbar #ctl00_PlaceHolderMain_Toolbar_RptControls_ButtonDeleteItems_ImageOfButton,
+.ms-toolbar #ctl00_PlaceHolderMain_Toolbar_RptControls_ButtonRestoreItems_ImageOfButton {
+    margin:0 5px !important;
 }
 
 div.article,
