@@ -227,7 +227,7 @@ function checkCookie() {
 }
 
 function showAlert() {
-
+    // _gaq.push(['_trackEvent', 'Unsupported IE', 'Alert', 'Browser Alert']);
     var bamAlert =
         "<div id='browser-alert'>" +
         "<div class='alert-wrapper'>" +
