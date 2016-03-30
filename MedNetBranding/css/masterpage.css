@@ -642,6 +642,9 @@ header .mednet-title {
     text-transform: none;
     letter-spacing: 2px;
 }
+#deltabreadcrumbnav {
+    display: inline-block;
+}
 #breadcrumbnavigation {
     margin-left:30px;
 }
@@ -968,6 +971,10 @@ footer a:hover {
 #two-col-br > div,
 #two-col-ml > div {
     height: 100%;
+}
+.bottom-wp-zones a {
+    word-break: break-word;
+    word-wrap: break-word;
 }
 .bottom-wp-zones .ms-webpart-zone {
     padding: 0 15px;

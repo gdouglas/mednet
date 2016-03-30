@@ -219,7 +219,8 @@ function getCookie(cname) {
 function checkCookie() {
     var medNetAlert = getCookie("medNetAlert");
     if (medNetAlert == "alerted today") {
-        //do not show alert
+        //we showed them once today
+        showAlert();
     } else {
         medNetAlert = "alerted today";
         showAlert();
@@ -227,7 +228,6 @@ function checkCookie() {
 }
 
 function showAlert() {
-    // _gaq.push(['_trackEvent', 'Unsupported IE', 'Alert', 'Browser Alert']);
     var bamAlert =
         "<div id='browser-alert'>" +
         "<div class='alert-wrapper'>" +
