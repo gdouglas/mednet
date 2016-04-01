@@ -1,7 +1,7 @@
 #s4-bodyContainer .page-content-container {
     max-width: 100%;
 }
-#deltabreadcrumbnav{
+div #deltabreadcrumbnav{
 	display:none;
 }
 .row.page-content-row {
