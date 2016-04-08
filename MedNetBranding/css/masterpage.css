@@ -642,6 +642,10 @@ header .mednet-title {
     text-transform: none;
     letter-spacing: 2px;
 }
+.mednet-title {
+    color: #fff;
+    display: block;
+}
 #deltabreadcrumbnav {
     display: inline-block;
 }
@@ -689,7 +693,6 @@ form[action*="/ReusableContent/Content"]  .breadcrumb-nonpub {
 
 /*top nav*/
 .site-nav {
-/*background:#effaf0;*/
     background: #3868A6;
     margin-bottom: 0;
     border: 0;
@@ -706,7 +709,6 @@ div.site-nav {
 }
 
 .site-nav .navbar-nav>li>a {
-/*color:#0c5e79;*/
     color: #fff;
 }
 
@@ -717,7 +719,6 @@ div.site-nav {
 }
 
 .navbar-nav li {
-/*padding:10px 0;*/
     border: 0;
 }
 
@@ -743,20 +744,6 @@ div.site-nav {
 }
 
 /*end top nav*/
-header {
-    background: #002145;
-    color: #FFF;
-    margin-bottom: 5px;
-}
-
-header nav {
-    display: block;
-}
-
-.mednet-title {
-    color: #fff;
-    display: block;
-}
 
 header h2 {
     margin: 19px 0 0;
