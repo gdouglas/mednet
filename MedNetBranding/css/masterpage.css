@@ -439,6 +439,10 @@ tr.ms-rteTableEvenRow-ubctable {
 
 h1,
 .ms-h1,
+h1 a,
+.ms-h1 a,
+h1 a:visited,
+.ms-h1 a:visited,
 .ms-rtestate-field h1,
 h1.ms-rteElement-H1,
 h1.ms-rteElement-H1B {
@@ -451,6 +455,9 @@ h1.ms-rteElement-H1B {
 h2,
 h2 a,
 .ms-h2,
+.ms-h2 a,
+h2 a:visited,
+.ms-h2 a:visited,
 .ms-rtestate-field h2,
 h2.ms-rteElement-H2,
 h2.ms-rteElement-H2B,
@@ -465,6 +472,10 @@ h2.ms-rteElement-H2B,
 }
 h3,
 .ms-h3,
+h3 a,
+.ms-h3 a,
+h3 a:visited,
+.ms-h3 a:visited,
 h3.ms-rteElement-H3B,
 h3.ms-standardheader {
     color: #3868a6;
@@ -476,6 +487,10 @@ h3.ms-standardheader {
 
 h4,
 .ms-h4,
+h4 a,
+.ms-h4 a,
+h4 a:visited,
+.ms-h4 a:visited,
 .ms-rtestate-field h4,
 h4.ms-rteElement-H4,
 h4.ms-rteElement-H4B {
@@ -1667,7 +1682,8 @@ h4.panel-title {
     .top-nav,
     .site-nav,
     .navbar-toggle,
-    footer {
+    footer,
+    footer address {
         display: none;
     }
     .banner-logo img{
