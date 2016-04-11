@@ -1613,46 +1613,73 @@ h4.panel-title {
  *
  */
 .browser-alert {
-    position:relative;
+    position: relative;
     z-index: 100;
 }
 #browser-alert{
-    position:fixed;
+    position: fixed;
     z-index: 100;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-    top:150px;
-    box-sizing:border-box;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 150px;
+    box-sizing: border-box;
 }
 #browser-alert p{
     font-size:18px;
 }
 .alert-wrapper{
     margin:0 auto;
-    position:relative;
+    position: relative;
     z-index: 100;
-    width:650px;
-    border:1px solid #000;
-    background:#000;
-    padding:50px;
-    color:#fff;
+    width: 650px;
+    border: 1px solid #000;
+    background: #000;
+    padding: 50px;
+    color: #fff;
 }
 #close{
     position:absolute;
-    top:0;
-    right:-50px;
-    border:1px solid #000;
-    background:#000;
-    padding:5px 10px;
-    cursor:pointer;
+    top: 0;
+    right: -50px;
+    border: 1px solid #000;
+    background: #000;
+    padding: 5px 10px;
+    cursor: pointer;
 }
 #browser-alert table{
-    width:100%;
+    width: 100%;
 }
 #browser-alert th,
 #browser-alert td{
-    padding:10px;
+    padding: 10px;
     text-align: center;
     vertical-align: top;
+}
+
+@media print {
+    .utility-links,
+    #navbar,
+    .footer-nav,
+    #unit-social-icons,
+    .address-title,
+    #top-ribbon,
+    .top-nav,
+    .site-nav,
+    .navbar-toggle,
+    footer {
+        display: none;
+    }
+    .banner-logo img{
+        display: none;
+    }
+    .banner-logo .logo:after{
+       content: url(/_layouts/15/MedNetBranding/images/ubc-logo-blue.png);
+       height: 50px;
+       width: 37px;
+       /*width: auto;*/
+    }
+    .fp-column {
+        width:100%;
+    }
 }
