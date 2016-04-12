@@ -52,7 +52,7 @@ function addListeners() {
  *
  */
 function addSmoothScroll() {
-    $('a[href*=#suiteBar]:not([href=#])').click(function() {
+    $('.toplink').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
             || location.hostname == this.hostname) {
 
