@@ -1,8 +1,10 @@
 var elements = ["h1","h2","h3","h4","p","strong","label","span","a"];
-for (var i = 0; i < elements.length; i++) {
-  jQuery(elements[i]).each(function() {
-    removeZWS(this);
-  });
+function targetZWS(){
+	for (var i = 0; i < elements.length; i++) {
+	  jQuery(elements[i]).each(function() {
+	    removeZWS(this);
+	  });
+	}
 }
 
 

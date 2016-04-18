@@ -777,6 +777,12 @@ header h2 {
 #sideNavBox .selected ul {
     display: block;
 }
+#sideNavBox .ms-ref-ctrl {
+    margin-left:20px;
+}
+#sideNavBox .ms-ref-refinername {
+    color: #666666;
+}
 
 .adm-site-links {
     margin-top: 23px;
@@ -1231,6 +1237,16 @@ h4.panel-title {
 }
 .spotlight-title{
     color: #444;
+}
+/*sharepoint search*/
+.ms-srch-ellipsis {
+    font-size: 19px;
+    margin: 0;
+    display: block;
+    width: 100%;
+}
+.ms-srch-group * {
+    max-width:100%;
 }
 /*media queries*/
 @media screen and (min-width:991px) and (max-width: 1133px) {
