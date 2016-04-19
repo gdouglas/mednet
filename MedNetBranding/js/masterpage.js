@@ -300,15 +300,12 @@ function targetZWS(){
 function checkElement(target) {
     if ($(target).children("input").length > 0) {
         //do nothing for now, or break inputs
-        console.log("do not remove this " + target);
     } else {
-        console.log("checked and found "+target);
         removeZWS(target);
     }
 }
 
 function removeZWS(target) {
-    console.log("remove this "+target);
     jQuery(target).html(jQuery(target).html().replace(/\u200B/g,''));
 }
 
