@@ -308,6 +308,14 @@ h2.ms-rteElement-SpecialHeading {
     background: #3868a6;
     color: #fff;
 }
+
+body > .ms-cui-menu {
+    padding-right: 14px;
+}
+body > .ms-cui-menu .ms-cui-smenu-inner {
+    width: 105%;
+}
+
 /*remove elements from style editor*/
 #Ribbon\.EditingTools\.CPEditTab\.Paragraph\.ElementWithStyle\.Menu\.Styles\.Gallery tr:nth-child(2) {
     display:none !important;

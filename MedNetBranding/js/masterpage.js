@@ -282,12 +282,39 @@ function addStatusCloseBtn(){
     }
 }
 
+/*
+*
+* Remove zero width space characters &#8023;
+*
+*/
+var elements = ["h1","h2","h3","h4","p","strong","label","span","a"];
+function targetZWS(){
+    for (var i = 0; i < elements.length; i++) {
+        var item = $(".page-content "+elements[i]);
+        $(item).each(function() {
+            checkElement(this);
+        });
+    }
+}
+
+function checkElement(target) {
+    if ($(target).children("input").length > 0) {
+        //do nothing for now, or break inputs
+        console.log("do not remove this " + target);
+    } else {
+        console.log("checked and found "+target);
+        removeZWS(target);
+    }
+}
+
+function removeZWS(target) {
+    console.log("remove this "+target);
+    jQuery(target).html(jQuery(target).html().replace(/\u200B/g,''));
+}
+
 /*load functions*/
 $(document).ready(function() {
     pruneSideNav();
-    _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter","addStatusCloseBtn");
-    // console.log("document ready "+ajaxProgress);
+    _spBodyOnLoadFunctionNames.push("addListeners", "Hidesuite", "pruneSideNav", "addSmoothScroll", "calcFooter","addStatusCloseBtn","targetZWS");
     $('.page-content').fitVids();
-    //clean8203('.page-content'); 
-
 });
